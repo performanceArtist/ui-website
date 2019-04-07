@@ -1,0 +1,10 @@
+@import 'partials/component';
+@import 'partials/defaults';
+@import 'partials/layout';
+
+@import 'components/buttons/standard/button';
+@import 'components/buttons/arrow/button';
+
+body {
+    color: black;
+}

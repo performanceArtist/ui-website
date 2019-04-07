@@ -1,0 +1,19 @@
+include components/buttons/standard/button
+include components/buttons/arrow/button
+
+doctype html
+
+hmtl(lang='en')
+  head
+    meta(charset='utf-8')
+    title UI page
+  body
+    #content
+      h2 STANDARD BUTTONS
+      div
+        +standard_button('BUTTON')
+      
+      h2 ARROW BUTTONS
+      div
+        +arrow_button
+        +arrow_button(false)

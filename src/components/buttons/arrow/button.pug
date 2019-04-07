@@ -1,0 +1,7 @@
+mixin arrow_button(left=true, className='arrow-button')
+  a(href='javascript:void(0)')
+    div(class=className)
+      if left 
+          i.left-arrow
+      else 
+          i.right-arrow

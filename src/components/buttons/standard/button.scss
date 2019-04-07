@@ -1,0 +1,39 @@
+%base-button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid 1px;
+}
+
+@mixin set-button-color($active, $passive) {
+    color: $active;
+    background-color: $passive;
+    border-color: $active;
+    box-shadow: 10px 5px 5px $active;
+
+    &:hover {
+        color: $passive;
+        background-color: $active;
+    }
+    &:active {
+        color: $passive;
+        background-color: $active;
+        box-shadow: none;
+    }
+}
+
+@mixin set-button-size($width, $height) {    
+    font-size: 1.4vw;
+    width: $width;
+    height: $height;
+    border-radius: 6%;
+}
+
+.big-green-button {
+    @extend %base-button;
+    @include set-button-color($light-green, $white);
+    @include set-button-size(236px, 70px)
+}

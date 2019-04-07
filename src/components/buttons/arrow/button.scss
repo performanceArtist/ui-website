@@ -1,0 +1,64 @@
+$arrow-angle: 135deg;
+$arrow-length: 7px;
+$arrow-width: 4px;
+$arrow-button-size: 50px;
+$arrow-button-border: 3px;
+
+.arrow-button {
+    @include circle($arrow-button-size);
+    
+    line-height: $arrow-button-size + $arrow-length;
+    text-align: center;
+    display: inline-block;
+    background: $white; 
+    box-shadow: 0 0 0 $arrow-button-border $light-green;
+    margin: $arrow-button-border;
+
+    i {
+        border: solid;
+        border-color: $light-green;
+        
+        border-width: 0 $arrow-width $arrow-width 0;
+        display: inline-block;
+        padding: $arrow-length;
+    }
+    
+    .left-arrow {
+        margin-left: $arrow-length;
+        transform: rotate($arrow-angle);
+        -webkit-transform: rotate($arrow-angle);
+    }
+    
+    .right-arrow {
+        margin-right: $arrow-length;
+        transform: rotate($arrow-angle - 180deg);
+        -webkit-transform: rotate($arrow-angle - 180deg);
+    }
+
+    &:hover {
+        background: $light-grey; 
+        box-shadow: 0 0 0 $arrow-button-border $light-grey;
+    
+        i {
+            border-color: $white;
+        }
+    }
+
+    &:active {
+        background: $light-green; 
+        box-shadow: 0 0 0 $arrow-button-border $light-green;
+    
+        i {
+            border-color: $white;
+        }
+    }
+
+}
+
+.big-arrow {
+    @extend .arrow-button;
+
+    i {
+        border-width: 0 20px 20px 0;
+    }
+}
