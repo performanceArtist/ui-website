@@ -12,22 +12,32 @@ hmtl(lang='en')
   body
     #content
       h2 STANDARD BUTTONS
-      div
-        +standard_button('big-green-button') BUTTON
+      #standard-buttons
+        +standard_button('small-green-button') small green
+        +standard_button('big-green-button') big green
+        +standard_button('big-orange-button') big orange
+        +standard_button('small-orange-button') small orange
       
       h2 ARROW BUTTONS
-      div
+      #arrow-buttons
         +arrow_button('left-arrow')
         +arrow_button('right-arrow')
 
       h2 PERCENTAGES/PIE CHART
-        
+      #jtest
+
       h2 SLIDERS
-      +slider('50')
+      +slider('slider', '50')
+
       div
         +bubble('top-bubble')
           h2 WEIRD
         +bubble('right-bubble', {width:'100px', height:'100px'})
 
       h2 STAGES
+      div(id="bluecircle", data-percent="17", class="big")
+
+      h2 FORM ELEMENTS
+      
+      #test
         

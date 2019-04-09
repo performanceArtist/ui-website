@@ -1,3 +1,4 @@
+//base class
 .button {
     text-align: center;
     text-decoration: none;
@@ -9,6 +10,7 @@
     text-transform: uppercase;
 }
 
+//setters
 @mixin set-button-color($active, $passive) {
     color: $active;
     background-color: $passive;
@@ -33,9 +35,42 @@
     height: $height;
 }
 
+//helper classes
+%big-button {
+  @include set-button-size(224px, 70px);
+}
+
+%small-button {
+  @include set-button-size(156x, 46px);
+}
+
+%orange-button {
+  @include set-button-color($light-orange, $white); 
+}
+
+%green-button {
+  @include set-button-color($light-green, $white);
+}
+
+//"fully applied" classes
 .big-green-button {
-    @include set-button-color($light-green, $white);
-    @include set-button-size(236px, 70px)
+  @extend %big-button;
+  @extend %green-button;
+}
+
+.small-green-button {
+  @extend %small-button;
+  @extend %green-button;
+}
+
+.big-orange-button {
+  @extend %big-button;
+  @extend %orange-button;
+}
+
+.small-orange-button {
+  @extend %small-button;
+  @extend %orange-button;
 }
 
 [ripple] {

@@ -1,5 +1,3 @@
-//set-arrow-size overrides it
-$arrow-length: 7px;
 $arrow-button-border: 3px;
 
 @mixin set-arrow-size($button-size) {
@@ -21,7 +19,7 @@ $arrow-button-border: 3px;
     
 }
 
-@mixin set-arrow-color($def:$white, $hover:$light-grey, $active:$light-green) {
+@mixin set-arrow-color($def, $hover, $active) {
     background: $def; 
     box-shadow: 0 0 0 $arrow-button-border $active;
 
@@ -50,7 +48,7 @@ $arrow-button-border: 3px;
 
 .arrow-button {
     @include set-arrow-size(50px);
-    @include set-arrow-color();
+    @include set-arrow-color($white, $light-grey, $light-green);
 }
 
 .left-arrow {

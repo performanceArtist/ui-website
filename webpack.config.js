@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin= require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 const config = {
   entry: {
@@ -61,6 +62,10 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'main.css'
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+   })
   ],
 };
 
