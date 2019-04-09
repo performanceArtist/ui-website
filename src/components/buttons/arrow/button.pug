@@ -1,7 +1,4 @@
-mixin arrow_button(left=true, className='arrow-button')
+mixin arrow_button(className)
   a(href='javascript:void(0)')
-    div(class=className)
-      if left 
-          i.left-arrow
-      else 
-          i.right-arrow
+    div(class='arrow-button ' + className)
+      i

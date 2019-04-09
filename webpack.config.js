@@ -9,7 +9,7 @@ const config = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "main.js",
+    filename: 'main.js',
   },
 
   devServer: {
@@ -21,6 +21,16 @@ const config = {
       { 
         test: /\.pug$/,
         use: ['pug-loader']
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,

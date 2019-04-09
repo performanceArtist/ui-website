@@ -1,5 +1,7 @@
 include components/buttons/standard/button
 include components/buttons/arrow/button
+include components/progress/slider/slider
+include components/bubble/bubble
 
 doctype html
 
@@ -11,9 +13,21 @@ hmtl(lang='en')
     #content
       h2 STANDARD BUTTONS
       div
-        +standard_button('BUTTON')
+        +standard_button('big-green-button') BUTTON
       
       h2 ARROW BUTTONS
       div
-        +arrow_button
-        +arrow_button(false)
+        +arrow_button('left-arrow')
+        +arrow_button('right-arrow')
+
+      h2 PERCENTAGES/PIE CHART
+        
+      h2 SLIDERS
+      +slider('50')
+      div
+        +bubble('top-bubble')
+          h2 WEIRD
+        +bubble('right-bubble', {width:'100px', height:'100px'})
+
+      h2 STAGES
+        

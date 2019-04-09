@@ -4,7 +4,10 @@
 
 @import 'components/buttons/standard/button';
 @import 'components/buttons/arrow/button';
+@import 'components/progress/slider/slider';
+@import 'components/bubble/bubble';
 
 body {
+    margin:0;
     color: black;
 }

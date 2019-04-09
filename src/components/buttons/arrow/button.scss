@@ -1,64 +1,70 @@
-$arrow-angle: 135deg;
+//set-arrow-size overrides it
 $arrow-length: 7px;
-$arrow-width: 4px;
-$arrow-button-size: 50px;
 $arrow-button-border: 3px;
 
-.arrow-button {
-    @include circle($arrow-button-size);
-    
-    line-height: $arrow-button-size + $arrow-length;
+@mixin set-arrow-size($button-size) {
+    @include circle($button-size);
+    $arrow-length: $button-size*0.14;
+    $arrow-width: $button-size*0.08;
+
+    line-height: $button-size + $arrow-length + $arrow-width;
     text-align: center;
     display: inline-block;
-    background: $white; 
-    box-shadow: 0 0 0 $arrow-button-border $light-green;
     margin: $arrow-button-border;
-
+    
     i {
         border: solid;
-        border-color: $light-green;
-        
         border-width: 0 $arrow-width $arrow-width 0;
         display: inline-block;
         padding: $arrow-length;
     }
     
-    .left-arrow {
-        margin-left: $arrow-length;
-        transform: rotate($arrow-angle);
-        -webkit-transform: rotate($arrow-angle);
-    }
-    
-    .right-arrow {
-        margin-right: $arrow-length;
-        transform: rotate($arrow-angle - 180deg);
-        -webkit-transform: rotate($arrow-angle - 180deg);
+}
+
+@mixin set-arrow-color($def:$white, $hover:$light-grey, $active:$light-green) {
+    background: $def; 
+    box-shadow: 0 0 0 $arrow-button-border $active;
+
+    i {
+        border-color: $active;
     }
 
     &:hover {
-        background: $light-grey; 
-        box-shadow: 0 0 0 $arrow-button-border $light-grey;
+        background: $hover; 
+        box-shadow: 0 0 0 $arrow-button-border $hover;
     
         i {
-            border-color: $white;
+            border-color: $def;
         }
     }
 
     &:active {
-        background: $light-green; 
-        box-shadow: 0 0 0 $arrow-button-border $light-green;
+        background: $active;
+        box-shadow: 0 0 0 $arrow-button-border $active;
     
         i {
-            border-color: $white;
+            border-color: $def;
         }
     }
-
 }
 
-.big-arrow {
-    @extend .arrow-button;
+.arrow-button {
+    @include set-arrow-size(50px);
+    @include set-arrow-color();
+}
 
+.left-arrow {
     i {
-        border-width: 0 20px 20px 0;
+        margin-left: 14%;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+.right-arrow {
+    i {
+        margin-right: 14%;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
     }
 }

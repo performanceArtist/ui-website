@@ -1,2 +1,3 @@
-mixin standard_button(text, className='big-green-button')
-  button(class=className) #{text} 
+mixin standard_button(className='')
+  button(class='button ' + className)(ripple='ripple') 
+    block
