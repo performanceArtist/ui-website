@@ -14,6 +14,8 @@ include composite/profile/profile
 include composite/search/search
 include composite/dropdown/dropdown
 include composite/forms/message-form/message-form
+include composite/news/news
+include composite/chat/chat
 
 doctype html
 
@@ -67,8 +69,7 @@ hmtl(lang='en')
       h2 FORM ELEMENTS
       .row
         .left
-          div(style='text-align:left')
-            +message-form
+          +message-form
           h2 SEARCH/DROP DOWNS
             +search
             br
@@ -102,10 +103,21 @@ hmtl(lang='en')
       h2 NEWS & EVENTS
       .row
         .left
-          h2 left
+          +news-1({
+            image:'https://m-ch.ml/t/src/1552236824933.jpg', 
+            title:'Beta Uprising', 
+            date:'1 April 2019', 
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+          })
 
         .right
-          h2 right
+          +news-2({
+            image:'https://m-ch.ml/t/src/1555009318025.jpg', 
+            title:'Meme funeral', 
+            day:'24', 
+            month:'Feb',
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          })
 
       h2 LOCATION
 

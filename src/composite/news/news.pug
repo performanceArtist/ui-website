@@ -1,3 +1,23 @@
-mixin news(data) {
-    
-}
+include ../../components/buttons/standard/button
+
+mixin news-1(data)
+  .news-1
+    .news-left(style='background-image:url(' + data.image + ')')
+    .news-right
+      .news-cont
+        .news-title #{data.title}
+        .news-date #{data.date}
+        .news-text #{data.text}
+
+mixin news-2(data)
+  .news-2
+    .news-left(style='background-image:url(' + data.image + ')')
+    .news-right
+      .news-cont
+        .news-date 
+          span.news-date-day #{data.day}
+          span.news-date-month #{data.month}
+        .news-title #{data.title}
+        .news-text #{data.text}
+        +standard_button('big-green-button') 
+          | Add to calendar
