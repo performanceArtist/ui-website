@@ -1,0 +1,39 @@
+.sliderval {
+    input[type="range"]::-moz-range-progress {
+        background-color: $light-orange; 
+    }
+    
+    input[type="range"]::-moz-range-track {  
+        background-color: $light-grey;
+    }
+}
+
+.sliderval .showval {
+    color: $medium-grey;
+    font-weight: bold;
+}
+
+.sliderval input {
+    height: 40px;
+    width: 100%;
+}
+
+.sliderval input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: $light-orange;
+    cursor: pointer;
+}
+
+.sliderval input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $light-orange;
+    cursor: pointer;
+}
+
+

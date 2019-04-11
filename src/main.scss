@@ -5,9 +5,13 @@
 @import 'components/buttons/standard/button';
 @import 'components/buttons/arrow/button';
 @import 'components/progress/slider/slider';
+@import 'components/progress/sliderval/slider';
 @import 'components/bubble/bubble';
+@import 'components/progress/stage/stage';
+@import 'components/progress/chart/chart';
+@import 'components/input/checkbox/checkbox';
+@import 'components/input/text/text';
+@import 'components/input/textarea/textarea';
+@import 'components/avatar/avatar';
 
-body {
-    margin:0;
-    color: black;
-}
+@import 'composite/profile/profile';

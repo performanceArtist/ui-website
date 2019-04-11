@@ -1,0 +1,12 @@
+mixin sliderval(val, divBy=4)
+  div(class='sliderval')
+    input(type="range", min="0", max="100", value=val)
+    div
+      -n=0;
+      while n <= divBy
+        -perc = 100/divBy - 2.2
+        if n == 0
+          -perc=0;
+        span.showval(style='padding-left:' + perc + '%') #{n*(100/divBy)}
+        -n++
+        

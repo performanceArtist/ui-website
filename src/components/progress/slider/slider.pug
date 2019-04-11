@@ -1,6 +1,6 @@
 include ../../bubble/bubble
 
-mixin slider(className, val)
-  div(class=className)
+mixin slider(val)
+  .slider
     +bubble('bottom-bubble', {width:'36px', height:'24px'})
     input(type="range", min="0", max="100", value=val)

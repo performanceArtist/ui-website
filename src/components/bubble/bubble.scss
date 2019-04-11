@@ -3,7 +3,7 @@ $bubble-color: $light-orange;
 
 .bubble { 
     position: relative; 
-    background: $light-orange; 
+    background: $bubble-color; 
     border-radius: .4em; 
     &:after { 
         content: ''; 
@@ -14,14 +14,22 @@ $bubble-color: $light-orange;
     }
 } 
 
+@mixin set-bubble-color($color) {
+    background: $color;
+
+    &:after {
+        border-right-color: $color;
+    }
+}
+
 .top-bubble {
     @extend .bubble;
-    margin-top:$pointer-size;
-    
+    margin-top: $pointer-size;
+
     &:after {
         top: 0; 
         left: 50%; 
-        border-bottom-color: $bubble-color; 
+        border-bottom-color: $bubble-color;
         border-top: 0; 
         margin-left: -$pointer-size; 
         margin-top: -$pointer-size;
@@ -69,3 +77,4 @@ $bubble-color: $light-orange;
         margin-right: -$pointer-size;
     }
 }
+

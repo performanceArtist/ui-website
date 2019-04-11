@@ -1,0 +1,19 @@
+.circle {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.circle-text {
+    display: inline-block;
+    font-size: 50px;
+    color: $medium-grey;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    margin: 0;
+}
+
+.pie {
+    display: inline-block;
+}

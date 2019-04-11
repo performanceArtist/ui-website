@@ -5,16 +5,18 @@
     });
 
     document.querySelectorAll('.slider').forEach(function(el) {
-        var bubble = el.querySelector('.bubble'),
+        let bubble = el.querySelector('.bubble'),
             width = el.offsetWidth,
-            offset = -15,
+            offset = 40,
             input = el.querySelector('input');
 
         input.addEventListener('input', function() {
-            var npos = width*((this.value - this.min) / (this.max - this.min));
-            //console.log(npos);
+            let perc = (this.value - this.min) / (this.max - this.min),
+                npos = width*perc;
+
             bubble.innerHTML = this.value;
-            bubble.style.left = offset + npos + 'px';
+            bubble.style.left = npos - offset*perc + 'px';
+
         });
 
         input.dispatchEvent(event);

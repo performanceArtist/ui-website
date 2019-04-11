@@ -1,2 +1,11 @@
-mixin stage()
-  
+-var num=0
+
+mixin stage(stages, className='')
+  div(class='progress ' + className)
+    .progress-track
+    each st in stages
+      -num++;
+      if(num==1) 
+        div(class='progress-step is-active') #{st}
+      else
+        .progress-step #{st}

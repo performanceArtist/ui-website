@@ -1,0 +1,17 @@
+.profile {
+    display: flex;
+}
+
+.profile .bubble {
+    width: 60%;
+}
+
+.profile-1 {
+    .bubble {
+        @include set-bubble-color($light-grey);
+    }
+}
+
+.profile .avatar {
+
+}
