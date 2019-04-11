@@ -4,14 +4,57 @@
 
 .profile .bubble {
     width: 60%;
+    padding: 1%;
+    padding-top: 2%;
+    line-height: 1.2;
+
+    .profile-name {
+        font-size: 24px;
+    }
+
+    .profile-occupation {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .profile-icons {
+        margin-top: 10%;
+        font-size: 2em;
+        text-align: center;
+
+        i {
+            margin-left: 9%;
+        }
+
+        i:last-child {
+            margin-right: 9%;
+        }
+
+        i:first-child {
+            margin-right: 2.5%;
+        }
+    }
+
 }
 
 .profile-1 {
     .bubble {
-        @include set-bubble-color($light-grey);
+        @include set-bubble-color($light-grey, left);
+    }
+
+    .profile-icons i {
+        color: $medium-grey;
+    }
+
+    .profile-icons .fa-twitter {
+        color: $light-orange;
     }
 }
 
-.profile .avatar {
+.profile-2 {
+    color: $white;
+    .bubble {
+        @include set-bubble-color($light-green, left);
+    }
 
 }

@@ -1,0 +1,23 @@
+.message-form {
+    
+    width: 322px;
+
+    input, textarea {
+        display: block;
+        margin-bottom: 3%;
+    }
+
+    textarea {
+        width: 300px;
+        margin-bottom: 2%;
+    }
+
+    input[type=submit] {
+        margin-left:auto; 
+        margin-right:0;
+    }
+
+    input[type=text] {
+        width: 60%;
+    }
+}

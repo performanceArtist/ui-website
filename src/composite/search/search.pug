@@ -1,0 +1,7 @@
+include ../../components/input/text/text
+
+mixin search()
+  .search
+    +input-text('search', 'Search')
+    button(type='submit')
+      i(class='fa fa-search')

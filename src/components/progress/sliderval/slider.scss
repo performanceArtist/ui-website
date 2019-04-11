@@ -14,23 +14,23 @@
 }
 
 .sliderval input {
-    height: 40px;
+    height: 15px;
     width: 100%;
 }
 
 .sliderval input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%; 
     background: $light-orange;
     cursor: pointer;
 }
 
 .sliderval input::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: $light-orange;
     cursor: pointer;

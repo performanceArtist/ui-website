@@ -28,17 +28,17 @@ $arrow-button-border: 3px;
     }
 
     &:hover {
-        background: $hover; 
-        box-shadow: 0 0 0 $arrow-button-border $hover;
+        background: $active;
+        box-shadow: 0 0 0 $arrow-button-border $active;
     
         i {
             border-color: $def;
         }
     }
 
-    &:active {
-        background: $active;
-        box-shadow: 0 0 0 $arrow-button-border $active;
+    & .disabled-arrow {
+        background: $hover; 
+        box-shadow: 0 0 0 $arrow-button-border $hover;
     
         i {
             border-color: $def;
@@ -50,6 +50,13 @@ $arrow-button-border: 3px;
     @include set-arrow-size(50px);
     @include set-arrow-color($white, $light-grey, $light-green);
 }
+
+/*
+.disabled-arrow-button {
+    @include set-arrow-size(50px);
+    @include set-arrow-color($white, $light-grey, $light-green);
+}
+*/
 
 .left-arrow {
     i {

@@ -5,10 +5,11 @@ mixin profile(className, data)
   div(class='profile ' + className)
     +avatar(data.src)
     +bubble('left-bubble')
-      .avatar-name #{data.name}
-      .avatar-occupation #{data.occupation}
-      i(class='fa fa-facebook-f')
-      i(class='fa fa-twitter')
-      i(class='fa fa-dribbble')
+      .profile-name #{data.name}
+      .profile-occupation #{data.occupation}
+      .profile-icons
+        i(class='fa fa-facebook-f')
+        i(class='fa fa-twitter')
+        i(class='fa fa-dribbble')
 
     

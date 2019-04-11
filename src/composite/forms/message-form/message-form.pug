@@ -1,0 +1,6 @@
+mixin message-form(action='')
+  form(action=action, class='message-form')
+    +input-text('name', 'Your name')
+    +input-text('email', 'Your email')
+    +input-textarea('message', {placeholder:'Your message', cols:'20', rows:'6'})
+    input(type='submit', value='SUBMIT', class='button big-green-button')

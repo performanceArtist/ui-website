@@ -11,6 +11,9 @@ include components/input/text/text
 include components/input/textarea/textarea
 
 include composite/profile/profile
+include composite/search/search
+include composite/dropdown/dropdown
+include composite/forms/message-form/message-form
 
 doctype html
 
@@ -23,13 +26,13 @@ hmtl(lang='en')
       h2 STANDARD BUTTONS
       #standard-buttons
         +standard_button('small-green-button') 
-          | small green
+          | button
         +standard_button('big-green-button') 
-          | big green
+          | button
         +standard_button('big-orange-button')
-          | big orange
+          | button
         +standard_button('small-orange-button')
-          | small orange 
+          | button
       
       h2 ARROW BUTTONS
       #arrow-buttons
@@ -44,15 +47,18 @@ hmtl(lang='en')
         .pie
 
       h2 SLIDERS
-      #sliders
-        div
-          +slider('50')
-        div
-          +sliderval('40')
+      .row
+        .left
+          div
+            +slider('50')
+
+        .right
+          div
+            +sliderval('40')
 
       div
-        +bubble('top-bubble')
-          h2 WEIRD
+        //+bubble('top-bubble')
+        //  h2 WEIRD
         //+bubble('right-bubble', {width:'100px', height:'100px'})
 
       h2 STAGES
@@ -62,15 +68,11 @@ hmtl(lang='en')
       .row
         .left
           div(style='text-align:left')
-            +input-text('name', 'Your name')
+            +message-form
+          h2 SEARCH/DROP DOWNS
+            +search
             br
-            +input-text('email', 'Your email')
-            br
-            +input-textarea('message', 'Your message')
-            br
-            input(type='submit', value='SUBMIT', class='button big-green-button')
-
-        h2 SEARCH/DROP DOWNS
+            +dropdown
 
         .right
 
@@ -87,9 +89,33 @@ hmtl(lang='en')
           h2 PROFILES
           +profile('profile-1', {
             name:'Ricardo Milos', 
-            occupation:'Full-time flex', 
+            occupation:'FleXx CEO', 
             src:'https://m-ch.ml/rand/rB/18.jpeg'
           })
 
-      #test
+          +profile('profile-2', {
+            name:'Orang', 
+            occupation:'Home Inspector', 
+            src:'https://vignette.wikia.nocookie.net/surrealmemes/images/8/88/Orang_Transparent.png/revision/latest?cb=20181230153623'
+          })
+
+      h2 NEWS & EVENTS
+      .row
+        .left
+          h2 left
+
+        .right
+          h2 right
+
+      h2 LOCATION
+
+      .row
+        .left
+          h2 CALENDAR
+
+        .right
+          h2 MESSAGING
+
+      h2 VIDEO
+
         

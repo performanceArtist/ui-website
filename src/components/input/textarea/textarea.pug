@@ -1,2 +1,6 @@
-mixin input-textarea(name, placeholder='')
-  textarea(name=name, class='input-textarea', placeholder=placeholder, cols="30", rows="10")
+mixin input-textarea(name, options)
+  textarea(name=name, 
+           class='input-textarea', 
+           placeholder=options.placeholder, 
+           cols=options.cols, 
+           rows=options.rows)

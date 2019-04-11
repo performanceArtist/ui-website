@@ -1,7 +1,8 @@
 .input-textarea {
     background-color: $light-grey;
-    border: 2px solid $medium-grey;
+    border: none;
     font-family: inherit; 
     font-size: inherit;
-    padding: 8px;
+    padding: 10px;
+    resize: none;
 }

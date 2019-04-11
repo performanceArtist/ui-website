@@ -6,3 +6,22 @@
     width: $size;
     height: $size;
 }
+
+@mixin menu-item($color, $font-size) {
+    display: inline-block;
+
+    button {
+        display: inline-block;
+        background: $color;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        vertical-align: middle;
+        height: 2.25em;
+        width: 2.4em;
+        i {
+            font-size: $font-size;
+            color: $white;
+        }
+    }
+}
