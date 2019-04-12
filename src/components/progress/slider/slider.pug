@@ -1,6 +1,10 @@
 include ../../bubble/bubble
 
-mixin slider(val)
-  .slider
+mixin slider-1(val)
+  .slider-1
     +bubble('bottom-bubble', {width:'36px', height:'24px'})
     input(type="range", min="0", max="100", value=val)
+
+mixin slider-2()
+  .slider-2
+  

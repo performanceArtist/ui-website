@@ -52,6 +52,16 @@ const config = {
                 outputPath: 'fonts/'
             }
         }]
+      },
+      {
+        test: /[^\.]+\.(png|jpg)?$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'images/'
+            }
+        }]
       }
     ],
   },

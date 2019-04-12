@@ -4,7 +4,7 @@
         'cancelable': true
     });
 
-    document.querySelectorAll('.slider').forEach(function(el) {
+    document.querySelectorAll('.slider-1').forEach(function(el) {
         let bubble = el.querySelector('.bubble'),
             width = el.offsetWidth,
             offset = 40,

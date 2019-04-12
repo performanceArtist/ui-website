@@ -1,7 +1,6 @@
 include components/buttons/standard/button
 include components/buttons/arrow/button
 include components/progress/slider/slider
-include components/progress/sliderval/slider
 include components/bubble/bubble
 include components/progress/stage/stage
 include components/progress/chart/chart
@@ -9,6 +8,8 @@ include components/input/checkbox/checkbox
 include components/input/toggle/toggle
 include components/input/text/text
 include components/input/textarea/textarea
+include components/map/map
+include components/video/video
 
 include composite/profile/profile
 include composite/search/search
@@ -51,12 +52,11 @@ hmtl(lang='en')
       h2 SLIDERS
       .row
         .left
-          div
-            +slider('50')
+          +slider-1('50')
 
         .right
-          div
-            +sliderval('40')
+          .slider-2
+
 
       div
         //+bubble('top-bubble')
@@ -64,8 +64,7 @@ hmtl(lang='en')
         //+bubble('right-bubble', {width:'100px', height:'100px'})
 
       h2 STAGES
-      +stage(['one', 'two', 'three', 'four', 'five'])
-
+      +stage('stage-test')
       h2 FORM ELEMENTS
       .row
         .left
@@ -96,7 +95,7 @@ hmtl(lang='en')
 
           +profile('profile-2', {
             name:'Orang', 
-            occupation:'Home Inspector', 
+            occupation:'Health Inspector', 
             src:'https://vignette.wikia.nocookie.net/surrealmemes/images/8/88/Orang_Transparent.png/revision/latest?cb=20181230153623'
           })
 
@@ -120,13 +119,17 @@ hmtl(lang='en')
           })
 
       h2 LOCATION
+        +map('map')
       .row
         .left
           h2 CALENDAR
-
+          .calendar
+          //input(type='text', class='calendar', data-language='en')
         .right
           h2 MESSAGING
           +chat({name:'Ricardo Milos', image:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'})
       h2 VIDEO
+      br
+      +video('https://www.w3schools.com/html/mov_bbb.mp4')
 
         

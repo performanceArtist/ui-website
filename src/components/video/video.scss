@@ -1,0 +1,21 @@
+.controls {
+    background: rgba($color: black, $alpha: 0.1);
+
+    button {
+        cursor: pointer;
+        border: none;
+        color: $white;
+    }
+
+    .play {
+        background-color: black;
+        font-size: 1.5em;
+        float: left;
+    }
+
+    .fullscreen {
+        background-color: $light-orange;
+        font-size: 2em;
+        font-style: italic;
+    }
+}

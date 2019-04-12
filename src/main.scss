@@ -2,17 +2,22 @@
 @import 'partials/defaults';
 @import 'partials/layout';
 
+@import 'components/bubble/bubble';
+@import 'components/avatar/avatar';
+@import 'components/map/map';
+@import 'components/video/video';
+
 @import 'components/buttons/standard/button';
 @import 'components/buttons/arrow/button';
+
+
 @import 'components/progress/slider/slider';
-@import 'components/progress/sliderval/slider';
-@import 'components/bubble/bubble';
 @import 'components/progress/stage/stage';
 @import 'components/progress/chart/chart';
+
 @import 'components/input/checkbox/checkbox';
 @import 'components/input/text/text';
 @import 'components/input/textarea/textarea';
-@import 'components/avatar/avatar';
 
 @import 'composite/profile/profile';
 @import 'composite/search/search';
@@ -20,3 +25,4 @@
 @import 'composite/forms/message-form/message-form';
 @import 'composite/news/news';
 @import 'composite/chat/chat';
+@import 'composite/datepicker/datepicker';

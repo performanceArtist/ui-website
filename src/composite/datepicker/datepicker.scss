@@ -1,0 +1,41 @@
+.calendar {
+
+    .ui-widget.ui-widget-content {
+        padding: 0;
+        border: none;
+    }
+
+    .ui-datepicker-year {
+        display: none;
+    }
+
+    .ui-datepicker .ui-datepicker-header, .ui-datepicker-calendar thead {
+        background-color: $light-orange;
+        color: $white;
+    }
+
+    .ui-datepicker-calendar thead {
+        font-size: 0.7em;
+        font-weight: bodl;
+        text-transform: uppercase;
+    }
+
+    .ui-state-active, .ui-widget-content .ui-state-active {
+        background-color: $light-orange;
+        border: none;
+        text-align: center;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+        width: 100%;
+        text-align: left;
+        border: none;
+        margin: 0;
+        padding: 4%;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane {
+        border: none;
+        margin: 0;
+    }
+}
