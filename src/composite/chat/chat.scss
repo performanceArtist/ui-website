@@ -1,0 +1,75 @@
+.chat {
+    $avatar-size: 120px;
+
+    border-radius: 0.4em;
+    overflow: hidden;
+    text-align: center;
+    width: 380px;
+
+    i {
+        font-size: 1.6em;
+        color: $dark-grey;
+    }
+    
+    .avatar {
+        width: $avatar-size;
+        height: $avatar-size;
+    }
+
+    .chat-name {
+        padding: 7%;
+        font-size: 2em;
+        background-color: $light-green;
+        color: $white;
+    }
+
+    .chat-header {
+        height: 36px;
+        background-color: $medium-green;
+    }
+
+    .chat-avatar {
+        position: relative;
+        height: 20px;
+        background-color: $light-grey;
+        padding: 5%;
+        padding-bottom: 0;
+        .avatar {
+            position: absolute;
+            top: -$avatar-size/2;
+            left: 35%;
+        }
+    }
+
+    .chat-content {
+        background-color: $light-grey;
+        padding: 10%;
+        .bubble {
+            @include set-bubble-color($white, top);
+            padding: 1em;
+            text-align: left;
+            margin-bottom: 6%;
+        }
+    }
+
+    textarea {
+        display: block;
+        background-color: $light-grey;
+        border: 3px solid $white;
+        border-radius: 0.4em;
+        margin-bottom: 6%;
+        width: 90%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .fa-comments {
+        float: left;
+    }
+    .fa-camera {
+        float: right;
+    }
+
+}

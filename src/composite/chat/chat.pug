@@ -1,6 +1,19 @@
+include ../../components/buttons/standard/button
 include ../../components/avatar/avatar
 include ../../components/bubble/bubble
 include ../../components/input/textarea/textarea
 
 mixin chat(data)
-  
+  .chat
+    .chat-name #{data.name}
+    .chat-header
+    .chat-avatar
+      +avatar(data.image)
+      i(class='fa fa-comments')
+      i(class='fa fa-camera')
+    .chat-content
+      +bubble('top-bubble')
+        | Hey! So are we cool to meet at the art gallery? Say 8pm
+      +input-textarea('chat-reply', {placeholder:'Yeah that sounds great. See you then.', rows:5})
+      +standard_button('big-green-button')
+        | reply

@@ -22,6 +22,8 @@
       pos = ripple.getBoundingClientRect();
       x = e.pageX - pos.left - (size / 2);
       y = e.pageY - pos.top - (size / 2);
+      console.log(x, y, e.pageY, pos.top, document.body.scrollTop);
+      y = 0;
       style = 'top:' + y + 'px; left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
       ripple.rippleContainer.appendChild(rippler);
       return rippler.setAttribute('style', style);
