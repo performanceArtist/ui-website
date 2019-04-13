@@ -7,7 +7,7 @@
     height: $size;
 }
 
-@mixin menu-item($color, $font-size) {
+@mixin menu-item($color, $font-size, $font-color: $white) {
     display: inline-block;
 
     button {
@@ -21,7 +21,7 @@
         width: 2.4em;
         i {
             font-size: $font-size;
-            color: $white;
+            color: $font-color;
         }
     }
 }

@@ -14,6 +14,7 @@ require('./components/map/map');
 window.onload = function() {
   require('./components/progress/slider/slider');
   require('./components/buttons/standard/ripple');
+  require('./components/video/video');
 
   $.switcher('.toggle-switch')
 

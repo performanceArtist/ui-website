@@ -1,5 +1,4 @@
 import ymaps from 'ymaps';
-import { variableDeclarator } from 'babel-types';
 
 ymaps.load('https://api-maps.yandex.ru/2.1/?apikey=5745b110-4bb1-4b0e-8202-4833743efa08&lang=en_RU&load=Map').then(maps => {
   var map = new maps.Map('map', {

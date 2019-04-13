@@ -1,5 +1,19 @@
+$video-width: 720px;
+
+.video {
+    width: $video-width;
+    position: relative;
+    video {
+        width: $video-width;
+    }
+}
+
 .controls {
-    background: rgba($color: black, $alpha: 0.1);
+    background: rgba($color: black, $alpha: 0.35);
+    position: absolute;
+    width: $video-width;
+    height: $video-width*0.07;
+    bottom: 1%;
 
     button {
         cursor: pointer;
@@ -7,15 +21,38 @@
         color: $white;
     }
 
-    .play {
-        background-color: black;
-        font-size: 1.5em;
+    .video-progress {
         float: left;
+        width: $video-width*0.82;
+        height: $video-width*0.012;
+        border: none;
+        cursor: pointer;
+        margin-top: 2.7%;
+
+        .ui-widget-header {
+            background: $light-orange;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default {
+            display: none;
+        }
+
+    }
+
+    .play {
+        @include menu-item(black, $video-width*0.025);
+        float: left;
+        margin-right: $video-width*0.02;
     }
 
     .fullscreen {
-        background-color: $light-orange;
-        font-size: 2em;
-        font-style: italic;
+        @include menu-item($light-orange, $video-width*0.03);
+        float: left;
+        margin-left: $video-width*0.02;
+    }
+
+    .play button, .fullscreen button {
+        width: $video-width*0.07;
+        height: $video-width*0.07;
     }
 }

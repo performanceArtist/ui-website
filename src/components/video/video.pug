@@ -1,9 +1,12 @@
 mixin video(src, type="video/mp4")
-  video(class='video', width="720px", height="420px")
-    source(src=src, type=type)
-  .controls
-    button.play
-      i(class='fa fa-play')
-    button.fullscreen
-      i(class='fa fa-arrows-alt')
-    //i(class='fa fa-pause')
+  .video
+    video
+      source(src=src, type=type)
+    .controls
+      .play
+        button
+          i(class='fa fa-play')
+      .video-progress
+      .fullscreen
+        button
+          i(class='fa fa-arrows-alt')
