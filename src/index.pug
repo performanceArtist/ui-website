@@ -1,137 +1,102 @@
-include components/buttons/standard/button
-include components/buttons/arrow/button
-include components/progress/slider/slider
-include components/bubble/bubble
-include components/progress/stage/stage
-include components/progress/chart/chart
-include components/input/checkbox/checkbox
-include components/input/toggle/toggle
-include components/input/text/text
-include components/input/textarea/textarea
-include components/map/map
-include components/video/video
+extends layout
 
-include composite/profile/profile
-include composite/search/search
-include composite/dropdown/dropdown
-include composite/forms/message-form/message-form
-include composite/news/news
-include composite/chat/chat
+block content
+  #content
+    h2 STANDARD BUTTONS
+    #standard-buttons
+      +standard_button('small-green-button') 
+        | button
+      +standard_button('big-green-button') 
+        | button
+      +standard_button('big-orange-button')
+        | button
+      +standard_button('small-orange-button')
+        | button
+    
+    h2 ARROW BUTTONS
+    #arrow-buttons
+      +arrow_button('left-arrow', {disabled:true})
+      +arrow_button('right-arrow')
+    h2 PERCENTAGES/PIE CHART
+    #percentages
+      .circle
+        .circle-text
 
-doctype html
-
-hmtl(lang='en')
-  head
-    meta(charset='utf-8')
-    title UI page
-  body
-    #content
-      h2 STANDARD BUTTONS
-      #standard-buttons
-        +standard_button('small-green-button') 
-          | button
-        +standard_button('big-green-button') 
-          | button
-        +standard_button('big-orange-button')
-          | button
-        +standard_button('small-orange-button')
-          | button
+      .pie
+    h2 SLIDERS
+    .row
+      .left
+        +slider-1
+      .right
+        .slider-2
+      //+bubble('top-bubble')
+      //  h2 WEIRD
+      //+bubble('right-bubble', {style:{width:'100px', height:'100px'}})
+    h2 STAGES
+    +stage('stage-test')
+    h2 FORM ELEMENTS
+    .row
+      .left
+        +message-form
+        h2 SEARCH/DROP DOWNS
+          +search
+          br
+          +dropdown
+      .right
+        h2 TOGGLES
+        div
+          +toggle('test', 'test')
+        h2 TICK BOXES
+        form
+          h3 Radio
+          +checkmark('test', {type:'radio', value:'ok', label:'ok'})
+          br
+          +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
+          br
+          h3 Checkbox
+          +checkmark('meme', {type:'checkbox', label:'test'})
+        //i(class='fa fa-search', style='color:grey;font-size:2em')
+        //+avatar()
+        h2 PROFILES
+        +profile('profile-1', {
+          name:'Ricardo Milos', 
+          occupation:'FleXx CEO', 
+          src:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'
+        })
+        +profile('profile-2', {
+          name:'Orang', 
+          occupation:'Health Inspector', 
+          src:'https://vignette.wikia.nocookie.net/surrealmemes/images/8/88/Orang_Transparent.png/revision/latest?cb=20181230153623'
+        })
+    h2 NEWS & EVENTS
+    .row
+      .left
+        +news-1({
+          image:'https://m-ch.ml/t/src/1552236824933.jpg', 
+          title:'Beta Uprising', 
+          date:'1 April 2019', 
+          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+        })
+      .right
+        +news-2({
+          image:'https://m-ch.ml/t/src/1555009318025.jpg', 
+          title:'Meme funeral', 
+          day:'24', 
+          month:'Feb',
+          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        })
+    h2 LOCATION
+      +map('map', 'Meet us!', '1259 California st', 'san francisco, ca')
+    .row
+      .left
+        h2 CALENDAR
+        .calendar
+        //input(type='text', class='calendar', data-language='en')
+      .right
+        h2 MESSAGING
+        +chat({name:'Ricardo Milos', image:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'})
+    h2 VIDEO
+    #video
+      +video('https://www.w3schools.com/html/mov_bbb.mp4')
+      br
       
-      h2 ARROW BUTTONS
-      #arrow-buttons
-        +arrow_button('left-arrow')
-        +arrow_button('right-arrow')
-
-      h2 PERCENTAGES/PIE CHART
-      #percentages
-        .circle
-          .circle-text
-  
-        .pie
-
-      h2 SLIDERS
-      .row
-        .left
-          +slider-1('50')
-
-        .right
-          .slider-2
-
-
-      div
-        //+bubble('top-bubble')
-        //  h2 WEIRD
-        //+bubble('right-bubble', {width:'100px', height:'100px'})
-
-      h2 STAGES
-      +stage('stage-test')
-      h2 FORM ELEMENTS
-      .row
-        .left
-          +message-form
-          h2 SEARCH/DROP DOWNS
-            +search
-            br
-            +dropdown
-
-        .right
-
-          h2 TOGGLES
-          div
-            +toggle('test', 'test')
-
-          h2 TICK BOXES
-          div
-            +checkbox('test')
-          //i(class='fa fa-search', style='color:grey;font-size:2em')
-          //+avatar()
-
-          h2 PROFILES
-          +profile('profile-1', {
-            name:'Ricardo Milos', 
-            occupation:'FleXx CEO', 
-            src:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'
-          })
-
-          +profile('profile-2', {
-            name:'Orang', 
-            occupation:'Health Inspector', 
-            src:'https://vignette.wikia.nocookie.net/surrealmemes/images/8/88/Orang_Transparent.png/revision/latest?cb=20181230153623'
-          })
-
-      h2 NEWS & EVENTS
-      .row
-        .left
-          +news-1({
-            image:'https://m-ch.ml/t/src/1552236824933.jpg', 
-            title:'Beta Uprising', 
-            date:'1 April 2019', 
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
-          })
-
-        .right
-          +news-2({
-            image:'https://m-ch.ml/t/src/1555009318025.jpg', 
-            title:'Meme funeral', 
-            day:'24', 
-            month:'Feb',
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          })
-
-      h2 LOCATION
-        +map('map')
-      .row
-        .left
-          h2 CALENDAR
-          .calendar
-          //input(type='text', class='calendar', data-language='en')
-        .right
-          h2 MESSAGING
-          +chat({name:'Ricardo Milos', image:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'})
-      h2 VIDEO
-      #video
-        +video('https://www.w3schools.com/html/mov_bbb.mp4')
-        br
-
-
-        

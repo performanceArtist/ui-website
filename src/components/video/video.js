@@ -1,5 +1,5 @@
-(function updateVideo() {
-    document.querySelectorAll('.video').forEach(cont => {
+function updateVideo(selector) {
+    document.querySelectorAll(selector).forEach(cont => {
         let jcont = $(cont),
             video = cont.querySelector('video'),
             progress = jcont.find('.video-progress');
@@ -76,4 +76,6 @@
         }
     }
 
-})();
+};
+
+module.exports = updateVideo;

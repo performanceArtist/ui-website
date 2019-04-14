@@ -1,3 +1,3 @@
-mixin bubble(className, style={})
-  div(style=style, class='bubble ' + className)
+mixin bubble(className, opt={})
+  div(style=opt.style, class=`bubble ${className}`)
     block

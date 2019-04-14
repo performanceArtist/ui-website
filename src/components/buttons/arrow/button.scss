@@ -19,7 +19,7 @@ $arrow-button-border: 3px;
     
 }
 
-@mixin set-arrow-color($def, $hover, $active) {
+@mixin set-arrow-color($def, $active) {
     background: $def; 
     box-shadow: 0 0 0 $arrow-button-border $active;
 
@@ -35,28 +35,26 @@ $arrow-button-border: 3px;
             border-color: $def;
         }
     }
+}
 
-    & .disabled-arrow {
-        background: $hover; 
-        box-shadow: 0 0 0 $arrow-button-border $hover;
-    
-        i {
-            border-color: $def;
-        }
+@mixin set-disabled-color($def, $disabled) {
+    background: $disabled; 
+    box-shadow: 0 0 0 $arrow-button-border $disabled;
+
+    i {
+        border-color: $def;
     }
 }
 
 .arrow-button {
     @include set-arrow-size(50px);
-    @include set-arrow-color($white, $light-grey, $light-green);
+    @include set-arrow-color($white, $light-green);
 }
 
-/*
 .disabled-arrow-button {
     @include set-arrow-size(50px);
-    @include set-arrow-color($white, $light-grey, $light-green);
+    @include set-disabled-color($white, $light-grey);
 }
-*/
 
 .left-arrow {
     i {

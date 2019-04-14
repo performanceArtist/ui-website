@@ -1,9 +1,9 @@
 .message-form {
     
     width: 322px;
+    text-align: left;
 
     input, textarea {
-        display: block;
         margin-bottom: 3%;
     }
 
@@ -13,6 +13,7 @@
     }
 
     input[type=submit] {
+        display: block;
         margin-left:auto; 
         margin-right:0;
     }
@@ -20,4 +21,26 @@
     input[type=text] {
         width: 60%;
     }
+
+    .bubble {
+        display: none;
+        height: 2.5em;
+        width: 6em;
+        text-align: center;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 240%;
+        margin-left: 0.8em;
+    }
+
+}
+
+.error-bubble {
+    @include set-bubble-color($light-orange, left);
+}
+
+.okay-bubble {
+    @include set-bubble-color($light-green, left);
 }

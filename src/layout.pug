@@ -1,0 +1,32 @@
+include components/bubble/bubble
+include components/map/map
+include components/video/video
+
+include components/buttons/standard/button
+include components/buttons/arrow/button
+
+include components/progress/slider/slider
+include components/progress/stage/stage
+include components/progress/chart/chart
+
+include components/input/checkmark/checkmark
+include components/input/toggle/toggle
+include components/input/text/text
+include components/input/textarea/textarea
+
+include composite/profile/profile
+include composite/search/search
+include composite/dropdown/dropdown
+include composite/forms/message-form/message-form
+include composite/news/news
+include composite/chat/chat
+
+doctype html
+
+hmtl(lang='en')
+  head
+    meta(charset='utf-8')
+    title UI page
+    script(src='https://api-maps.yandex.ru/2.1/?apikey=5745b110-4bb1-4b0e-8202-4833743efa08&lang=ru_RU&load=Map', type='text/javascript')
+  body
+    block content

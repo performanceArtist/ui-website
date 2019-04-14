@@ -1,2 +1,13 @@
-mixin map(id)
+mixin map(id, title, street, city)
   .map(id=id)
+    .map-info     
+      .map-info-left
+        .map-title #{title}
+        .map-address 
+          | #{street}
+          br
+          | #{city}
+      .map-info-right
+        i(class="fa fa-bullseye")
+        i(class="fa fa-map-marker")
+
