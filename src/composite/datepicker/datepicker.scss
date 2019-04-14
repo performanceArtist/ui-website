@@ -49,6 +49,18 @@
         margin: 0;
     }
 
+    .calendar .ui-state-active, .calendar .ui-widget-content .ui-state-active {
+        color: $white;
+    }
+
+    .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+        color: $white;
+    }
+
+    table tbody tr td a {
+        text-align: center;
+    }
+
     .datepicker-custom-date {
         background: $light-orange;
         font-size: 5em;

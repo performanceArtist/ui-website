@@ -1,4 +1,6 @@
-import "./fonts/comic/fonts.css";
+import './fonts/myriad_pro/fonts.css';
+import './fonts/myriad_pro_light/fonts.css';
+import './fonts/myriad_pro_bold/fonts.css';
 import 'font-awesome/scss/font-awesome.scss';
 import 'jquery-ui-dist/jquery-ui.min.css';
 import './plugins/jquery-switcher/css/switcher.css';
@@ -14,7 +16,7 @@ const slider = require('./components/progress/slider/slider');
 const video = require('./components/video/video');
 const messageForm = require('./composite/forms/message-form/message-form');
 const datepicker = require('./composite/datepicker/datepicker');
-//const map = require('./components/map/map');
+const map = require('./components/map/map');
 
 window.onload = function() {
     //adds ripple to elements with custom 'ripple' attribute
@@ -47,13 +49,14 @@ window.onload = function() {
     messageForm.addValidator('.message-form');
 
     datepicker('.calendar');
-    
+
     $('#stage-test').progressbar({
         // ~: failed
         // @: current
         steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']
     });
 
+    map();
     video('#video');
 }
 

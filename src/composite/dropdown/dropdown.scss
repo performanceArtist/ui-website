@@ -1,3 +1,7 @@
 .dropdown {
     @include menu-item($light-green, 24px);
+    button {
+        vertical-align: middle;
+        height: 2.45em;
+    }
 }

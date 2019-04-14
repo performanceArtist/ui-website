@@ -1,12 +1,19 @@
 body {
     margin:0;
     color: black;
+    font-family: 'Conv_Myriad Pro Light';
+    letter-spacing: 0.6px;
 }
+
 
 #content {
     margin: auto;
     width: 70%;
     text-align: center;
+    h1, h2 {
+        font-family: 'Conv_Myriad Pro Bold';
+    }
+    
 }
 
 .row {
