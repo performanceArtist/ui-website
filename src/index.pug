@@ -49,10 +49,11 @@ block content
         h2 TICK BOXES
         form
           h3 Radio
-          +checkmark('test', {type:'radio', value:'ok', label:'ok'})
-          br
-          +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
-          br
+          #radiobuttons
+            +checkmark('test', {type:'radio', value:'ok', label:'ok'})
+            br
+            +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
+            br
           h3 Checkbox
           +checkmark('meme', {type:'checkbox', label:'test'})
         //i(class='fa fa-search', style='color:grey;font-size:2em')

@@ -13,7 +13,7 @@ const chart = require('./components/progress/chart/chart');
 const slider = require('./components/progress/slider/slider');
 const video = require('./components/video/video');
 const messageForm = require('./composite/forms/message-form/message-form');
-
+const datepicker = require('./composite/datepicker/datepicker');
 //const map = require('./components/map/map');
 
 window.onload = function() {
@@ -46,19 +46,12 @@ window.onload = function() {
 
     messageForm.addValidator('.message-form');
 
+    datepicker('.calendar');
+    
     $('#stage-test').progressbar({
         // ~: failed
         // @: current
         steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']
-    });
-
-    $('.calendar').datepicker({
-        showOtherMonths: true,
-        selectOtherMonths: true,
-        showButtonPanel: true,
-        dayNamesMin: ['sat', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-        minDate: null,
-        maxDate: null
     });
 
     video('#video');

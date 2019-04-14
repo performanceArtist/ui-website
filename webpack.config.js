@@ -67,7 +67,12 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.pug'
+      template: './src/index.pug',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/test.pug',
+      filename: 'test.html'
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css'
