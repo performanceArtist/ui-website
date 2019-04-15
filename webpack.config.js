@@ -1,22 +1,45 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin= require("mini-css-extract-plugin");
+const MiniCssExtractPlugin= require('mini-css-extract-plugin');
 const webpack = require('webpack');
+
+const htmlFiles = ['index', 'ui', 'test'].map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/views/${name}/${name}.pug`,
+    filename: `${name}.html`,
+    chunks: [name, 'commons', 'styles']
+  })
+});
 
 const config = {
   entry: {
-    app: './src/app.js'
+    styles: './src/styles.js',
+    index: './src/views//index/index.js',
+    ui: './src/views/ui/ui.js',
+    test: './src/views/test/test.js'
   },
-
+  optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					name: "commons",
+					chunks: "initial",
+					minChunks: 2,
+					minSize: 0
+				}
+			}
+		}
+	},
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: 'js/[name].js',
+    publicPath: '/test/'
   },
 
   devServer: {
     port: 5000,
   },
-
+  //devtool: 'source-map',
   module: {
     rules: [
       { 
@@ -49,7 +72,7 @@ const config = {
             loader: 'file-loader',
             options: {
                 name: '[name].[ext]',
-                outputPath: 'fonts/'
+                outputPath: 'fonts'
             }
         }]
       },
@@ -66,22 +89,14 @@ const config = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.pug',
-      filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/test.pug',
-      filename: 'test.html'
-    }),
     new MiniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'css/[name].css'
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
    })
-  ],
+  ].concat(htmlFiles),
 };
 
 module.exports = config;

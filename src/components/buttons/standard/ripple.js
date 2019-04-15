@@ -1,4 +1,5 @@
-(function() { var cleanUp, debounce, i, len, ripple, rippleContainer, ripples, showRipple;
+module.exports = function ripple() { 
+  var cleanUp, debounce, i, len, ripple, rippleContainer, ripples, showRipple;
 
     debounce = function(func, delay) {
       var inDebounce;
@@ -22,7 +23,7 @@
       pos = ripple.getBoundingClientRect();
       x = e.pageX - pos.left - (size / 2);
       y = e.pageY - pos.top - (size / 2);
-      console.log(x, y, e.pageY, pos.top, document.body.scrollTop);
+      //console.log(x, y, e.pageY, pos.top, document.body.scrollTop);
       y = 0;
       style = 'top:' + y + 'px; left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
       ripple.rippleContainer.appendChild(rippler);
@@ -46,4 +47,4 @@
       ripple.rippleContainer = rippleContainer;
       ripple.appendChild(rippleContainer);
     }
-}());
+}
