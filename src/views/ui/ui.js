@@ -8,7 +8,7 @@ import '../../static/images/orang.jpg';
 
 import '../../static/videos/bunny.mp4';
 
-const scripts = require('../../scripts');
+import * as scripts from '../../scripts';
 
 window.onload = function() {
     //automatically adds ripple to the elements with custom 'ripple' attribute
@@ -38,7 +38,7 @@ window.onload = function() {
 
     $.switcher('.toggle-switch');
 
-    scripts.messageForm.addValidator('.message-form');
+    scripts.messageForm('.message-form');
 
     scripts.datepicker('.calendar');
 
@@ -48,7 +48,7 @@ window.onload = function() {
         steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']
     });
 
-    scripts.map('map');
+    scripts.myMap('map');
 
     scripts.video('#video');
 }

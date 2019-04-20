@@ -1,7 +1,7 @@
 import '../../styles.js';
 
-const scripts = require('../../scripts');
+import {ripple} from '../../scripts';
 
 window.onload = function() {
-    scripts.ripple();
+    ripple();
 }

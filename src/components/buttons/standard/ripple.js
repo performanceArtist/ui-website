@@ -1,4 +1,4 @@
-module.exports = function ripple() { 
+export default function ripple() { 
   var cleanUp, debounce, i, len, ripple, rippleContainer, ripples, showRipple;
 
     debounce = function(func, delay) {

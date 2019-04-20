@@ -1,4 +1,4 @@
-const validator = require('../../../scripts/validator');
+import validator from './validator.js';
 
 function extract(cont) {
     return {
@@ -19,13 +19,11 @@ function validate(el, vald) {
     });
 }
 
-module.exports = {
-    addValidator: function(selector) {
-        let form = document.querySelector(selector),
-            name = extract(form.querySelector('.message-name')),
-            email = extract(form.querySelector('.message-email'));
+export default function(selector) {
+    let form = document.querySelector(selector),
+        name = extract(form.querySelector('.message-name')),
+        email = extract(form.querySelector('.message-email'));
 
-        validate(name, validator.name);
-        validate(email, validator.email);
-    }
+    validate(name, validator.name);
+    validate(email, validator.email);
 }

@@ -78,4 +78,4 @@ function updateVideo(selector) {
 
 };
 
-module.exports = updateVideo;
+export default updateVideo;

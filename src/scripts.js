@@ -1,17 +1,22 @@
-//add dependencies
-(function() {
-    require('jquery-ui-dist/jquery-ui');
-    require('./plugins/jquery-switcher/js/jquery.switcher.min');
-    require('./plugins/progressbar/jquery.progressbar');
-})();
+//add JQuery dependencies
+import 'jquery-ui-dist/jquery-ui';
+import './plugins/jquery-switcher/js/jquery.switcher.min';
+import './plugins/progressbar/jquery.progressbar';
 
-//export wrappers
-module.exports = {
-    ripple: require('./components/buttons/standard/ripple'),
-    chart: require('./components/progress/chart/chart'),
-    slider: require('./components/progress/slider/slider'),
-    video: require('./components/video/video'),
-    messageForm: require('./composite/forms/message-form/message-form'),
-    datepicker: require('./composite/datepicker/datepicker'),
-    map: require('./components/map/map')
+import ripple from './components/buttons/standard/ripple';
+import * as chart from './components/progress/chart/chart';
+import * as slider from './components/progress/slider/slider';
+import video from './components/video/video';
+import messageForm from './composite/forms/message-form/message-form';
+import datepicker from './composite/datepicker/datepicker';
+import myMap from './components/map/map';
+    
+export {
+    ripple,
+    chart,
+    slider,
+    video,
+    messageForm,
+    datepicker,
+    myMap
 }

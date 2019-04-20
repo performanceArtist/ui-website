@@ -1,4 +1,4 @@
-module.exports = function addCalendar(selector) {
+export default function addCalendar(selector) {
     const el = $(selector);
     el.datepicker({
         showOtherMonths: true,

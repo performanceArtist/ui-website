@@ -1,8 +1,8 @@
-const ymaps = require('ymaps').default;
+import ymaps from 'ymaps';
 
-require('../../static/images/baloon.png');
+import '../../static/images/baloon.png';
 
-module.exports = function updateMap(id) {
+export default function updateMap(id) {
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=5745b110-4bb1-4b0e-8202-4833743efa08').then(ymaps => {
         var myMap = new ymaps.Map(id, {
             center: [55.751574, 37.573856],
