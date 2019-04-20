@@ -1,6 +1,7 @@
-const scripts = require('../../scripts');
+import '../../styles.js';
+import './index.scss';
 
-import './wot.scss';
+const scripts = require('../../scripts');
 
 window.onload = function() {
     scripts.ripple();

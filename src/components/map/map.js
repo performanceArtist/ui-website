@@ -1,5 +1,7 @@
 const ymaps = require('ymaps').default;
 
+require('../../static/images/baloon.png');
+
 module.exports = function updateMap(id) {
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=5745b110-4bb1-4b0e-8202-4833743efa08').then(ymaps => {
         var myMap = new ymaps.Map(id, {
@@ -11,7 +13,7 @@ module.exports = function updateMap(id) {
         }),
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
             iconLayout: 'default#image',
-            iconImageHref: 'https://m-ch.ml/t/src/1555262081604.png',
+            iconImageHref: 'images/baloon.png',
             iconImageSize: [60, 60],
             iconImageOffset: [-5, -38]
         });

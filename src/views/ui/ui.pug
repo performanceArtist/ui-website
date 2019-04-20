@@ -63,25 +63,25 @@ block content
         +profile('profile-1', {
           name:'Ricardo Milos', 
           occupation:'FleXx CEO', 
-          src:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'
+          src:'images/ricardo.jpg'
         })
         +profile('profile-2', {
           name:'Orang', 
           occupation:'Health Inspector', 
-          src:'https://vignette.wikia.nocookie.net/surrealmemes/images/8/88/Orang_Transparent.png/revision/latest?cb=20181230153623'
+          src:'images/orang.jpg'
         })
     h2 NEWS & EVENTS
     .row
       .left
         +news-1({
-          image:'https://m-ch.ml/t/src/1552236824933.jpg', 
+          image:'images/animal.jpg', 
           title:'Beta Uprising', 
           date:'1 April 2019', 
           text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
         })
       .right
         +news-2({
-          image:'https://m-ch.ml/t/src/1555009318025.jpg', 
+          image:'images/bear.jpg', 
           title:'Meme funeral', 
           day:'24', 
           month:'Feb',
@@ -96,9 +96,9 @@ block content
         //input(type='text', class='calendar', data-language='en')
       .right
         h2 MESSAGING
-        +chat({name:'Ricardo Milos', image:'https://steamuserimages-a.akamaihd.net/ugc/964231421198448119/2EB398149D22ECEEAE4B1CFB76FF4CFD8BF54EC1/'})
+        +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
     h2 VIDEO
     #video
-      +video('https://www.w3schools.com/html/mov_bbb.mp4')
+      +video('/videos/bunny.mp4')
       br
       

@@ -7,14 +7,13 @@ const htmlFiles = ['index', 'ui', 'test'].map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/views/${name}/${name}.pug`,
     filename: `${name}.html`,
-    chunks: [name, 'commons', 'styles']
+    chunks: [name, 'commons']
   })
 });
 
 const config = {
   entry: {
-    styles: './src/styles.js',
-    index: './src/views//index/index.js',
+    index: './src/views/index/index.js',
     ui: './src/views/ui/ui.js',
     test: './src/views/test/test.js'
   },
@@ -33,7 +32,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
-    publicPath: '/test/'
+    publicPath: '/'
+    //publicPath: '/test/'
   },
 
   devServer: {
@@ -77,12 +77,22 @@ const config = {
         }]
       },
       {
-        test: /[^\.]+\.(png|jpg)?$/,
+        test: /[^\.]+\.(png|jpg|gif)?$/,
         use: [{
             loader: 'file-loader',
             options: {
                 name: '[name].[ext]',
                 outputPath: 'images/'
+            }
+        }]
+      },
+      {
+        test: /[^\.]+\.(mp4|webM)?$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'videos/'
             }
         }]
       }

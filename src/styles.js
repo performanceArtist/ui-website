@@ -1,5 +1,5 @@
-import './fonts/myriad_pro_light/fonts.css';
-import './fonts/myriad_pro_bold/fonts.css';
+import './static/fonts/myriad_pro_light/fonts.css';
+import './static/fonts/myriad_pro_bold/fonts.css';
 import 'font-awesome/scss/font-awesome.scss';
 
 import 'jquery-ui-dist/jquery-ui.min.css';
