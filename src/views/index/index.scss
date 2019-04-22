@@ -1,13 +1,17 @@
-.news {
+#location {
+    margin: auto;
+}
+
+#news {
     display: flex;
     justify-content: center;
 
-    .news-1 {
-        margin-right: 5%;
+    &:first-child {
+        margin-right: 2%;
     }
 }
 
-.videos {
+#videos {
     .video {
         margin: auto;
     }

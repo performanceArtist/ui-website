@@ -1,4 +1,13 @@
 extends ../../layout
 
+include ../../composite/pizza/pizza
+
+block head
+  title Gallery
+
 block content
-  h1 Menu
+  +pizza({
+    name: 'pepperoni',
+    display: 'block',
+    src: 'images/pepperoni.jpg'
+  })

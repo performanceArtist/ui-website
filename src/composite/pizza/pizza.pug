@@ -1,0 +1,14 @@
+mixin pizza(opt)
+  .pizza-cont(style=`display:${opt.display}`)
+    .pizza-name #{opt.name}
+    .pizza-info
+      .pizza-img
+        img(src=opt.src)
+      .pizza-rating Rating
+        .circle(id=opt.name + '-rating')
+          .circle-text
+        .pizza-arrows
+          +arrow-button('left-arrow')
+          +arrow-button('right-arrow')
+    .pie(id=opt.name + '-pie')
+

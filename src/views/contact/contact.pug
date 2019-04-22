@@ -1,4 +1,28 @@
 extends ../../layout
 
+block head
+  title Contact
+
 block content
   h1 Contact
+
+  #contact-cont
+    #contacts
+      +profile('profile-1 selected-contact', {
+            name:'Ricardo Milos', 
+            occupation:'Pizza boi', 
+            src:'images/ricardo.jpg'
+          })
+      +profile('profile-2', {
+        name:'Orang', 
+        occupation:'Health Inspector', 
+        src:'images/orang.jpg'
+      })
+      +profile('profile-1', {
+            name:'Ricardo Milos', 
+            occupation:'FleXx CEO', 
+            src:'images/ricardo.jpg'
+      })
+  
+    #chat-cont
+      +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})

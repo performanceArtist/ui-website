@@ -11,6 +11,8 @@ import datepicker from './components/datepicker/datepicker';
 import myMap from './components/map/map';
 import messageForm from './composite/forms/message-form/message-form';
 
+import './static/images/logo.png';
+
 export {
     ripple,
     chart,

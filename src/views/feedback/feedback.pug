@@ -1,4 +1,13 @@
 extends ../../layout
 
+block head
+  title Feedback
+
 block content
-  h1 Feedback
+  h1 Rate our service:
+  #options
+    +dropdown
+    +slider-1
+
+  +message-form
+

@@ -1,4 +1,13 @@
 extends ../../layout
 
+block head
+  title Order
+
 block content
   h1 Order
+  +stage('stages')
+  +toggle('test', 'test')
+
+  +checkmark('test', {type:'radio', value:'ok', label:'ok'})
+  br
+  +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})

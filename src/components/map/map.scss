@@ -3,6 +3,7 @@ $info-height: $map-width*0.2;
 
 .map {
     width: $map-width;
+    max-width: 850px;
     height: 500px;
     position: relative;
     border-radius: 0.4em;
@@ -13,7 +14,6 @@ $info-height: $map-width*0.2;
         position: absolute;
         bottom: 0;
         width: 100%;
-        max-width: 1000px;
         color: $white;
         background: $light-orange;
         z-index: 2;

@@ -1,19 +1,15 @@
 extends ../../layout
 
+block head
+  title Homepage
+
 block content
   h1 Welcome!
-  +standard-button('big-green-button')
-    | order
-  +standard-button('big-orange-button')
-    | visit
-
-  br 
-  br
 
   +map('location', 'Meet us!', '1259 California st', 'san francisco, ca')
 
   h1 Hottest news
-  .news
+  #news
     +news-1({
         image:'images/animal.jpg', 
         title:'Cheesy picket', 
@@ -32,5 +28,5 @@ block content
     | Check out the 
     a(href='https://www.youtube.com/watch?v=8RamCgvJKKE') review
     |  of our latest offer!
-  .videos
+  #videos
     +video('/videos/review.mp4')

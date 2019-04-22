@@ -25,21 +25,29 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title UI page
+    block head
+      title Papa Bear's
   body
     #header
-      .header-item
-        h1 Bob's Wacky Pizza
+      a(href='/')
+        img(src='images/logo.png')  
     #nav
       #nav-links
         a(href='/') Home
-        a(href='/menu.html') Menu
+        a(href='/menu.html') Gallery
         a(href='/order.html') Order
         a(href='/feedback.html') Feedback
         a(href='/contact.html') Contact
         a(href='/ui.html') UI
       +search
+
     #content
       block content
     #footer
-      h1 Lele le
+      a(href='') Home
+      | |
+      a(href='') Sponsors
+      | |
+      a(href='') Stuff
+      | |
+      a(href='') About

@@ -1,7 +1,7 @@
 body {
     margin:0;
-    color: #303030;
-    background: white;
+    color: #404040;
+    background: rgb(247, 241, 231);
     font-family: 'Conv_Myriad Pro Light';
     letter-spacing: 0.6px;
 
@@ -11,21 +11,38 @@ body {
 
     a {
         text-decoration: none;
-        color: purple;
+        color: #006000;
+    }
+
+    a:hover {
+        color: #008500;
+    }
+
+    hr {
+        height: 1px;
     }
 }
 
 #header {
     display: flex;
-    padding-left: 2%;
+    padding: 1%;
+    background: wheat;
+    margin-bottom: 2%;
+
+    h1 {
+        font-family: 'Conv_Myriad Pro Light';
+        font-style: italic;
+    }
 }
 
 #nav {
     padding-left: 2%;
-    
+    padding-bottom: 2%;
+    border-bottom: 2px $light-grey solid;
+
     #nav-links {
         display: inline-block;
-        border: 1px solid white;
+        border: 1px solid $light-grey;
     }
     
     a {
@@ -50,10 +67,19 @@ body {
 
 #content {
     margin: auto;
-    width: 70%;
+    width: 90%;
     text-align: center; 
 }
 
 #footer {
+    margin-top: 2%;
+    padding: 2%;
+    background:rgb(247, 241, 231);
+    border-top: 1px solid rgb(197, 177, 141);
+    text-align: center;
 
+    a {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 }
