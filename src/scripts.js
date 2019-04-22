@@ -7,10 +7,10 @@ import ripple from './components/buttons/standard/ripple';
 import * as chart from './components/progress/chart/chart';
 import * as slider from './components/progress/slider/slider';
 import video from './components/video/video';
-import messageForm from './composite/forms/message-form/message-form';
-import datepicker from './composite/datepicker/datepicker';
+import datepicker from './components/datepicker/datepicker';
 import myMap from './components/map/map';
-    
+import messageForm from './composite/forms/message-form/message-form';
+
 export {
     ripple,
     chart,

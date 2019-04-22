@@ -1,19 +1,29 @@
-function updateVideo(selector) {
-    document.querySelectorAll(selector).forEach(cont => {
+function updateVideo() {
+    document.querySelectorAll('.video').forEach(cont => {
         let jcont = $(cont),
             video = cont.querySelector('video'),
-            progress = jcont.find('.video-progress');
+            progress = jcont.find('.video-progress'),
+            moving = false;
         
         progress.slider({
             value: 0,
             max: video.duration,
             orientation: "horizontal",
             range: "min",
-            animate: true
+            animate: true,
+            start: function(event, ui) {
+                moving = true;
+            },
+            stop: function(event, ui) {
+                video.currentTime = ui.value;
+                moving = false;
+            }
         });
 
+        video.volume = 0.5;
+
         video.addEventListener('timeupdate', function() {
-            progress.slider('value', video.currentTime);
+            if(!moving) progress.slider('value', video.currentTime);
         });
 
         video.addEventListener('ended', function() {
@@ -23,22 +33,15 @@ function updateVideo(selector) {
             }
         });
 
-        cont.addEventListener('click', (e) => {
-            let target = e.target;
-
-            switch(target.className) {
-                case 'fa fa-play':
-                case 'fa fa-pause':
-                    play(video, target);
-                    break;
-                case 'fa fa-arrows-alt':
-                    fullscreen(video);
-                    break;
-                default:
-                    break;
-            }
-
+        cont.querySelector('.fullscreen').addEventListener('click', function(e) {
+            fullscreen(video);
         });
+
+        cont.querySelector('.play').addEventListener('click', function(e) {
+            let icon = this.querySelector('button i');
+            play(video, icon);
+        });
+
     });
 
     function play(video, play) {
@@ -62,16 +65,6 @@ function updateVideo(selector) {
                 video.mozRequestFullScreen();
               } else if (video.webkitRequestFullscreen) {
                 video.webkitRequestFullscreen();
-              }
-        } else {
-            if (video.exitFullscreen) {
-                video.exitFullscreen();
-              } else if (video.msExitFullscreen) {
-                video.msExitFullscreen();
-              } else if (video.mozExitFullScreen) {
-                video.mozExitFullScreen();
-              } else if (video.webkitExitFullscreen) {
-                video.webkitExitFullscreen();
               }
         }
     }

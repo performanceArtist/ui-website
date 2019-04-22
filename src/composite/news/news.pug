@@ -7,7 +7,8 @@ mixin news-1(data)
       .news-cont
         .news-title #{data.title}
         .news-date #{data.date}
-        .news-text #{data.text}
+        .news-text
+          block
 
 mixin news-2(data)
   .news-2
@@ -18,6 +19,7 @@ mixin news-2(data)
           span.news-date-day #{data.day}
           span.news-date-month #{data.month}
         .news-title #{data.title}
-        .news-text #{data.text}
-        +standard_button('big-green-button') 
+        .news-text
+          block
+        +standard-button('big-green-button') 
           | Add to calendar

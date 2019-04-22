@@ -1,7 +1,59 @@
 body {
     margin:0;
-    color: black;
+    color: #303030;
+    background: white;
     font-family: 'Conv_Myriad Pro Light';
     letter-spacing: 0.6px;
+
+    h1, h2 {
+        font-family: 'Conv_Myriad Pro Bold';
+    }  
+
+    a {
+        text-decoration: none;
+        color: purple;
+    }
 }
 
+#header {
+    display: flex;
+    padding-left: 2%;
+}
+
+#nav {
+    padding-left: 2%;
+    
+    #nav-links {
+        display: inline-block;
+        border: 1px solid white;
+    }
+    
+    a {
+        display: inline-block;
+        min-width: 50px;
+        background: whitesmoke;
+        color: black;
+        font-family: 'Conv_Myriad Pro Bold';
+        text-align: center;
+        padding: 0.5em;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background: white;
+    }
+
+    .search {
+        margin-left: 2em;
+    }
+}
+
+#content {
+    margin: auto;
+    width: 70%;
+    text-align: center; 
+}
+
+#footer {
+
+}

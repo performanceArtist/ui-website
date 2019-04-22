@@ -50,7 +50,7 @@ window.onload = function() {
 
     scripts.myMap('map');
 
-    scripts.video('#video');
+    scripts.video();
 }
 
 

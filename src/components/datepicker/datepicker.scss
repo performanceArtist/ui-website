@@ -1,0 +1,98 @@
+.calendar {
+
+    display: inline-block;
+
+    .ui-widget.ui-widget-content {
+        padding: 0;
+        border: none;
+    }
+
+    .ui-datepicker-year {
+        display: none;
+    }
+
+    .ui-datepicker .ui-datepicker-header, .ui-datepicker-calendar thead {
+        background-color: $light-orange;
+        color: $white;
+    }
+
+    .ui-datepicker-calendar thead {
+        font-size: 0.7em;
+        font-weight: bodl;
+        text-transform: uppercase;
+    }
+
+    .ui-state-active, .ui-widget-content .ui-state-active {
+        background-color: $light-orange;
+        border: none;
+        text-align: center;
+    }
+
+    .ui-datepicker table {
+        margin: 0;
+    }
+    
+    .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+        width: 100%;
+        text-align: left;
+        border: none;
+        margin: 0;
+        padding: 5%;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8em;
+        background: $medium-grey;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane {
+        border: none;
+        margin: 0;
+    }
+
+    .calendar .ui-state-active, .calendar .ui-widget-content .ui-state-active {
+        color: $white;
+    }
+
+    .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+        color: $white;
+    }
+
+    table tbody tr td a {
+        text-align: center;
+    }
+
+    .datepicker-custom-date {
+        background: $light-orange;
+        font-size: 5em;
+        padding: 0.1em;
+        color: $white;
+    }
+
+    .ui-datepicker-prev span,
+    .ui-datepicker-next span {
+        background-image: none !important;
+    }
+
+    .ui-datepicker-prev:before,
+    .ui-datepicker-next:before {
+        font-family: FontAwesome;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        font-weight: normal;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+    }
+
+    .ui-datepicker-prev:before {
+        content: "\f104";
+    }
+
+    .ui-datepicker-next:before {
+        content: "\f105";
+    }
+}

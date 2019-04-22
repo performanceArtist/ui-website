@@ -7,7 +7,6 @@ include components/buttons/arrow/button
 
 include components/progress/slider/slider
 include components/progress/stage/stage
-include components/progress/chart/chart
 
 include components/input/checkmark/checkmark
 include components/input/toggle/toggle
@@ -28,8 +27,19 @@ html(lang='en')
     meta(charset='utf-8')
     title UI page
   body
-    .header
-      h1 Kek Pok
-    block content
-    .footer
-      h1 Lele lel
+    #header
+      .header-item
+        h1 Bob's Wacky Pizza
+    #nav
+      #nav-links
+        a(href='/') Home
+        a(href='/menu.html') Menu
+        a(href='/order.html') Order
+        a(href='/feedback.html') Feedback
+        a(href='/contact.html') Contact
+        a(href='/ui.html') UI
+      +search
+    #content
+      block content
+    #footer
+      h1 Lele le

@@ -1,3 +1,9 @@
-h1 {
-  color: purple; }
+.news {
+  display: flex;
+  justify-content: center; }
+  .news .news-1 {
+    margin-right: 5%; }
+
+.videos .video {
+  margin: auto; }
 

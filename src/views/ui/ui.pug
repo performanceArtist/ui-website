@@ -1,104 +1,102 @@
 extends ../../layout
 
 block content
-  #content
-    h2 STANDARD BUTTONS
-    #standard-buttons
-      +standard_button('small-green-button') 
-        | button
-      +standard_button('big-green-button') 
-        | button
-      +standard_button('big-orange-button')
-        | button
-      +standard_button('small-orange-button')
-        | button
-    
-    h2 ARROW BUTTONS
-    #arrow-buttons
-      +arrow_button('left-arrow', {disabled:true})
-      +arrow_button('right-arrow')
-    h2 PERCENTAGES/PIE CHART
-    #percentages
-      .circle
-        .circle-text
-
-      .pie
-    h2 SLIDERS
-    .row
-      .left
-        +slider-1
-      .right
-        .slider-2
-      //+bubble('top-bubble')
-      //  h2 WEIRD
-      //+bubble('right-bubble', {style:{width:'100px', height:'100px'}})
-    h2 STAGES
-    +stage('stage-test')
-    h2 FORM ELEMENTS
-    .row
-      .left
-        +message-form
-        h2 SEARCH/DROP DOWNS
-        +search
-        br
-        br
-        +dropdown
-      .right
-        h2 TOGGLES
-        div
-          +toggle('test', 'test')
-        h2 TICK BOXES
-        form
-          h3 Radio
-          #radiobuttons
-            +checkmark('test', {type:'radio', value:'ok', label:'ok'})
-            br
-            +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
-            br
-          h3 Checkbox
-          +checkmark('meme', {type:'checkbox', label:'test'})
-        //i(class='fa fa-search', style='color:grey;font-size:2em')
-        //+avatar()
-        h2 PROFILES
-        +profile('profile-1', {
-          name:'Ricardo Milos', 
-          occupation:'FleXx CEO', 
-          src:'images/ricardo.jpg'
-        })
-        +profile('profile-2', {
-          name:'Orang', 
-          occupation:'Health Inspector', 
-          src:'images/orang.jpg'
-        })
-    h2 NEWS & EVENTS
-    .row
-      .left
-        +news-1({
-          image:'images/animal.jpg', 
-          title:'Beta Uprising', 
-          date:'1 April 2019', 
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
-        })
-      .right
-        +news-2({
-          image:'images/bear.jpg', 
-          title:'Meme funeral', 
-          day:'24', 
-          month:'Feb',
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        })
-    h2 LOCATION
-      +map('map', 'Meet us!', '1259 California st', 'san francisco, ca')
-    .row
-      .left
-        h2 CALENDAR
-        .calendar
-        //input(type='text', class='calendar', data-language='en')
-      .right
-        h2 MESSAGING
-        +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
-    h2 VIDEO
-    #video
-      +video('/videos/bunny.mp4')
+  h2 STANDARD BUTTONS
+  #standard-buttons
+    +standard-button('small-green-button') 
+      | button
+    +standard-button('big-green-button') 
+      | button
+    +standard-button('big-orange-button')
+      | button
+    +standard-button('small-orange-button')
+      | button
+  
+  h2 ARROW BUTTONS
+  #arrow-buttons
+    +arrow-button('left-arrow', {disabled:true})
+    +arrow-button('right-arrow')
+  h2 PERCENTAGES/PIE CHART
+  #percentages
+    .circle
+      .circle-text
+    .pie
+  h2 SLIDERS
+  .row
+    .left
+      +slider-1
+    .right
+      .slider-2
+    //+bubble('top-bubble')
+    //  h2 WEIRD
+    //+bubble('right-bubble', {style:{width:'100px', height:'100px'}})
+  h2 STAGES
+  +stage('stage-test')
+  h2 FORM ELEMENTS
+  .row
+    .left
+      +message-form
+      h2 SEARCH/DROP DOWNS
+      +search
       br
-      
+      br
+      +dropdown
+    .right
+      h2 TOGGLES
+      div
+        +toggle('test', 'test')
+      h2 TICK BOXES
+      form
+        h3 Radio
+        #radiobuttons
+          +checkmark('test', {type:'radio', value:'ok', label:'ok'})
+          br
+          +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
+          br
+        h3 Checkbox
+        +checkmark('meme', {type:'checkbox', label:'test'})
+      //i(class='fa fa-search', style='color:grey;font-size:2em')
+      //+avatar()
+      h2 PROFILES
+      +profile('profile-1', {
+        name:'Ricardo Milos', 
+        occupation:'FleXx CEO', 
+        src:'images/ricardo.jpg'
+      })
+      +profile('profile-2', {
+        name:'Orang', 
+        occupation:'Health Inspector', 
+        src:'images/orang.jpg'
+      })
+  h2 NEWS & EVENTS
+  .row
+    .left
+      +news-1({
+        image:'images/animal.jpg', 
+        title:'Beta Uprising', 
+        date:'1 April 2019'
+      })
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
+    .right
+      +news-2({
+        image:'images/bear.jpg', 
+        title:'Meme funeral', 
+        day:'24', 
+        month:'Feb'
+      })
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  h2 LOCATION
+  +map('map', 'Meet us!', '1259 California st', 'san francisco, ca')
+  .row
+    .left
+      h2 CALENDAR
+      .calendar
+      //input(type='text', class='calendar', data-language='en')
+    .right
+      h2 MESSAGING
+      +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
+  h2 VIDEO
+  #video
+    +video('/videos/bunny.mp4')
+    br
+    
