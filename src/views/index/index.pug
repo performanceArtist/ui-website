@@ -20,12 +20,18 @@ block content
     })
       | Billy Bob will make his appearance on this very date! 
 
-
   h1 Plan your visit!
   #place-info
     +map('location', 'Meet us!', '1259 California st', 'san francisco, ca')
-    #calendar
-  h1 
+    #date-info
+      .calendar
+      #date-text 
+        span The first step in any flexbox layout is to create a flex container. To do that, set the display property to flex. In Safari, you will still have to use the -webkit prefix. 
+        #button-cont
+          a(href='/order.html')
+            +standard-button('big-orange-button')
+              | order now!
+  h1  
     | Check out the 
     a(href='https://www.youtube.com/watch?v=8RamCgvJKKE') review
     |  of our latest offer!

@@ -1,12 +1,33 @@
 @import '../../partials/mixins';
 @import '../../partials/defaults';
-
+  
 #place-info {
-    display: flex;
-    justify-content: space-even;
-
     .map {
-        width: 800px;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+    text-align: left;
+    
+    #date-info {
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: space-between;
+
+        .calendar {
+            margin-right: 5%;
+        }
+
+        #date-text {
+            padding: 2em;
+            padding-top: 5%;
+
+            #button-cont {
+                margin-top: 7%;
+                text-align: center;
+            }
+        }
     }
 }
 

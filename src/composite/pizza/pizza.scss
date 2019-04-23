@@ -1,4 +1,7 @@
 .pizza-cont {
+    width: 60%;
+    margin: auto;
+
     .pizza-name {
         font-size: 1.7em;
         text-transform: uppercase;
@@ -11,7 +14,6 @@
 
     .pizza-info {
         display: flex;
-        justify-content: center;
 
         .pizza-rating {
             padding: 1em;
@@ -29,6 +31,20 @@
             .arrow-button {
                 margin-left: 0.5em;
             }
+        }
+    }
+
+    .pizza-rating {
+        margin-left: 1em;
+    }
+
+    .pizza-ing {
+        display: flex;
+        margin-top: 2%;
+
+        .pizza-ing-li {
+            margin-right: 5%;
+            text-align: left;
         }
     }
 

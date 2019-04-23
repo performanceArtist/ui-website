@@ -1,6 +1,6 @@
 include ../../bubble/bubble
 
-mixin slider-1(value=0)
+mixin slider-1(name='slider', value=0)
   .slider-1
     +bubble('bottom-bubble', {
       style:{
@@ -8,5 +8,5 @@ mixin slider-1(value=0)
         height:'24px'
       }
     })
-    input(type="range", min="0", max="100", value=value)
+    input(name=name, type="range", min="0", max="100", value=value)
   

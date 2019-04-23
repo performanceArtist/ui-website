@@ -83,7 +83,7 @@
     $arrow-length: $button-size*0.14;
     $arrow-width: $button-size*0.08;
 
-    line-height: $button-size + $arrow-length + $arrow-width;
+    line-height: $button-size + $arrow-length;
     text-align: center;
     display: inline-block;
     margin: $arrow-button-border;

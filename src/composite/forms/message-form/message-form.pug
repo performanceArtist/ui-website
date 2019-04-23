@@ -1,5 +1,6 @@
 mixin message-form(action='')
   form(action=action, class='message-form')
+    block
     .message-name
       +input-text('name', 'Your name')
       +bubble

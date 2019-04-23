@@ -9,6 +9,6 @@ window.onload = function() {
     ripple();
     video();
     myMap('location');
-    datepicker('#calendar');
+    datepicker('.calendar');
 }
 

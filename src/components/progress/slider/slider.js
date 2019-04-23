@@ -32,15 +32,16 @@ function slider1(selector) {
     document.querySelectorAll(selector).forEach(function(el) {
         let bubble = el.querySelector('.bubble'),
             width = el.offsetWidth,
-            offset = 40,
+            offset = 0.28,
             input = el.querySelector('input');
 
         input.addEventListener('input', function() {
             let perc = (this.value - this.min) / (this.max - this.min),
-                npos = width*perc;
+                npos = width*perc - this.value*offset;
 
             bubble.innerHTML = this.value;
-            bubble.style.left = npos - offset*perc + 'px';
+            //input.value = this.value;
+            bubble.style.left = npos + 'px';
 
         });
 

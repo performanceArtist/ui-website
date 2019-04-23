@@ -7,28 +7,36 @@ block content
   h1 Rate our service:
   #rate-cont
     #left
-      #options
-        +slider-1
       +message-form
+        #options
+          +slider-1('rating')
     #right
-      +bubble('right-bubble')
-        | I just want my tendies.
-        .rating
-          | Rated 0
-      +bubble('right-bubble green-bubble')
-        | Good pizza and all, but your menu lacks variety. Hopefully it'll only get better with time.
-        .rating
-          | Rated 60
+      .comment
+        +bubble('right-bubble')
+          | I just want my tendies.
+          .rating
+            | Rated 0
+          .name sadBoy
+
+      .comment
+        +bubble('right-bubble green-bubble')
+          | Good pizza and all, but your menu lacks variety. Hopefully it'll only get better with time.
+          .rating
+            | Rated 60
+          .name Ash Williams
       +bubble('right-bubble')
         | BRING BACK THE NUGGETS OR FACE THE CONSEQUENCES. I AM DEAD SERIOUS.
         .rating
           | Rated 0
+        .name TENDY DESTROYER
       +bubble('right-bubble green-bubble')
         | Great pizza place and delivery is always just in time!
         .rating
           | Rated 85
+        .name yogaBro1989
       +bubble('right-bubble green-bubble')
         | I like your pizza, but that bear is just creepy. Do you really need it?
         .rating
           | Rated 70
+        .name crikey
 

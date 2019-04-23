@@ -3,7 +3,11 @@ import './contact.scss';
 
 import '../../static/images/billybob.jpg';
 
+import {ripple} from '../../scripts';
+
 window.onload = function() {
+    ripple();
+
     let els = document.querySelectorAll('.profile'),
         chat = document.querySelector('.chat'),
         chatName = chat.querySelector('.chat-name'),
