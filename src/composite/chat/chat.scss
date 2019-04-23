@@ -25,7 +25,7 @@
 
     .chat-header {
         height: 36px;
-        background-color: $medium-green;
+        background-color: darken($light-green, 20%)
     }
 
     .chat-avatar {

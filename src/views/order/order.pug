@@ -6,8 +6,22 @@ block head
 block content
   h1 Order
   +stage('stages')
-  +toggle('test', 'test')
 
-  +checkmark('test', {type:'radio', value:'ok', label:'ok'})
-  br
-  +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
+  form#order-cont
+    +dropdown('pizza', ['Pepperoni', 'Cheesy Crust'])
+  
+    #order-options
+      #sauce
+        | Special sauce:
+        +toggle('sauce', 'yep')
+
+      #crust
+        +checkmark('crust', {type:'radio', value:'thin', label:'Thin'})
+        +checkmark('crust', {type:'radio', value:'standard', label:'Standard'})
+
+    #address
+      +input-text('address', 'Address')
+      +bubble
+
+    #submit
+      input(type='submit', value='SUBMIT', class='button small-green-button')

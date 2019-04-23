@@ -1,9 +1,12 @@
-.news {
+#location {
+  margin: auto; }
+
+#news {
   display: flex;
   justify-content: center; }
-  .news .news-1 {
-    margin-right: 5%; }
+  #news .news-1 {
+    margin-right: 2%; }
 
-.videos .video {
+#videos .video {
   margin: auto; }
 

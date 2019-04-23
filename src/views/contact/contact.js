@@ -1,6 +1,8 @@
 import '../../styles.js';
 import './contact.scss';
 
+import '../../static/images/billybob.jpg';
+
 window.onload = function() {
     let els = document.querySelectorAll('.profile'),
         chat = document.querySelector('.chat'),

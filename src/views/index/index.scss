@@ -1,12 +1,20 @@
-#location {
-    margin: auto;
+@import '../../partials/mixins';
+@import '../../partials/defaults';
+
+#place-info {
+    display: flex;
+    justify-content: space-even;
+
+    .map {
+        width: 800px;
+    }
 }
 
 #news {
     display: flex;
     justify-content: center;
 
-    &:first-child {
+    .news-1 {
         margin-right: 2%;
     }
 }

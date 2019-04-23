@@ -22,6 +22,9 @@
     top: 9px;
 }
 
+.ui-switcher[aria-checked="true"] {
+    background-color: $light-green;
+}
 
 .ui-switcher[aria-checked="true"]::after {
     left: 44px;

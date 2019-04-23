@@ -1,0 +1,28 @@
+#content {
+  text-align: left; }
+  #content #options {
+    width: 322px;
+    margin-bottom: 5%; }
+  #content .dropdown {
+    margin-bottom: 2%; }
+  #content #rate-cont {
+    display: flex; }
+    #content #rate-cont #left {
+      margin-right: 10%; }
+    #content #rate-cont #right {
+      overflow: auto;
+      display: flex;
+      width: 40%;
+      flex-wrap: wrap;
+      justify-content: right; }
+      #content #rate-cont #right .bubble {
+        padding: 1em;
+        margin-bottom: 1em; }
+        #content #rate-cont #right .bubble .rating {
+          color: #800000;
+          margin-top: 1em;
+          text-align: right;
+          font-family: 'Conv_Myriad Pro Bold'; }
+      #content #rate-cont #right .green-bubble .rating {
+        color: #006500; }
+

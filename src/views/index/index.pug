@@ -4,10 +4,6 @@ block head
   title Homepage
 
 block content
-  h1 Welcome!
-
-  +map('location', 'Meet us!', '1259 California st', 'san francisco, ca')
-
   h1 Hottest news
   #news
     +news-1({
@@ -18,12 +14,17 @@ block content
       | Angry mob demands Cheesy Nuggets to be back!
     +news-2({
       image:'images/bear.jpg', 
-      title:'Meet our weird mascot!', 
+      title:'Meet our mascot!', 
       day:'22', 
       month:'April'
     })
       | Billy Bob will make his appearance on this very date! 
 
+
+  h1 Plan your visit!
+  #place-info
+    +map('location', 'Meet us!', '1259 California st', 'san francisco, ca')
+    #calendar
   h1 
     | Check out the 
     a(href='https://www.youtube.com/watch?v=8RamCgvJKKE') review

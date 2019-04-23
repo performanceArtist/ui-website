@@ -1,5 +1,6 @@
-mixin dropdown()
+mixin dropdown(name='select', opt=[])
   .dropdown
-    +input-text('search', 'Choose An Option')
-    button(type='submit')
-      i(class='fa fa-angle-down')
+    select(name=name)
+      option(disabled=true, selected=true) Select
+      each o in opt
+        option #{o}

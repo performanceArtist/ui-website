@@ -1,51 +1,5 @@
 $arrow-button-border: 3px;
 
-@mixin set-arrow-size($button-size) {
-    @include circle($button-size);
-    $arrow-length: $button-size*0.14;
-    $arrow-width: $button-size*0.08;
-
-    line-height: $button-size + $arrow-length + $arrow-width;
-    text-align: center;
-    display: inline-block;
-    margin: $arrow-button-border;
-    
-    i {
-        border: solid;
-        border-width: 0 $arrow-width $arrow-width 0;
-        display: inline-block;
-        padding: $arrow-length;
-    }
-    
-}
-
-@mixin set-arrow-color($def, $active) {
-    background: $def; 
-    box-shadow: 0 0 0 $arrow-button-border $active;
-
-    i {
-        border-color: $active;
-    }
-
-    &:hover {
-        background: $active;
-        box-shadow: 0 0 0 $arrow-button-border $active;
-    
-        i {
-            border-color: $def;
-        }
-    }
-}
-
-@mixin set-disabled-color($def, $disabled) {
-    background: $disabled; 
-    box-shadow: 0 0 0 $arrow-button-border $disabled;
-
-    i {
-        border-color: $def;
-    }
-}
-
 .arrow-button {
     @include set-arrow-size(50px);
     @include set-arrow-color($white, $light-green);

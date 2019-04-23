@@ -5,9 +5,30 @@ block head
 
 block content
   h1 Rate our service:
-  #options
-    +dropdown
-    +slider-1
-
-  +message-form
+  #rate-cont
+    #left
+      #options
+        +slider-1
+      +message-form
+    #right
+      +bubble('right-bubble')
+        | I just want my tendies.
+        .rating
+          | Rated 0
+      +bubble('right-bubble green-bubble')
+        | Good pizza and all, but your menu lacks variety. Hopefully it'll only get better with time.
+        .rating
+          | Rated 60
+      +bubble('right-bubble')
+        | BRING BACK THE NUGGETS OR FACE THE CONSEQUENCES. I AM DEAD SERIOUS.
+        .rating
+          | Rated 0
+      +bubble('right-bubble green-bubble')
+        | Great pizza place and delivery is always just in time!
+        .rating
+          | Rated 85
+      +bubble('right-bubble green-bubble')
+        | I like your pizza, but that bear is just creepy. Do you really need it?
+        .rating
+          | Rated 70
 

@@ -1,3 +1,4 @@
 .search {
-    @include menu-item($light-orange, 13px);
+    @include menu-item($light-green, 14px);
+    height: 2.25em;
 }

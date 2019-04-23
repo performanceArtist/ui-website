@@ -14,35 +14,6 @@ $bubble-color: $light-orange;
     }
 } 
 
-@mixin set-bubble-color($color, $dir) {
-    background: $color;
-
-    @if ($dir == left) {
-        &:after {
-            border-right-color: $color;
-        }
-    }   
-
-    @if ($dir == right) {
-        &:after {
-            border-left-color: $color;
-        }
-    }   
-
-    @if ($dir == top) {
-        &:after {
-            border-bottom-color: $color;
-        }
-    }
-
-    @if ($dir == bottom) {
-        &:after {
-            border-top-color: $color;
-        }
-    }
-
-}
-
 .top-bubble {
     @extend .bubble;
     margin-top: $pointer-size;

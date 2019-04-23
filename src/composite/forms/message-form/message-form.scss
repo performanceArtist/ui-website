@@ -24,25 +24,30 @@
         width: 60%;
     }
 
-    .bubble {
-        display: none;
-        height: 2.5em;
-        width: 6em;
-        text-align: center;
-        font-size: 0.9em;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $white;
-        line-height: 240%;
-        margin-left: 0.8em;
-    }
+}
 
+%info-bubble {
+    display: inline-block;
+    visibility: hidden;
+    height: 2.5em;
+    width: 6em;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 240%;
+    margin-left: 0.8em;
 }
 
 .error-bubble {
+    @extend .left-bubble;
+    @extend %info-bubble;
     @include set-bubble-color($light-orange, left);
 }
 
 .okay-bubble {
+    @extend .left-bubble;
+    @extend %info-bubble;
     @include set-bubble-color($light-green, left);
 }

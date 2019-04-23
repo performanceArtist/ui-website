@@ -2,10 +2,10 @@ mixin message-form(action='')
   form(action=action, class='message-form')
     .message-name
       +input-text('name', 'Your name')
-      +bubble('left-bubble')
+      +bubble
     .message-email
       +input-text('email', 'Your email')
-      +bubble('left-bubble')
+      +bubble
     .message-text
       +input-textarea('message', {placeholder:'Your message', cols:'20', rows:'6'})
     input(type='submit', value='SUBMIT', class='button big-green-button')

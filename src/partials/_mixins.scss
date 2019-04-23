@@ -1,0 +1,125 @@
+//setters
+@mixin set-button-color($active, $passive) {
+    color: $active;
+    background-color: $passive;
+    border-color: $active;
+    box-shadow: 0px 5px 0px darken($active, 10%);;
+
+    &:hover {
+        color: $passive;
+        background-color: $active;
+    }
+    &:active {
+        color: $passive;
+        background-color: $active;
+        box-shadow: none;
+    }
+}
+
+@mixin set-button-size($width, $height) {    
+    font-size: 1.4vw;
+    border-radius: 8px;
+    width: $width;
+    height: $height;
+}
+
+@mixin circle($size) {
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: $size;
+    height: $size;
+}
+
+@mixin set-bubble-color($color, $dir) {
+    background: $color;
+
+    @if ($dir == left) {
+        &:after {
+            border-right-color: $color;
+        }
+    }   
+
+    @if ($dir == right) {
+        &:after {
+            border-left-color: $color;
+        }
+    }   
+
+    @if ($dir == top) {
+        &:after {
+            border-bottom-color: $color;
+        }
+    }
+
+    @if ($dir == bottom) {
+        &:after {
+            border-top-color: $color;
+        }
+    }
+
+}
+
+@mixin menu-item($color, $font-size, $font-color: $white) {
+    display: inline-block;
+
+    button {
+        display: inline-block;
+        background: $color;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        height: 2.35em;
+        width: 2.4em;
+        i {
+            font-size: $font-size;
+            color: $font-color;
+        }
+    }
+}
+
+@mixin set-arrow-size($button-size) {
+    @include circle($button-size);
+    $arrow-length: $button-size*0.14;
+    $arrow-width: $button-size*0.08;
+
+    line-height: $button-size + $arrow-length + $arrow-width;
+    text-align: center;
+    display: inline-block;
+    margin: $arrow-button-border;
+    
+    i {
+        border: solid;
+        border-width: 0 $arrow-width $arrow-width 0;
+        display: inline-block;
+        padding: $arrow-length;
+    }
+    
+}
+
+@mixin set-arrow-color($def, $active) {
+    background: $def; 
+    box-shadow: 0 0 0 $arrow-button-border $active;
+
+    i {
+        border-color: $active;
+    }
+
+    &:hover {
+        background: $active;
+        box-shadow: 0 0 0 $arrow-button-border $active;
+    
+        i {
+            border-color: $def;
+        }
+    }
+}
+
+@mixin set-disabled-color($def, $disabled) {
+    background: $disabled; 
+    box-shadow: 0 0 0 $arrow-button-border $disabled;
+
+    i {
+        border-color: $def;
+    }
+}

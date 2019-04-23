@@ -7,7 +7,7 @@ const htmlFiles = ['index', 'order', 'menu', 'feedback', 'contact', 'ui'].map(na
   return new HtmlWebpackPlugin({
     template: `./src/views/${name}/${name}.pug`,
     filename: `${name}.html`,
-    chunks: [name, 'commons']
+    chunks: ['commons', name]
   })
 });
 
@@ -65,8 +65,12 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          'css-loader',
-          'sass-loader'
+          {
+            loader:'css-loader'
+          },
+          {
+            loader: 'sass-loader',
+          }
         ]
       },
       {

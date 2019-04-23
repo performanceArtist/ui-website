@@ -1,5 +1,6 @@
 import '../../styles.js';
 import './menu.scss';
+
 import '../../composite/pizza/pizza.scss';
 
 import '../../static/images/pepperoni.jpg';

@@ -1,3 +1,55 @@
-#stages .progressbar .current li:before {
-    background-color: #68BB68;
+@import '../../partials/mixins';
+@import '../../partials/defaults';
+
+#order-cont {
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+
+    #sauce {
+        margin-bottom: 1em;
+    }
+
+    .ui-switcher {
+        margin-left: 1em;
+    }
+
+    .checkmark {
+        margin-right: 1em;
+    }
+
+    #address {
+        input {
+            width: 180px;
+        }
+    }
+
+    #order-options, #address, #submit {
+        visibility: hidden;
+    }
+}
+
+.stage {
+    .progressbar {
+        li {
+            color: #303030;
+        }
+        
+        .current {
+            font-weight: bold;
+        }
+
+        .current::before {
+            background-color: $light-orange;
+        }
+
+        .done::before {
+            background-color: $light-green;
+        }
+
+        .done::after {
+            background-color: $light-green;
+        }
+    }
+
 }

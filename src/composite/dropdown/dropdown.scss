@@ -1,7 +1,32 @@
+$dropdown-width: 220px;
+
 .dropdown {
-    @include menu-item($light-green, 24px);
-    button {
-        vertical-align: middle;
-        height: 2.45em;
-    }
+    height: 29px;
+    overflow: hidden;
+    width: $dropdown-width;
+    position: relative;
+ }
+ 
+ .dropdown:after {
+    content:"\f107";
+    font-family: FontAwesome;
+    color: $white;
+    position: absolute; right: 0; top: 0;
+    background: $light-green;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.5em;
+    width: 30px;
+    height: 100%;      
+    pointer-events: none;
+    box-sizing: border-box;   
 }
+
+ .dropdown select {
+    background: $light-grey;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; 
+    width: $dropdown-width;
+ }
