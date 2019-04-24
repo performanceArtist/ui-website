@@ -1,17 +1,17 @@
-mixin pizza(opt)
-  .pizza-cont(style=`display:${opt.display}`)
-    .pizza-name #{opt.name}
+mixin pizza
+  .pizza-cont
+    .pizza-name
     .pizza-info
       .pizza-img
-        img(src=opt.src)
+        img
       .pizza-rating Rating
-        .circle(id=opt.name + '-rating')
+        .circle
           .circle-text
         .pizza-arrows
           +arrow-button('left-arrow')
           +arrow-button('right-arrow')
     .pizza-ing
       .pizza-ing-li
-      .pie(id=opt.name + '-pie')
+      .pie
 
 

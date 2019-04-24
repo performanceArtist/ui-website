@@ -44,6 +44,10 @@
         @include set-bubble-color($light-grey, left);
     }
 
+    .profile-name {
+        color: $light-orange;
+    }
+    
     .profile-icons i {
         color: $medium-grey;
     }

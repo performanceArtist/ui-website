@@ -1,6 +1,6 @@
 mixin dropdown(name='select', opt=[])
   .dropdown
     select(name=name)
-      option(disabled=true, selected=true) Select
+      option(disabled=true, selected=true) Option
       each o in opt
         option #{o}

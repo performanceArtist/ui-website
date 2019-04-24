@@ -26,6 +26,6 @@
 }
 
 .selected-contact {
-    background: rgb(225, 202, 159);
+    background: darken($light-yellow, 7%);
     border-radius: 0.4em;
 }

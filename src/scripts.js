@@ -13,6 +13,9 @@ import messageForm from './composite/forms/message-form/message-form';
 
 import './static/images/logo.png';
 
+import search from './composite/search/search';
+search();
+
 export {
     ripple,
     chart,

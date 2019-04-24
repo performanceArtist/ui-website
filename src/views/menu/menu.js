@@ -9,11 +9,33 @@ import '../../static/images/vegetarian.jpg';
 
 import {chart} from '../../scripts';
 
-function Ingredient(name, color, value) {
-    this.name = name;
-    this.color = color;
-    this.value = value;
-}
+//lol
+const Factory = (function() {
+    function Ingredient(name, color, value) {
+        this.name = name;
+        this.color = color;
+        this.value = value;
+
+        let li = document.createElement('li');
+        li.innerText = this.name;
+        this.el = li;
+    }
+
+    return function (type, val) {
+        switch(type) {
+            case 'Tomatoes':
+                return new Ingredient('Tomatoes', '#DF3232', val);
+            case 'Mozarella':
+                return new Ingredient('Mozarella', '#EDED86', val);
+            case 'Pepperoni':
+                return new Ingredient('Pepperoni', 'brown', val);
+            case 'Onions':
+                return new Ingredient('Onions', '#B96C93', val);
+            default:
+                throw new Error('No ingredient!');
+        }
+    }
+})();
 
 const items = [
     {
@@ -21,9 +43,9 @@ const items = [
         src: 'images/pepperoni.jpg',
         rating: 0.82,
         ing: [
-            new Ingredient('Tomatoes', '#ff6347', 0.2),
-            new Ingredient('Mozarella', 'yellow', 0.5),
-            new Ingredient('Pepperoni', 'brown', 0.8),
+            Factory('Tomatoes', 0.2),
+            Factory('Mozarella', 0.5),
+            Factory('Pepperoni', 0.8)
         ]
     },
     {
@@ -31,9 +53,9 @@ const items = [
         src: 'images/cheesy_crust.jpg',
         rating: 0.95,
         ing: [
-            new Ingredient('Tomatoes', '#ff6347', 0.2),
-            new Ingredient('Mozarella', 'yellow', 0.5),
-            new Ingredient('Pepperoni', 'brown', 0.8),
+            Factory('Tomatoes', 0.1),
+            Factory('Mozarella', 0.7),
+            Factory('Pepperoni', 0.9)
         ]
     },
     {
@@ -41,52 +63,78 @@ const items = [
         src: 'images/vegetarian.jpg',
         rating: 0.37,
         ing: [
-            new Ingredient('Tomatoes', '#ff6347', 0.2),
-            new Ingredient('Mozarella', 'yellow', 0.5),
-            new Ingredient('Onions', '#B96C93', 0.9),
+            Factory('Tomatoes', 0.2),
+            Factory('Mozarella', 0.6),
+            Factory('Onions', 0.9)
         ]
     }
 ]
 
-function displayItem(i) {
-    document.querySelector('.pizza-name').innerHTML = items[i].name;
-    document.querySelector('.pizza-img img').src = items[i].src;
+const displayItem = (function() {
+    function display(item) {
+        document.querySelector('.pizza-name').innerHTML = item.name;
+        document.querySelector('.pizza-img img').src = item.src;
+    
+        let html = document.createElement('ul');
+    
+        item.ing.forEach(el => {
+            html.appendChild(el.el);
+        });
+    
+        document.querySelector('.pizza-ing-li').innerHTML = '';
+        document.querySelector('.pizza-ing-li').appendChild(html);
+    
+        chart.percent('.circle', {
+            value: item.rating, 
+            fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
+        });
+    
+        chart.pie('.pie', {fill: {
+                sectors: item.ing.map(el => [el.color, el.value])
+            }
+        });
+    }
 
-    let html = document.createElement('ul');
+    let i = 0;
 
-    items[i].ing.forEach(el => {
-        let li = document.createElement('li');
-        li.innerText = el.name;
-        html.appendChild(li);
-    });
+    return {
+        current: function() {
+            display(items[i]);
+        },
+        next: function() {
+            if(i >= items.length - 1) return;
 
-    document.querySelector('.pizza-ing-li').innerHTML = '';
-    document.querySelector('.pizza-ing-li').appendChild(html);
+            i++;
+            if(i === items.length - 1) {
+                document.querySelector('.right-arrow').classList.add('disabled-arrow-button');
+            } else {
+                document.querySelector('.left-arrow').classList.remove('disabled-arrow-button');
+            }
+            display(items[i]);
 
-    chart.percent('.circle', {
-        value: items[i].rating, 
-        fill: items[i].rating > 0.6 ? '#68BB68' : '#D28847'
-    });
+        },
+        previous: function() {
+            if(i <= 0) return;
 
-    chart.pie('.pie', {fill: {
-            sectors: items[i].ing.map(el => [el.color, el.value])
+            i--;
+            if(i === 0) {
+                document.querySelector('.left-arrow').classList.add('disabled-arrow-button');
+            } else {
+                document.querySelector('.right-arrow').classList.remove('disabled-arrow-button');
+            }
+            display(items[i]);
         }
-    });
-
-}
+    }
+})();
 
 window.onload = function() {
-    let i = 1;
-
-    displayItem(i);
+    displayItem.current();
 
     document.querySelector('.right-arrow').addEventListener('click', function(e) {
-        i++;
-        displayItem(i);
+        displayItem.next();
     });
 
     document.querySelector('.left-arrow').addEventListener('click', function(e) {
-        i--;
-        displayItem(i);
+        displayItem.previous();
     });
 }

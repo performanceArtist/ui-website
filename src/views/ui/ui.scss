@@ -1,6 +1,11 @@
 @import '../../partials/mixins';
 @import '../../partials/defaults';
 
+#content {
+    text-align: center;
+    width: 75%;
+}
+
 .row {
     width: 100%;
 }
@@ -33,8 +38,13 @@
     margin-left: 20px;
 }
 
-#radiobuttons {
-    text-align: left;
+#search-cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.news-1, .news-2, .map, .chat, .message-form {
+    margin: auto;
 }
 
 #sliders div {
