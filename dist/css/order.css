@@ -1,3 +1,32 @@
-#stages .progressbar .current li:before {
+#order-cont {
+  padding-top: 3%;
+  display: flex;
+  justify-content: space-evenly; }
+  #order-cont #sauce {
+    margin-bottom: 1em; }
+  #order-cont .ui-switcher {
+    margin-left: 1em; }
+  #order-cont .checkmark {
+    margin-right: 1em; }
+  #order-cont #address input {
+    width: 180px; }
+  #order-cont #order-options, #order-cont #address, #order-cont #submit {
+    visibility: hidden; }
+
+.stage .progressbar li {
+  color: #303030; }
+
+.stage .progressbar .current {
+  font-weight: bold; }
+
+.stage .progressbar .current::before {
+  background-color: #d28847; }
+
+.stage .progressbar .done::before {
   background-color: #68BB68; }
 
+.stage .progressbar .done::after {
+  background-color: #68BB68; }
+
+
+/*# sourceMappingURL=order.css.map*/

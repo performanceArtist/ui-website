@@ -36,7 +36,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
     publicPath: '/'
-    //publicPath: '/test/'
+    //publicPath: '/ui/'
   },
 
   devServer: {

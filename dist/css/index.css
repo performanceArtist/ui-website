@@ -1,5 +1,21 @@
-#location {
-  margin: auto; }
+#place-info {
+  text-align: left; }
+  #place-info .map {
+    margin: auto;
+    margin-bottom: 5%; }
+  #place-info #date-info {
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-between; }
+    #place-info #date-info .calendar {
+      margin-right: 5%; }
+    #place-info #date-info #date-text {
+      padding: 2em;
+      padding-top: 5%; }
+      #place-info #date-info #date-text #button-cont {
+        margin-top: 7%;
+        text-align: center; }
 
 #news {
   display: flex;
@@ -10,3 +26,5 @@
 #videos .video {
   margin: auto; }
 
+
+/*# sourceMappingURL=index.css.map*/
