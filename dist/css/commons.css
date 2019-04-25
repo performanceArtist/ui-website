@@ -3990,20 +3990,20 @@ body {
     margin-left: 0.5em;
     margin-right: 0.5em; }
 
-.bubble, .top-bubble, .bottom-bubble, .left-bubble, .error-bubble, .okay-bubble, .right-bubble {
+.bubble, .bubble_top, .bubble_bottom, .bubble_left, .error-bubble, .okay-bubble, .bubble_right {
   position: relative;
   background: #d28847;
   border-radius: .4em; }
-  .bubble:after, .top-bubble:after, .bottom-bubble:after, .left-bubble:after, .error-bubble:after, .okay-bubble:after, .right-bubble:after {
+  .bubble:after, .bubble_top:after, .bubble_bottom:after, .bubble_left:after, .error-bubble:after, .okay-bubble:after, .bubble_right:after {
     content: '';
     position: absolute;
     width: 0;
     height: 0;
     border: 6px solid transparent; }
 
-.top-bubble {
+.bubble_top {
   margin-top: 6px; }
-  .top-bubble:after {
+  .bubble_top:after {
     top: 0;
     left: 50%;
     border-bottom-color: #d28847;
@@ -4011,9 +4011,9 @@ body {
     margin-left: -6px;
     margin-top: -6px; }
 
-.bottom-bubble {
+.bubble_bottom {
   margin-bottom: 6px; }
-  .bottom-bubble:after {
+  .bubble_bottom:after {
     bottom: 0;
     left: 50%;
     border-top-color: #d28847;
@@ -4021,9 +4021,9 @@ body {
     margin-left: -6px;
     margin-bottom: -6px; }
 
-.left-bubble, .error-bubble, .okay-bubble {
+.bubble_left, .error-bubble, .okay-bubble {
   margin-left: 6px; }
-  .left-bubble:after, .error-bubble:after, .okay-bubble:after {
+  .bubble_left:after, .error-bubble:after, .okay-bubble:after {
     left: 0;
     top: 50%;
     border-right-color: #d28847;
@@ -4031,9 +4031,9 @@ body {
     margin-top: -6px;
     margin-left: -6px; }
 
-.right-bubble {
+.bubble_right {
   margin-right: 6px; }
-  .right-bubble:after {
+  .bubble_right:after {
     right: 0;
     top: 50%;
     border-left-color: #d28847;
@@ -4062,7 +4062,7 @@ body {
   border-radius: 0.4em;
   overflow: hidden;
   font-family: 'Conv_Myriad Pro Light'; }
-  .map .map-info {
+  .map__info {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -4072,25 +4072,25 @@ body {
     height: 20%;
     display: flex;
     align-items: center; }
-    .map .map-info .map-info-left {
-      width: 50%;
-      text-align: left; }
-    .map .map-info .map-title, .map .map-info .map-address {
-      display: inline-block; }
-    .map .map-info .map-title {
-      font-size: 3em;
-      margin-right: 7%;
-      margin-left: 7%; }
-    .map .map-info .map-address {
-      font-size: 1em;
-      text-transform: uppercase;
-      font-weight: bold; }
-    .map .map-info .map-info-right {
-      font-size: 3em;
-      text-align: right;
-      width: 50%; }
-      .map .map-info .map-info-right i {
-        margin-right: 0.8em; }
+  .map__title, .map__address {
+    display: inline-block; }
+  .map__title {
+    font-size: 3em;
+    margin-right: 7%;
+    margin-left: 7%; }
+  .map__address {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .map__info-left {
+    width: 50%;
+    text-align: left; }
+  .map__info-right {
+    font-size: 3em;
+    text-align: right;
+    width: 50%; }
+    .map__info-right i {
+      margin-right: 0.8em; }
 
 .video {
   width: 720px;
@@ -4099,33 +4099,32 @@ body {
   overflow: hidden; }
   .video video {
     width: 720px; }
-
-.controls {
-  background: rgba(0, 0, 0, 0.35);
-  position: absolute;
-  width: 720px;
-  height: 50.4px;
-  bottom: 1%; }
-  .controls button {
-    cursor: pointer;
-    border: none;
-    color: #F5F5F5; }
-  .controls .video-progress {
+  .video__controls {
+    background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    width: 720px;
+    height: 50.4px;
+    bottom: 1%; }
+    .video__controls button {
+      cursor: pointer;
+      border: none;
+      color: #F5F5F5; }
+  .video__progress {
     float: left;
     width: 590.4px;
     height: 8.64px;
     border: none;
     cursor: pointer;
     margin-top: 2.7%; }
-    .controls .video-progress .ui-widget-header {
+    .video__progress .ui-widget-header {
       background: #d28847; }
-    .controls .video-progress .ui-state-default, .controls .video-progress .ui-widget-content .ui-state-default {
+    .video__progress .ui-state-default, .video__progress .ui-widget-content .ui-state-default {
       display: none; }
-  .controls .play {
+  .video__play {
     display: inline-block;
     float: left;
     margin-right: 14.4px; }
-    .controls .play button {
+    .video__play button {
       display: inline-block;
       background: black;
       text-align: center;
@@ -4133,14 +4132,14 @@ body {
       cursor: pointer;
       height: 2.35em;
       width: 2.4em; }
-      .controls .play button i {
+      .video__play button i {
         font-size: 18px;
         color: #F5F5F5; }
-  .controls .fullscreen {
+  .video__fullscreen {
     display: inline-block;
     float: left;
-    margin-left: 14.4px; }
-    .controls .fullscreen button {
+    margin-left: 12.24px; }
+    .video__fullscreen button {
       display: inline-block;
       background: #d28847;
       text-align: center;
@@ -4148,10 +4147,10 @@ body {
       cursor: pointer;
       height: 2.35em;
       width: 2.4em; }
-      .controls .fullscreen button i {
+      .video__fullscreen button i {
         font-size: 21.6px;
         color: #F5F5F5; }
-  .controls .play button, .controls .fullscreen button {
+  .video__play button, .video__fullscreen button {
     width: 50.4px;
     height: 50.4px; }
 
@@ -4235,40 +4234,40 @@ body {
   text-transform: uppercase;
   margin-bottom: 5px; }
 
-.big-green-button, .big-orange-button {
+.button_big {
   font-size: 1.4vw;
   border-radius: 8px;
   width: 175px;
   height: 48px; }
 
-.small-green-button, .small-orange-button {
+.button_small {
   font-size: 1.4vw;
   border-radius: 8px;
   width: 117x;
   height: 33px; }
 
-.big-orange-button, .small-orange-button {
+.button_orange {
   color: #d28847;
   background-color: #F5F5F5;
   border-color: #d28847;
   box-shadow: 0px 5px 0px #b96e2d; }
-  .big-orange-button:hover, .small-orange-button:hover {
+  .button_orange:hover {
     color: #F5F5F5;
     background-color: #d28847; }
-  .big-orange-button:active, .small-orange-button:active {
+  .button_orange:active {
     color: #F5F5F5;
     background-color: #d28847;
     box-shadow: none; }
 
-.big-green-button, .small-green-button {
+.button_green {
   color: #68BB68;
   background-color: #F5F5F5;
   border-color: #68BB68;
   box-shadow: 0px 5px 0px #4ba54b; }
-  .big-green-button:hover, .small-green-button:hover {
+  .button_green:hover {
     color: #F5F5F5;
     background-color: #68BB68; }
-  .big-green-button:active, .small-green-button:active {
+  .button_green:active {
     color: #F5F5F5;
     background-color: #68BB68;
     box-shadow: none; }
@@ -4323,7 +4322,8 @@ body {
   display: inline-block;
   margin: 3px;
   background: #F5F5F5;
-  box-shadow: 0 0 0 3px #68BB68; }
+  box-shadow: 0 0 0 3px #68BB68;
+  cursor: pointer; }
   .arrow-button i {
     border: solid;
     border-width: 0 4px 4px 0;
@@ -4337,7 +4337,7 @@ body {
     .arrow-button:hover i {
       border-color: #F5F5F5; }
 
-.disabled-arrow-button {
+.arrow-button_disabled {
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
@@ -4349,20 +4349,20 @@ body {
   margin: 3px;
   background: #D2D2D2;
   box-shadow: 0 0 0 3px #D2D2D2; }
-  .disabled-arrow-button i {
+  .arrow-button_disabled i {
     border: solid;
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 7px; }
-  .disabled-arrow-button i {
+  .arrow-button_disabled i {
     border-color: #F5F5F5; }
 
-.left-arrow i {
+.arrow-button_left i {
   margin-left: 14%;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg); }
 
-.right-arrow i {
+.arrow-button_right i {
   margin-right: 14%;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg); }
@@ -4370,7 +4370,7 @@ body {
 .slider-1 {
   position: relative;
   margin-top: 35px; }
-  .slider-1 .bubble, .slider-1 .top-bubble, .slider-1 .bottom-bubble, .slider-1 .left-bubble, .slider-1 .error-bubble, .slider-1 .okay-bubble, .slider-1 .right-bubble {
+  .slider-1 .bubble, .slider-1 .bubble_top, .slider-1 .bubble_bottom, .slider-1 .bubble_left, .slider-1 .error-bubble, .slider-1 .okay-bubble, .slider-1 .bubble_right {
     position: absolute;
     text-align: center;
     top: -38px;
@@ -4480,7 +4480,7 @@ body {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
-.checkmark-icon {
+.checkmark__icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -4488,7 +4488,7 @@ body {
   width: 25px;
   background-color: #eee;
   border-radius: 50%; }
-  .checkmark-icon:after {
+  .checkmark__icon:after {
     content: "";
     position: absolute;
     border: solid;
@@ -4541,30 +4541,30 @@ body {
   align-items: center;
   text-align: center; }
 
-.profile .bubble, .profile .top-bubble, .profile .bottom-bubble, .profile .left-bubble, .profile .error-bubble, .profile .okay-bubble, .profile .right-bubble {
+.profile .bubble, .profile .bubble_top, .profile .bubble_bottom, .profile .bubble_left, .profile .error-bubble, .profile .okay-bubble, .profile .bubble_right {
   width: 300px;
   padding: 1%;
   padding-top: 2%;
   line-height: 1.2; }
-  .profile .bubble .profile-name, .profile .top-bubble .profile-name, .profile .bottom-bubble .profile-name, .profile .left-bubble .profile-name, .profile .error-bubble .profile-name, .profile .okay-bubble .profile-name, .profile .right-bubble .profile-name {
+  .profile .bubble .profile-name, .profile .bubble_top .profile-name, .profile .bubble_bottom .profile-name, .profile .bubble_left .profile-name, .profile .error-bubble .profile-name, .profile .okay-bubble .profile-name, .profile .bubble_right .profile-name {
     font-size: 24px; }
-  .profile .bubble .profile-occupation, .profile .top-bubble .profile-occupation, .profile .bottom-bubble .profile-occupation, .profile .left-bubble .profile-occupation, .profile .error-bubble .profile-occupation, .profile .okay-bubble .profile-occupation, .profile .right-bubble .profile-occupation {
+  .profile .bubble .profile-occupation, .profile .bubble_top .profile-occupation, .profile .bubble_bottom .profile-occupation, .profile .bubble_left .profile-occupation, .profile .error-bubble .profile-occupation, .profile .okay-bubble .profile-occupation, .profile .bubble_right .profile-occupation {
     font-size: 18px;
     font-weight: bold; }
-  .profile .bubble .profile-icons, .profile .top-bubble .profile-icons, .profile .bottom-bubble .profile-icons, .profile .left-bubble .profile-icons, .profile .error-bubble .profile-icons, .profile .okay-bubble .profile-icons, .profile .right-bubble .profile-icons {
+  .profile .bubble .profile-icons, .profile .bubble_top .profile-icons, .profile .bubble_bottom .profile-icons, .profile .bubble_left .profile-icons, .profile .error-bubble .profile-icons, .profile .okay-bubble .profile-icons, .profile .bubble_right .profile-icons {
     margin-top: 10%;
     font-size: 2em;
     text-align: center; }
-    .profile .bubble .profile-icons i, .profile .top-bubble .profile-icons i, .profile .bottom-bubble .profile-icons i, .profile .left-bubble .profile-icons i, .profile .error-bubble .profile-icons i, .profile .okay-bubble .profile-icons i, .profile .right-bubble .profile-icons i {
+    .profile .bubble .profile-icons i, .profile .bubble_top .profile-icons i, .profile .bubble_bottom .profile-icons i, .profile .bubble_left .profile-icons i, .profile .error-bubble .profile-icons i, .profile .okay-bubble .profile-icons i, .profile .bubble_right .profile-icons i {
       margin-left: 9%; }
-    .profile .bubble .profile-icons i:last-child, .profile .top-bubble .profile-icons i:last-child, .profile .bottom-bubble .profile-icons i:last-child, .profile .left-bubble .profile-icons i:last-child, .profile .error-bubble .profile-icons i:last-child, .profile .okay-bubble .profile-icons i:last-child, .profile .right-bubble .profile-icons i:last-child {
+    .profile .bubble .profile-icons i:last-child, .profile .bubble_top .profile-icons i:last-child, .profile .bubble_bottom .profile-icons i:last-child, .profile .bubble_left .profile-icons i:last-child, .profile .error-bubble .profile-icons i:last-child, .profile .okay-bubble .profile-icons i:last-child, .profile .bubble_right .profile-icons i:last-child {
       margin-right: 9%; }
-    .profile .bubble .profile-icons i:first-child, .profile .top-bubble .profile-icons i:first-child, .profile .bottom-bubble .profile-icons i:first-child, .profile .left-bubble .profile-icons i:first-child, .profile .error-bubble .profile-icons i:first-child, .profile .okay-bubble .profile-icons i:first-child, .profile .right-bubble .profile-icons i:first-child {
+    .profile .bubble .profile-icons i:first-child, .profile .bubble_top .profile-icons i:first-child, .profile .bubble_bottom .profile-icons i:first-child, .profile .bubble_left .profile-icons i:first-child, .profile .error-bubble .profile-icons i:first-child, .profile .okay-bubble .profile-icons i:first-child, .profile .bubble_right .profile-icons i:first-child {
       margin-right: 2.5%; }
 
-.profile-1 .bubble, .profile-1 .top-bubble, .profile-1 .bottom-bubble, .profile-1 .left-bubble, .profile-1 .error-bubble, .profile-1 .okay-bubble, .profile-1 .right-bubble {
+.profile-1 .bubble, .profile-1 .bubble_top, .profile-1 .bubble_bottom, .profile-1 .bubble_left, .profile-1 .error-bubble, .profile-1 .okay-bubble, .profile-1 .bubble_right {
   background: #D2D2D2; }
-  .profile-1 .bubble:after, .profile-1 .top-bubble:after, .profile-1 .bottom-bubble:after, .profile-1 .left-bubble:after, .profile-1 .error-bubble:after, .profile-1 .okay-bubble:after, .profile-1 .right-bubble:after {
+  .profile-1 .bubble:after, .profile-1 .bubble_top:after, .profile-1 .bubble_bottom:after, .profile-1 .bubble_left:after, .profile-1 .error-bubble:after, .profile-1 .okay-bubble:after, .profile-1 .bubble_right:after {
     border-right-color: #D2D2D2; }
 
 .profile-1 .profile-name {
@@ -4578,9 +4578,9 @@ body {
 
 .profile-2 {
   color: #F5F5F5; }
-  .profile-2 .bubble, .profile-2 .top-bubble, .profile-2 .bottom-bubble, .profile-2 .left-bubble, .profile-2 .error-bubble, .profile-2 .okay-bubble, .profile-2 .right-bubble {
+  .profile-2 .bubble, .profile-2 .bubble_top, .profile-2 .bubble_bottom, .profile-2 .bubble_left, .profile-2 .error-bubble, .profile-2 .okay-bubble, .profile-2 .bubble_right {
     background: #68BB68; }
-    .profile-2 .bubble:after, .profile-2 .top-bubble:after, .profile-2 .bottom-bubble:after, .profile-2 .left-bubble:after, .profile-2 .error-bubble:after, .profile-2 .okay-bubble:after, .profile-2 .right-bubble:after {
+    .profile-2 .bubble:after, .profile-2 .bubble_top:after, .profile-2 .bubble_bottom:after, .profile-2 .bubble_left:after, .profile-2 .error-bubble:after, .profile-2 .okay-bubble:after, .profile-2 .bubble_right:after {
       border-right-color: #68BB68; }
 
 .search {
@@ -4680,7 +4680,7 @@ body {
   clear: both;
   display: table; }
 
-.news-left {
+.news__left {
   float: left;
   width: 35%;
   height: 100%;
@@ -4688,46 +4688,46 @@ body {
   background-size: auto 100%;
   background-position: center; }
 
-.news-text {
+.news__text {
   text-align: left; }
 
-.news-cont {
+.news__cont {
   padding: 10%;
   padding-bottom: 0; }
 
-.news-right {
+.news__right {
   float: left;
   width: 65%;
   height: 100%; }
 
 .news-1 {
   background-color: #d28847; }
-  .news-1 .news-title {
+  .news-1 .news__title {
     font-size: 2.8em;
     line-height: 0.9;
     margin-bottom: 8%;
     text-align: left;
     margin-top: 2%; }
-  .news-1 .news-date {
+  .news-1 .news__date {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 8%; }
 
 .news-2 {
   background-color: #68BB68; }
-  .news-2 .news-date {
+  .news-2 .news__date {
     margin-bottom: 8%; }
-  .news-2 .news-date-day {
+  .news-2 .news__day {
     font-size: 6em;
     margin-right: 4%; }
-  .news-2 .news-date-month {
+  .news-2 .news__month {
     font-size: 2em; }
-  .news-2 .news-title {
+  .news-2 .news__title {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 5%;
     text-align: left; }
-  .news-2 .news-text {
+  .news-2 .news__text {
     margin-bottom: 10%; }
   .news-2 .button {
     font-size: 1em;
@@ -4744,33 +4744,33 @@ body {
   .chat .avatar {
     width: 120px;
     height: 120px; }
-  .chat .chat-name {
+  .chat__name {
     padding: 7%;
     font-size: 2em;
     background-color: #68BB68;
     color: #F5F5F5; }
-  .chat .chat-header {
+  .chat__header {
     height: 36px;
     background-color: #3b823b; }
-  .chat .chat-avatar {
+  .chat__avatar {
     position: relative;
     height: 20px;
     background-color: #D2D2D2;
     padding: 5%;
     padding-bottom: 0; }
-    .chat .chat-avatar .avatar {
+    .chat__avatar .avatar {
       position: absolute;
       top: -60px;
       left: 35%; }
-  .chat .chat-content {
+  .chat__content {
     background-color: #D2D2D2;
     padding: 10%; }
-    .chat .chat-content .bubble, .chat .chat-content .top-bubble, .chat .chat-content .bottom-bubble, .chat .chat-content .left-bubble, .chat .chat-content .error-bubble, .chat .chat-content .okay-bubble, .chat .chat-content .right-bubble {
+    .chat__content .bubble, .chat__content .bubble_top, .chat__content .bubble_bottom, .chat__content .bubble_left, .chat__content .error-bubble, .chat__content .okay-bubble, .chat__content .bubble_right {
       background: #F5F5F5;
       padding: 1em;
       text-align: left;
       margin-bottom: 6%; }
-      .chat .chat-content .bubble:after, .chat .chat-content .top-bubble:after, .chat .chat-content .bottom-bubble:after, .chat .chat-content .left-bubble:after, .chat .chat-content .error-bubble:after, .chat .chat-content .okay-bubble:after, .chat .chat-content .right-bubble:after {
+      .chat__content .bubble:after, .chat__content .bubble_top:after, .chat__content .bubble_bottom:after, .chat__content .bubble_left:after, .chat__content .error-bubble:after, .chat__content .okay-bubble:after, .chat__content .bubble_right:after {
         border-bottom-color: #F5F5F5; }
   .chat textarea {
     display: block;

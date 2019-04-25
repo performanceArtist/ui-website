@@ -13,25 +13,27 @@
       overflow: auto;
       max-width: 40%;
       text-align: right; }
-      #content #rate-cont #right .name {
-        font-family: 'Conv_Myriad Pro Bold';
-        padding-right: 1em; }
       #content #rate-cont #right .bubble {
         padding: 1em;
         margin-bottom: 1em;
         display: inline-block;
         text-align: left; }
-        #content #rate-cont #right .bubble .rating {
-          color: #800000;
-          margin-top: 1em;
-          text-align: right;
-          font-family: 'Conv_Myriad Pro Bold'; }
-      #content #rate-cont #right .green-bubble {
+      #content #rate-cont #right .bubble_green {
         background: #68BB68; }
-        #content #rate-cont #right .green-bubble:after {
+        #content #rate-cont #right .bubble_green:after {
           border-left-color: #68BB68; }
-        #content #rate-cont #right .green-bubble .rating {
+        #content #rate-cont #right .bubble_green .comment__rating {
           color: #006500; }
+
+.comment__name {
+  font-family: 'Conv_Myriad Pro Bold';
+  padding-right: 1em; }
+
+.comment__rating {
+  color: #800000;
+  margin-top: 1em;
+  text-align: right;
+  font-family: 'Conv_Myriad Pro Bold'; }
 
 
 /*# sourceMappingURL=feedback.css.map*/
