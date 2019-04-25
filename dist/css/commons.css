@@ -4464,13 +4464,26 @@ body {
   .checkmark input {
     display: none;
     cursor: pointer; }
-  .checkmark:hover input ~ .checkmark-icon {
+  .checkmark:hover input ~ .checkmark__icon {
     background-color: #ccc; }
-  .checkmark input:checked ~ .checkmark-icon {
+  input:checked ~ .checkmark__icon {
     background-color: #68BB68; }
-  .checkmark input:checked ~ .checkmark-icon:after {
+  input:checked ~ .checkmark__icon:after {
     border-color: white; }
-  .checkmark .checkmark-icon:after {
+  .checkmark__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%; }
+    .checkmark__icon:after {
+      content: "";
+      position: absolute;
+      border: solid;
+      border-color: #A6A6A6; }
+  .checkmark__icon:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -4479,20 +4492,6 @@ body {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
-
-.checkmark__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%; }
-  .checkmark__icon:after {
-    content: "";
-    position: absolute;
-    border: solid;
-    border-color: #A6A6A6; }
 
 .input-text {
   background-color: #D2D2D2;
@@ -4787,5 +4786,3 @@ body {
   .chat .fa-camera {
     float: right; }
 
-
-/*# sourceMappingURL=commons.css.map*/
