@@ -6,19 +6,19 @@ block head
 block content
   h2 STANDARD BUTTONS
   #standard-buttons
-    +standard-button('small-green-button') 
+    +standard-button('small', 'green') 
       | button
-    +standard-button('big-green-button') 
+    +standard-button('big', 'green') 
       | button
-    +standard-button('big-orange-button')
+    +standard-button('big', 'orange')
       | button
-    +standard-button('small-orange-button')
+    +standard-button('small', 'orange')
       | button
   
   h2 ARROW BUTTONS
   #arrow-buttons
-    +arrow-button('left-arrow', {disabled:true})
-    +arrow-button('right-arrow')
+    +arrow-button('left', {disabled:true})
+    +arrow-button('right')
   h2 PERCENTAGES/PIE CHART
   #percentages
     .circle
@@ -30,9 +30,6 @@ block content
       +slider-1
     .right
       .slider-2
-    //+bubble('top-bubble')
-    //  h2 WEIRD
-    //+bubble('right-bubble', {style:{width:'100px', height:'100px'}})
   h2 STAGES
   +stage('stage-test')
   h2 FORM ELEMENTS
@@ -57,8 +54,7 @@ block content
           br
         h3 Checkbox
         +checkmark('meme', {type:'checkbox', label:'test'})
-      //i(class='fa fa-search', style='color:grey;font-size:2em')
-      //+avatar()
+        
       h2 PROFILES
       +profile('profile-1', {
         name:'Ricardo Milos', 

@@ -1,13 +1,13 @@
 mixin map(id, title, street, city)
   .map(id=id)
-    .map-info     
-      .map-info-left
-        .map-title #{title}
-        .map-address 
+    .map__info     
+      .map__info-left
+        .map__title #{title}
+        .map__address 
           | #{street}
           br
           | #{city}
-      .map-info-right
+      .map__info-right
         i(class="fa fa-bullseye")
         i(class="fa fa-map-marker")
 

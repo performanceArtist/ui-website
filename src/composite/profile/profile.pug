@@ -4,7 +4,7 @@ include ../../components/avatar/avatar
 mixin profile(className, data)
   div(class='profile ' + className)
     +avatar(data.src)
-    +bubble('left-bubble')
+    +bubble('left')
       .profile-name #{data.name}
       .profile-occupation #{data.occupation}
       .profile-icons

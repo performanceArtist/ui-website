@@ -13,7 +13,7 @@
     display: table;
 }
   
-.news-left {
+.news__left {
     float: left;
     width: 35%;
     height: 100%;
@@ -23,16 +23,16 @@
     background-position: center; 
 }
 
-.news-text {
+.news__text {
     text-align: left;
 }
 
-.news-cont {
+.news__cont {
     padding: 10%;
     padding-bottom: 0;
 }
 
-.news-right {
+.news__right {
     float: left;
     width: 65%;
     height: 100%;
@@ -41,7 +41,7 @@
 .news-1 {
     background-color: $light-orange;
 
-    .news-title {
+    .news__title {
         font-size: 2.8em;
         line-height: 0.9;
         margin-bottom: 8%;
@@ -49,7 +49,7 @@
         margin-top: 2%;
     }
 
-    .news-date {
+    .news__date {
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 8%;
@@ -60,27 +60,27 @@
 .news-2 {
     background-color: $light-green;
 
-    .news-date {
+    .news__date {
         margin-bottom: 8%;
     }
 
-    .news-date-day {
+    .news__day {
         font-size: 6em;
         margin-right: 4%;
     }
 
-    .news-date-month {
+    .news__month {
         font-size: 2em;
     }
 
-    .news-title {
+    .news__title {
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 5%;
         text-align: left;
     }    
 
-    .news-text {
+    .news__text {
         margin-bottom: 10%;
     }
 

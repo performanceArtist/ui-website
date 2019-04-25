@@ -10,7 +10,7 @@ $info-height: $map-width*0.2;
     overflow: hidden;
     font-family: 'Conv_Myriad Pro Light';
     
-    .map-info {
+    &__info {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -20,36 +20,37 @@ $info-height: $map-width*0.2;
         height: $info-height;
         display: flex;
         align-items: center;
+    }
 
-        .map-info-left {
-            width: 50%;
-            text-align: left;
-        }
+    
+    &__title, &__address {
+        display: inline-block;
+    }
 
-        .map-title, .map-address {
-            display: inline-block;
-        }
+    &__title {
+        font-size: 3em;   
+        margin-right: 7%;
+        margin-left: 7%;
+    }
 
-        .map-title {
-            font-size: 3em;   
-            margin-right: 7%;
-            margin-left: 7%;
-        }
+    &__address {
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
 
-        .map-address {
-            font-size: 1em;
-            text-transform: uppercase;
-            font-weight: bold;
+    }
 
-        }
+    &__info-left {
+        width: 50%;
+        text-align: left;
+    }
 
-        .map-info-right {
-            font-size: 3em;
-            text-align: right;
-            width: 50%;
-            i {
-                margin-right: 0.8em;
-            }
+    &__info-right {
+        font-size: 3em;
+        text-align: right;
+        width: 50%;
+        i {
+            margin-right: 0.8em;
         }
     }
 

@@ -2,7 +2,7 @@ function updateVideo() {
     document.querySelectorAll('.video').forEach(cont => {
         let jcont = $(cont),
             video = cont.querySelector('video'),
-            progress = jcont.find('.video-progress'),
+            progress = jcont.find('.video__progress'),
             moving = false;
         
         progress.slider({
@@ -33,11 +33,11 @@ function updateVideo() {
             }
         });
 
-        cont.querySelector('.fullscreen').addEventListener('click', function(e) {
+        cont.querySelector('.video__fullscreen').addEventListener('click', function(e) {
             fullscreen(video);
         });
 
-        cont.querySelector('.play').addEventListener('click', function(e) {
+        cont.querySelector('.video__play').addEventListener('click', function(e) {
             let icon = this.querySelector('button i');
             play(video, icon);
         });

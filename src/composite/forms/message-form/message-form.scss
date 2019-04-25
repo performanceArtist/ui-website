@@ -41,13 +41,13 @@
 }
 
 .error-bubble {
-    @extend .left-bubble;
+    @extend .bubble_left;
     @extend %info-bubble;
     @include set-bubble-color($light-orange, left);
 }
 
 .okay-bubble {
-    @extend .left-bubble;
+    @extend .bubble_left;
     @extend %info-bubble;
     @include set-bubble-color($light-green, left);
 }

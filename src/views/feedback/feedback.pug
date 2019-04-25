@@ -2,10 +2,10 @@ extends ../../layout
 
 mixin comment(name, message, rating)
   .comment
-    +bubble(rating < 60 ? 'right-bubble' : 'right-bubble green-bubble')
+    +bubble(rating < 60 ? 'right' : 'right bubble_green')
       | #{message}
-      .rating Rated #{rating}
-      .name #{name}
+      .comment__rating Rated #{rating}
+      .comment__name #{name}
 
 block head
   title Feedback

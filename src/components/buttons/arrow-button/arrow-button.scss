@@ -3,14 +3,15 @@ $arrow-button-border: 3px;
 .arrow-button {
     @include set-arrow-size(50px);
     @include set-arrow-color($white, $light-green);
+    cursor: pointer;
 }
 
-.disabled-arrow-button {
+.arrow-button_disabled {
     @include set-arrow-size(50px);
     @include set-disabled-color($white, $light-grey);
 }
 
-.left-arrow {
+.arrow-button_left {
     i {
         margin-left: 14%;
         transform: rotate(135deg);
@@ -18,7 +19,7 @@ $arrow-button-border: 3px;
     }
 }
 
-.right-arrow {
+.arrow-button_right {
     i {
         margin-right: 14%;
         transform: rotate(-45deg);

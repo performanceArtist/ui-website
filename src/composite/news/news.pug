@@ -1,25 +1,25 @@
-include ../../components/buttons/standard/button
+include ../../components/buttons/standard-button/standard-button
 
 mixin news-1(data)
   .news-1
-    .news-left(style='background-image:url(' + data.image + ')')
-    .news-right
-      .news-cont
-        .news-title #{data.title}
-        .news-date #{data.date}
-        .news-text
+    .news__left(style='background-image:url(' + data.image + ')')
+    .news__right
+      .news__cont
+        .news__title #{data.title}
+        .news__date #{data.date}
+        .news__text
           block
 
 mixin news-2(data)
   .news-2
-    .news-left(style='background-image:url(' + data.image + ')')
-    .news-right
-      .news-cont
-        .news-date 
-          span.news-date-day #{data.day}
-          span.news-date-month #{data.month}
-        .news-title #{data.title}
-        .news-text
+    .news__left(style='background-image:url(' + data.image + ')')
+    .news__right
+      .news__cont
+        .news__date 
+          span.news__day #{data.day}
+          span.news__month #{data.month}
+        .news__title #{data.title}
+        .news__text
           block
-        +standard-button('big-green-button') 
+        +standard-button('big', 'green') 
           | Add to calendar

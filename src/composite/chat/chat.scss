@@ -16,19 +16,19 @@
         height: $avatar-size;
     }
 
-    .chat-name {
+    &__name {
         padding: 7%;
         font-size: 2em;
         background-color: $light-green;
         color: $white;
     }
 
-    .chat-header {
+    &__header {
         height: 36px;
         background-color: darken($light-green, 20%)
     }
 
-    .chat-avatar {
+    &__avatar {
         position: relative;
         height: 20px;
         background-color: $light-grey;
@@ -41,7 +41,7 @@
         }
     }
 
-    .chat-content {
+    &__content {
         background-color: $light-grey;
         padding: 10%;
         .bubble {

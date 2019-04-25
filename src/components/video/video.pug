@@ -2,11 +2,11 @@ mixin video(src, type="video/mp4")
   .video
     video
       source(src=src, type=type)
-    .controls
-      .play
+    .video__controls
+      .video__play
         button
           i(class='fa fa-play')
-      .video-progress
-      .fullscreen
+      .video__progress
+      .video__fullscreen
         button
           i(class='fa fa-arrows-alt')

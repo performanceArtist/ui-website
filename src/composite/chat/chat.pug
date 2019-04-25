@@ -1,19 +1,19 @@
-include ../../components/buttons/standard/button
+include ../../components/buttons/standard-button/standard-button
 include ../../components/avatar/avatar
 include ../../components/bubble/bubble
 include ../../components/input/textarea/textarea
 
 mixin chat(data)
   .chat
-    .chat-name #{data.name}
-    .chat-header
-    .chat-avatar
+    .chat__name #{data.name}
+    .chat__header
+    .chat__avatar
       +avatar(data.image)
       i(class='fa fa-comments')
       i(class='fa fa-camera')
-    .chat-content
-      +bubble('top-bubble')
+    .chat__content
+      +bubble('top')
         | Hi there! I am here to answer all your questions!
       +input-textarea('chat-reply', {placeholder:'Do you serve the Big Sausage Pizza?', rows:5})
-      +standard-button('big-green-button')
+      +standard-button('big', 'green')
         | reply

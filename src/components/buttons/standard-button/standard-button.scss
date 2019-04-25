@@ -11,42 +11,20 @@
     margin-bottom: 5px;
 }
 
-//helper classes
-%big-button {
+.button_big {
   @include set-button-size(175px, 48px);
 }
 
-%small-button {
+.button_small {
   @include set-button-size(117x, 33px);
 }
 
-%orange-button {
+.button_orange {
   @include set-button-color($light-orange, $white); 
 }
 
-%green-button {
+.button_green {
   @include set-button-color($light-green, $white);
-}
-
-//"fully applied" classes
-.big-green-button {
-  @extend %big-button;
-  @extend %green-button;
-}
-
-.small-green-button {
-  @extend %small-button;
-  @extend %green-button;
-}
-
-.big-orange-button {
-  @extend %big-button;
-  @extend %orange-button;
-}
-
-.small-orange-button {
-  @extend %small-button;
-  @extend %orange-button;
 }
 
 [ripple] {

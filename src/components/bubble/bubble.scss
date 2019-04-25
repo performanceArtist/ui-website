@@ -14,7 +14,7 @@ $bubble-color: $light-orange;
     }
 } 
 
-.top-bubble {
+.bubble_top {
     @extend .bubble;
     margin-top: $pointer-size;
 
@@ -28,7 +28,7 @@ $bubble-color: $light-orange;
     }
 }
 
-.bottom-bubble {
+.bubble_bottom {
     @extend .bubble;
     margin-bottom:$pointer-size;
 
@@ -42,7 +42,7 @@ $bubble-color: $light-orange;
     }
 }
 
-.left-bubble {
+.bubble_left {
     @extend .bubble;
     margin-left:$pointer-size;
 
@@ -56,7 +56,7 @@ $bubble-color: $light-orange;
     }
 }
 
-.right-bubble {
+.bubble_right {
     @extend .bubble;
     margin-right:$pointer-size;
 

@@ -25,32 +25,34 @@
             max-width: 40%;
             text-align: right;
 
-            .name {
-                font-family: 'Conv_Myriad Pro Bold';
-                padding-right: 1em;
-            }
-
             .bubble {
                 padding: 1em;
                 margin-bottom: 1em;
                 display: inline-block;
                 text-align: left;
-
-                .rating {
-                    color: #800000;
-                    margin-top: 1em;
-                    text-align: right;
-                    font-family: 'Conv_Myriad Pro Bold';
-                }
             }
 
-            .green-bubble {
+            .bubble_green {
                 @include set-bubble-color($light-green, right);
 
-                .rating {
+                .comment__rating {
                     color: $medium-green;
                 }
             }
         }
+    }
+}
+
+.comment {
+    &__name {
+        font-family: 'Conv_Myriad Pro Bold';
+        padding-right: 1em;
+    }
+
+    &__rating {
+        color: #800000;
+        margin-top: 1em;
+        text-align: right;
+        font-family: 'Conv_Myriad Pro Bold';
     }
 }

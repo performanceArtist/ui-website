@@ -1,57 +1,55 @@
-.pizza-cont {
+.pizza {
     width: 60%;
     margin: auto;
 
-    .pizza-name {
+    &__name {
         font-size: 1.7em;
         text-transform: uppercase;
         padding: 1em;
     }
 
-    .pizza-img {
+    &__img {
         display: inline-block;
+
+        img {
+            max-width: 400px;
+            max-height: 400px;
+            border: 1px solid #c5b18d;
+        }
     }
 
-    .pizza-info {
+    &__info {
         display: flex;
-
-        .pizza-rating {
-            padding: 1em;
-            padding-top: 0;
-            font-size: 1.5em;
-        }
 
         .circle {
             display: block;
             margin-top: 0.5em;
             margin-bottom: 0.5em;
         }
-
-        .pizza-arrows {
-            .arrow-button {
-                margin-left: 0.5em;
-            }
-        }
     }
 
-    .pizza-rating {
+    &__rating {
+        padding: 1em;
+        padding-top: 0;
+        font-size: 1.5em;
         margin-left: 1em;
     }
 
-    .pizza-ing {
-        display: flex;
-        margin-top: 2%;
 
-        .pizza-ing-li {
-            margin-right: 5%;
-            text-align: left;
+    &__arrows {
+        .arrow-button {
+            margin-left: 0.5em;
         }
     }
 
-    img {
-        max-width: 400px;
-        max-height: 400px;
-        border: 1px solid #c5b18d;
+    &__ing {
+        display: flex;
+        margin-top: 2%;
+    }
+
+    &__li {
+        margin-right: 5%;
+        text-align: left;
     }
 
 }
