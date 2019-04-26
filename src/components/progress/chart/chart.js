@@ -41,9 +41,10 @@ require('jquery-circle-progress');
 
 function percent(selector, opt={}) {
     const def = {
-        value: 0.6,
+        value: 0.89,
         startAngle: -Math.PI/2,
         size: 120,
+        thickness: 7,
         fill: '#E75637'
     }
 
@@ -58,7 +59,7 @@ function pie(selector, opt={}) {
         value: 1,
         startAngle: -Math.PI/2,
         size: 120,
-        thickness: '25',
+        thickness: 22,
         fill: {
             sectors: [
                 ['#747474', 0.3], 

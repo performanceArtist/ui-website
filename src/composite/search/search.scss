@@ -1,3 +1,15 @@
 .search {
     @include menu-item($light-orange, 14px);
+
+    button {
+        width: 2.64em;
+        height: 2.64em;
+    }
+
+    input {
+        width: 295px;
+        padding: 0.6em;
+        font-size: 0.9em;
+        padding-left: 1em;
+    }
 }

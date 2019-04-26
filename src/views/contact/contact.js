@@ -10,12 +10,12 @@ window.onload = function() {
 
     let els = document.querySelectorAll('.profile'),
         chat = document.querySelector('.chat'),
-        chatName = chat.querySelector('.chat-name'),
+        chatName = chat.querySelector('.chat__name'),
         chatImg = chat.querySelector('.avatar img');
 
     els.forEach(el => {
         let img = el.querySelector('.avatar img'),
-            name = el.querySelector('.profile-name');
+            name = el.querySelector('.profile__name');
 
         el.addEventListener('click', function() {
             els.forEach(el => el.classList.remove('selected-contact'));

@@ -12,11 +12,13 @@
 }
 
 .button_big {
-  @include set-button-size(175px, 48px);
+  @include set-button-size(146px, 40px);
+  font-size: 0.9em;
 }
 
 .button_small {
-  @include set-button-size(117x, 33px);
+  @include set-button-size(97px, 27px);
+  font-size: 0.8em;
 }
 
 .button_orange {

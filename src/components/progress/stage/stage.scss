@@ -9,9 +9,17 @@
             top: 18px;
         }
 
+        .done::before, .current::before, li::before {
+            width: 36px;
+            height: 36px;
+            line-height: 1.8;
+            font-family: $font-bold;
+        }
+
         .done::before, .current::before {
             background-color: $light-orange;
         }
+
         .done::after {
             background-color: $light-orange;
         }

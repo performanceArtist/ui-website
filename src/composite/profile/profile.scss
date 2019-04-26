@@ -5,22 +5,26 @@
 }
 
 .profile .bubble {
-    width: 300px;
-    padding: 1%;
-    padding-top: 2%;
+    width: 203px;
+    height: 116px;
     line-height: 1.2;
+    margin-left: 1em;
+}
 
-    .profile-name {
+.profile {
+    &__name {
         font-size: 24px;
+        margin-top: 5.5%;
     }
 
-    .profile-occupation {
-        font-size: 18px;
-        font-weight: bold;
+    &__occupation {
+        font-size: 0.9em;
+        font-family: $font-bold;
+        text-transform: uppercase;
     }
 
-    .profile-icons {
-        margin-top: 10%;
+    &__icons {
+        margin-top: 6.5%;
         font-size: 2em;
         text-align: center;
 
@@ -44,15 +48,15 @@
         @include set-bubble-color($light-grey, left);
     }
 
-    .profile-name {
+    .profile__name {
         color: $light-orange;
     }
     
-    .profile-icons i {
+    .profile__icons i {
         color: $medium-grey;
     }
 
-    .profile-icons .fa-twitter {
+    .profile__icons .fa-twitter {
         color: $light-orange;
     }
 }

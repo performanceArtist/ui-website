@@ -25,13 +25,14 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1.0', width='device-width')
     block head
       title Papa Bear's
   body
     #header
       a(href='index.html')
-        img(src='images/logo.png')  
-    #nav
+        img(src='images/logo.png', alt='logo.png')  
+    nav
       #nav-links
         a(href='index.html') Home
         a(href='menu.html') Gallery
@@ -43,7 +44,7 @@ html(lang='en')
 
     #content
       block content
-    #footer
+    footer
       a(href='') Home
       | |
       a(href='') Sponsors

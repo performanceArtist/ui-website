@@ -1,7 +1,7 @@
 .news-1, .news-2 {
     color: $white;
-    width: 435px;
-    height: 322px;
+    width: 360px;
+    height: 265px;
     text-align: center;
     border-radius: 0.4em;
     overflow: auto;
@@ -15,7 +15,7 @@
   
 .news__left {
     float: left;
-    width: 35%;
+    width: 33%;
     height: 100%;
     background-repeat: no-repeat;
     //background-size: contain;
@@ -25,6 +25,7 @@
 
 .news__text {
     text-align: left;
+    font-size: 0.8em;
 }
 
 .news__cont {
@@ -42,7 +43,7 @@
     background-color: $light-orange;
 
     .news__title {
-        font-size: 2.8em;
+        font-size: 2.2em;
         line-height: 0.9;
         margin-bottom: 8%;
         text-align: left;
@@ -51,8 +52,10 @@
 
     .news__date {
         text-transform: uppercase;
-        font-weight: bold;
-        margin-bottom: 8%;
+        font-family: $font-bold;
+        font-size: 0.9em;
+        text-align: left;
+        margin-bottom: 9.5%;
     }    
 
 }
@@ -60,8 +63,12 @@
 .news-2 {
     background-color: $light-green;
 
+    .news__cont {
+        padding-top: 0;
+    }
+
     .news__date {
-        margin-bottom: 8%;
+        margin-bottom: 4%;
     }
 
     .news__day {
@@ -85,7 +92,8 @@
     }
 
     .button {
-        font-size: 1em;
+        font-size: 0.8em;
         width: 90%;
+        height: 32px;
     }
 }

@@ -1,13 +1,13 @@
 $arrow-button-border: 3px;
 
 .arrow-button {
-    @include set-arrow-size(50px);
+    @include set-arrow-size(60px);
     @include set-arrow-color($white, $light-green);
     cursor: pointer;
 }
 
 .arrow-button_disabled {
-    @include set-arrow-size(50px);
+    @include set-arrow-size(60px);
     @include set-disabled-color($white, $light-grey);
 }
 

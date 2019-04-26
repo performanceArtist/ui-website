@@ -5,9 +5,9 @@ mixin profile(className, data)
   div(class='profile ' + className)
     +avatar(data.src)
     +bubble('left')
-      .profile-name #{data.name}
-      .profile-occupation #{data.occupation}
-      .profile-icons
+      .profile__name #{data.name}
+      .profile__occupation #{data.occupation}
+      .profile__icons
         i(class='fa fa-facebook-f')
         i(class='fa fa-twitter')
         i(class='fa fa-dribbble')

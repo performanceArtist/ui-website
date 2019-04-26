@@ -32,7 +32,7 @@ function slider1(selector) {
     document.querySelectorAll(selector).forEach(function(el) {
         let bubble = el.querySelector('.bubble'),
             width = el.offsetWidth,
-            offset = 0.28,
+            offset = 0.30,
             input = el.querySelector('input');
 
         input.addEventListener('input', function() {

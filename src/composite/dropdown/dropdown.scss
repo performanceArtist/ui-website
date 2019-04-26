@@ -1,7 +1,7 @@
-$dropdown-width: 220px;
+$dropdown-width: 360px;
 
 .dropdown {
-    height: 29px;
+    height: 34px;
     overflow: hidden;
     width: $dropdown-width;
     position: relative;
@@ -16,7 +16,7 @@ $dropdown-width: 220px;
     z-index: 1;
     text-align: center;
     font-size: 1.5em;
-    width: 30px;
+    width: $dropdown-width/9;
     height: 100%;      
     pointer-events: none;
     box-sizing: border-box;   
@@ -26,7 +26,7 @@ $dropdown-width: 220px;
     background: $light-grey;
     border: none;
     font-size: 14px;
-    height: 29px;
+    height: 34px;
     padding: 5px; 
     width: $dropdown-width;
  }
