@@ -5,7 +5,7 @@ import './plugins/progressbar/jquery.progressbar';
 
 import ripple from './components/buttons/standard-button/ripple';
 import * as chart from './components/progress/chart/chart';
-import * as slider from './components/progress/slider/slider';
+import * as slider from './composite/slider/slider';
 import video from './components/video/video';
 import datepicker from './components/datepicker/datepicker';
 import myMap from './components/map/map';

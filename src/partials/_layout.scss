@@ -1,6 +1,6 @@
 body {
     margin:0;
-    color: #252525;
+    color: $black;
     background: $light-yellow;
     font-family: $font;
     letter-spacing: 1px;
@@ -34,6 +34,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 1920px;
+    margin: auto;
 }
 
 header {
@@ -49,9 +51,14 @@ nav {
     padding-bottom: 2%;
     border-bottom: 1px #E0E0E0 solid;
 
+    .search {
+        input {
+            width: 160px;
+        }
+    }
+    
     #nav-links {
         display: inline-block;
-        //border: 1px solid $light-grey;
     }
     
     a {
@@ -77,6 +84,7 @@ nav {
     margin: auto;
     width: 90%;
     text-align: center; 
+    max-width: 1280px;
 }
 
 footer {

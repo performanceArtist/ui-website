@@ -69,8 +69,6 @@
         text-align: center;
         border: none;
         cursor: pointer;
-        height: 2.35em;
-        width: 2.4em;
         i {
             font-size: $font-size;
             color: $font-color;
@@ -131,7 +129,7 @@
     }
  
     .dropdown:after {
-       width: $width/9;
+       //width: $width/9;
     }
  
     .dropdown select {

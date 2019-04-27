@@ -1,3 +1,5 @@
+include ../../components/buttons/arrow-button/arrow-button
+
 mixin pizza
   .pizza
     .pizza__name
@@ -5,8 +7,9 @@ mixin pizza
       .pizza__img
         img(alt='pizza')
       .pizza__rating Rating
-        .circle
-          .circle-text
+        .pizza__circle
+          .circle
+            .circle-text
         .pizza__arrows
           +arrow-button('left')
           +arrow-button('right')

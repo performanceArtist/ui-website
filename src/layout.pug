@@ -1,11 +1,11 @@
 include components/bubble/bubble
 include components/map/map
 include components/video/video
+include components/dropdown/dropdown
 
 include components/buttons/standard-button/standard-button
 include components/buttons/arrow-button/arrow-button
 
-include components/progress/slider/slider
 include components/progress/stage/stage
 
 include components/input/checkmark/checkmark
@@ -15,10 +15,10 @@ include components/input/textarea/textarea
 
 include composite/profile/profile
 include composite/search/search
-include composite/dropdown/dropdown
 include composite/forms/message-form/message-form
 include composite/news/news
 include composite/chat/chat
+include composite/slider/slider
 
 doctype html
 
@@ -60,10 +60,10 @@ html(lang='en')
       #content
         block content
       footer
-        a(href='') Home
+        a(href='/') Home
         | |
-        a(href='') Sponsors
+        a(href='blank.html') Sponsors
         | |
-        a(href='') Stuff
+        a(href='blank.html') Stuff
         | |
-        a(href='') About
+        a(href='blank.html') About

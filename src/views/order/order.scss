@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-evenly;
 
+    @include set-dropdown-width(190px);
+
     #sauce {
         margin-bottom: 1em;
     }

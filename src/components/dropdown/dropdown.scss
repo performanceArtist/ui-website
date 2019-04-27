@@ -5,6 +5,7 @@ $dropdown-width: 360px;
     overflow: hidden;
     width: $dropdown-width;
     position: relative;
+    display: inline-block;
  }
  
  .dropdown:after {
@@ -20,6 +21,7 @@ $dropdown-width: 360px;
     height: 100%;      
     pointer-events: none;
     box-sizing: border-box;   
+    line-height: 1.4em;
 }
 
  .dropdown select {
