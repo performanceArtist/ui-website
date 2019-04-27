@@ -26,29 +26,44 @@ html(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1.0', width='device-width')
+    meta(name='description' content='Basically, this is a website.')
+    meta(name='keywords' content='HTML, CSS, JavaScript')
+
+    link(rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png')
+    link(rel='manifest' href='/favicon/site.webmanifest')
+    link(rel='mask-icon' href='/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    link(rel='shortcut icon' href='/favicon/favicon.ico')
+    meta(name='msapplication-TileColor' content='#da532c')
+    meta(name='msapplication-config' content='/favicon/browserconfig.xml')
+    meta(name='theme-color' content='#ffffff')
+    
     block head
+
       title Papa Bear's
   body
-    #header
-      a(href='index.html')
-        img(src='images/logo.png', alt='logo.png')  
-    nav
-      #nav-links
-        a(href='index.html') Home
-        a(href='menu.html') Gallery
-        a(href='order.html') Order
-        a(href='feedback.html') Feedback
-        a(href='contact.html') Contact
-        a(href='ui.html') UI
-      +search
-
-    #content
-      block content
-    footer
-      a(href='') Home
-      | |
-      a(href='') Sponsors
-      | |
-      a(href='') Stuff
-      | |
-      a(href='') About
+    .wrapper
+      header
+        a(href='index.html')
+          img(src='images/logo.png', alt='logo.png')  
+      nav
+        #nav-links
+          a(href='index.html') Home
+          a(href='menu.html') Gallery
+          a(href='order.html') Order
+          a(href='feedback.html') Feedback
+          a(href='contact.html') Contact
+          a(href='ui.html') UI
+        +search
+  
+      #content
+        block content
+      footer
+        a(href='') Home
+        | |
+        a(href='') Sponsors
+        | |
+        a(href='') Stuff
+        | |
+        a(href='') About

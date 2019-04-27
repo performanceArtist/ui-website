@@ -25,7 +25,18 @@ body {
     }
 }
 
-#header {
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
     display: flex;
     padding: 1%;
     background: wheat;

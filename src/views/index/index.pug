@@ -4,7 +4,7 @@ block head
   title Homepage
 
 block content
-  h1 Hottest news
+  h2 Hottest news
   #news
     +news-1({
         image:'images/animal.jpg', 
@@ -20,7 +20,7 @@ block content
     })
       | Billy Bob will make his appearance on this very date! 
 
-  h1 Plan your visit!
+  h2 Plan your visit!
   #place-info
     +map('location', 'Meet us!', '1259 California st', 'san francisco, ca')
     #date-info
@@ -31,7 +31,7 @@ block content
           a(href='order.html')
             +standard-button('big', 'orange')
               | order now!
-  h1  
+  h2  
     | Check out the 
     a(href='https://www.youtube.com/watch?v=8RamCgvJKKE') review
     |  of our latest offer!
