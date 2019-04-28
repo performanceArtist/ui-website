@@ -1,10 +1,11 @@
 .news-1, .news-2 {
     color: $white;
-    width: 360px;
+    max-width: 360px;
     height: 265px;
+    width: 100%;
     text-align: center;
     border-radius: 0.4em;
-    overflow: auto;
+    overflow: hidden;
 }
   
 .news-1::after, .news-2::after {
@@ -95,5 +96,6 @@
         font-size: 0.8em;
         width: 90%;
         height: 32px;
+        margin-bottom: 19%;
     }
 }

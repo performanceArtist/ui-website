@@ -2,6 +2,10 @@
   padding-top: 3%;
   display: flex;
   justify-content: space-evenly; }
+  #order-cont .dropdown {
+    width: 190px; }
+  #order-cont .dropdown select {
+    width: 190px; }
   #order-cont #sauce {
     margin-bottom: 1em; }
   #order-cont .ui-switcher {
@@ -20,7 +24,7 @@
   font-weight: bold; }
 
 .stage .progressbar .current::before {
-  background-color: #d28847; }
+  background-color: #D28847; }
 
 .stage .progressbar .done::before {
   background-color: #68BB68; }

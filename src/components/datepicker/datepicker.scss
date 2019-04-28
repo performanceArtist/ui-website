@@ -1,7 +1,7 @@
 .calendar {
 
     display: inline-block;
-    font-size: 1.3em;
+    font-size: 1.62vw;
 
     .ui-widget.ui-widget-content {
         padding: 0;
@@ -19,7 +19,7 @@
 
     .ui-datepicker-calendar thead {
         font-size: 0.7em;
-        font-weight: bodl;
+        font-weight: bold;
         text-transform: uppercase;
     }
 
@@ -107,5 +107,11 @@
 
     .ui-datepicker-title {
         line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .calendar {
+        font-size: 0.75em;
     }
 }

@@ -35,6 +35,7 @@ body {
     flex-direction: column;
     height: 100%;
     max-width: 1920px;
+    min-width: 320px;
     margin: auto;
 }
 
@@ -59,11 +60,12 @@ nav {
     
     #nav-links {
         display: inline-block;
+        margin-right: 1em;
     }
     
     a {
         display: inline-block;
-        min-width: 50px;
+        min-width: 3.12em;
         color: black;
         font-family: $font-bold;
         text-align: center;
@@ -75,14 +77,11 @@ nav {
         background: white;
     }
 
-    .search {
-        margin-left: 2em;
-    }
 }
 
 #content {
     margin: auto;
-    width: 90%;
+    width: 95%;
     text-align: center; 
     max-width: 1280px;
 }
@@ -96,5 +95,34 @@ footer {
     a {
         margin-left: 0.5em;
         margin-right: 0.5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    header {
+        img {
+            width: 30%;
+        }
+    }
+
+    nav {
+        text-align: center;
+        #nav-links {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8em;
+        }
+    }
+
+    footer {
+        font-size: 0.75em;
     }
 }

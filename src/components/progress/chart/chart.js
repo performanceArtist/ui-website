@@ -50,7 +50,7 @@ function percent(selector, opt={}) {
 
     $(selector).circleProgress(Object.assign(def, opt))
     .on('circle-animation-progress', function(e, progress, stepValue) {
-        $(this).find('.circle-text').text(stepValue.toFixed(2).substr(2));
+        $(this).find('.circle__text').text(stepValue.toFixed(2).substr(2));
     });
 }
 

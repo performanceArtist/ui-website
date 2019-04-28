@@ -26,3 +26,17 @@ $arrow-button-border: 3px;
         -webkit-transform: rotate(-45deg);
     }
 }
+
+@media screen and (max-width: 500px) {
+    .arrow-button {
+        @include set-arrow-size(30px);
+        line-height: 26px;
+        @include set-arrow-color($white, $light-green);
+    }
+
+    .arrow-button_disabled {
+        @include set-arrow-size(30px);
+        line-height: 26px;
+        @include set-disabled-color($white, $light-grey);
+    }
+}

@@ -27,9 +27,8 @@
 #percentages .pie, #percentages .circle {
   margin-left: 20px; }
 
-#search-cont {
-  display: flex;
-  justify-content: space-evenly; }
+#search-cont .search {
+  margin-bottom: 2em; }
 
 .news-1, .news-2, .map, .chat, .message-form {
   margin: auto; }

@@ -4,7 +4,7 @@
     border-radius: 0.4em;
     overflow: hidden;
     text-align: center;
-    width: 360px;
+    max-width: 360px;
 
     i {
         font-size: 1.6em;
@@ -12,7 +12,7 @@
     }
     
     .avatar {
-        width: $avatar-size;
+        max-width: $avatar-size;
         height: $avatar-size;
     }
 
@@ -37,7 +37,7 @@
         .avatar {
             position: absolute;
             top: -$avatar-size/2;
-            left: 35%;
+            left: 33%;
         }
     }
 
@@ -77,4 +77,16 @@
         float: right;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    .chat {
+        textarea {
+            font-size: 1em;
+        }
+
+        &__content {
+            font-size: 0.75em;
+        }
+    }
 }

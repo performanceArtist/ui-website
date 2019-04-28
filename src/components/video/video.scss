@@ -1,19 +1,18 @@
-$video-width: 741px;
-
 .video {
-    width: $video-width;
+    width: 100%;
+    max-width: 760px;
     position: relative;
     border-radius: 0.2em;
     overflow: hidden;
 
     video {
-        width: $video-width;
+        width: 100%;
     }
 
     &__controls {
         background: rgba($color: black, $alpha: 0.35);
         position: absolute;
-        width: $video-width;
+        width: 100%;
         bottom: 1%;
 
         button {
@@ -26,7 +25,7 @@ $video-width: 741px;
     &__progress {
         float: left;
         width: 78%;
-        height: $video-width*0.007;
+        height: 0.35vw;
         border: none;
         cursor: pointer;
         margin-top: 3.6%;
@@ -42,24 +41,45 @@ $video-width: 741px;
     }
 
     &__play {
-        @include menu-item(black, $video-width*0.025);
+        @include menu-item(black, 1.6em);
         float: left;
-        margin-right: $video-width*0.02;
+        margin-right: 1%;
     }
 
     &__fullscreen {
-        @include menu-item($light-orange, $video-width*0.03);
+        @include menu-item($light-orange, 1.6em);
         float: right;
-        margin-left: $video-width*0.017;
     }
 
     &__play button, &__fullscreen button {
-        width: $video-width*0.085;
-        height: $video-width*0.085;
+        width: 100%;
+        padding: 1.4em;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .video {
+        &__controls {
+            bottom: 2.2%;
+        }
 
+        &__play button, &__fullscreen button {
+            padding: 0.4em 0.8em;
+        }
+
+        &__play {
+            @include menu-item(black, 0.6em);
+        }
+
+        &__fullscreen {
+            @include menu-item($light-orange, 0.6em);
+        }
+
+        &__progress {
+            margin-top: 4%;
+        }
+    }
+}
 
 
 

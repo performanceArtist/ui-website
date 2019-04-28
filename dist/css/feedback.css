@@ -26,12 +26,12 @@
           color: #006500; }
 
 .comment__name {
-  font-family: 'Conv_Myriad Pro Bold';
+  font-family: "Conv_Myriad Pro Bold";
   padding-right: 1em; }
 
 .comment__rating {
   color: #800000;
   margin-top: 1em;
   text-align: right;
-  font-family: 'Conv_Myriad Pro Bold'; }
+  font-family: "Conv_Myriad Pro Bold"; }
 

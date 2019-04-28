@@ -2,19 +2,34 @@
     display: inline-block;
     position: relative;
     text-align: center;
-}
 
-.circle-text {
-    display: inline-block;
-    font-size: 50px;
-    color: $black;
-    position: absolute;
-    top: 25%;
-    text-align: center;
-    left: 30%;
-    margin: 0;
+    &__text {
+        display: inline-block;
+        font-size: 50px;
+        color: $black;
+        position: absolute;
+        top: 25%;
+        text-align: center;
+        left: 30%;
+        margin: 0;
+    }
 }
 
 .pie {
     display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+    .circle, .pie {
+        canvas {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .circle {
+        &__text {
+            font-size: 1em;
+        }
+    }
 }

@@ -10,18 +10,18 @@
     text-align: left;
     
     #date-info {
-        margin-left: 20%;
-        margin-right: 20%;
         display: flex;
         justify-content: space-between;
+        width: 60%;
+        margin: auto;
 
         .calendar {
             margin-right: 5%;
+            margin-bottom: 5%;
         }
 
         #date-text {
             padding: 2em;
-            padding-top: 5%;
 
             #button-cont {
                 margin-top: 7%;
@@ -45,4 +45,28 @@
         margin: auto;
     }
 
+}
+
+@media screen and (max-width: 760px) {
+    #news {
+        display: block;
+
+        .news-1, .news-2 {
+            margin: auto;
+            margin-bottom: 1em;
+        }
+    }
+
+    #place-info {
+        #date-info {
+            display: block;
+            text-align: center;
+            width: 100%;
+
+            #date-text {
+                text-align: left;
+                padding: 0.5em;
+            }
+        }
+    }
 }

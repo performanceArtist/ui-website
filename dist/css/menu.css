@@ -14,8 +14,7 @@
       border: 1px solid #c5b18d; }
   .pizza__info {
     display: flex; }
-    .pizza__info .circle {
-      display: block;
+    .pizza__info .pizza__circle {
       margin-top: 0.5em;
       margin-bottom: 0.5em; }
   .pizza__rating {

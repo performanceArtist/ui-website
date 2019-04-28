@@ -20,14 +20,15 @@
     font-size: 1.4vw;
     border-radius: 6px;
     width: $width;
-    height: $height;
+    min-height: $height;
 }
 
 @mixin circle($size) {
     border-radius: 50%;
     overflow: hidden;
     box-sizing: border-box;
-    width: $size;
+    max-width: $size;
+    width: 100%;
     height: $size;
 }
 
@@ -77,7 +78,12 @@
 }
 
 @mixin set-arrow-size($button-size) {
-    @include circle($button-size);
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: $button-size;
+    height: $button-size;
+
     $arrow-length: $button-size*0.14;
     $arrow-width: $button-size*0.08;
 

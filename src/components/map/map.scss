@@ -1,9 +1,9 @@
-$map-width: 100%;
+//$map-width: 100%;
 
 .map {
-    width: $map-width;
-    width: 740px;
-    height: 340px;
+    width: 100%;
+    max-width: 720px;
+    max-height: 340px;
     position: relative;
     border-radius: 0.4em;
     overflow: hidden;

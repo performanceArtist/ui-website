@@ -2,13 +2,12 @@
     display: flex;
     align-items: center;
     text-align: center;
-}
-
-.profile .bubble {
-    width: 203px;
-    height: 116px;
-    line-height: 1.2;
-    margin-left: 1em;
+    width: 100%;
+    .bubble {
+        width: 203px;
+        line-height: 1.2;
+        margin-left: 1em;
+    }
 }
 
 .profile {
@@ -67,4 +66,24 @@
         @include set-bubble-color($light-green, left);
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    .profile {
+        &__name {
+            font-size: 1em;
+        }
+    
+        &__occupation {
+            font-size: 0.75em;
+        }
+    
+        &__icons {
+            font-size: 1.4em;
+        }
+
+        .bubble {
+            width: 160px;
+        }
+    }
 }
