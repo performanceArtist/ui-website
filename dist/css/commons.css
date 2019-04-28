@@ -4117,8 +4117,8 @@ footer {
 
 .map {
   width: 100%;
-  max-width: 720px;
-  max-height: 340px;
+  max-width: 745px;
+  height: 340px;
   position: relative;
   border-radius: 0.4em;
   overflow: hidden; }
@@ -4136,22 +4136,35 @@ footer {
     display: inline-block; }
   .map__title {
     font-size: 2.5em;
-    margin-right: 7%;
-    margin-left: 7%; }
+    margin-right: 5%;
+    margin-left: 5%; }
   .map__address {
     font-size: 1em;
     text-transform: uppercase;
     font-family: "Conv_Myriad Pro Bold"; }
   .map__info-left {
-    width: 50%;
+    width: 85%;
     text-align: left; }
   .map__info-right {
     font-size: 3em;
     text-align: right;
-    width: 50%; }
+    width: 15%;
+    display: table; }
     .map__info-right i {
+      display: table-cell;
       font-size: 0.6em;
-      margin-right: 1.2em; }
+      padding-right: 1.2em; }
+
+@media screen and (max-width: 600px) {
+  .map__info {
+    height: 18%; }
+  .map__title {
+    font-size: 1.5em; }
+  .map__address {
+    font-size: 0.65em; }
+  .map__info-right i {
+    font-size: 0.4em;
+    padding-right: 0.5em; } }
 
 .video {
   width: 100%;
@@ -4165,28 +4178,25 @@ footer {
     background: rgba(0, 0, 0, 0.35);
     position: absolute;
     width: 100%;
-    bottom: 1%; }
+    bottom: 1%;
+    display: flex;
+    align-items: center; }
     .video__controls button {
       cursor: pointer;
       border: none;
       color: #F5F5F5; }
   .video__progress {
-    float: left;
-    width: 78%;
-    height: 0.35vw;
+    width: 100%;
+    height: 5px;
     border: none;
-    cursor: pointer;
-    margin-top: 3.6%; }
+    cursor: pointer; }
     .video__progress .ui-widget-header {
       background: #D28847; }
     .video__progress .ui-state-default, .video__progress .ui-widget-content .ui-state-default {
       display: none; }
   .video__play {
-    display: inline-block;
-    float: left;
-    margin-right: 1%; }
+    margin-right: 2%; }
     .video__play button {
-      display: inline-block;
       background: black;
       text-align: center;
       border: none;
@@ -4195,10 +4205,8 @@ footer {
         font-size: 1.6em;
         color: #F5F5F5; }
   .video__fullscreen {
-    display: inline-block;
-    float: right; }
+    margin-left: 2%; }
     .video__fullscreen button {
-      display: inline-block;
       background: #D28847;
       text-align: center;
       border: none;
@@ -4208,41 +4216,17 @@ footer {
         color: #F5F5F5; }
   .video__play button, .video__fullscreen button {
     width: 100%;
-    padding: 1.4em; }
+    padding: 1.5em; }
 
-@media screen and (max-width: 600px) {
-  .video__controls {
-    bottom: 2.2%; }
+@media screen and (max-width: 750px) {
   .video__play button, .video__fullscreen button {
-    padding: 0.4em 0.8em; }
-  .video__play {
-    display: inline-block; }
-    .video__play button {
-      display: inline-block;
-      background: black;
-      text-align: center;
-      border: none;
-      cursor: pointer; }
-      .video__play button i {
-        font-size: 0.6em;
-        color: #F5F5F5; }
-  .video__fullscreen {
-    display: inline-block; }
-    .video__fullscreen button {
-      display: inline-block;
-      background: #D28847;
-      text-align: center;
-      border: none;
-      cursor: pointer; }
-      .video__fullscreen button i {
-        font-size: 0.6em;
-        color: #F5F5F5; }
-  .video__progress {
-    margin-top: 4%; } }
+    padding: 0.6em; }
+    .video__play button i, .video__fullscreen button i {
+      font-size: 0.9em; } }
 
 .calendar {
   display: inline-block;
-  font-size: 1.62vw; }
+  font-size: 1.28em; }
   .calendar .ui-widget.ui-widget-content {
     padding: 0;
     border: none; }
@@ -4316,7 +4300,7 @@ footer {
 
 @media screen and (max-width: 680px) {
   .calendar {
-    font-size: 0.75em; } }
+    font-size: 0.65em; } }
 
 .button {
   text-align: center;
@@ -4562,7 +4546,7 @@ footer {
     width: 60px;
     height: 60px; }
   .circle__text {
-    font-size: 1em; } }
+    font-size: 100%; } }
 
 .checkmark {
   position: relative;
@@ -4773,18 +4757,16 @@ footer {
 .search {
   display: inline-block; }
   .search button {
-    display: inline-block;
     background: #D28847;
     text-align: center;
     border: none;
-    cursor: pointer; }
-    .search button i {
-      font-size: 14px;
-      color: #F5F5F5; }
-  .search button {
+    cursor: pointer;
     padding: 0.8em;
     padding-top: 0.7em;
     padding-bottom: 0.65em; }
+    .search button i {
+      font-size: 14px;
+      color: #F5F5F5; }
   .search input {
     width: 295px;
     padding: 0.6em;

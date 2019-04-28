@@ -25,6 +25,9 @@
         width: 66%;
     }
 
+    &__name, &__email {
+        display: flex;
+    }
 }
 
 %info-bubble {
