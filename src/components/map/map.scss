@@ -1,9 +1,7 @@
-//$map-width: 100%;
-
 .map {
     width: 100%;
-    max-width: 720px;
-    max-height: 340px;
+    max-width: 745px;
+    height: 340px;
     position: relative;
     border-radius: 0.4em;
     overflow: hidden;
@@ -27,8 +25,8 @@
 
     &__title {
         font-size: 2.5em;   
-        margin-right: 7%;
-        margin-left: 7%;
+        margin-right: 5%;
+        margin-left: 5%;
     }
 
     &__address {
@@ -38,18 +36,43 @@
     }
 
     &__info-left {
-        width: 50%;
+        width: 85%;
         text-align: left;
     }
 
     &__info-right {
         font-size: 3em;
         text-align: right;
-        width: 50%;
+        width: 15%;
+        display: table;
         i {
+            display: table-cell;
             font-size: 0.6em;
-            margin-right: 1.2em;
+            padding-right: 1.2em;
         }
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .map {
+        &__info {
+            height: 18%;
+        }
+
+        &__title {
+            font-size: 1.5em;  
+        }
+
+        &__address {
+            font-size: 0.65em;  
+        }
+
+        &__info-right {
+            i {
+                font-size: 0.4em;
+                padding-right: 0.5em;
+            }
+        }
+    }
 }

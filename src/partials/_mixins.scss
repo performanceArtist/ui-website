@@ -61,22 +61,6 @@
 
 }
 
-@mixin menu-item($color, $font-size, $font-color: $white) {
-    display: inline-block;
-
-    button {
-        display: inline-block;
-        background: $color;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        i {
-            font-size: $font-size;
-            color: $font-color;
-        }
-    }
-}
-
 @mixin set-arrow-size($button-size) {
     border-radius: 50%;
     overflow: hidden;
@@ -133,11 +117,7 @@
     .dropdown {
        width: $width;
     }
- 
-    .dropdown:after {
-       //width: $width/9;
-    }
- 
+    
     .dropdown select {
        width: $width;
     }

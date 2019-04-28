@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin= require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
-const htmlFiles = ['index', 'order', 'menu', 'feedback', 'contact', 'ui', 'blank'].map(name => {
+const htmlFiles = ['index', 'order', 'gallery', 'feedback', 'contact', 'ui', 'blank'].map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/views/${name}/${name}.pug`,
     filename: `${name}.html`,
@@ -15,7 +15,7 @@ const config = {
   entry: {
     index: './src/views/index/index.js',
     order: './src/views/order/order.js',
-    menu: './src/views/menu/menu.js',
+    gallery: './src/views/gallery/gallery.js',
     feedback: './src/views/feedback/feedback.js',
     contact: './src/views/contact/contact.js',
     ui: './src/views/ui/ui.js',

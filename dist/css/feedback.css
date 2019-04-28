@@ -1,29 +1,25 @@
 #content {
   text-align: left; }
-  #content #options {
-    width: 322px;
-    margin-bottom: 5%; }
-  #content .dropdown {
-    margin-bottom: 2%; }
-  #content #rate-cont {
-    display: flex; }
-    #content #rate-cont #left {
-      margin-right: 12%; }
-    #content #rate-cont #right {
-      overflow: auto;
-      max-width: 40%;
-      text-align: right; }
-      #content #rate-cont #right .bubble {
-        padding: 1em;
-        margin-bottom: 1em;
-        display: inline-block;
-        text-align: left; }
-      #content #rate-cont #right .bubble_green {
-        background: #68BB68; }
-        #content #rate-cont #right .bubble_green:after {
-          border-left-color: #68BB68; }
-        #content #rate-cont #right .bubble_green .comment__rating {
-          color: #006500; }
+
+#rate-cont {
+  display: flex; }
+  #rate-cont #left {
+    margin-right: 12%; }
+  #rate-cont #right {
+    overflow: auto;
+    max-width: 40%;
+    text-align: right; }
+    #rate-cont #right .bubble {
+      padding: 1em;
+      margin-bottom: 1em;
+      display: inline-block;
+      text-align: left; }
+    #rate-cont #right .bubble_green {
+      background: #68BB68; }
+      #rate-cont #right .bubble_green:after {
+        border-left-color: #68BB68; }
+      #rate-cont #right .bubble_green .comment__rating {
+        color: #006500; }
 
 .comment__name {
   font-family: "Conv_Myriad Pro Bold";
@@ -34,4 +30,13 @@
   margin-top: 1em;
   text-align: right;
   font-family: "Conv_Myriad Pro Bold"; }
+
+@media screen and (max-width: 800px) {
+  #rate-cont {
+    flex-direction: column; }
+    #rate-cont #right {
+      max-width: 100%;
+      margin-top: 5%; }
+      #rate-cont #right .comment {
+        font-size: 0.75em; } }
 

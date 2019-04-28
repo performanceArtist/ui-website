@@ -4,15 +4,15 @@
     margin: auto;
     margin-bottom: 5%; }
   #place-info #date-info {
-    margin-left: 20%;
-    margin-right: 20%;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 60%;
+    margin: auto; }
     #place-info #date-info .calendar {
-      margin-right: 5%; }
+      margin-right: 5%;
+      margin-bottom: 5%; }
     #place-info #date-info #date-text {
-      padding: 2em;
-      padding-top: 5%; }
+      padding: 2em; }
       #place-info #date-info #date-text #button-cont {
         margin-top: 7%;
         text-align: center; }
@@ -25,4 +25,18 @@
 
 #videos .video {
   margin: auto; }
+
+@media screen and (max-width: 760px) {
+  #news {
+    display: block; }
+    #news .news-1, #news .news-2 {
+      margin: auto;
+      margin-bottom: 1em; }
+  #place-info #date-info {
+    display: block;
+    text-align: center;
+    width: 100%; }
+    #place-info #date-info #date-text {
+      text-align: left;
+      padding: 0.5em; } }
 

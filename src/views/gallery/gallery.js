@@ -1,5 +1,5 @@
 import '../../styles.js';
-import './menu.scss';
+import './gallery.scss';
 
 import '../../composite/pizza/pizza.scss';
 import pizza from '../../composite/pizza/pizza';

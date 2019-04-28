@@ -14,6 +14,8 @@
         position: absolute;
         width: 100%;
         bottom: 1%;
+        display: flex;
+        align-items: center;
 
         button {
             cursor: pointer;
@@ -23,12 +25,10 @@
     }
 
     &__progress {
-        float: left;
-        width: 78%;
-        height: 0.35vw;
+        width: 100%;
+        height: 5px;
         border: none;
         cursor: pointer;
-        margin-top: 3.6%;
 
         .ui-widget-header {
             background: $light-orange;
@@ -40,43 +40,43 @@
 
     }
 
+    @mixin button($color, $font-size, $font-color: $white) {
+        button {
+            background: $color;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            i {
+                font-size: $font-size;
+                color: $font-color;
+            }
+        }
+    }
+
     &__play {
-        @include menu-item(black, 1.6em);
-        float: left;
-        margin-right: 1%;
+        @include button(black, 1.6em);
+        margin-right: 2%;
     }
 
     &__fullscreen {
-        @include menu-item($light-orange, 1.6em);
-        float: right;
+        @include button($light-orange, 1.6em);
+        margin-left: 2%;
     }
 
     &__play button, &__fullscreen button {
         width: 100%;
-        padding: 1.4em;
+        padding: 1.5em;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .video {
-        &__controls {
-            bottom: 2.2%;
-        }
-
         &__play button, &__fullscreen button {
-            padding: 0.4em 0.8em;
-        }
-
-        &__play {
-            @include menu-item(black, 0.6em);
-        }
-
-        &__fullscreen {
-            @include menu-item($light-orange, 0.6em);
-        }
-
-        &__progress {
-            margin-top: 4%;
+            i {
+                font-size: 0.9em;
+            }
+            
+            padding: 0.6em;
         }
     }
 }

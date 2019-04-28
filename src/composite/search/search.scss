@@ -1,10 +1,18 @@
 .search {
-    @include menu-item($light-orange, 14px);
+    display: inline-block;
 
     button {
+        background: $light-orange;
+        text-align: center;
+        border: none;
+        cursor: pointer;
         padding: 0.8em;
         padding-top: 0.7em;
         padding-bottom: 0.65em;
+        i {
+            font-size: 14px;
+            color: $white;
+        }
     }
 
     input {

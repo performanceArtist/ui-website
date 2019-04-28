@@ -13,7 +13,7 @@
   #order-cont .checkmark {
     margin-right: 1em; }
   #order-cont #address input {
-    width: 180px; }
+    max-width: 180px; }
   #order-cont #order-options, #order-cont #address, #order-cont #submit {
     visibility: hidden; }
 
@@ -31,4 +31,11 @@
 
 .stage .progressbar .done::after {
   background-color: #68BB68; }
+
+@media screen and (max-width: 820px) {
+  #order-cont {
+    margin-top: 2%;
+    display: block; }
+    #order-cont .dropdown, #order-cont #order-options, #order-cont #address, #order-cont #submit {
+      margin-bottom: 5%; } }
 

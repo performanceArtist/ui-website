@@ -18,3 +18,7 @@
   background: #f1ddbe;
   border-radius: 0.4em; }
 
+@media screen and (max-width: 800px) {
+  #contact-cont {
+    flex-direction: column; } }
+
