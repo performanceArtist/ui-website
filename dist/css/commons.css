@@ -4791,6 +4791,8 @@ footer {
     margin-right: 0; }
   .message-form input[type=text] {
     width: 66%; }
+  .message-form__name, .message-form__email {
+    display: flex; }
 
 .error-bubble, .okay-bubble {
   display: inline-block;

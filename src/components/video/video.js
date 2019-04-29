@@ -45,10 +45,10 @@ function updateVideo() {
     });
 
     function play(video, play) {
-        if(play.className == 'fa fa-play') {
+        if(play.className === 'fa fa-play') {
             video.play();
             play.className = 'fa fa-pause';
-        } else if(play.className = 'fa fa-pause') {
+        } else if(play.className === 'fa fa-pause') {
             video.pause();
             play.className = 'fa fa-play';
         }
