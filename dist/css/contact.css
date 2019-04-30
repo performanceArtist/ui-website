@@ -14,11 +14,13 @@
   padding: 3%;
   cursor: pointer; }
 
-.selected-contact {
+.profile_selected {
   background: #f1ddbe;
   border-radius: 0.4em; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50rem) {
   #contact-cont {
     flex-direction: column; } }
 
+
+/*# sourceMappingURL=contact.css.map*/

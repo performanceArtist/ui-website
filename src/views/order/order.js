@@ -11,13 +11,13 @@ window.onload = function init() {
   });
   const steps = hm.find('ul li');
 
-  document.querySelector('.dropdown select').addEventListener('change', (e) => {
+  document.querySelector('.dropdown select').addEventListener('change', () => {
     steps[0].setAttribute('class', 'done');
     steps[1].setAttribute('class', 'current');
     document.querySelector('#order-options').style.visibility = 'initial';
   });
 
-  document.querySelector('#crust').addEventListener('change', (e) => {
+  document.querySelector('#crust').addEventListener('change', () => {
     steps[1].setAttribute('class', 'done');
     steps[2].setAttribute('class', 'current');
     document.querySelector('#address').style.visibility = 'initial';

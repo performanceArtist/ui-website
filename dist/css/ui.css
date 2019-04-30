@@ -19,13 +19,13 @@
   width: 50%; }
 
 #standard-buttons .button {
-  margin-left: 20px; }
+  margin-left: 1.25rem; }
 
 #arrow-buttons .arrow-button {
-  margin-left: 20px; }
+  margin-left: 1.25rem; }
 
 #percentages .pie, #percentages .circle {
-  margin-left: 20px; }
+  margin-left: 1.25rem; }
 
 #search-cont .search {
   margin-bottom: 2em; }
@@ -34,8 +34,15 @@
   margin: auto; }
 
 #sliders div {
-  margin-bottom: 15px; }
+  margin-bottom: 0.9375rem; }
 
 #video .video {
   margin: auto; }
 
+@media screen and (max-width: 60rem) {
+  .left, .right {
+    float: none;
+    width: 100%; } }
+
+
+/*# sourceMappingURL=ui.css.map*/

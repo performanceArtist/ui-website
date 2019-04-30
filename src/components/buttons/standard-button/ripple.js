@@ -20,7 +20,7 @@ export default function ripple() {
     const size = that.offsetWidth;
     const pos = that.getBoundingClientRect();
     const x = e.pageX - pos.left - (size / 2);
-    const y = e.pageY - pos.top - (size / 2);
+    const y = e.pageY - pos.top - (size / 2) - window.scrollY;
     const style = `top:${y}px; left: ${x}px; height: ${size}px; width: ${size}px;`;
     that.rippleContainer.appendChild(rippler);
     return rippler.setAttribute('style', style);

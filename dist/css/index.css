@@ -26,7 +26,7 @@
 #videos .video {
   margin: auto; }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 47.5rem) {
   #news {
     display: block; }
     #news .news-1, #news .news-2 {
@@ -40,3 +40,5 @@
       text-align: left;
       padding: 0.5em; } }
 
+
+/*# sourceMappingURL=index.css.map*/

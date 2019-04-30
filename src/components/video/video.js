@@ -62,8 +62,8 @@ function updateVideo() {
       fullscreen(video);
     });
 
-    cont.querySelector('.video__play').addEventListener('click', () => {
-      const icon = this.querySelector('button i');
+    cont.querySelector('.video__play').addEventListener('click', (e) => {
+      const icon = e.currentTarget.querySelector('button i');
       play(video, icon);
     });
   });

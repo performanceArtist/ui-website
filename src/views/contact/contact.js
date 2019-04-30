@@ -1,4 +1,4 @@
-import '../../styles.js';
+import '../../styles';
 import './contact.scss';
 
 import '../../static/images/billybob.jpg';
@@ -18,8 +18,8 @@ window.onload = function init() {
     const name = el.querySelector('.profile__name');
 
     el.addEventListener('click', () => {
-      els.forEach(el => el.classList.remove('selected-contact'));
-      el.classList.add('selected-contact');
+      els.forEach(elm => elm.classList.remove('profile_selected'));
+      el.classList.add('profile_selected');
       chatName.innerText = name.innerText;
       chatImg.src = img.src;
     });

@@ -48,7 +48,6 @@ All code resides in `src` directory, except for config files. Build results go i
 
 * components - components used independently.
 * composite - composite components (they use pug mixins from the components folder).
-* favicons - favicon files generated with this [service](https://realfavicongenerator.net/). 
 * partials - scss partials: layout css, mixins and variables(defaults.scss)
 * plugins - jQuery plugins that weren't installed through npm.
 * static - static files. Fonts, images, etc.

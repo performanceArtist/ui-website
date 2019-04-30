@@ -34,13 +34,11 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
-    publicPath: '/',
   },
 
   devServer: {
     port: 5000,
   },
-  // devtool: 'source-map',
   module: {
     rules: [
       {
@@ -114,4 +112,15 @@ const config = {
   ].concat(htmlFiles),
 };
 
-module.exports = config;
+module.exports = ((env, options) => {
+  if (options.mode === 'production') {
+    config.output.publicPath = '/ui/';
+  }
+
+  if (options.mode === 'development') {
+    config.output.publicPath = '/';
+    config.devtool = 'source-map';
+  }
+
+  return config;
+});
