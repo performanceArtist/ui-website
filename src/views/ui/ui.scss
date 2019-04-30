@@ -55,3 +55,10 @@
 #video .video {
   margin: auto;
 }
+
+@media screen and (max-width: 60rem) {
+  .left, .right {
+    float: none;
+    width: 100%;
+  }
+}

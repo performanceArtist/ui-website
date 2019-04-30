@@ -1,4 +1,6 @@
 .video {
+  //to fully wrap video element, works in Chrome and Firefox
+  display: inline-grid;
   width: 100%;
   max-width: 47.5rem;
   position: relative;
@@ -13,7 +15,7 @@
     background: rgba($color: black, $alpha: 0.35);
     position: absolute;
     width: 100%;
-    bottom: 1%;
+    bottom: 0;
     display: flex;
     align-items: center;
 

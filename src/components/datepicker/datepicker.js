@@ -15,7 +15,7 @@ export default function addCalendar(selector) {
 
   el.prepend(nel);
 
-  el.on('change', function () {
+  el.on('change', function changeCustomDate() {
     const selected = $(this).val();
     const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
 

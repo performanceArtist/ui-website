@@ -11,7 +11,7 @@ function updateVideo() {
       orientation: 'horizontal',
       range: 'min',
       animate: true,
-      start(event, ui) {
+      start() {
         moving = true;
       },
       stop(event, ui) {
@@ -27,19 +27,19 @@ function updateVideo() {
     });
 
     video.addEventListener('ended', () => {
-      const play = cont.querySelector('.fa-pause');
-      if (play) {
-        play.className = 'fa fa-play';
+      const playButton = cont.querySelector('.fa-pause');
+      if (playButton) {
+        playButton.className = 'fa fa-play';
       }
     });
     
-    function play(video, play) {
-      if (play.className === 'fa fa-play') {
+    function play(video, playButton) {
+      if (playButton.className === 'fa fa-play') {
         video.play();
-        play.className = 'fa fa-pause';
-      } else if (play.className === 'fa fa-pause') {
+        playButton.className = 'fa fa-pause';
+      } else if (playButton.className === 'fa fa-pause') {
         video.pause();
-        play.className = 'fa fa-play';
+        playButton.className = 'fa fa-play';
       }
     }
   
@@ -58,11 +58,11 @@ function updateVideo() {
       }
     }
 
-    cont.querySelector('.video__fullscreen').addEventListener('click', (e) => {
+    cont.querySelector('.video__fullscreen').addEventListener('click', () => {
       fullscreen(video);
     });
 
-    cont.querySelector('.video__play').addEventListener('click', function (e) {
+    cont.querySelector('.video__play').addEventListener('click', () => {
       const icon = this.querySelector('button i');
       play(video, icon);
     });
