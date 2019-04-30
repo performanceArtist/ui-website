@@ -1,13 +1,13 @@
-$arrow-button-border: 3px;
+$arrow-button-border: 0.1875rem;
 
 .arrow-button {
-  @include set-arrow-size(60px);
+  @include set-arrow-size(3.75rem);
   @include set-arrow-color($white, $light-green);
   cursor: pointer;
 }
 
 .arrow-button_disabled {
-  @include set-arrow-size(60px);
+  @include set-arrow-size(3.75rem);
   @include set-disabled-color($white, $light-grey);
 }
 
@@ -27,16 +27,16 @@ $arrow-button-border: 3px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 31.25rem) {
   .arrow-button {
-    @include set-arrow-size(30px);
-    line-height: 26px;
+    @include set-arrow-size(1.875rem);
+    line-height: 1.875rem;
     @include set-arrow-color($white, $light-green);
   }
 
   .arrow-button_disabled {
-    @include set-arrow-size(30px);
-    line-height: 26px;
+    @include set-arrow-size(1.875rem);
+    line-height: 1.875rem;
     @include set-disabled-color($white, $light-grey);
   }
 }

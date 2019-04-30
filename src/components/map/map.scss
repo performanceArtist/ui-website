@@ -1,7 +1,7 @@
 .map {
   width: 100%;
-  max-width: 745px;
-  height: 340px;
+  max-width: 46.5625rem;
+  height: 21.25rem;
   position: relative;
   border-radius: 0.4em;
   overflow: hidden;
@@ -54,7 +54,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   .map {
     &__info {
       height: 18%;

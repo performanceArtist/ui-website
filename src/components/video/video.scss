@@ -1,6 +1,6 @@
 .video {
   width: 100%;
-  max-width: 760px;
+  max-width: 47.5rem;
   position: relative;
   border-radius: 0.2em;
   overflow: hidden;
@@ -69,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 46.875rem) {
   .video {
     &__play button, &__fullscreen button {
       i {

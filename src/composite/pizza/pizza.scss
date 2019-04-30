@@ -1,6 +1,6 @@
 .pizza {
   margin: auto;
-  max-width: 650px;
+  max-width: 40.625rem;
   
   &__name {
     font-size: 1.7em;
@@ -11,8 +11,8 @@
   &__img {
     img {
       width: 100%;
-      max-width: 420px;
-      border: 1px solid #c5b18d;
+      max-width: 26.25rem;
+      border: 0.0625rem solid #c5b18d;
     }
   }
 
@@ -53,7 +53,7 @@
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 31.25rem) {
   .pizza {
     &__info {
       font-size: 1em;

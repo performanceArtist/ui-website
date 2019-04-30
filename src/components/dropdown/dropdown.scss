@@ -1,7 +1,7 @@
-$dropdown-width: 360px;
+$dropdown-width: 22.5rem;
 
 .dropdown {
-  height: 34px;
+  height: 2.125rem;
   overflow: hidden;
   width: $dropdown-width;
   position: relative;
@@ -9,7 +9,7 @@ $dropdown-width: 360px;
     
   &:after {
     content:"\f107";
-    font-family: FontAwesome;
+    font-family: "FontAwesome";
     color: $white;
     position: absolute; right: 0; top: 0;
     background: $light-green;
@@ -26,9 +26,9 @@ $dropdown-width: 360px;
   select {
     background: $light-grey;
     border: none;
-    font-size: 14px;
-    height: 34px;
-    padding: 5px; 
+    font-size: 0.875rem;
+    height: 2.125rem;
+    padding: 0.3125rem; 
     width: $dropdown-width;
   }
 }

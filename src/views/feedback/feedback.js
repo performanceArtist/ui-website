@@ -1,10 +1,10 @@
-import '../../styles.js';
+import '../../styles';
 import './feedback.scss';
 
-import {messageForm, slider, ripple} from '../../scripts';
+import { messageForm, slider, ripple } from '../../scripts';
 
-window.onload = function() {
-    ripple();
-    messageForm('.message-form');
-    slider.slider1('.slider-1');
-}
+window.onload = function init() {
+  ripple();
+  messageForm('.message-form');
+  slider.slider1('.slider-1');
+};

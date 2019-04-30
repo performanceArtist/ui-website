@@ -4,13 +4,13 @@
     text-align: center;
     width: 100%;
     .bubble {
-        width: 203px;
+        width: 12.6875rem;
         line-height: 1.2;
         margin-left: 1em;
     }
 
     &__name {
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-top: 5.5%;
     }
 
@@ -66,7 +66,7 @@
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25rem) {
     .profile {
         &__name {
             font-size: 1em;
@@ -81,7 +81,7 @@
         }
 
         .bubble {
-            width: 160px;
+            width: 10rem;
         }
     }
 }

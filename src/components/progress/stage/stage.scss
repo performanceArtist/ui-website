@@ -5,13 +5,13 @@
     }
 
     li::after {
-      height: 7px;
-      top: 18px;
+      height: 0.4375rem;
+      top: 1.125rem;
     }
 
     .done::before, .current::before, li::before {
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
       line-height: 2.2;
       font-family: $font-bold;
     }
@@ -27,7 +27,7 @@
 
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 51.25rem) {
   .stage {
       .progressbar {
         li {
@@ -35,13 +35,13 @@
         }
 
         .done::before, .current::before, li::before {
-          width: 24px;
-          height: 24px;
+          width: 1.5rem;
+          height: 1.5rem;
           line-height: 1.9;
         }
 
         li::after {
-          top: 8px;
+          top: 0.5rem;
         }
       }
   }

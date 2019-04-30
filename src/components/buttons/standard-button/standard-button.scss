@@ -5,19 +5,19 @@
     display: inline-block;
     cursor: pointer;
     font-weight: bold;
-    border: solid 2px;
-    border-left: solid 3px;
+    border: solid 0.125rem;
+    border-left: solid 0.1875rem;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .button_big {
-  @include set-button-size(146px, 40px);
+  @include set-button-size(9.125rem, 2.5rem);
   font-size: 0.9em;
 }
 
 .button_small {
-  @include set-button-size(97px, 27px);
+  @include set-button-size(6.0625rem, 1.6875rem);
   font-size: 0.8em;
 }
 

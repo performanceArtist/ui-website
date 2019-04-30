@@ -1,36 +1,35 @@
-(function($) {
+(function ($) {
   $.fn.progressbar = function (options) {
+    const opts = $.extend({ }, options);
 
-    var opts = $.extend({ }, options);
+    return this.each(function () {
+      const $this = $(this);
 
-    return this.each(function() {
-      var $this = $(this);
+      const $ul = $('<ul>').attr('class', 'progressbar');
 
-      var $ul = $('<ul>').attr('class', 'progressbar');
+      let currentIdx = -1;
 
-      var currentIdx = -1
+      $.each(opts.steps, (index, value) => {
+        const $li = $('<li>').text(value.replace('@', '').replace('~', ''));
+        $li.css('width', `${100 / opts.steps.length}%`);
 
-      $.each(opts.steps, function(index, value) {
-        var $li = $('<li>').text(value.replace('@', '').replace('~', ''));
-        $li.css('width', (100 / opts.steps.length) + '%');
-
-        if(value.indexOf('@') > -1) {
+        if (value.indexOf('@') > -1) {
           $li.addClass('current');
           currentIdx = index;
         }
 
-        if(value.indexOf('~') > -1) {
+        if (value.indexOf('~') > -1) {
           $li.addClass('fail');
         }
 
         $ul.append($li);
       });
 
-      for(var i = 0; i < currentIdx; i++) {
+      for (let i = 0; i < currentIdx; i++) {
         $($ul.find('li')[i]).addClass('done');
       }
 
       $this.append($ul);
     });
   };
-})(jQuery);
+}(jQuery));

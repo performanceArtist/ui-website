@@ -34,6 +34,12 @@ Production build
 npm run build
 ```
 
+Eslint
+
+```
+npx eslint src
+```
+
 ## Directory structure
 
 All code resides in `src` directory, except for config files. Build results go into `dist` directory.

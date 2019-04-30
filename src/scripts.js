@@ -1,4 +1,4 @@
-//add JQuery dependencies
+// add JQuery dependencies
 import 'jquery-ui-dist/jquery-ui';
 import './plugins/jquery-switcher/js/jquery.switcher.min';
 import './plugins/progressbar/jquery.progressbar';
@@ -14,14 +14,15 @@ import messageForm from './composite/message-form/message-form';
 import './static/images/logo.png';
 
 import search from './composite/search/search';
+
 search();
 
 export {
-    ripple,
-    chart,
-    slider,
-    video,
-    messageForm,
-    datepicker,
-    myMap
-}
+  ripple,
+  chart,
+  slider,
+  video,
+  messageForm,
+  datepicker,
+  myMap,
+};

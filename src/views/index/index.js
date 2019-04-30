@@ -1,14 +1,15 @@
-import '../../styles.js';
+import '../../styles';
 import './index.scss';
 
 import '../../static/videos/review.mp4';
 
-import {ripple, video, myMap, datepicker} from '../../scripts';
+import {
+  ripple, video, myMap, datepicker,
+} from '../../scripts';
 
-window.onload = function() {
-    ripple();
-    video();
-    myMap('location');
-    datepicker('.calendar');
-}
-
+window.onload = function init() {
+  ripple();
+  video();
+  myMap('location');
+  datepicker('.calendar');
+};

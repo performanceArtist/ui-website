@@ -1,6 +1,6 @@
 .avatar {
-  @include circle(115px);
-  border: 6px solid $light-grey;
+  @include circle(7.1875rem);
+  border: 0.375rem solid $light-grey;
 }
 
 .avatar img {

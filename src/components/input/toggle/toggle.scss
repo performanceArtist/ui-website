@@ -1,7 +1,7 @@
 .ui-switcher {
-  height: 30px;
-  width: 72px;
-  border-radius: 25px;
+  height: 1.875rem;
+  width: 4.5rem;
+  border-radius: 1.5625rem;
   font-size: 1.1em;
   font-style: bold;
 }
@@ -12,16 +12,16 @@
 }
 
 .ui-switcher::after {
-  width: 24px;
-  height: 24px;
-  top: 3px;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.1875rem;
 }
 
 .ui-switcher::before {
   font-size: 0.8em;
-  height: 18px;
-  width: 30px;
-  top: 9px;
+  height: 1.125rem;
+  width: 1.875rem;
+  top: 0.5625rem;
 }
 
 .ui-switcher[aria-checked="true"] {
@@ -29,9 +29,9 @@
 }
 
 .ui-switcher[aria-checked="true"]::after {
-  left: 44px;
+  left: 2.75rem;
 }
 
 .ui-switcher[aria-checked="false"]::after {
-  left: 4px;
+  left: 0.25rem;
 }

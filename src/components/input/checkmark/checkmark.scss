@@ -1,8 +1,8 @@
 .checkmark {
   position: relative;
   cursor: pointer;
-  font-size: 14px;
-  padding-left: 35px;
+  font-size: 0.875rem;
+  padding-left: 2.1875rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -35,8 +35,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 27px;
-    width: 27px;
+    height: 1.6875rem;
+    width: 1.6875rem;
     background-color: #eee;
     border-radius: 50%;
   
@@ -49,11 +49,11 @@
   }
   
   &__icon:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border-width: 0 3px 3px 0;
+    left: 0.5625rem;
+    top: 0.3125rem;
+    width: 0.3125rem;
+    height: 0.625rem;
+    border-width: 0 0.1875rem 0.1875rem 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
