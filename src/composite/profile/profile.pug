@@ -1,8 +1,8 @@
 include ../../components/bubble/bubble
 include ../../components/avatar/avatar
 
-mixin profile(className, data)
-  div(class='profile ' + className)
+mixin profile(type, data)
+  div(class=`profile profile_${type}`)
     +avatar(data.src)
     +bubble('left')
       .profile__name #{data.name}

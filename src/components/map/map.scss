@@ -1,78 +1,78 @@
 .map {
+  width: 100%;
+  max-width: 745px;
+  height: 340px;
+  position: relative;
+  border-radius: 0.4em;
+  overflow: hidden;
+  
+  &__info {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    max-width: 745px;
-    height: 340px;
-    position: relative;
-    border-radius: 0.4em;
-    overflow: hidden;
-    
-    &__info {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        color: $white;
-        background: $light-orange;
-        z-index: 2;
-        height: 25%;
-        display: flex;
-        align-items: center;
-    }
+    color: $white;
+    background: $light-orange;
+    z-index: 2;
+    height: 25%;
+    display: flex;
+    align-items: center;
+  }
 
-    
-    &__title, &__address {
-        display: inline-block;
-    }
+  
+  &__title, &__address {
+    display: inline-block;
+  }
 
-    &__title {
-        font-size: 2.5em;   
-        margin-right: 5%;
-        margin-left: 5%;
-    }
+  &__title {
+    font-size: 2.5em;   
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 
-    &__address {
-        font-size: 1em;
-        text-transform: uppercase;
-        font-family: $font-bold;
-    }
+  &__address {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: $font-bold;
+  }
 
-    &__info-left {
-        width: 85%;
-        text-align: left;
-    }
+  &__info-left {
+    width: 85%;
+    text-align: left;
+  }
 
-    &__info-right {
-        font-size: 3em;
-        text-align: right;
-        width: 15%;
-        display: table;
-        i {
-            display: table-cell;
-            font-size: 0.6em;
-            padding-right: 1.2em;
-        }
+  &__info-right {
+    font-size: 3em;
+    text-align: right;
+    width: 15%;
+    display: table;
+    i {
+      display: table-cell;
+      font-size: 0.6em;
+      padding-right: 1.2em;
     }
+  }
 
 }
 
 @media screen and (max-width: 600px) {
-    .map {
-        &__info {
-            height: 18%;
-        }
-
-        &__title {
-            font-size: 1.5em;  
-        }
-
-        &__address {
-            font-size: 0.65em;  
-        }
-
-        &__info-right {
-            i {
-                font-size: 0.4em;
-                padding-right: 0.5em;
-            }
-        }
+  .map {
+    &__info {
+      height: 18%;
     }
+
+    &__title {
+      font-size: 1.5em;  
+    }
+
+    &__address {
+      font-size: 0.65em;  
+    }
+
+    &__info-right {
+      i {
+        font-size: 0.4em;
+        padding-right: 0.5em;
+      }
+    }
+  }
 }

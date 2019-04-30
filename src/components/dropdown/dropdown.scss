@@ -1,14 +1,13 @@
 $dropdown-width: 360px;
 
 .dropdown {
-    height: 34px;
-    overflow: hidden;
-    width: $dropdown-width;
-    position: relative;
-    display: inline-block;
- }
- 
- .dropdown:after {
+  height: 34px;
+  overflow: hidden;
+  width: $dropdown-width;
+  position: relative;
+  display: inline-block;
+    
+  &:after {
     content:"\f107";
     font-family: FontAwesome;
     color: $white;
@@ -22,13 +21,14 @@ $dropdown-width: 360px;
     pointer-events: none;
     box-sizing: border-box;   
     line-height: 1.4em;
-}
+  }
 
- .dropdown select {
+  select {
     background: $light-grey;
     border: none;
     font-size: 14px;
     height: 34px;
     padding: 5px; 
     width: $dropdown-width;
- }
+  }
+}

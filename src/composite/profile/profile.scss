@@ -8,9 +8,7 @@
         line-height: 1.2;
         margin-left: 1em;
     }
-}
 
-.profile {
     &__name {
         font-size: 24px;
         margin-top: 5.5%;
@@ -42,7 +40,7 @@
 
 }
 
-.profile-1 {
+.profile_type-1 {
     .bubble {
         @include set-bubble-color($light-grey, left);
     }
@@ -60,7 +58,7 @@
     }
 }
 
-.profile-2 {
+.profile_type-2 {
     color: $white;
     .bubble {
         @include set-bubble-color($light-green, left);

@@ -1,70 +1,70 @@
 .slider-1 {
-    position: relative;
-    margin-top: 35px;
+  position: relative;
+  margin-top: 35px;
 
-    .bubble {
-        position: absolute;
-        text-align: center;
-        top: -40px;
-        line-height: 24px;
-        padding: 0.12em;
-        color: $white;
-        font-weight: bold;
-    }
+  .bubble {
+    position: absolute;
+    text-align: center;
+    top: -40px;
+    line-height: 24px;
+    padding: 0.12em;
+    color: $white;
+    font-weight: bold;
+  }
 
-    input{
-        -webkit-appearance: none;
-        width: 100%;
-        height: 8px;
-        border-radius: 5px;  
-        background: #d3d3d3;
-        outline: none;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-    }
+  input{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
 
-    input::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 22px;
-        height: 22px;
-        border-radius: 50%; 
-        background: $light-orange;
-        cursor: pointer;
-    }
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%; 
+    background: $light-orange;
+    cursor: pointer;
+  }
 
-    input::-moz-range-thumb {
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background: $light-orange;
-        cursor: pointer;
-    }
+  input::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $light-orange;
+    cursor: pointer;
+  }
 }
 
 
 .slider-2 {
-    color: $medium-grey;
-    background: $light-grey;
-    height: 5px;
-    .ui-widget-header {
-        background: $light-green;
-    }
+  color: $medium-grey;
+  background: $light-grey;
+  height: 5px;
+  .ui-widget-header {
+    background: $light-green;
+  }
 
-    .ui-state-default, .ui-widget-content .ui-state-default {
-        cursor: pointer;
-        border-radius: 50%;
-        border: none;
-        background: $light-green;
-        top: -.45em;
-    }
+  .ui-state-default, .ui-widget-content .ui-state-default {
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background: $light-green;
+    top: -.45em;
+  }
 
-    label {
-        position: absolute;
-        width: 20px;
-        margin-left: -10px;
-        text-align: center;
-        margin-top: 20px;
-    }
+  label {
+    position: absolute;
+    width: 20px;
+    margin-left: -10px;
+    text-align: center;
+    margin-top: 20px;
+  }
 
 }

@@ -1,124 +1,124 @@
 //setters
 @mixin set-button-color($active, $passive) {
-    color: $active;
-    background-color: $passive;
-    border-color: $active;
-    box-shadow: 0px 5px 0px darken($active, 10%);;
+  color: $active;
+  background-color: $passive;
+  border-color: $active;
+  box-shadow: 0 0.3125rem 0 darken($active, 10%);;
 
-    &:hover {
-        color: $passive;
-        background-color: $active;
-    }
-    &:active {
-        color: $passive;
-        background-color: $active;
-        box-shadow: none;
-    }
+  &:hover {
+    color: $passive;
+    background-color: $active;
+  }
+  &:active {
+    color: $passive;
+    background-color: $active;
+    box-shadow: none;
+  }
 }
 
 @mixin set-button-size($width, $height) {    
-    font-size: 1.4vw;
-    border-radius: 6px;
-    width: $width;
-    min-height: $height;
+  font-size: 1.4vw;
+  border-radius: 0.375em;
+  width: $width;
+  min-height: $height;
 }
 
 @mixin circle($size) {
-    border-radius: 50%;
-    overflow: hidden;
-    box-sizing: border-box;
-    max-width: $size;
-    width: 100%;
-    height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: $size;
+  width: 100%;
+  height: $size;
 }
 
 @mixin set-bubble-color($color, $dir) {
-    background: $color;
+  background: $color;
 
-    @if ($dir == left) {
-        &:after {
-            border-right-color: $color;
-        }
-    }   
-
-    @if ($dir == right) {
-        &:after {
-            border-left-color: $color;
-        }
-    }   
-
-    @if ($dir == top) {
-        &:after {
-            border-bottom-color: $color;
-        }
+  @if ($dir == left) {
+    &:after {
+      border-right-color: $color;
     }
+  }   
 
-    @if ($dir == bottom) {
-        &:after {
-            border-top-color: $color;
-        }
+  @if ($dir == right) {
+    &:after {
+      border-left-color: $color;
     }
+  }   
+
+  @if ($dir == top) {
+    &:after {
+      border-bottom-color: $color;
+    }
+  }
+
+  @if ($dir == bottom) {
+    &:after {
+      border-top-color: $color;
+    }
+  }
 
 }
 
 @mixin set-arrow-size($button-size) {
-    border-radius: 50%;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: $button-size;
-    height: $button-size;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: $button-size;
+  height: $button-size;
 
-    $arrow-length: $button-size*0.14;
-    $arrow-width: $button-size*0.08;
+  $arrow-length: $button-size*0.14;
+  $arrow-width: $button-size*0.08;
 
-    line-height: $button-size + $arrow-length;
-    text-align: center;
+  line-height: $button-size + $arrow-length;
+  text-align: center;
+  display: inline-block;
+  margin: $arrow-button-border;
+  
+  i {
+    border: solid;
+    border-width: 0 $arrow-width $arrow-width 0;
     display: inline-block;
-    margin: $arrow-button-border;
-    
-    i {
-        border: solid;
-        border-width: 0 $arrow-width $arrow-width 0;
-        display: inline-block;
-        padding: $arrow-length;
-    }
-    
+    padding: $arrow-length;
+  }
+  
 }
 
 @mixin set-arrow-color($def, $active) {
-    background: $def; 
+  background: $def; 
+  box-shadow: 0 0 0 $arrow-button-border $active;
+
+  i {
+    border-color: $active;
+  }
+
+  &:hover {
+    background: $active;
     box-shadow: 0 0 0 $arrow-button-border $active;
-
+  
     i {
-        border-color: $active;
+      border-color: $def;
     }
-
-    &:hover {
-        background: $active;
-        box-shadow: 0 0 0 $arrow-button-border $active;
-    
-        i {
-            border-color: $def;
-        }
-    }
+  }
 }
 
 @mixin set-disabled-color($def, $disabled) {
-    background: $disabled; 
-    box-shadow: 0 0 0 $arrow-button-border $disabled;
+  background: $disabled; 
+  box-shadow: 0 0 0 $arrow-button-border $disabled;
 
-    i {
-        border-color: $def;
-    }
+  i {
+    border-color: $def;
+  }
 }
 
 
 @mixin set-dropdown-width($width) {
-    .dropdown {
-       width: $width;
-    }
-    
-    .dropdown select {
-       width: $width;
-    }
+  .dropdown {
+     width: $width;
+  }
+  
+  .dropdown select {
+     width: $width;
+  }
   }

@@ -1,28 +1,27 @@
 body {
-    margin:0;
-    color: $black;
-    background: $light-yellow;
-    font-family: $font;
-    letter-spacing: 1px;
+	margin:0;
+	color: $black;
+	background: $light-yellow;
+	font-family: $font;
+	letter-spacing: 0.0625rem;
 
+	h1, h2 {
+		font-family: $font-bold;
+		word-spacing: 0.3125rem;
+	}  
 
-    h1, h2 {
-        font-family: $font-bold;
-        word-spacing: 5px;
-    }  
+	a {
+		text-decoration: none;
+		color: #006000;
+	}
 
-    a {
-        text-decoration: none;
-        color: #006000;
-    }
+	a:hover {
+		color: #008500;
+	}
 
-    a:hover {
-        color: #008500;
-    }
-
-    hr {
-        height: 1px;
-    }
+	hr {
+		height: 0.0625rem;
+	}
 }
 
 html,
@@ -31,97 +30,97 @@ body {
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-width: 1920px;
-    min-width: 320px;
-    margin: auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 1920px;
+	min-width: 320px;
+	margin: auto;
 }
 
 header {
-    padding: 1%;
-    background: wheat;
-    margin-bottom: 2%;
-    border-bottom: 1px solid #D5C19D;
+	padding: 1%;
+	background: wheat;
+	margin-bottom: 2%;
+	border-bottom: 1px solid #D5C19D;
 }
 
 nav {
-    padding-left: 2%;
-    padding-bottom: 2%;
-    border-bottom: 1px #E0E0E0 solid;
+	padding-left: 2%;
+	padding-bottom: 2%;
+	border-bottom: 1px #E0E0E0 solid;
 
-    .search {
-        input {
-            width: 160px;
-        }
-    }
-    
-    #nav-links {
-        display: inline-block;
-        margin-right: 1em;
-    }
-    
-    a {
-        display: inline-block;
-        min-width: 3.12em;
-        color: black;
-        font-family: $font-bold;
-        text-align: center;
-        padding: 0.5em;
-        text-decoration: none;
-    }
+	.search {
+		input {
+			width: 10rem;
+		}
+	}
+	
+	#nav-links {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	a {
+		display: inline-block;
+		min-width: 3.12em;
+		color: $black;
+		font-family: $font-bold;
+		text-align: center;
+		padding: 0.5em;
+		text-decoration: none;
+	}
 
-    a:hover {
-        background: white;
-    }
+	a:hover {
+		background: white;
+	}
 
 }
 
 #content {
-    margin: auto;
-    width: 95%;
-    text-align: center; 
-    max-width: 1280px;
+	margin: auto;
+	width: 95%;
+	text-align: center; 
+	max-width: 1280px;
 }
 
 footer {
-    margin-top: 2%;
-    padding: 2%;
-    border-top: 1px solid #D5C19D;
-    text-align: center;
+	margin-top: 2%;
+	padding: 2%;
+	border-top: 0.0625rem solid #D5C19D;
+	text-align: center;
 
-    a {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
+	a {
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
 }
 
 @media screen and (max-width: 500px) {
-    h1 {
-        font-size: 1.6em;
-    }
+	h1 {
+		font-size: 1.6rem;
+	}
 
-    h2 {
-        font-size: 1.2em;
-    }
+	h2 {
+		font-size: 1.2rem;
+	}
 
-    header {
-        img {
-            width: 30%;
-        }
-    }
+	header {
+		img {
+			width: 30%;
+		}
+	}
 
-    nav {
-        text-align: center;
-        #nav-links {
-            display: flex;
-            flex-direction: column;
-            font-size: 0.8em;
-        }
-    }
+	nav {
+		text-align: center;
+		#nav-links {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.8em;
+		}
+	}
 
-    footer {
-        font-size: 0.75em;
-    }
+	footer {
+		font-size: 0.75em;
+	}
 }

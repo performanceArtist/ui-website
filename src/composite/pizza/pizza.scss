@@ -1,74 +1,70 @@
 .pizza {
-    margin: auto;
-    max-width: 650px;
-    
-    &__name {
-        font-size: 1.7em;
-        text-transform: uppercase;
-        padding: 1em;
+  margin: auto;
+  max-width: 650px;
+  
+  &__name {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid #c5b18d;
     }
+  }
 
-    &__img {
-        img {
-            width: 100%;
-            max-width: 420px;
-            border: 1px solid #c5b18d;
-        }
+  &__info {
+    display: flex;
+    justify-content: center;
+
+    .pizza__circle {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
     }
+  }
 
-    &__info {
-        display: flex;
-        justify-content: center;
+  &__rating {
+    padding: 1em;
+    padding-top: 0;
+    font-size: 1.5em;
+  }
 
-        .pizza__circle {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
+
+  &__arrows {
+    display: flex;
+    .arrow-button {
+      margin-left: 0.5em;
     }
+  }
 
-    &__rating {
-        padding: 1em;
-        padding-top: 0;
-        font-size: 1.5em;
-    }
+  &__ing {
+    display: flex;
+    margin-top: 2%;
+    justify-content: left;
+  }
 
-
-    &__arrows {
-        display: flex;
-        .arrow-button {
-            margin-left: 0.5em;
-        }
-    }
-
-    &__ing {
-        display: flex;
-        margin-top: 2%;
-        justify-content: left;
-    }
-
-    &__li {
-        margin-right: 5%;
-        text-align: left;
-    }
+  &__li {
+    margin-right: 5%;
+    text-align: left;
+  }
 
 }
 
 @media screen and (max-width: 500px) {
-    .pizza {
-        &__info {
-            font-size: 1em;
-        }
-
-        &__name,  {
-            font-size: 1.2em;
-        }
-
-        &__li {
-            font-size: 0.75em;
-        }
-
-        &__ing {
-            //justify-content: left;
-        }
+  .pizza {
+    &__info {
+      font-size: 1em;
     }
+
+    &__name,  {
+      font-size: 1.2em;
+    }
+
+    &__li {
+      font-size: 0.75em;
+    }
+  }
 }

@@ -2,7 +2,13 @@
 
 ## Usage
 
-Clone this repository and run the following commands.
+Run the following commands:
+
+To clone the repository
+
+```
+git clone https://github.com/performanceArtist/ui-website.git
+```
 
 To install dependencies
 

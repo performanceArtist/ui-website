@@ -1,92 +1,92 @@
 .chat {
-    $avatar-size: 120px;
+  $avatar-size: 120px;
 
-    border-radius: 0.4em;
-    overflow: hidden;
-    text-align: center;
-    max-width: 360px;
+  border-radius: 0.4em;
+  overflow: hidden;
+  text-align: center;
+  max-width: 360px;
 
-    i {
-        font-size: 1.6em;
-        color: $dark-grey;
-    }
-    
+  i {
+    font-size: 1.6em;
+    color: $dark-grey;
+  }
+  
+  .avatar {
+    max-width: $avatar-size;
+    height: $avatar-size;
+  }
+
+  &__name {
+    padding: 8%;
+    font-size: 2.5em;
+    background-color: $light-green;
+    color: $white;
+  }
+
+  &__header {
+    height: 42px;
+    background-color: darken($light-green, 20%)
+  }
+
+  &__avatar {
+    position: relative;
+    height: 20px;
+    background-color: $light-grey;
+    padding: 5%;
+    padding-bottom: 0;
     .avatar {
-        max-width: $avatar-size;
-        height: $avatar-size;
+      position: absolute;
+      top: -$avatar-size/2;
+      left: 33%;
     }
+  }
 
-    &__name {
-        padding: 8%;
-        font-size: 2.5em;
-        background-color: $light-green;
-        color: $white;
+  &__content {
+    background-color: $light-grey;
+    padding: 10%;
+    .bubble {
+      @include set-bubble-color($white, top);
+      padding: 1em;
+      text-align: left;
+      margin-bottom: 9%;
     }
+  }
 
-    &__header {
-        height: 42px;
-        background-color: darken($light-green, 20%)
-    }
+  textarea {
+    display: block;
+    background-color: $light-grey;
+    border: 3px solid $white;
+    border-radius: 0.4em;
+    margin-bottom: 10%;
+    width: 90%;
+  }
 
-    &__avatar {
-        position: relative;
-        height: 20px;
-        background-color: $light-grey;
-        padding: 5%;
-        padding-bottom: 0;
-        .avatar {
-            position: absolute;
-            top: -$avatar-size/2;
-            left: 33%;
-        }
-    }
+  .button {
+    width: 100%;
+  }
 
-    &__content {
-        background-color: $light-grey;
-        padding: 10%;
-        .bubble {
-            @include set-bubble-color($white, top);
-            padding: 1em;
-            text-align: left;
-            margin-bottom: 9%;
-        }
-    }
+  .fa-comments, .fa-camera {
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+  }
 
-    textarea {
-        display: block;
-        background-color: $light-grey;
-        border: 3px solid $white;
-        border-radius: 0.4em;
-        margin-bottom: 10%;
-        width: 90%;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .fa-comments, .fa-camera {
-        margin-top: 0.3em;
-        margin-left: 0.5em;
-    }
-
-    .fa-comments {
-        float: left;
-    }
-    .fa-camera {
-        float: right;
-    }
+  .fa-comments {
+    float: left;
+  }
+  .fa-camera {
+    float: right;
+  }
 
 }
 
 @media screen and (max-width: 800px) {
-    .chat {
-        textarea {
-            font-size: 1em;
-        }
-
-        &__content {
-            font-size: 0.75em;
-        }
+  .chat {
+    textarea {
+      font-size: 1em;
     }
+
+    &__content {
+      font-size: 0.75em;
+    }
+  }
 }

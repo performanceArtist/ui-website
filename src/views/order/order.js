@@ -3,7 +3,7 @@ import './order.scss';
 
 import {} from '../../scripts';
 
-import validator from '../../composite/forms/message-form/validator';
+import validator from '../../composite/message-form/validator';
 
 window.onload = function() {
     let hm = $('#stages').progressbar({

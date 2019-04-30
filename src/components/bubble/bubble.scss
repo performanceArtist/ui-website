@@ -2,70 +2,70 @@ $pointer-size: 6px;
 $bubble-color: $light-orange;
 
 .bubble { 
-    position: relative; 
-    background: $bubble-color; 
-    border-radius: .4em; 
-    &:after { 
-        content: ''; 
-        position: absolute; 
-        width: 0; 
-        height: 0; 
-        border: $pointer-size solid transparent; 
-    }
+  position: relative; 
+  background: $bubble-color; 
+  border-radius: .4em; 
+  &:after { 
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 0; 
+    border: $pointer-size solid transparent; 
+  }
 } 
 
 .bubble_top {
-    @extend .bubble;
-    margin-top: $pointer-size;
+  @extend .bubble;
+  margin-top: $pointer-size;
 
-    &:after {
-        top: 0; 
-        left: 50%; 
-        border-bottom-color: $bubble-color;
-        border-top: 0; 
-        margin-left: -$pointer-size; 
-        margin-top: -$pointer-size;
-    }
+  &:after {
+    top: 0; 
+    left: 50%; 
+    border-bottom-color: $bubble-color;
+    border-top: 0; 
+    margin-left: -$pointer-size; 
+    margin-top: -$pointer-size;
+  }
 }
 
 .bubble_bottom {
-    @extend .bubble;
-    margin-bottom:$pointer-size;
+  @extend .bubble;
+  margin-bottom:$pointer-size;
 
-    &:after {
-        bottom: 0; 
-        left: 50%; 
-        border-top-color: $bubble-color; 
-        border-bottom: 0; 
-        margin-left: -$pointer-size; 
-        margin-bottom: -$pointer-size;
-    }
+  &:after {
+    bottom: 0; 
+    left: 50%; 
+    border-top-color: $bubble-color; 
+    border-bottom: 0; 
+    margin-left: -$pointer-size; 
+    margin-bottom: -$pointer-size;
+  }
 }
 
 .bubble_left {
-    @extend .bubble;
-    margin-left:$pointer-size;
+  @extend .bubble;
+  margin-left:$pointer-size;
 
-    &:after {
-        left: 0; 
-        top: 50%; 
-        border-right-color: $bubble-color;
-        border-left: 0; 
-        margin-top: -$pointer-size; 
-        margin-left: -$pointer-size;
-    }
+  &:after {
+    left: 0; 
+    top: 50%; 
+    border-right-color: $bubble-color;
+    border-left: 0; 
+    margin-top: -$pointer-size; 
+    margin-left: -$pointer-size;
+  }
 }
 
 .bubble_right {
-    @extend .bubble;
-    margin-right:$pointer-size;
+  @extend .bubble;
+  margin-right:$pointer-size;
 
-    &:after {
-        right: 0; 
-        top: 50%; 
-        border-left-color: $bubble-color; 
-        border-right: 0; 
-        margin-top: -$pointer-size; 
-        margin-right: -$pointer-size;
-    }
+  &:after {
+    right: 0; 
+    top: 50%; 
+    border-left-color: $bubble-color; 
+    border-right: 0; 
+    margin-top: -$pointer-size; 
+    margin-right: -$pointer-size;
+  }
 }

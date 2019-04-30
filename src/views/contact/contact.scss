@@ -2,36 +2,36 @@
 @import '../../partials/defaults';
 
 #content {
-    text-align: left;
+  text-align: left;
 }
 
 #contact-cont {
-    display: flex;
+  display: flex;
 
-    #contacts {
-        margin-right: 5%;
-    }
+  #contacts {
+    margin-right: 5%;
+  }
 }
 
 #chat-cont {
-    .chat {
-        margin: auto;
-    }
+  .chat {
+    margin: auto;
+  }
 }
 
 .profile {
-    margin-bottom: 5%;
-    padding: 3%;
-    cursor: pointer;
+  margin-bottom: 5%;
+  padding: 3%;
+  cursor: pointer;
 }
 
-.selected-contact {
-    background: darken($light-yellow, 7%);
-    border-radius: 0.4em;
+.profile_selected {
+  background: darken($light-yellow, 7%);
+  border-radius: 0.4em;
 }
 
 @media screen and (max-width: 800px) { 
-    #contact-cont {
-        flex-direction: column;
-    }
+  #contact-cont {
+    flex-direction: column;
+  }
 }

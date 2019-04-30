@@ -2,56 +2,56 @@
 @import '../../partials/defaults';
 
 #content {
-    text-align: center;
-    width: 75%;
+  text-align: center;
+  width: 75%;
 }
 
 .row {
-    width: 100%;
+  width: 100%;
 }
   
 .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
   
 .left {
-    float: left;
-    width: 50%
+  float: left;
+  width: 50%
 }
 
 .right {
-    float: left;
-    width: 50%
+  float: left;
+  width: 50%
 }
 
 #standard-buttons .button {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #arrow-buttons .arrow-button {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #percentages .pie, #percentages .circle {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #search-cont {
-    .search {
-        margin-bottom: 2em;
-    }
+  .search {
+    margin-bottom: 2em;
+  }
 }
 
 .news-1, .news-2, .map, .chat, .message-form {
-    margin: auto;
+  margin: auto;
 }
 
 #sliders div {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #video .video {
-    margin: auto;
+  margin: auto;
 }

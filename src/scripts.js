@@ -9,7 +9,7 @@ import * as slider from './composite/slider/slider';
 import video from './components/video/video';
 import datepicker from './components/datepicker/datepicker';
 import myMap from './components/map/map';
-import messageForm from './composite/forms/message-form/message-form';
+import messageForm from './composite/message-form/message-form';
 
 import './static/images/logo.png';
 

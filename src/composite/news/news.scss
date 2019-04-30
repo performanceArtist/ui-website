@@ -1,101 +1,101 @@
 .news-1, .news-2 {
-    color: $white;
-    max-width: 360px;
-    height: 265px;
-    width: 100%;
-    text-align: center;
-    border-radius: 0.4em;
-    overflow: hidden;
+  color: $white;
+  max-width: 360px;
+  height: 265px;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.4em;
+  overflow: hidden;
 }
   
 .news-1::after, .news-2::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
   
 .news__left {
-    float: left;
-    width: 33%;
-    height: 100%;
-    background-repeat: no-repeat;
-    //background-size: contain;
-    background-size: auto 100%;
-    background-position: center; 
+  float: left;
+  width: 33%;
+  height: 100%;
+  background-repeat: no-repeat;
+  //background-size: contain;
+  background-size: auto 100%;
+  background-position: center; 
 }
 
 .news__text {
-    text-align: left;
-    font-size: 0.8em;
+  text-align: left;
+  font-size: 0.8em;
 }
 
 .news__cont {
-    padding: 10%;
-    padding-bottom: 0;
+  padding: 10%;
+  padding-bottom: 0;
 }
 
 .news__right {
-    float: left;
-    width: 65%;
-    height: 100%;
+  float: left;
+  width: 65%;
+  height: 100%;
 }
 
 .news-1 {
-    background-color: $light-orange;
+  background-color: $light-orange;
 
-    .news__title {
-        font-size: 2.2em;
-        line-height: 0.9;
-        margin-bottom: 8%;
-        text-align: left;
-        margin-top: 2%;
-    }
+  .news__title {
+    font-size: 2.2em;
+    line-height: 0.9;
+    margin-bottom: 8%;
+    text-align: left;
+    margin-top: 2%;
+  }
 
-    .news__date {
-        text-transform: uppercase;
-        font-family: $font-bold;
-        font-size: 0.9em;
-        text-align: left;
-        margin-bottom: 9.5%;
-    }    
+  .news__date {
+    text-transform: uppercase;
+    font-family: $font-bold;
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 9.5%;
+  }    
 
 }
 
 .news-2 {
-    background-color: $light-green;
+  background-color: $light-green;
 
-    .news__cont {
-        padding-top: 0;
-    }
+  .news__cont {
+    padding-top: 0;
+  }
 
-    .news__date {
-        margin-bottom: 4%;
-    }
+  .news__date {
+    margin-bottom: 4%;
+  }
 
-    .news__day {
-        font-size: 6em;
-        margin-right: 4%;
-    }
+  .news__day {
+    font-size: 6em;
+    margin-right: 4%;
+  }
 
-    .news__month {
-        font-size: 2em;
-    }
+  .news__month {
+    font-size: 2em;
+  }
 
-    .news__title {
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-bottom: 5%;
-        text-align: left;
-    }    
+  .news__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-align: left;
+  }    
 
-    .news__text {
-        margin-bottom: 10%;
-    }
+  .news__text {
+    margin-bottom: 10%;
+  }
 
-    .button {
-        font-size: 0.8em;
-        width: 90%;
-        height: 32px;
-        margin-bottom: 19%;
-    }
+  .button {
+    font-size: 0.8em;
+    width: 90%;
+    height: 32px;
+    margin-bottom: 19%;
+  }
 }

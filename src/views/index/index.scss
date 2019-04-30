@@ -2,71 +2,71 @@
 @import '../../partials/defaults';
   
 #place-info {
-    .map {
-        margin: auto;
-        margin-bottom: 5%;
+  .map {
+    margin: auto;
+    margin-bottom: 5%;
+  }
+
+  text-align: left;
+  
+  #date-info {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+
+    .calendar {
+      margin-right: 5%;
+      margin-bottom: 5%;
     }
 
-    text-align: left;
-    
-    #date-info {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        margin: auto;
+    #date-text {
+      padding: 2em;
 
-        .calendar {
-            margin-right: 5%;
-            margin-bottom: 5%;
-        }
-
-        #date-text {
-            padding: 2em;
-
-            #button-cont {
-                margin-top: 7%;
-                text-align: center;
-            }
-        }
+      #button-cont {
+        margin-top: 7%;
+        text-align: center;
+      }
     }
+  }
 }
 
 #news {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    .news-1 {
-        margin-right: 2%;
-    }
+  .news-1 {
+    margin-right: 2%;
+  }
 }
 
 #videos {
-    .video {
-        margin: auto;
-    }
+  .video {
+    margin: auto;
+  }
 
 }
 
 @media screen and (max-width: 760px) {
-    #news {
-        display: block;
+  #news {
+    display: block;
 
-        .news-1, .news-2 {
-            margin: auto;
-            margin-bottom: 1em;
-        }
+    .news-1, .news-2 {
+      margin: auto;
+      margin-bottom: 1em;
     }
+  }
 
-    #place-info {
-        #date-info {
-            display: block;
-            text-align: center;
-            width: 100%;
+  #place-info {
+    #date-info {
+      display: block;
+      text-align: center;
+      width: 100%;
 
-            #date-text {
-                text-align: left;
-                padding: 0.5em;
-            }
-        }
+      #date-text {
+        text-align: left;
+        padding: 0.5em;
+      }
     }
+  }
 }
