@@ -4,7 +4,7 @@ $bubble-color: $light-orange;
 .bubble { 
   position: relative; 
   background: $bubble-color; 
-  border-radius: .4em; 
+  border-radius: .4rem; 
   &:after { 
     content: ''; 
     position: absolute; 

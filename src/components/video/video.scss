@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 47.5rem;
   position: relative;
-  border-radius: 0.2em;
+  border-radius: 0.2rem;
   overflow: hidden;
 
   video {
@@ -56,18 +56,18 @@
   }
 
   &__play {
-    @include button(black, 1.6em);
+    @include button(black, 1.6rem);
     margin-right: 2%;
   }
 
   &__fullscreen {
-    @include button($light-orange, 1.6em);
+    @include button($light-orange, 1.6rem);
     margin-left: 2%;
   }
 
   &__play button, &__fullscreen button {
     width: 100%;
-    padding: 1.5em;
+    padding: 1.5rem;
   }
 }
 
@@ -75,10 +75,10 @@
   .video {
     &__play button, &__fullscreen button {
       i {
-        font-size: 0.9em;
+        font-size: 0.9rem;
       }
       
-      padding: 0.6em;
+      padding: 0.6rem;
     }
   }
 }

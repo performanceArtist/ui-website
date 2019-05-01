@@ -4,7 +4,7 @@
   height: 16.5625rem;
   width: 100%;
   text-align: center;
-  border-radius: 0.4em;
+  border-radius: 0.4rem;
   overflow: hidden;
 }
   
@@ -26,7 +26,7 @@
 
 .news__text {
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .news__cont {
@@ -44,7 +44,7 @@
   background-color: $light-orange;
 
   .news__title {
-    font-size: 2.2em;
+    font-size: 2.2rem;
     line-height: 0.9;
     margin-bottom: 8%;
     text-align: left;
@@ -54,7 +54,7 @@
   .news__date {
     text-transform: uppercase;
     font-family: $font-bold;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     text-align: left;
     margin-bottom: 9.5%;
   }    
@@ -73,12 +73,12 @@
   }
 
   .news__day {
-    font-size: 6em;
+    font-size: 6rem;
     margin-right: 4%;
   }
 
   .news__month {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .news__title {
@@ -93,7 +93,7 @@
   }
 
   .button {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     width: 90%;
     height: 2rem;
     margin-bottom: 19%;

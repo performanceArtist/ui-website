@@ -18,7 +18,7 @@
 
 @mixin set-button-size($width, $height) {    
   font-size: 1.4vw;
-  border-radius: 0.375em;
+  border-radius: 0.375rem;
   width: $width;
   min-height: $height;
 }

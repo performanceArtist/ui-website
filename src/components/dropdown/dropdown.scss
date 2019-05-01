@@ -15,12 +15,12 @@ $dropdown-width: 22.5rem;
     background: $light-green;
     z-index: 1;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     width: $dropdown-width/9;
     height: 100%;      
     pointer-events: none;
     box-sizing: border-box;   
-    line-height: 1.4em;
+    line-height: 1.4rem;
   }
 
   select {

@@ -6,7 +6,7 @@
     .bubble {
         width: 12.6875rem;
         line-height: 1.2;
-        margin-left: 1em;
+        margin-left: 1rem;
     }
 
     &__name {
@@ -15,14 +15,14 @@
     }
 
     &__occupation {
-        font-size: 0.9em;
+        font-size: 0.9rem;
         font-family: $font-bold;
         text-transform: uppercase;
     }
 
     &__icons {
         margin-top: 6.5%;
-        font-size: 2em;
+        font-size: 2rem;
         text-align: center;
 
         i {
@@ -69,15 +69,15 @@
 @media screen and (max-width: 25rem) {
     .profile {
         &__name {
-            font-size: 1em;
+            font-size: 1rem;
         }
     
         &__occupation {
-            font-size: 0.75em;
+            font-size: 0.75rem;
         }
     
         &__icons {
-            font-size: 1.4em;
+            font-size: 1.4rem;
         }
 
         .bubble {

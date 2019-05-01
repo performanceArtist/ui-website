@@ -18,8 +18,8 @@
     text-align: right;
 
     .bubble {
-      padding: 1em;
-      margin-bottom: 1em;
+      padding: 1rem;
+      margin-bottom: 1rem;
       display: inline-block;
       text-align: left;
     }
@@ -38,12 +38,12 @@
 .comment {
   &__name {
     font-family: $font-bold;
-    padding-right: 1em;
+    padding-right: 1rem;
   }
 
   &__rating {
     color: #800000;
-    margin-top: 1em;
+    margin-top: 1rem;
     text-align: right;
     font-family: $font-bold;
   }
@@ -58,7 +58,7 @@
       margin-top: 5%;
 
       .comment {
-        font-size: 0.75em;
+        font-size: 0.75rem;
       }
     }
   }

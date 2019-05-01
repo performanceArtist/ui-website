@@ -1,7 +1,7 @@
 .stage {
   .progressbar {
     li {
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     li::after {
@@ -31,7 +31,7 @@
   .stage {
       .progressbar {
         li {
-          font-size: 0.75em;
+          font-size: 0.75rem;
         }
 
         .done::before, .current::before, li::before {

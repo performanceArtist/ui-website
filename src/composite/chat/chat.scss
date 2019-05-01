@@ -1,13 +1,13 @@
 .chat {
   $avatar-size: 7.5rem;
 
-  border-radius: 0.4em;
+  border-radius: 0.4rem;
   overflow: hidden;
   text-align: center;
   max-width: 22.5rem;
 
   i {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     color: $dark-grey;
   }
   
@@ -18,7 +18,7 @@
 
   &__name {
     padding: 8%;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     background-color: $light-green;
     color: $white;
   }
@@ -46,7 +46,7 @@
     padding: 10%;
     .bubble {
       @include set-bubble-color($white, top);
-      padding: 1em;
+      padding: 1rem;
       text-align: left;
       margin-bottom: 9%;
     }
@@ -56,7 +56,7 @@
     display: block;
     background-color: $light-grey;
     border: 0.1875rem solid $white;
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
     margin-bottom: 10%;
     width: 90%;
   }
@@ -66,8 +66,8 @@
   }
 
   .fa-comments, .fa-camera {
-    margin-top: 0.3em;
-    margin-left: 0.5em;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
   }
 
   .fa-comments {
@@ -82,11 +82,11 @@
 @media screen and (max-width: 50rem) {
   .chat {
     textarea {
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     &__content {
-      font-size: 0.75em;
+      font-size: 0.75rem;
     }
   }
 }

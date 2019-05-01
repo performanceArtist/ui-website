@@ -4,7 +4,7 @@
 	font-family: $font;
 
 	input, textarea {
-		font-size: 0.8em;
+		font-size: 0.8rem;
 		margin-bottom: 4.5%;
 	}
 
@@ -12,7 +12,7 @@
 		width: 100%;
 		margin-bottom: 2%;
 		font-family: $font;
-		font-size: 1em;
+		font-size: 1rem;
 	}
 
 	input[type=submit] {
@@ -33,15 +33,15 @@
 %info-bubble {
 	display: inline-block;
 	visibility: hidden;
-	height: 2.5em;
-	width: 6em;
+	height: 2.5rem;
+	width: 6rem;
 	text-align: center;
-	font-size: 0.9em;
+	font-size: 0.9rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: $white;
 	line-height: 240%;
-	margin-left: 0.8em;
+	margin-left: 0.8rem;
 }
 
 .error-bubble {
