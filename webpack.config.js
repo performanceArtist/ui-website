@@ -7,6 +7,9 @@ const htmlFiles = ['index', 'order', 'gallery', 'feedback', 'contact', 'ui', 'bl
   template: `./src/views/${name}/${name}.pug`,
   filename: `${name}.html`,
   chunks: ['commons', name],
+  options: {
+    attrs: ['img:src'],
+  },
 }));
 
 const config = {
@@ -18,6 +21,12 @@ const config = {
     contact: './src/views/contact/contact.js',
     ui: './src/views/ui/ui.js',
     blank: './src/views/blank/blank',
+  },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, 'src/static/images'),
+    },
+    extensions: ['.js'],
   },
   optimization: {
     splitChunks: {

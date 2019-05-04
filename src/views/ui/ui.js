@@ -45,7 +45,7 @@ window.onload = function init() {
   $('#stage-test').progressbar({
     // ~: failed
     // @: current
-    steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5'],
+    steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']
   });
 
   scripts.myMap('map');

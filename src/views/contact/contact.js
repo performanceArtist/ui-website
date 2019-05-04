@@ -13,7 +13,7 @@ window.onload = function init() {
   const chatName = chat.querySelector('.chat__name');
   const chatImg = chat.querySelector('.avatar img');
 
-  els.forEach((el) => {
+  els.forEach(el => {
     const img = el.querySelector('.avatar img');
     const name = el.querySelector('.profile__name');
 

@@ -12,7 +12,7 @@
       margin-right: 5%;
       margin-bottom: 5%; }
     #place-info #date-info #date-text {
-      padding: 2em; }
+      padding: 2rem; }
       #place-info #date-info #date-text #button-cont {
         margin-top: 7%;
         text-align: center; }
@@ -31,12 +31,12 @@
     display: block; }
     #news .news-1, #news .news-2 {
       margin: auto;
-      margin-bottom: 1em; }
+      margin-bottom: 1rem; }
   #place-info #date-info {
     display: block;
     text-align: center;
     width: 100%; }
     #place-info #date-info #date-text {
       text-align: left;
-      padding: 0.5em; } }
+      padding: 0.5rem; } }
 

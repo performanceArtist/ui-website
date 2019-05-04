@@ -16,7 +16,7 @@
 
 .profile_selected {
   background: #f1ddbe;
-  border-radius: 0.4em; }
+  border-radius: 0.4rem; }
 
 @media screen and (max-width: 50rem) {
   #contact-cont {
