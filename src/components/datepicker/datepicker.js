@@ -6,11 +6,11 @@ export default function addCalendar(selector) {
     showButtonPanel: true,
     dayNamesMin: ['sat', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
     minDate: null,
-    maxDate: null,
+    maxDate: null
   });
 
   const nel = $('<div />', {
-    class: 'datepicker-custom-date',
+    class: 'datepicker-custom-date'
   });
 
   el.prepend(nel);

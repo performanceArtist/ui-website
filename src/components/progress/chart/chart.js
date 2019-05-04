@@ -1,10 +1,10 @@
 require('jquery-circle-progress');
 
 // multiple colors
-(function () {
+(function addColorFeature() {
   const _originalInitFill = $.circleProgress.defaults.initFill;
 
-  $.circleProgress.defaults.initFill = function () {
+  $.circleProgress.defaults.initFill = function() {
     _originalInitFill.apply(this, arguments);
 
     if (this.fill.sectors) {
@@ -26,7 +26,13 @@ require('jquery-circle-progress');
 
         ctx.beginPath();
         ctx.moveTo(r, r);
-        ctx.arc(r, r, r, sa + 2 * lastValue * Math.PI, sa + 2 * currentValue * Math.PI);
+        ctx.arc(
+          r,
+          r,
+          r,
+          sa + 2 * lastValue * Math.PI,
+          sa + 2 * currentValue * Math.PI
+        );
         ctx.moveTo(r, r);
         ctx.fillStyle = currentColor;
         ctx.fill();
@@ -37,7 +43,7 @@ require('jquery-circle-progress');
       this.arcFill = this.ctx.createPattern(bg, 'no-repeat');
     }
   };
-}());
+})();
 
 function percent(selector, opt = {}) {
   const def = {
@@ -45,12 +51,15 @@ function percent(selector, opt = {}) {
     startAngle: -Math.PI / 2,
     size: 120,
     thickness: 7,
-    fill: '#E75637',
+    fill: '#E75637'
   };
 
-  $(selector).circleProgress(Object.assign(def, opt))
-    .on('circle-animation-progress', function (e, progress, stepValue) {
-      $(this).find('.circle__text').text(stepValue.toFixed(2).substr(2));
+  $(selector)
+    .circleProgress(Object.assign(def, opt))
+    .on('circle-animation-progress', function(e, progress, stepValue) {
+      $(this)
+        .find('.circle__text')
+        .text(stepValue.toFixed(2).substr(2));
     });
 }
 
@@ -65,9 +74,9 @@ function pie(selector, opt = {}) {
         ['#747474', 0.3],
         ['#E75637', 0.5],
         ['#4EB7A8', 0.8],
-        ['#E6E6E6', 1.0],
-      ],
-    },
+        ['#E6E6E6', 1.0]
+      ]
+    }
   };
 
   $(selector).circleProgress(Object.assign(def, opt));

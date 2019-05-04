@@ -17,12 +17,4 @@ import search from './composite/search/search';
 
 search();
 
-export {
-  ripple,
-  chart,
-  slider,
-  video,
-  messageForm,
-  datepicker,
-  myMap,
-};
+export { ripple, chart, slider, video, messageForm, datepicker, myMap };

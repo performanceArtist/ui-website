@@ -30,7 +30,7 @@ const Factory = (function Factory() {
         throw new Error('No ingredient!');
     }
   };
-}());
+})();
 
 const items = [
   {
@@ -40,8 +40,8 @@ const items = [
     ing: [
       Factory('Tomatoes', 0.2),
       Factory('Mozarella', 0.5),
-      Factory('Pepperoni', 0.8),
-    ],
+      Factory('Pepperoni', 0.8)
+    ]
   },
   {
     name: 'cheesy crust',
@@ -50,8 +50,8 @@ const items = [
     ing: [
       Factory('Tomatoes', 0.1),
       Factory('Mozarella', 0.7),
-      Factory('Pepperoni', 0.9),
-    ],
+      Factory('Pepperoni', 0.9)
+    ]
   },
   {
     name: 'vegetarian',
@@ -60,9 +60,9 @@ const items = [
     ing: [
       Factory('Tomatoes', 0.2),
       Factory('Mozarella', 0.6),
-      Factory('Onions', 0.9),
-    ],
-  },
+      Factory('Onions', 0.9)
+    ]
+  }
 ];
 
 const displayItem = (function displayItem() {
@@ -72,7 +72,7 @@ const displayItem = (function displayItem() {
 
     const html = document.createElement('ul');
 
-    item.ing.forEach((el) => {
+    item.ing.forEach(el => {
       html.appendChild(el.el);
     });
 
@@ -81,13 +81,13 @@ const displayItem = (function displayItem() {
 
     chart.percent('.circle', {
       value: item.rating,
-      fill: item.rating > 0.6 ? '#68BB68' : '#D28847',
+      fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
     });
 
     chart.pie('.pie', {
       fill: {
-        sectors: item.ing.map(el => [el.color, el.value]),
-      },
+        sectors: item.ing.map(el => [el.color, el.value])
+      }
     });
   }
 
@@ -102,9 +102,13 @@ const displayItem = (function displayItem() {
 
       i += 1;
       if (i === items.length - 1) {
-        document.querySelector('.arrow-button_right').classList.add('arrow-button_disabled');
+        document
+          .querySelector('.arrow-button_right')
+          .classList.add('arrow-button_disabled');
       } else {
-        document.querySelector('.arrow-button_left').classList.remove('arrow-button_disabled');
+        document
+          .querySelector('.arrow-button_left')
+          .classList.remove('arrow-button_disabled');
       }
       display(items[i]);
     },
@@ -113,13 +117,17 @@ const displayItem = (function displayItem() {
 
       i -= 1;
       if (i === 0) {
-        document.querySelector('.arrow-button_left').classList.add('arrow-button_disabled');
+        document
+          .querySelector('.arrow-button_left')
+          .classList.add('arrow-button_disabled');
       } else {
-        document.querySelector('.arrow-button_right').classList.remove('arrow-button_disabled');
+        document
+          .querySelector('.arrow-button_right')
+          .classList.remove('arrow-button_disabled');
       }
       display(items[i]);
-    },
+    }
   };
-}());
+})();
 
 export default displayItem;

@@ -7,7 +7,12 @@ import validator from '../../composite/message-form/validator';
 
 window.onload = function init() {
   const hm = $('#stages').progressbar({
-    steps: ['@Choose a pizza', 'Select options', 'Enter your address', 'All done!'],
+    steps: [
+      '@Choose a pizza',
+      'Select options',
+      'Enter your address',
+      'All done!'
+    ]
   });
   const steps = hm.find('ul li');
 
