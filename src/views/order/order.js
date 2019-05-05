@@ -1,12 +1,14 @@
 import '../../styles';
+
+import '../../composite/pizza/pizza.scss';
 import './order.scss';
 
+// progressbar JQuery dependency
 import {} from '../../scripts';
-
 import validator from '../../composite/message-form/validator';
 
 window.onload = function init() {
-  const hm = $('#stages').progressbar({
+  const progressbar = $('#stages').progressbar({
     steps: [
       '@Choose a pizza',
       'Select options',
@@ -14,7 +16,7 @@ window.onload = function init() {
       'All done!'
     ]
   });
-  const steps = hm.find('ul li');
+  const steps = progressbar.find('ul li');
 
   document.querySelector('.dropdown select').addEventListener('change', () => {
     steps[0].setAttribute('class', 'done');

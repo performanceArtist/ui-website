@@ -10,7 +10,7 @@
     font-size: 1.6rem;
     color: $dark-grey;
   }
-  
+
   .avatar {
     max-width: $avatar-size;
     height: $avatar-size;
@@ -25,7 +25,7 @@
 
   &__header {
     height: 2.625rem;
-    background-color: darken($light-green, 20%)
+    background-color: darken($light-green, 20%);
   }
 
   &__avatar {
@@ -65,7 +65,8 @@
     width: 100%;
   }
 
-  .fa-comments, .fa-camera {
+  .fa-comments,
+  .fa-camera {
     margin-top: 0.3rem;
     margin-left: 0.5rem;
   }
@@ -76,7 +77,6 @@
   .fa-camera {
     float: right;
   }
-
 }
 
 @media screen and (max-width: 50rem) {

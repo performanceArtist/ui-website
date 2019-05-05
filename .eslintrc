@@ -3,7 +3,6 @@
     "plugins": ["eslint-plugin-prettier"],
     "env": {
         "browser": true,
-        "jest": true,
         "jquery": true
     },
     "rules": {

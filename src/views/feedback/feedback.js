@@ -1,4 +1,3 @@
-import '../../styles';
 import './feedback.scss';
 
 import { messageForm, slider, ripple } from '../../scripts';

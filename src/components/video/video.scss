@@ -36,10 +36,10 @@
       background: $light-orange;
     }
 
-    .ui-state-default, .ui-widget-content .ui-state-default {
+    .ui-state-default,
+    .ui-widget-content .ui-state-default {
       display: none;
     }
-
   }
 
   @mixin button($color, $font-size, $font-color: $white) {
@@ -65,7 +65,8 @@
     margin-left: 2%;
   }
 
-  &__play button, &__fullscreen button {
+  &__play button,
+  &__fullscreen button {
     width: 100%;
     padding: 1.5rem;
   }
@@ -73,15 +74,13 @@
 
 @media screen and (max-width: 46.875rem) {
   .video {
-    &__play button, &__fullscreen button {
+    &__play button,
+    &__fullscreen button {
       i {
         font-size: 0.9rem;
       }
-      
+
       padding: 0.6rem;
     }
   }
 }
-
-
-

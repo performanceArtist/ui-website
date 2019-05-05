@@ -1,7 +1,6 @@
-import '../../styles';
 import './contact.scss';
 
-import '../../static/images/billybob.jpg';
+import 'static/images/billybob.jpg';
 
 import { ripple } from '../../scripts';
 

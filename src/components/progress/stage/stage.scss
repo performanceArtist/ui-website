@@ -9,14 +9,17 @@
       top: 1.125rem;
     }
 
-    .done::before, .current::before, li::before {
+    .done::before,
+    .current::before,
+    li::before {
       width: 2.25rem;
       height: 2.25rem;
       line-height: 2.2;
-      font-family: $font-bold;
+      font-weight: bold;
     }
 
-    .done::before, .current::before {
+    .done::before,
+    .current::before {
       background-color: $light-orange;
     }
 
@@ -24,25 +27,26 @@
       background-color: $light-orange;
     }
   }
-
 }
 
 @media screen and (max-width: 51.25rem) {
   .stage {
-      .progressbar {
-        li {
-          font-size: 0.75rem;
-        }
-
-        .done::before, .current::before, li::before {
-          width: 1.5rem;
-          height: 1.5rem;
-          line-height: 1.9;
-        }
-
-        li::after {
-          top: 0.5rem;
-        }
+    .progressbar {
+      li {
+        font-size: 0.75rem;
       }
+
+      .done::before,
+      .current::before,
+      li::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.9;
+      }
+
+      li::after {
+        top: 0.5rem;
+      }
+    }
   }
 }

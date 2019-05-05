@@ -1,7 +1,6 @@
-import '../../styles';
 import './index.scss';
 
-import '../../static/videos/review.mp4';
+import 'static/videos/review.mp4';
 
 import { ripple, video, myMap, datepicker } from '../../scripts';
 

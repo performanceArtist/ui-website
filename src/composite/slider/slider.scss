@@ -12,15 +12,15 @@
     font-weight: bold;
   }
 
-  input{
+  input {
     -webkit-appearance: none;
     width: 100%;
     height: 0.5rem;
-    border-radius: 0.3125rem;  
+    border-radius: 0.3125rem;
     background: #d3d3d3;
     outline: none;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
   }
 
   input::-webkit-slider-thumb {
@@ -28,7 +28,7 @@
     appearance: none;
     width: 1.375rem;
     height: 1.375rem;
-    border-radius: 50%; 
+    border-radius: 50%;
     background: $light-orange;
     cursor: pointer;
   }
@@ -42,7 +42,6 @@
   }
 }
 
-
 .slider-2 {
   color: $medium-grey;
   background: $light-grey;
@@ -51,12 +50,13 @@
     background: $light-green;
   }
 
-  .ui-state-default, .ui-widget-content .ui-state-default {
+  .ui-state-default,
+  .ui-widget-content .ui-state-default {
     cursor: pointer;
     border-radius: 50%;
     border: none;
     background: $light-green;
-    top: -.45rem;
+    top: -0.45rem;
   }
 
   label {
@@ -66,5 +66,4 @@
     text-align: center;
     margin-top: 1.25rem;
   }
-
 }

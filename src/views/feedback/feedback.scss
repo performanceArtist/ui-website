@@ -1,6 +1,3 @@
-@import '../../partials/mixins';
-@import '../../partials/defaults';
-
 #content {
   text-align: left;
 }
@@ -34,10 +31,9 @@
   }
 }
 
-
 .comment {
   &__name {
-    font-family: $font-bold;
+    font-weight: bold;
     padding-right: 1rem;
   }
 
@@ -45,7 +41,7 @@
     color: #800000;
     margin-top: 1rem;
     text-align: right;
-    font-family: $font-bold;
+    font-weight: bold;
   }
 }
 

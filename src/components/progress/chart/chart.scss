@@ -20,7 +20,8 @@
 }
 
 @media screen and (max-width: 31.25rem) {
-  .circle, .pie {
+  .circle,
+  .pie {
     canvas {
       width: 3.75rem;
       height: 3.75rem;

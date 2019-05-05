@@ -8,4 +8,11 @@ import 'jquery-ui-dist/jquery-ui.min.css';
 import './plugins/jquery-switcher/css/switcher.css';
 import './plugins/progressbar/jquery.progressbar.css';
 
-import './main.scss';
+import './layout.scss';
+
+function importAll(resolve) {
+  resolve.keys().forEach(resolve);
+}
+
+importAll(require.context('./components', true, /\.scss$/));
+importAll(require.context('./composite', true, /\.scss$/));

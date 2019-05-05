@@ -1,7 +1,3 @@
-import '../../styles';
-import './gallery.scss';
-
-import '../../composite/pizza/pizza.scss';
 import pizza from '../../composite/pizza/pizza';
 
 window.onload = function init() {

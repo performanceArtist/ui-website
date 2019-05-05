@@ -1,12 +1,13 @@
 import '../../styles';
+
 import './ui.scss';
 
-import '../../static/images/ricardo.jpg';
-import '../../static/images/animal.jpg';
-import '../../static/images/bear.jpg';
-import '../../static/images/orang.jpg';
+import 'static/images/ricardo.jpg';
+import 'static/images/animal.jpg';
+import 'static/images/bear.jpg';
+import 'static/images/orang.jpg';
 
-import '../../static/videos/bunny.mp4';
+import 'static/videos/bunny.mp4';
 
 import * as scripts from '../../scripts';
 

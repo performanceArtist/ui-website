@@ -37,17 +37,17 @@
     left: 0;
     height: 1.6875rem;
     width: 1.6875rem;
-    background-color: #eee;
+    background-color: #ddd;
     border-radius: 50%;
-  
+
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       border: solid;
       border-color: $medium-grey;
     }
   }
-  
+
   &__icon:after {
     left: 0.5625rem;
     top: 0.3125rem;
@@ -59,4 +59,3 @@
     transform: rotate(45deg);
   }
 }
-  

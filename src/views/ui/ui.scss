@@ -1,6 +1,3 @@
-@import '../../partials/mixins';
-@import '../../partials/defaults';
-
 #content {
   text-align: center;
   width: 75%;
@@ -9,21 +6,21 @@
 .row {
   width: 100%;
 }
-  
+
 .row::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
-  
+
 .left {
   float: left;
-  width: 50%
+  width: 50%;
 }
 
 .right {
   float: left;
-  width: 50%
+  width: 50%;
 }
 
 #standard-buttons .button {
@@ -34,7 +31,8 @@
   margin-left: 1.25rem;
 }
 
-#percentages .pie, #percentages .circle {
+#percentages .pie,
+#percentages .circle {
   margin-left: 1.25rem;
 }
 
@@ -44,7 +42,11 @@
   }
 }
 
-.news-1, .news-2, .map, .chat, .message-form {
+.news-1,
+.news-2,
+.map,
+.chat,
+.message-form {
   margin: auto;
 }
 
@@ -57,7 +59,8 @@
 }
 
 @media screen and (max-width: 60rem) {
-  .left, .right {
+  .left,
+  .right {
     float: none;
     width: 100%;
   }

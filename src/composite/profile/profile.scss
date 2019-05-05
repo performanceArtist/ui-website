@@ -1,87 +1,85 @@
 .profile {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  .bubble {
+    width: 12.6875rem;
+    line-height: 1.2;
+    margin-left: 1rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin-top: 5.5%;
+  }
+
+  &__occupation {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__icons {
+    margin-top: 6.5%;
+    font-size: 2rem;
     text-align: center;
-    width: 100%;
-    .bubble {
-        width: 12.6875rem;
-        line-height: 1.2;
-        margin-left: 1rem;
+
+    i {
+      margin-left: 9%;
     }
 
-    &__name {
-        font-size: 1.5rem;
-        margin-top: 5.5%;
+    i:last-child {
+      margin-right: 9%;
     }
 
-    &__occupation {
-        font-size: 0.9rem;
-        font-family: $font-bold;
-        text-transform: uppercase;
+    i:first-child {
+      margin-right: 2.5%;
     }
-
-    &__icons {
-        margin-top: 6.5%;
-        font-size: 2rem;
-        text-align: center;
-
-        i {
-            margin-left: 9%;
-        }
-
-        i:last-child {
-            margin-right: 9%;
-        }
-
-        i:first-child {
-            margin-right: 2.5%;
-        }
-    }
-
+  }
 }
 
 .profile_type-1 {
-    .bubble {
-        @include set-bubble-color($light-grey, left);
-    }
+  .bubble {
+    @include set-bubble-color($light-grey, left);
+  }
 
-    .profile__name {
-        color: $light-orange;
-    }
-    
-    .profile__icons i {
-        color: $medium-grey;
-    }
+  .profile__name {
+    color: $light-orange;
+  }
 
-    .profile__icons .fa-twitter {
-        color: $light-orange;
-    }
+  .profile__icons i {
+    color: $medium-grey;
+  }
+
+  .profile__icons .fa-twitter {
+    color: $light-orange;
+  }
 }
 
 .profile_type-2 {
-    color: $white;
-    .bubble {
-        @include set-bubble-color($light-green, left);
-    }
-
+  color: $white;
+  .bubble {
+    @include set-bubble-color($light-green, left);
+  }
 }
 
 @media screen and (max-width: 25rem) {
-    .profile {
-        &__name {
-            font-size: 1rem;
-        }
-    
-        &__occupation {
-            font-size: 0.75rem;
-        }
-    
-        &__icons {
-            font-size: 1.4rem;
-        }
-
-        .bubble {
-            width: 10rem;
-        }
+  .profile {
+    &__name {
+      font-size: 1rem;
     }
+
+    &__occupation {
+      font-size: 0.75rem;
+    }
+
+    &__icons {
+      font-size: 1.4rem;
+    }
+
+    .bubble {
+      width: 10rem;
+    }
+  }
 }
