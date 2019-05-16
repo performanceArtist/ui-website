@@ -29,12 +29,6 @@ const config = {
     contact: './src/views/contact/contact.js',
     ui: './src/views/ui/ui.js'
   },
-  resolve: {
-    alias: {
-      static: path.resolve(__dirname, 'src/static')
-    },
-    extensions: ['.js']
-  },
   optimization: {
     splitChunks: {
       cacheGroups: {
