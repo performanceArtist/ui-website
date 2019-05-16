@@ -21,16 +21,16 @@ window.onload = function init() {
   document.querySelector('.dropdown select').addEventListener('change', () => {
     steps[0].setAttribute('class', 'done');
     steps[1].setAttribute('class', 'current');
-    document.querySelector('#order-options').style.visibility = 'initial';
+    document.querySelector('.order__options').style.visibility = 'initial';
   });
 
-  document.querySelector('#crust').addEventListener('change', () => {
+  document.querySelector('.order__crust').addEventListener('change', () => {
     steps[1].setAttribute('class', 'done');
     steps[2].setAttribute('class', 'current');
-    document.querySelector('#address').style.visibility = 'initial';
+    document.querySelector('.order__address').style.visibility = 'initial';
   });
 
-  const el = validator.extract(document.querySelector('#address'));
+  const el = validator.extract(document.querySelector('.order__address'));
 
   el.input.addEventListener('input', () => {
     validator.validate(el, validator.address);
@@ -38,11 +38,11 @@ window.onload = function init() {
     if (validator.address(el.input)) {
       steps[2].setAttribute('class', 'done');
       steps[3].setAttribute('class', 'done');
-      document.querySelector('#submit').style.visibility = 'initial';
+      document.querySelector('.order__submit').style.visibility = 'initial';
     } else {
       steps[2].setAttribute('class', 'current');
       steps[3].setAttribute('class', '');
-      document.querySelector('#submit').style.visibility = 'hidden';
+      document.querySelector('.order__submit').style.visibility = 'hidden';
     }
   });
 

@@ -1,7 +1,5 @@
 import './contact.scss';
 
-import 'static/images/billybob.jpg';
-
 import { ripple } from '../../scripts';
 
 window.onload = function init() {

@@ -35,12 +35,12 @@
     font-weight: bold;
   }
 
-  &__info-left {
+  &__info-text {
     width: 85%;
     text-align: left;
   }
 
-  &__info-right {
+  &__icons {
     font-size: 3rem;
     text-align: right;
     width: 15%;
@@ -67,7 +67,7 @@
       font-size: 0.65rem;
     }
 
-    &__info-right {
+    &__icons {
       i {
         font-size: 1.6rem;
         padding-right: 1rem;

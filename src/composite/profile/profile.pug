@@ -3,8 +3,8 @@ include ../../components/avatar/avatar
 
 mixin profile(type, data)
   div(class=`profile profile_${type}`)
-    +avatar(data.src)
-    +bubble('left')
+    +avatar({src:data.src})
+    +bubble({direction:'left'})
       .profile__name #{data.name}
       .profile__occupation #{data.occupation}
       .profile__icons

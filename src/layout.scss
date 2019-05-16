@@ -1,8 +1,10 @@
-body {
+body,
+html {
   margin: 0;
   color: $black;
   background: $light-yellow;
   font-family: $font;
+  font-size: 1rem;
   letter-spacing: 0.0625rem;
 
   h1,
@@ -47,20 +49,20 @@ header {
   border-bottom: 0.0625rem solid #d5c19d;
 }
 
-nav {
+.navigation {
   padding-left: 2%;
   padding-bottom: 2%;
   border-bottom: 0.0625rem #e0e0e0 solid;
+
+  &__links {
+    display: inline-block;
+    margin-right: 1rem;
+  }
 
   .search {
     input {
       width: 10rem;
     }
-  }
-
-  #nav-links {
-    display: inline-block;
-    margin-right: 1rem;
   }
 
   a {
@@ -78,20 +80,20 @@ nav {
   }
 }
 
-#content {
+.content {
   margin: auto;
   width: 95%;
   text-align: center;
   max-width: 80rem;
 }
 
-footer {
+.footer {
   margin-top: 2%;
   padding: 2%;
   border-top: 0.0625rem solid #d5c19d;
   text-align: center;
 
-  a {
+  &__link {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
@@ -112,16 +114,16 @@ footer {
     }
   }
 
-  nav {
+  .navigation {
     text-align: center;
-    #nav-links {
+    &__links {
       display: flex;
       flex-direction: column;
       font-size: 0.8rem;
     }
   }
 
-  footer {
+  .footer {
     font-size: 0.75rem;
   }
 }

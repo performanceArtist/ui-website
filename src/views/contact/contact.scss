@@ -1,34 +1,32 @@
-#content {
+.content {
   text-align: left;
 }
 
-#contact-cont {
+.contacts {
   display: flex;
 
-  #contacts {
+  &__profiles {
     margin-right: 5%;
   }
-}
 
-#chat-cont {
   .chat {
     margin: auto;
   }
-}
 
-.profile {
-  margin-bottom: 5%;
-  padding: 3%;
-  cursor: pointer;
-}
+  .profile {
+    margin-bottom: 5%;
+    padding: 3%;
+    cursor: pointer;
 
-.profile_selected {
-  background: darken($light-yellow, 7%);
-  border-radius: 0.4rem;
+    &_selected {
+      background: darken($light-yellow, 7%);
+      border-radius: 0.4rem;
+    }
+  }
 }
 
 @media screen and (max-width: 50rem) {
-  #contact-cont {
+  .contacts {
     flex-direction: column;
   }
 }

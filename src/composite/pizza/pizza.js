@@ -1,7 +1,3 @@
-import '../../static/images/pepperoni.jpg';
-import '../../static/images/cheesy_crust.jpg';
-import '../../static/images/vegetarian.jpg';
-
 import { chart } from '../../scripts';
 
 // lol

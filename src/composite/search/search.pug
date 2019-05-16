@@ -2,6 +2,6 @@ include ../../components/input/text/text
 
 mixin search()
   .search
-    +input-text('search', 'Search')
+    +input-text({name:'search', placeholder:'Search'})
     button(type='submit')
       i(class='fa fa-search')

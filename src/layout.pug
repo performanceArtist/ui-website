@@ -6,13 +6,13 @@ include components/dropdown/dropdown
 include components/buttons/standard-button/standard-button
 include components/buttons/arrow-button/arrow-button
 
-include components/progress/stage/stage
+include components/stage/stage
 
 include components/input/checkmark/checkmark
 include components/input/toggle/toggle
 include components/input/text/text
 include components/input/textarea/textarea
-include components/progress/chart/circle-chart
+include components/chart/chart
 
 include composite/profile/profile
 include composite/search/search
@@ -47,8 +47,8 @@ html(lang='en')
       header
         a(href='index.html')
           img(src='images/logo.png', alt='logo.png')  
-      nav
-        #nav-links
+      nav.navigation
+        .navigation__links
           a(href='index.html') Home
           a(href='gallery.html') Gallery
           a(href='order.html') Order
@@ -57,13 +57,13 @@ html(lang='en')
           a(href='ui.html') UI
         +search
   
-      #content
+      .content
         block content
-      footer
-        a(href='/') Home
+      footer.footer
+        a(href='/').footer__link Home
         | |
-        a(href='blank.html') Sponsors
+        a(href='blank.html').footer__link Sponsors
         | |
-        a(href='blank.html') Stuff
+        a(href='blank.html').footer__link Stuff
         | |
-        a(href='blank.html') About
+        a(href='blank.html').footer__link About

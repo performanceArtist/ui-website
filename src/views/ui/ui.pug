@@ -5,30 +5,28 @@ block head
 
 block content
   h2 STANDARD BUTTONS
-  #standard-buttons
-    +standard-button('small', 'green') 
+  .standard-buttons
+    +standard-button({size:'small', color:'green'}) 
       | button
-    +standard-button('big', 'green') 
+    +standard-button({size:'big', color:'green'}) 
       | button
-    +standard-button('big', 'orange')
+    +standard-button({size:'big', color:'orange'})
       | button
-    +standard-button('small', 'orange')
+    +standard-button({size:'small', color:'orange'})
       | button
   
   h2 ARROW BUTTONS
-  #arrow-buttons
-    +arrow-button('left', {disabled:true})
-    +arrow-button('right')
+  .arrow-buttons
+    +arrow-button({direction:'left', disabled:true})
+    +arrow-button({direction:'right'})
   h2 PERCENTAGES/PIE CHART
-  #percentages
-    +circle-chart
+  .percentages
+    +chart
     .pie
   h2 SLIDERS
-  .row
-    .left
-      +slider-1
-    .right
-      .slider-2
+  .sliders
+    +slider-1
+    .slider-2
   h2 STAGES
   +stage('stage-test')
   h2 FORM ELEMENTS
@@ -42,17 +40,17 @@ block content
     .right
       h2 TOGGLES
       div
-        +toggle('test', 'test')
+        +toggle({name:'test', value:'test'})
       h2 TICK BOXES
       form
         h3 Radio
         #radiobuttons
-          +checkmark('test', {type:'radio', value:'ok', label:'ok'})
+          +checkmark({name:'test', type:'radio', value:'ok', label:'ok'})
           br
-          +checkmark('test', {type:'radio', value:'not ok', label:'not ok'})
+          +checkmark({name:'test', type:'radio', value:'not ok', label:'not ok'})
           br
         h3 Checkbox
-        +checkmark('meme', {type:'checkbox', label:'test'})
+        +checkmark({name:'meme', type:'checkbox', label:'test'})
         
       h2 PROFILES
       +profile('type-1', {

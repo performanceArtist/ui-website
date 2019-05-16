@@ -1,6 +1,6 @@
-mixin dropdown(name='select', opt=[])
+mixin dropdown({name = 'select', options = []} = {})
   .dropdown
     select(name=name)
       option(disabled=true, selected=true) Option
-      each o in opt
-        option #{o}
+      each option in options
+        option #{option}

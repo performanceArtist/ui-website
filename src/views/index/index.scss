@@ -1,4 +1,4 @@
-#place-info {
+.place-info {
   .map {
     margin: auto;
     margin-bottom: 5%;
@@ -6,7 +6,7 @@
 
   text-align: left;
 
-  #date-info {
+  &__date {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -16,19 +16,19 @@
       margin-right: 5%;
       margin-bottom: 5%;
     }
+  }
 
-    #date-text {
-      padding: 2rem;
+  &__description {
+    padding: 2rem;
+  }
 
-      #button-cont {
-        margin-top: 7%;
-        text-align: center;
-      }
-    }
+  &__order-button {
+    margin-top: 7%;
+    text-align: center;
   }
 }
 
-#news {
+.news {
   display: flex;
   justify-content: center;
 
@@ -37,14 +37,14 @@
   }
 }
 
-#videos {
+.videos {
   .video {
     margin: auto;
   }
 }
 
 @media screen and (max-width: 47.5rem) {
-  #news {
+  .news {
     display: block;
 
     .news-1,
@@ -54,16 +54,16 @@
     }
   }
 
-  #place-info {
-    #date-info {
+  .place-info {
+    &__date {
       display: block;
       text-align: center;
       width: 100%;
+    }
 
-      #date-text {
-        text-align: left;
-        padding: 0.5rem;
-      }
+    &__description {
+      text-align: left;
+      padding: 0.5rem;
     }
   }
 }

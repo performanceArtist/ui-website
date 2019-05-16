@@ -1,13 +1,12 @@
-mixin map(id, title, street, city)
+mixin map({id = 'map', title = 'Meet us!', street = '1259 California st', city = 'san francisco, ca'} = {})
   .map(id=id)
     .map__info     
-      .map__info-left
+      .map__info-text
         .map__title #{title}
         .map__address 
           | #{street}
           br
           | #{city}
-      .map__info-right
+      .map__icons
         i(class="fa fa-bullseye")
         i(class="fa fa-map-marker")
-

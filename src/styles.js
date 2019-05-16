@@ -14,5 +14,12 @@ function importAll(resolve) {
   resolve.keys().forEach(resolve);
 }
 
+importAll(
+  require.context(
+    './static',
+    true,
+    /\.(scss|jpg|png|css|svg|png|ico|xml|mp4|)$/
+  )
+);
 importAll(require.context('./components', true, /\.scss$/));
 importAll(require.context('./composite', true, /\.scss$/));

@@ -2,7 +2,7 @@ extends ../../layout
 
 mixin comment(name, message, rating)
   .comment
-    +bubble(rating < 60 ? 'right' : 'right bubble_green')
+    +bubble({direction: 'right', modifier: rating < 60 ? '' : 'green'})
       | #{message}
       .comment__rating Rated #{rating}
       .comment__name #{name}
@@ -12,11 +12,11 @@ block head
 
 block content
   h2 Rate our service:
-  #rate-cont
-    #left
+  .rating
+    .rating__form
       +message-form
         +slider-1('rating')
-    #right
+    .rating__comments
       +comment('sadBoy', 'I just want my tendies.', 0)
       +comment(
         'Ash Williams', 

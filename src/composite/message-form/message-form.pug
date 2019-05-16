@@ -6,11 +6,11 @@ mixin message-form(action='')
   form(action=action, class='message-form')
     block
     .message-form__name
-      +input-text('name', 'Your name')
-      +bubble
+      +input-text({name:'name', placeholder:'Your name'})
+      +bubble({direction:'left'})
     .message-form__email
-      +input-text('email', 'Your email')
-      +bubble
+      +input-text({name:'email', placeholder:'Your email'})
+      +bubble({direction:'left'})
     .message-form__text
-      +input-textarea('message', {placeholder:'Your message', cols:'30', rows:'4'})
+      +input-textarea({name:'message', placeholder:'Your message', cols:'30', rows:'4'})
     input(type='submit', value='SUBMIT', class='button button_big button_green')

@@ -1,4 +1,4 @@
-#content {
+.content {
   text-align: center;
   width: 75%;
 }
@@ -23,20 +23,20 @@
   width: 50%;
 }
 
-#standard-buttons .button {
+.standard-buttons .button {
   margin-left: 1.25rem;
 }
 
-#arrow-buttons .arrow-button {
+.arrow-buttons .arrow-button {
   margin-left: 1.25rem;
 }
 
-#percentages .pie,
-#percentages .circle {
+.percentages .pie,
+.percentages .circle {
   margin-left: 1.25rem;
 }
 
-#search-cont {
+.search-cont {
   .search {
     margin-bottom: 2rem;
   }

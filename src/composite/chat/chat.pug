@@ -8,12 +8,12 @@ mixin chat(data)
     .chat__name #{data.name}
     .chat__header
     .chat__avatar
-      +avatar(data.image)
+      +avatar({src:data.image})
       i(class='fa fa-comments')
       i(class='fa fa-camera')
     .chat__content
-      +bubble('top')
+      +bubble({direction:'top'})
         | Hi there! I am here to answer all your questions!
-      +input-textarea('chat-reply', {placeholder:'What starts with "W" and ends with "T"?', rows:3})
-      +standard-button('big', 'green')
+      +input-textarea({name:'chat-reply', placeholder:'What starts with "W" and ends with "T"?', rows:3})
+      +standard-button({size:'big', color:'green'})
         | reply

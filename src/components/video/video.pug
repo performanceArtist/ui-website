@@ -1,4 +1,4 @@
-mixin video(src, type="video/mp4")
+mixin video({src = '', type='video/mp4'} = {})
   .video
     video
       source(src=src, type=type)

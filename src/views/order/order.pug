@@ -7,21 +7,21 @@ block content
   h2 Order
   +stage('stages')
 
-  form#order-cont
-    +dropdown('pizza', ['Pepperoni', 'Cheesy Crust', 'Vegetarian'])
+  form.order
+    +dropdown({name:'pizza', options:['Pepperoni', 'Cheesy Crust', 'Vegetarian']})
   
-    #order-options
-      #sauce
+    .order__options
+      .order__sauce
         | Special sauce:
-        +toggle('sauce', 'yep')
+        +toggle({name:'sauce', value:'yep'})
 
-      #crust
-        +checkmark('crust', {type:'radio', value:'thin', label:'Thin'})
-        +checkmark('crust', {type:'radio', value:'standard', label:'Standard'})
+      .order__crust
+        +checkmark({name:'crust', type:'radio', value:'thin', label:'Thin'})
+        +checkmark({name:'crust', type:'radio', value:'standard', label:'Standard'})
 
-    #address
-      +input-text('address', 'Address')
+    .order__address
+      +input-text({name:'address', placeholder:'Address'})
       +bubble
 
-    #submit
+    .order__submit
       input(type='submit', value='SUBMIT', class='button button_small button_green')

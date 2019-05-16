@@ -1,5 +1,5 @@
 include ../../components/buttons/arrow-button/arrow-button
-include ../../components/progress/chart/circle-chart
+include ../../components/chart/chart
 
 mixin pizza
   .pizza
@@ -9,10 +9,10 @@ mixin pizza
         img(alt='pizza')
       .pizza__rating Rating
         .pizza__circle
-          +circle-chart
+          +chart
         .pizza__arrows
-          +arrow-button('left')
-          +arrow-button('right')
+          +arrow-button({direction:'left'})
+          +arrow-button({direction:'right'})
     .pizza__ing
       .pizza__li
       .pie
