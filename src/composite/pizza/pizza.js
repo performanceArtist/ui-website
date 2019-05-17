@@ -1,6 +1,5 @@
 import { chart } from '../../scripts';
 
-// lol
 const Factory = (function Factory() {
   function Ingredient(name, color, value) {
     this.name = name;
@@ -22,6 +21,8 @@ const Factory = (function Factory() {
         return new Ingredient('Pepperoni', 'brown', val);
       case 'Onions':
         return new Ingredient('Onions', '#B96C93', val);
+      case 'GreenStuff':
+        return new Ingredient('Green Stuff', '#28590c', val);
       default:
         throw new Error('No ingredient!');
     }
@@ -55,7 +56,8 @@ const items = [
     rating: 0.37,
     ing: [
       Factory('Tomatoes', 0.2),
-      Factory('Mozarella', 0.6),
+      Factory('Mozarella', 0.3),
+      Factory('GreenStuff', 0.8),
       Factory('Onions', 0.9)
     ]
   }
@@ -64,7 +66,7 @@ const items = [
 const displayItem = (function displayItem() {
   function display(item) {
     document.querySelector('.pizza__name').innerHTML = item.name;
-    document.querySelector('.pizza__img img').src = item.src;
+    document.querySelector('.pizza__image').src = item.src;
 
     const html = document.createElement('ul');
 
@@ -75,7 +77,7 @@ const displayItem = (function displayItem() {
     document.querySelector('.pizza__li').innerHTML = '';
     document.querySelector('.pizza__li').appendChild(html);
 
-    chart.percent('.circle', {
+    chart.percent('.chart', {
       value: item.rating,
       fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
     });

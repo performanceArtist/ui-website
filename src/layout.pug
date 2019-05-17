@@ -20,6 +20,7 @@ include composite/message-form/message-form
 include composite/news/news
 include composite/chat/chat
 include composite/slider/slider
+include composite/comment/comment
 
 doctype html
 
@@ -44,7 +45,7 @@ html(lang='en')
       title Papa Bear's
   body
     .wrapper
-      header
+      header.header
         a(href='index.html')
           img(src='images/logo.png', alt='logo.png')  
       nav.navigation
@@ -57,7 +58,7 @@ html(lang='en')
           a(href='ui.html') UI
         +search
   
-      .content
+      main.content
         block content
       footer.footer
         a(href='/').footer__link Home

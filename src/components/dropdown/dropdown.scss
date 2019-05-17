@@ -25,7 +25,7 @@ $dropdown-width: 22.5rem;
     line-height: 2rem;
   }
 
-  select {
+  &__select {
     background: $light-grey;
     border: none;
     font-size: 0.875rem;

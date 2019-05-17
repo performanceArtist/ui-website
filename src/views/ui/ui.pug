@@ -19,22 +19,26 @@ block content
   .arrow-buttons
     +arrow-button({direction:'left', disabled:true})
     +arrow-button({direction:'right'})
+
   h2 PERCENTAGES/PIE CHART
   .percentages
     +chart
     .pie
+
   h2 SLIDERS
   .sliders
     +slider-1
     .slider-2
+
   h2 STAGES
   +stage('stage-test')
+
   h2 FORM ELEMENTS
   .row
     .left
       +message-form
       h2 SEARCH/DROP DOWNS
-      #search-cont
+      .search-cont
         +search
         +dropdown
     .right
@@ -44,7 +48,7 @@ block content
       h2 TICK BOXES
       form
         h3 Radio
-        #radiobuttons
+        .radiobuttons
           +checkmark({name:'test', type:'radio', value:'ok', label:'ok'})
           br
           +checkmark({name:'test', type:'radio', value:'not ok', label:'not ok'})
@@ -63,6 +67,7 @@ block content
         occupation:'Health Inspector', 
         src:'images/orang.jpg'
       })
+
   h2 NEWS & EVENTS
   .row
     .left
@@ -80,6 +85,7 @@ block content
         month:'Feb'
       })
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
   h2 LOCATION
   +map('map', 'Meet us!', '1259 California st', 'san francisco, ca')
   .row
@@ -90,7 +96,7 @@ block content
       h2 MESSAGING
       +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
   h2 VIDEO
-  #video
-    +video('videos/bunny.mp4')
+  .video
+    +video({src:'videos/bunny.mp4'})
     br
     

@@ -1,4 +1,4 @@
-.circle {
+.chart {
   display: inline-block;
   position: relative;
   text-align: center;
@@ -20,17 +20,11 @@
 }
 
 @media screen and (max-width: 31.25rem) {
-  .circle,
+  .chart,
   .pie {
     canvas {
       width: 3.75rem;
       height: 3.75rem;
-    }
-  }
-
-  .circle {
-    &__text {
-      font-size: 100%;
     }
   }
 }

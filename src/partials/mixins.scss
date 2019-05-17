@@ -23,15 +23,6 @@
   min-height: $height;
 }
 
-@mixin circle($size) {
-  border-radius: 50%;
-  overflow: hidden;
-  box-sizing: border-box;
-  max-width: $size;
-  width: 100%;
-  height: $size;
-}
-
 @mixin set-bubble-color($color, $dir) {
   background: $color;
 

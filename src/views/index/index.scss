@@ -1,21 +1,21 @@
 .place-info {
-  .map {
+  text-align: left;
+
+  &__map {
     margin: auto;
     margin-bottom: 5%;
   }
-
-  text-align: left;
 
   &__date {
     display: flex;
     justify-content: space-between;
     width: 60%;
     margin: auto;
+  }
 
-    .calendar {
-      margin-right: 5%;
-      margin-bottom: 5%;
-    }
+  &__calendar {
+    margin-right: 5%;
+    margin-bottom: 5%;
   }
 
   &__description {
@@ -38,9 +38,7 @@
 }
 
 .videos {
-  .video {
-    margin: auto;
-  }
+  margin: auto;
 }
 
 @media screen and (max-width: 47.5rem) {

@@ -3,12 +3,12 @@ include ../../components/avatar/avatar
 include ../../components/bubble/bubble
 include ../../components/input/textarea/textarea
 
-mixin chat(data)
-  .chat
-    .chat__name #{data.name}
+mixin chat({name = 'John Doe', image = ''} = {})
+  article.chat
+    .chat__name #{name}
     .chat__header
     .chat__avatar
-      +avatar({src:data.image})
+      +avatar({src:image})
       i(class='fa fa-comments')
       i(class='fa fa-camera')
     .chat__content

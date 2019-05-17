@@ -9,13 +9,13 @@ window.onload = function init() {
   scripts.ripple();
 
   // defaults
-  scripts.chart.percent('.circle');
+  scripts.chart.percent('.chart');
   scripts.chart.pie('.pie');
 
   // override defaults
   // same principle applies to some other modules, such as 'slider'
   /*
-    chart.percent('.circle', {fill: 'red'});
+    chart.percent('.chart', {fill: 'red'});
     chart.pie('.pie', {fill: {
         sectors: [
             ['red', 0.3],

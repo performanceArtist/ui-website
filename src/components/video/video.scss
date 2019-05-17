@@ -1,5 +1,5 @@
 .video {
-  //to fully wrap video element, works in Chrome and Firefox
+  //to fully wrap the video, works in Chrome and Firefox
   display: inline-grid;
   width: 100%;
   max-width: 47.5rem;
@@ -18,12 +18,6 @@
     bottom: 0;
     display: flex;
     align-items: center;
-
-    button {
-      cursor: pointer;
-      border: none;
-      color: $white;
-    }
   }
 
   &__progress {
@@ -43,11 +37,15 @@
   }
 
   @mixin button($color, $font-size, $font-color: $white) {
-    button {
+    .video__button {
+      border: none;
+      color: $white;
       background: $color;
       text-align: center;
       border: none;
       cursor: pointer;
+      width: 100%;
+      padding: 1.5rem;
       i {
         font-size: $font-size;
         color: $font-color;
@@ -64,23 +62,19 @@
     @include button($light-orange, 1.6rem);
     margin-left: 2%;
   }
-
-  &__play button,
-  &__fullscreen button {
-    width: 100%;
-    padding: 1.5rem;
-  }
 }
 
 @media screen and (max-width: 46.875rem) {
   .video {
-    &__play button,
-    &__fullscreen button {
-      i {
-        font-size: 0.9rem;
-      }
+    &__play,
+    &__fullscreen {
+      .video__button {
+        i {
+          font-size: 0.9rem;
+        }
 
-      padding: 0.6rem;
+        padding: 0.6rem;
+      }
     }
   }
 }

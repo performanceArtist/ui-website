@@ -1,29 +1,27 @@
 .pizza {
   margin: auto;
   max-width: 40.625rem;
-  
+
   &__name {
     font-size: 1.7rem;
     text-transform: uppercase;
     padding: 1rem;
   }
 
-  &__img {
-    img {
-      width: 100%;
-      max-width: 26.25rem;
-      border: 0.0625rem solid #c5b18d;
-    }
+  &__image {
+    width: 100%;
+    max-width: 26.25rem;
+    border: 0.0625rem solid #c5b18d;
   }
 
   &__info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+  }
 
-    .pizza__circle {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+  &__circle {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__rating {
@@ -32,15 +30,15 @@
     font-size: 1.5rem;
   }
 
-
   &__arrows {
     display: flex;
+    justify-content: center;
     .arrow-button {
       margin-left: 0.5rem;
     }
   }
 
-  &__ing {
+  &__ingredients {
     display: flex;
     margin-top: 2%;
     justify-content: left;
@@ -50,7 +48,6 @@
     margin-right: 5%;
     text-align: left;
   }
-
 }
 
 @media screen and (max-width: 31.25rem) {
@@ -59,7 +56,7 @@
       font-size: 1rem;
     }
 
-    &__name,  {
+    &__name {
       font-size: 1.2rem;
     }
 

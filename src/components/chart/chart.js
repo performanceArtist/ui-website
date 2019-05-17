@@ -58,7 +58,7 @@ function percent(selector, opt = {}) {
     .circleProgress(Object.assign(def, opt))
     .on('circle-animation-progress', function(e, progress, stepValue) {
       $(this)
-        .find('.circle__text')
+        .find('.chart__text')
         .text(stepValue.toFixed(2).substr(2));
     });
 }

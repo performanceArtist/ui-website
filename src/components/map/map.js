@@ -1,7 +1,5 @@
 import ymaps from 'ymaps';
 
-import '../../static/images/baloon.png';
-
 export default function updateMap(
   id,
   opt = { center: [55.751574, 37.573856], zoom: 9 }

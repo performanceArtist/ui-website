@@ -2,7 +2,7 @@ include ../../components/bubble/bubble
 include ../../components/avatar/avatar
 
 mixin profile(type, data)
-  div(class=`profile profile_${type}`)
+  article(class=`profile profile_${type}`)
     +avatar({src:data.src})
     +bubble({direction:'left'})
       .profile__name #{data.name}

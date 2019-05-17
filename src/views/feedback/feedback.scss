@@ -13,35 +13,6 @@
     overflow: auto;
     max-width: 40%;
     text-align: right;
-
-    .bubble {
-      padding: 1rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-      text-align: left;
-    }
-
-    .bubble_green {
-      @include set-bubble-color($light-green, right);
-
-      .comment__rating {
-        color: $medium-green;
-      }
-    }
-  }
-}
-
-.comment {
-  &__name {
-    font-weight: bold;
-    padding-right: 1rem;
-  }
-
-  &__rating {
-    color: #800000;
-    margin-top: 1rem;
-    text-align: right;
-    font-weight: bold;
   }
 }
 

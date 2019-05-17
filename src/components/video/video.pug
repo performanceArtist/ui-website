@@ -4,9 +4,9 @@ mixin video({src = '', type='video/mp4'} = {})
       source(src=src, type=type)
     .video__controls
       .video__play
-        button
+        button.video__button
           i(class='fa fa-play')
       .video__progress
       .video__fullscreen
-        button
+        button.video__button
           i(class='fa fa-arrows-alt')

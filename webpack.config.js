@@ -108,7 +108,20 @@ const config = {
         ]
       },
       {
-        test: /[^.]+\.(mp4|webM)?$/,
+        test: /\.(svg|png|ico|xml|json|manifest)$/,
+        include: [path.resolve(__dirname, 'src/static/favicons')],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'favicon/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(mp4|webM)?$/,
         use: [
           {
             loader: 'file-loader',

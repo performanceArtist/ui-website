@@ -2,6 +2,7 @@ include ../../components/bubble/bubble
 
 mixin slider-1(name='slider', value=0)
   .slider-1
-    +bubble({direction:'bottom', modifier:'slider'})
+    .slider-1__bubble
+      +bubble({direction:'bottom'})
     input(name=name, type="range", min="0", max="100", value=value)
   

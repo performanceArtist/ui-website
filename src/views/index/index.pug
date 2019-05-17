@@ -22,14 +22,15 @@ block content
 
   h2 Plan your visit!
   .place-info
-    +map({
-      id:'location', 
-      title:'Meet us!', 
-      street:'1259 California st', 
-      town:'san francisco, ca'
-    })
+    .place-info__map
+      +map({
+        id:'location', 
+        title:'Meet us!', 
+        street:'1259 California st', 
+        town:'san francisco, ca'
+      })
     .place-info__date
-      .calendar
+      .place-info__calendar
       .place-info__description 
         | The first step in any flexbox layout is to create a flex container. To do that, set the display property to flex. In Safari, you will still have to use the -webkit prefix. 
         .place-info__order-button
