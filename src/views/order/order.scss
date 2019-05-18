@@ -30,30 +30,6 @@
   }
 }
 
-.stage {
-  .progressbar {
-    li {
-      color: #303030;
-    }
-
-    .current {
-      font-weight: bold;
-    }
-
-    .current::before {
-      background-color: $light-orange;
-    }
-
-    .done::before {
-      background-color: $light-green;
-    }
-
-    .done::after {
-      background-color: $light-green;
-    }
-  }
-}
-
 @media screen and (max-width: 51.25rem) {
   .order {
     margin-top: 2%;

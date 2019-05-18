@@ -10,24 +10,31 @@
     text-align: right;
     font-weight: bold;
   }
+
+  %comment-bubble {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .bubble_comment-orange {
+    @extend %comment-bubble;
+    @include set-bubble-color($light-orange, right);
+  }
+
+  .bubble_comment-green {
+    @extend %comment-bubble;
+    @include set-bubble-color($light-green, right);
+
+    .comment__rating {
+      color: $medium-green;
+    }
+  }
 }
 
-%comment-bubble {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  text-align: left;
-}
-
-.bubble_comment-orange {
-  @extend %comment-bubble;
-}
-
-.bubble_comment-green {
-  @extend %comment-bubble;
-  @include set-bubble-color($light-green, right);
-
-  .comment__rating {
-    color: $medium-green;
+@media screen and (max-width: 50rem) {
+  .comment {
+    font-size: 0.75rem;
   }
 }

@@ -3,7 +3,6 @@ $bubble-color: $light-orange;
 
 .bubble {
   position: relative;
-  background: $bubble-color;
   border-radius: 0.4rem;
   &:after {
     content: '';
@@ -64,4 +63,8 @@ $bubble-color: $light-orange;
     margin-top: -$pointer-size;
     margin-right: -$pointer-size;
   }
+}
+
+.bubble_default {
+  background: $bubble-color;
 }

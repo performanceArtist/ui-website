@@ -1,6 +1,5 @@
 import '../../styles';
 
-import '../../composite/pizza/pizza.scss';
 import './order.scss';
 
 // progressbar JQuery dependency
@@ -8,7 +7,7 @@ import {} from '../../scripts';
 import validator from '../../composite/message-form/validator';
 
 window.onload = function init() {
-  const progressbar = $('#stages').progressbar({
+  const progressbar = $('.stage').progressbar({
     steps: [
       '@Choose a pizza',
       'Select options',

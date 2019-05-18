@@ -7,10 +7,10 @@ mixin message-form(action='')
     block
     .message-form__name
       +input-text({name:'name', placeholder:'Your name'})
-      +bubble({direction:'left'})
+      .message-form__bubble
     .message-form__email
       +input-text({name:'email', placeholder:'Your email'})
-      +bubble({direction:'left'})
+      .message-form__bubble
     .message-form__text
       +input-textarea({name:'message', placeholder:'Your message', cols:'30', rows:'4'})
     input(type='submit', value='SUBMIT', class='button button_big button_green')

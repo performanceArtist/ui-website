@@ -12,7 +12,7 @@
   }
 
   textarea {
-    width: 100%;
+    width: 94%;
     margin-bottom: 2%;
     font-family: $font;
     font-size: 1rem;
@@ -32,30 +32,28 @@
   &__email {
     display: flex;
   }
-}
 
-%info-bubble {
-  display: inline-block;
-  visibility: hidden;
-  height: 2.5rem;
-  width: 6rem;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $white;
-  line-height: 2.5rem;
-  margin-left: 0.8rem;
-}
+  %info-bubble {
+    display: inline-block;
+    visibility: hidden;
+    height: 2.1rem;
+    width: 6rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 2.1rem;
+    margin-left: 0.8rem;
+  }
 
-.error-bubble {
-  @extend .bubble_left;
-  @extend %info-bubble;
-  @include set-bubble-color($light-orange, left);
-}
+  .bubble_error {
+    @extend %info-bubble;
+    @include set-bubble-color($light-orange, left);
+  }
 
-.okay-bubble {
-  @extend .bubble_left;
-  @extend %info-bubble;
-  @include set-bubble-color($light-green, left);
+  .bubble_okay {
+    @extend %info-bubble;
+    @include set-bubble-color($light-green, left);
+  }
 }

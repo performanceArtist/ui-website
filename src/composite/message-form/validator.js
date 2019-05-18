@@ -11,7 +11,7 @@ const choose = regex => {
 
 function extract(cont) {
   return {
-    bubble: cont.querySelector('.bubble'),
+    bubble: cont.querySelector('.message-form__bubble'),
     input: cont.querySelector('input')
   };
 }
@@ -19,12 +19,12 @@ function extract(cont) {
 function validate(el, vald) {
   el.input.addEventListener('input', () => {
     const valid = vald(el.input);
-    const newClass = valid ? 'okay-bubble' : 'error-bubble';
+    const newClass = valid ? 'bubble_okay' : 'bubble_error';
     const newText = valid ? 'thanks' : 'error';
 
     el.bubble.innerHTML = newText;
     el.bubble.style.visibility = 'initial';
-    el.bubble.className = newClass;
+    el.bubble.className = `bubble bubble_left ${newClass}`;
   });
 }
 

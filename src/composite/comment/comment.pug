@@ -5,4 +5,4 @@ mixin comment({username = 'Anonymous', message = 'Text', rating = 100} = {})
     +bubble({direction: 'right', modifier: rating < 60 ? 'comment-orange' : 'comment-green'})
       | #{message}
       .comment__rating Rated #{rating}
-      .comment__name #{name}
+      .comment__name #{username}

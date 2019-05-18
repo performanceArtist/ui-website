@@ -1,15 +1,22 @@
+.index-content {
+  width: 70%;
+  margin: auto;
+}
+
 .place-info {
   text-align: left;
 
   &__map {
-    margin: auto;
     margin-bottom: 5%;
+    .map {
+      margin: auto;
+    }
   }
 
   &__date {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
 

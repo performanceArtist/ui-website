@@ -1,12 +1,16 @@
 .stage {
   .progressbar {
     li {
+      color: #303030;
       font-size: 1rem;
     }
 
-    li::after {
-      height: 0.4375rem;
-      top: 1.125rem;
+    .current {
+      font-weight: bold;
+    }
+
+    .current:before {
+      background-color: $light-orange;
     }
 
     .done::before,
@@ -14,17 +18,30 @@
     li::before {
       width: 2.25rem;
       height: 2.25rem;
-      line-height: 2.2;
+      line-height: 2.2rem;
       font-weight: bold;
     }
 
-    .done::before,
-    .current::before {
+    .done::before {
+      background-color: $light-green;
+    }
+
+    .done:after {
+      background-color: #68bb68;
+    }
+
+    &:after {
+      height: 0.4375rem;
+      top: 1.125rem;
       background-color: $light-orange;
     }
 
-    .done::after {
-      background-color: $light-orange;
+    .done:before {
+      background-color: $light-green;
+    }
+
+    .done:after {
+      background-color: $light-green;
     }
   }
 }

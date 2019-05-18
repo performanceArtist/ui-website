@@ -2,7 +2,11 @@
   position: relative;
   margin-top: 2.1875rem;
 
-  &__bubble {
+  .bubble_slider {
+    @include set-bubble-color($light-orange, bottom);
+    width: 2.25rem;
+    height: 1.5rem;
+    left: -5px;
     position: absolute;
     text-align: center;
     top: -2.5rem;

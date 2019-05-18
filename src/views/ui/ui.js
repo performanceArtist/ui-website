@@ -36,7 +36,7 @@ window.onload = function init() {
 
   scripts.datepicker('.calendar');
 
-  $('#stage-test').progressbar({
+  $('.stage').progressbar({
     // ~: failed
     // @: current
     steps: ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']
