@@ -3,6 +3,7 @@
     li {
       color: #303030;
       font-size: 1rem;
+      z-index: 0;
     }
 
     .current {
@@ -20,6 +21,10 @@
       height: 2.25rem;
       line-height: 2.2rem;
       font-weight: bold;
+    }
+
+    li::after {
+      height: 0.6rem;
     }
 
     .done::before {
