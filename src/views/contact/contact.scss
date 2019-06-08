@@ -1,12 +1,14 @@
-.contacts {
-  display: flex;
+.contact {
+  &__title {
+    text-align: left;
+  }
+
+  &__content {
+    display: flex;
+  }
 
   &__profiles {
     margin-right: 5%;
-  }
-
-  &__chat {
-    margin: auto;
   }
 
   .profile {
@@ -22,7 +24,13 @@
 }
 
 @media screen and (max-width: 50rem) {
-  .contacts {
-    flex-direction: column;
+  .contact {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__chat {
+      margin: auto;
+    }
   }
 }

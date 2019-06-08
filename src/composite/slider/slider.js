@@ -1,16 +1,16 @@
-function slider1(selector) {
+function standard(selector) {
   const event = new Event('input', {
     bubbles: true,
-    cancelable: true,
+    cancelable: true
   });
 
-  document.querySelectorAll(selector).forEach((el) => {
+  document.querySelectorAll(selector).forEach(el => {
     const bubble = el.querySelector('.bubble');
     const width = el.offsetWidth;
     const offset = 0.25;
     const input = el.querySelector('input');
 
-    input.addEventListener('input', function () {
+    input.addEventListener('input', function() {
       const perc = (this.value - this.min) / (this.max - this.min);
       const npos = width * perc - this.value * offset;
 
@@ -22,7 +22,7 @@ function slider1(selector) {
   });
 }
 
-function slider2(selector, opt = {}) {
+function withSteps(selector, opt = {}) {
   const def = {
     value: 50,
     min: 0,
@@ -30,18 +30,20 @@ function slider2(selector, opt = {}) {
     step: 25,
     orientation: 'horizontal',
     range: 'min',
-    animate: true,
+    animate: true
   };
 
-  $(selector).slider(Object.assign(def, opt)).each(function () {
-    const opt = $(this).data().uiSlider.options;
-    const vals = opt.max - opt.min;
+  $(selector)
+    .slider(Object.assign(def, opt))
+    .each(function() {
+      const opt = $(this).data().uiSlider.options;
+      const vals = opt.max - opt.min;
 
-    for (let i = 0; i <= vals; i += opt.step) {
-      const el = $(`<label>${i}</label>`).css('left', `${i / vals * 100}%`);
-      $(selector).append(el);
-    }
-  });
+      for (let i = 0; i <= vals; i += opt.step) {
+        const el = $(`<label>${i}</label>`).css('left', `${(i / vals) * 100}%`);
+        $(selector).append(el);
+      }
+    });
 }
 
-export { slider1, slider2 };
+export { standard, withSteps };

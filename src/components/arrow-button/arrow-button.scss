@@ -1,0 +1,44 @@
+@import './mixins';
+
+$arrow-button-border: 0.1875rem;
+
+.arrow-button {
+  @include set-arrow-size(3.75rem);
+  @include set-arrow-color($white, $light-green);
+  cursor: pointer;
+}
+
+.arrow-button_disabled {
+  @include set-arrow-size(3.75rem);
+  @include set-disabled-color(#f7f7f7, $light-grey);
+}
+
+.arrow-button_left {
+  .arrow-button__arrow {
+    margin-left: 14%;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+}
+
+.arrow-button_right {
+  .arrow-button__arrow {
+    margin-right: 14%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .arrow-button {
+    @include set-arrow-size(1.875rem);
+    line-height: 1.875rem;
+    @include set-arrow-color($white, $light-green);
+  }
+
+  .arrow-button_disabled {
+    @include set-arrow-size(1.875rem);
+    line-height: 1.875rem;
+    @include set-disabled-color($white, $medium-grey);
+  }
+}

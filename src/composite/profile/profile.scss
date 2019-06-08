@@ -1,3 +1,5 @@
+@import '../../components/bubble/mixins';
+
 .profile {
   display: flex;
   align-items: center;
@@ -43,16 +45,18 @@
     @include set-bubble-color($light-grey, left);
   }
 
-  .profile__name {
-    color: $light-orange;
-  }
+  .profile {
+    &__name {
+      color: $light-orange;
+    }
 
-  .profile__icons i {
-    color: $medium-grey;
-  }
+    &__icons i {
+      color: $dark-grey;
+    }
 
-  .profile__icons .fa-twitter {
-    color: $light-orange;
+    &__icons .fa-twitter {
+      color: $light-orange;
+    }
   }
 }
 

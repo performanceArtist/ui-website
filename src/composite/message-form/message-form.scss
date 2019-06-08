@@ -1,21 +1,33 @@
-@import '../../components/bubble/bubble';
-
 .message-form {
+  display: inline-block;
   max-width: 22.5rem;
   text-align: left;
   font-family: $font;
 
-  input,
-  textarea {
+  &__input,
+  &__textarea {
     font-size: 0.8rem;
+    font-family: inherit;
     margin-bottom: 4.5%;
   }
 
-  textarea {
+  &__input {
+    background-color: #d2d2d2;
+    border: none;
+    padding: 0.4375rem;
+    padding-left: 0.9375rem;
+    font-size: 0.9rem;
+  }
+
+  &__textarea {
     width: 94%;
     margin-bottom: 2%;
-    font-family: $font;
+    font-family: inherit;
     font-size: 1rem;
+    background-color: #d2d2d2;
+    border: none;
+    padding: 0.625rem;
+    resize: none;
   }
 
   input[type='submit'] {
@@ -31,29 +43,5 @@
   &__name,
   &__email {
     display: flex;
-  }
-
-  %info-bubble {
-    display: inline-block;
-    visibility: hidden;
-    height: 2.1rem;
-    width: 6rem;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $white;
-    line-height: 2.1rem;
-    margin-left: 0.8rem;
-  }
-
-  .bubble_error {
-    @extend %info-bubble;
-    @include set-bubble-color($light-orange, left);
-  }
-
-  .bubble_okay {
-    @extend %info-bubble;
-    @include set-bubble-color($light-green, left);
   }
 }

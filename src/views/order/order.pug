@@ -5,7 +5,7 @@ block head
 
 block content
   h2 Order
-  .stage
+  +stage
 
   form.order
     +dropdown({name:'pizza', options:['Pepperoni', 'Cheesy Crust', 'Vegetarian']})
@@ -20,7 +20,7 @@ block content
         +checkmark({name:'crust', type:'radio', value:'standard', label:'Standard'})
 
     .order__address
-      +input-text({name:'address', placeholder:'Address'})
+      input.order__input(name='address', placeholder='Address')
       .status__bubble
 
     .order__submit

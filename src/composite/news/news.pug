@@ -1,25 +1,23 @@
-include ../../components/buttons/standard-button/standard-button
+include ../../components/standard-button/standard-button
 
-mixin news-1(data)
-  .news-1
-    .news__left(style='background-image:url(' + data.image + ')')
-    .news__right
-      .news__cont
-        .news__title #{data.title}
-        .news__date #{data.date}
-        .news__text
-          block
+mixin news({image, title = 'Title', date = '1 April', text = 'Text here'} = {})
+  .news
+    .news__image(style='background-image:url(' + image + ')')
+    .news__content
+      .news__content-wrapper
+        .news__title #{title}
+        .news__date #{date}
+        .news__text #{text}
 
-mixin news-2(data)
-  .news-2
-    .news__left(style='background-image:url(' + data.image + ')')
-    .news__right
-      .news__cont
+mixin event-news({image, title = 'Title', day = '1', month = 'April', text = 'Text here'} = {})
+  .event-news
+    .news__image(style='background-image:url(' + image + ')')
+    .news__content
+      .news__content-wrapper
         .news__date 
-          span.news__day #{data.day}
-          span.news__month #{data.month}
-        .news__title #{data.title}
-        .news__text
-          block
-        +standard-button({size:'big', color:'green'}) 
-          | Add to calendar
+          span.news__day #{day}
+          span.news__month #{month}
+        .news__title #{title}
+        .news__text #{text}
+        .news__button
+          +standard-button({size:'big', color:'green', text:'Add to calendar'}) 

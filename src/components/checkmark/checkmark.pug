@@ -1,0 +1,5 @@
+mixin checkmark({name = 'checkmark', label = 'Checkmark', type = 'checkbox', value = 'value'} = {})
+  label.checkmark
+    | #{label}
+    input.checkmark__input(type=type, name=name, value=value)
+    span.checkmark__icon

@@ -1,3 +1,5 @@
+@import './mixins';
+
 $pointer-size: 0.375rem;
 $bubble-color: $light-orange;
 
@@ -67,4 +69,35 @@ $bubble-color: $light-orange;
 
 .bubble_default {
   background: $bubble-color;
+}
+
+%info-bubble {
+  display: inline-block;
+  visibility: hidden;
+  height: 2.1rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $white;
+  line-height: 2.1rem;
+  margin-left: 0.8rem;
+}
+
+.bubble_error {
+  @extend %info-bubble;
+  @include set-bubble-color($light-orange, left);
+}
+
+.bubble_okay {
+  @extend %info-bubble;
+  @include set-bubble-color($light-green, left);
+}
+
+.bubble_message {
+  @include set-bubble-color($white, top);
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 9%;
 }

@@ -1,0 +1,10 @@
+include ../../components/search/search
+
+mixin navigation(links = [])
+  nav.navigation
+    .navigation__wrapper
+      each link in links
+        - let {text = 'Link', href = 'blank.html'} = link
+        a.navigation__link(href=href) #{text} 
+      .navigation__search
+        +search

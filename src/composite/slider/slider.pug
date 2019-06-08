@@ -1,7 +1,9 @@
 include ../../components/bubble/bubble
 
-mixin slider-1(name='slider', value=0)
-  .slider-1
+mixin slider({id='slider', name='slider', value=0} = {})
+  .slider(id=id)
     +bubble({direction:'bottom', modifier:'slider'})
-    input(name=name, type="range", min="0", max="100", value=value)
+    input.slider__input(name=name, type="range", min="0", max="100", value=value)
   
+mixin steps-slider({id='steps-slider'} = {})
+  .steps-slider(id=id)

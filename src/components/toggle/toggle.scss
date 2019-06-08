@@ -1,0 +1,39 @@
+.ui-switcher {
+  height: 1.875rem;
+  width: 4.5rem;
+  border-radius: 1.5625rem;
+  font-size: 1.1rem;
+  font-style: bold;
+  background: $medium-grey;
+}
+
+.ui-switcher::before,
+.ui-switcher::after {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.ui-switcher::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.1875rem;
+}
+
+.ui-switcher::before {
+  font-size: 0.8rem;
+  height: 1.125rem;
+  width: 1.875rem;
+  top: 0.5625rem;
+}
+
+.ui-switcher[aria-checked='true'] {
+  background-color: $light-green;
+}
+
+.ui-switcher[aria-checked='true']::after {
+  left: 2.75rem;
+}
+
+.ui-switcher[aria-checked='false']::after {
+  left: 0.25rem;
+}

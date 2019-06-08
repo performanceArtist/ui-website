@@ -2,16 +2,18 @@ include components/bubble/bubble
 include components/map/map
 include components/video/video
 include components/dropdown/dropdown
-include components/buttons/standard-button/standard-button
-include components/buttons/arrow-button/arrow-button
-include components/input/checkmark/checkmark
-include components/input/toggle/toggle
-include components/input/text/text
-include components/input/textarea/textarea
+include components/standard-button/standard-button
+include components/arrow-button/arrow-button
+include components/checkmark/checkmark
+include components/toggle/toggle
 include components/chart/chart
+include components/stage/stage
+include components/footer/footer
+include components/header/header
+include components/search/search
 
+include composite/navigation/navigation
 include composite/profile/profile
-include composite/search/search
 include composite/message-form/message-form
 include composite/news/news
 include composite/chat/chat
@@ -41,26 +43,16 @@ html(lang='en')
       title Papa Bear's
   body
     .wrapper
-      header.header
-        a(href='index.html')
-          img(src='images/logo.png', alt='logo.png')  
-      nav.navigation
-        .navigation__links
-          a(href='index.html') Home
-          a(href='gallery.html') Gallery
-          a(href='order.html') Order
-          a(href='feedback.html') Feedback
-          a(href='contact.html') Contact
-          a(href='ui.html') UI
-        +search
+      +header
+      +navigation([
+        {text:'Home', href:'index.html'}, 
+        {text:'Gallery', href:'gallery.html'},
+        {text:'Order', href:'order.html'},
+        {text:'Feedback', href:'feedback.html'},
+        {text:'Contact', href:'contact.html'},
+        {text:'UI', href:'ui.html'}
+      ])
   
       main.content
         block content
-      footer.footer
-        a(href='/ui/').footer__link Home
-        | |
-        a(href='blank.html').footer__link Sponsors
-        | |
-        a(href='blank.html').footer__link Stuff
-        | |
-        a(href='blank.html').footer__link About
+      +footer([{text:'Home', href:'index.html'}, {text:'Sponsors'}, {text:'Stuff'}, {text:'About'}])

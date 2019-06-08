@@ -1,4 +1,4 @@
-$dropdown-width: 22.5rem;
+$dropdown-width: 14.25rem;
 
 .dropdown {
   height: 2.125rem;
@@ -6,6 +6,7 @@ $dropdown-width: 22.5rem;
   width: $dropdown-width;
   position: relative;
   display: inline-block;
+  border-radius: 0px 0.2rem 0.2rem 0;
 
   &:after {
     content: '\f107';
@@ -18,7 +19,7 @@ $dropdown-width: 22.5rem;
     z-index: 1;
     text-align: center;
     font-size: 1.5rem;
-    width: $dropdown-width/9;
+    width: 2.05rem;
     height: 100%;
     pointer-events: none;
     box-sizing: border-box;

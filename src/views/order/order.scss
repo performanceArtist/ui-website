@@ -3,8 +3,6 @@
   display: flex;
   justify-content: space-evenly;
 
-  @include set-dropdown-width(11.875rem);
-
   &__sauce {
     margin-bottom: 1rem;
   }
@@ -21,6 +19,14 @@
     input {
       max-width: 11.25rem;
     }
+  }
+
+  &__input {
+    background-color: #d2d2d2;
+    border: none;
+    padding: 0.4375rem;
+    padding-left: 0.9375rem;
+    font-size: 0.9rem;
   }
 
   &__options,

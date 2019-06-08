@@ -1,5 +1,11 @@
 .rating {
-  display: flex;
+  &__title {
+    text-align: left;
+  }
+
+  &__content {
+    display: flex;
+  }
 
   &__form {
     margin-right: 12%;
@@ -14,7 +20,13 @@
 
 @media screen and (max-width: 50rem) {
   .rating {
-    flex-direction: column;
+    &__title {
+      text-align: center;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
 
     &__comments {
       max-width: 100%;

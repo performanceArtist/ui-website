@@ -1,0 +1,9 @@
+@mixin set-dropdown-width($width) {
+  .dropdown {
+    width: $width;
+  }
+
+  .dropdown select {
+    width: $width;
+  }
+}

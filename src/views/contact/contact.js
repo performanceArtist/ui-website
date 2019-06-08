@@ -5,18 +5,19 @@ import { ripple } from '../../scripts';
 window.onload = function init() {
   ripple();
 
-  const els = document.querySelectorAll('.profile');
+  const profiles = document.querySelectorAll('.profile');
   const chat = document.querySelector('.chat');
   const chatName = chat.querySelector('.chat__name');
   const chatImg = chat.querySelector('.avatar img');
 
-  els.forEach(el => {
-    const img = el.querySelector('.avatar img');
-    const name = el.querySelector('.profile__name');
+  profiles.forEach(profile => {
+    profile.addEventListener('click', e => {
+      const target = e.currentTarget;
+      const img = target.querySelector('.avatar img');
+      const name = target.querySelector('.profile__name');
 
-    el.addEventListener('click', () => {
-      els.forEach(elm => elm.classList.remove('profile_selected'));
-      el.classList.add('profile_selected');
+      profiles.forEach(p => p.classList.remove('profile_selected'));
+      target.classList.add('profile_selected');
       chatName.innerText = name.innerText;
       chatImg.src = img.src;
     });

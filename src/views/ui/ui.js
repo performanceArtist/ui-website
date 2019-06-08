@@ -27,8 +27,8 @@ window.onload = function init() {
     });
     */
 
-  scripts.slider.slider1('.slider-1');
-  scripts.slider.slider2('.slider-2');
+  scripts.slider.standard('#slider');
+  scripts.slider.withSteps('#steps-slider');
 
   $.switcher('.toggle-switch');
 

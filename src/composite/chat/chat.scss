@@ -1,6 +1,8 @@
+@import '../../components/bubble/mixins';
+
 .chat {
   $avatar-size: 7.5rem;
-
+  display: inline-block;
   border-radius: 0.4rem;
   overflow: hidden;
   text-align: center;
@@ -44,16 +46,14 @@
   &__content {
     background-color: $light-grey;
     padding: 10%;
-    .bubble {
-      @include set-bubble-color($white, top);
-      padding: 1rem;
-      text-align: left;
-      margin-bottom: 9%;
-    }
   }
 
-  textarea {
+  &__textarea {
     display: block;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.625rem;
+    resize: none;
     background-color: $light-grey;
     border: 0.1875rem solid $white;
     border-radius: 0.4rem;

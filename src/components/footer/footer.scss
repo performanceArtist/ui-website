@@ -1,0 +1,19 @@
+.footer {
+  &__wrapper {
+    margin-top: 2%;
+    padding: 2%;
+    border-top: 0.0625rem solid #d5c19d;
+    text-align: center;
+  }
+
+  &__link {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .footer {
+    font-size: 0.75rem;
+  }
+}

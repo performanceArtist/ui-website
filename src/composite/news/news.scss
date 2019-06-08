@@ -1,22 +1,22 @@
-.news-1,
-.news-2 {
+.news,
+.event-news {
+  display: inline-block;
   color: $white;
-  max-width: 22.5rem;
+  width: 22.5rem;
   height: 16.5625rem;
-  width: 100%;
   text-align: center;
   border-radius: 0.4rem;
   overflow: hidden;
 }
 
-.news-1::after,
-.news-2::after {
+.news::after,
+.event-news::after {
   content: '';
   clear: both;
   display: table;
 }
 
-.news__left {
+.news__image {
   float: left;
   width: 33%;
   height: 100%;
@@ -30,18 +30,18 @@
   font-size: 0.8rem;
 }
 
-.news__cont {
+.news__content-wrapper {
   padding: 10%;
   padding-bottom: 0;
 }
 
-.news__right {
+.news__content {
   float: left;
   width: 65%;
   height: 100%;
 }
 
-.news-1 {
+.news {
   background-color: $light-orange;
 
   .news__title {
@@ -61,10 +61,10 @@
   }
 }
 
-.news-2 {
+.event-news {
   background-color: $light-green;
 
-  .news__cont {
+  .news__content-wrapper {
     padding-top: 0;
   }
 
@@ -92,10 +92,12 @@
     margin-bottom: 10%;
   }
 
-  .button {
-    font-size: 0.8rem;
-    width: 90%;
-    height: 2rem;
-    margin-bottom: 19%;
+  .news__button {
+    .button {
+      font-size: 0.8rem;
+      width: 90%;
+      height: 2rem;
+      margin-bottom: 19%;
+    }
   }
 }

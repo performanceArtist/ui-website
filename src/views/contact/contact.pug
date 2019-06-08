@@ -4,11 +4,10 @@ block head
   title Contact
 
 block content
-  .contact-content
-    h2 Contacts
-  
-    .contacts
-      .contacts__profiles
+  .contact
+    h2.contact__title Contacts:
+    .contact__content
+      .contact__profiles
         +profile('type-1 profile_selected', {
               name:'Billy Bob', 
               occupation:'Official mascot', 
@@ -20,5 +19,5 @@ block content
               src:'images/ricardo.jpg'
             })
   
-      .contacts__chat
+      .contact__chat
         +chat({name:'Billy Bob', image:'images/billybob.jpg'})

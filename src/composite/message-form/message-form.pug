@@ -1,16 +1,14 @@
-include ../../components/input/text/text
-include ../../components/input/textarea/textarea
 include ../../components/bubble/bubble
 
-mixin message-form(action='')
-  form(action=action, class='message-form')
+mixin message-form({ action='' } = {})
+  form.message-form(action=action)
     block
     .message-form__name
-      +input-text({name:'name', placeholder:'Your name'})
+      input.message-form__input(name='name', placeholder='Your name')
       .message-form__bubble
     .message-form__email
-      +input-text({name:'email', placeholder:'Your email'})
+      input.message-form__input(name='email', placeholder='Your email')
       .message-form__bubble
     .message-form__text
-      +input-textarea({name:'message', placeholder:'Your message', cols:'30', rows:'4'})
-    input(type='submit', value='SUBMIT', class='button button_big button_green')
+      textarea.message-form__textarea(name='message', placeholder='Your message', cols=30, rows=4)
+    input(type='submit', value='SUBMIT', class='button button_big button_green') 

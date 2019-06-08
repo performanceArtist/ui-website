@@ -1,6 +1,12 @@
-.slider-1 {
+@import '../../components/bubble/mixins';
+
+.slider {
   position: relative;
-  margin-top: 2.1875rem;
+  max-width: 25rem;
+  width: 100%;
+  display: inline-block;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 
   .bubble_slider {
     @include set-bubble-color($light-orange, bottom);
@@ -16,7 +22,7 @@
     font-weight: bold;
   }
 
-  input {
+  &__input {
     -webkit-appearance: none;
     width: 100%;
     height: 0.5rem;
@@ -27,7 +33,7 @@
     transition: opacity 0.2s;
   }
 
-  input::-webkit-slider-thumb {
+  &__input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 1.375rem;
@@ -37,7 +43,7 @@
     cursor: pointer;
   }
 
-  input::-moz-range-thumb {
+  &__input::-moz-range-thumb {
     width: 1.375rem;
     height: 1.375rem;
     border-radius: 50%;
@@ -46,10 +52,18 @@
   }
 }
 
-.slider-2 {
+.steps-slider {
   color: $medium-grey;
   background: $light-grey;
   height: 0.3125rem;
+  max-width: 25rem;
+  width: 100%;
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 2.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
   .ui-widget-header {
     background: $light-green;
   }

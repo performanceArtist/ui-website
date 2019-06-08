@@ -77,7 +77,7 @@ const config = {
           {
             loader: 'sass-loader',
             options: {
-              data: '@import "./partials/globals";',
+              data: '@import "./globals";',
               includePaths: [path.join(__dirname, 'src')]
             }
           }
@@ -109,7 +109,7 @@ const config = {
       },
       {
         test: /\.(svg|png|ico|xml|json|manifest)$/,
-        include: [path.resolve(__dirname, 'src/static/favicons')],
+        include: [path.resolve(__dirname, 'src/favicons')],
         use: [
           {
             loader: 'file-loader',
