@@ -7,17 +7,22 @@ block content
   .contact
     h2.contact__title Contacts:
     .contact__content
-      .contact__profiles
-        +profile('type-1 profile_selected', {
-              name:'Billy Bob', 
-              occupation:'Official mascot', 
-              src:'images/billybob.jpg'
-        })
-        +profile('type-2', {
-              name:'Ricardo Milos', 
-              occupation:'Pizza boy', 
-              src:'images/ricardo.jpg'
-            })
+      .contact__profile-container
+        .contact__profile
+          +profile({
+            type:'grey',
+            selected: true,
+            name:'Billy Bob', 
+            occupation:'Official mascot', 
+            src:'images/billybob.jpg'
+          })
+        .contact__profile
+          +profile({
+            type:'green',
+            name:'Ricardo Milos', 
+            occupation:'Pizza boy', 
+            src:'images/ricardo.jpg'
+          })
   
       .contact__chat
         +chat({name:'Billy Bob', image:'images/billybob.jpg'})

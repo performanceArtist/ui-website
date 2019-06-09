@@ -7,6 +7,7 @@ mixin map({id = 'map', title = 'Meet us!', street = '1259 California st', city =
           | #{street}
           br
           | #{city}
-      .map__icons
-        i(class="fa fa-bullseye")
-        i(class="fa fa-map-marker")
+      .map__icon-container
+        img.map__icon(src='images/crosshair.png')
+        img.map__icon(src='images/location.png')
+

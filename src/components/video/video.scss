@@ -1,5 +1,5 @@
 .video {
-  //to fully wrap the video, works in Chrome and Firefox
+  //fully wraps the video, works in Chrome and Firefox
   display: inline-grid;
   width: 100%;
   max-width: 47.5rem;
@@ -36,30 +36,28 @@
     }
   }
 
-  @mixin button($color, $font-size, $font-color: $white) {
-    .video__button {
-      border: none;
-      color: $white;
-      background: $color;
-      text-align: center;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      padding: 1.5rem;
-      i {
-        font-size: $font-size;
-        color: $font-color;
-      }
-    }
-  }
-
   &__play {
-    @include button(black, 1.6rem);
+    width: 4rem;
+    height: 3.5rem;
+    cursor: pointer;
+    background-color: black;
+    background-size: cover;
+    background-image: url('images/play.png');
     margin-right: 2%;
   }
 
+  &__pause {
+    @extend .video__play;
+    background-image: url('images/pause.png');
+  }
+
   &__fullscreen {
-    @include button($light-orange, 1.6rem);
+    width: 4rem;
+    height: 3.5rem;
+    cursor: pointer;
+    background-color: $light-orange;
+    background-size: cover;
+    background-image: url('images/fullscreen.png');
     margin-left: 2%;
   }
 }
@@ -67,14 +65,10 @@
 @media screen and (max-width: 46.875rem) {
   .video {
     &__play,
+    &__pause,
     &__fullscreen {
-      .video__button {
-        i {
-          font-size: 0.9rem;
-        }
-
-        padding: 0.6rem;
-      }
+      width: 3rem;
+      height: 2.5rem;
     }
   }
 }

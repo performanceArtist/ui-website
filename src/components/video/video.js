@@ -1,10 +1,10 @@
 function play(video, playButton) {
-  if (playButton.className === 'fa fa-play') {
+  if (playButton.className === 'video__play') {
     video.play();
-    playButton.className = 'fa fa-pause';
-  } else if (playButton.className === 'fa fa-pause') {
+    playButton.className = 'video__pause';
+  } else if (playButton.className === 'video__pause') {
     video.pause();
-    playButton.className = 'fa fa-play';
+    playButton.className = 'video__play';
   }
 }
 
@@ -55,9 +55,9 @@ function updateVideo() {
     });
 
     video.addEventListener('ended', () => {
-      const playButton = cont.querySelector('.fa-pause');
+      const playButton = cont.querySelector('.video__pause');
       if (playButton) {
-        playButton.className = 'fa fa-play';
+        playButton.className = 'video__play';
       }
     });
 
@@ -66,8 +66,7 @@ function updateVideo() {
     });
 
     cont.querySelector('.video__play').addEventListener('click', e => {
-      const icon = e.currentTarget.querySelector('.video__button i');
-      play(video, icon);
+      play(video, e.currentTarget);
     });
   });
 }

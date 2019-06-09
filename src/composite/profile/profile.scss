@@ -1,10 +1,16 @@
 @import '../../components/bubble/mixins';
 
 .profile {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   text-align: center;
-  width: 100%;
+  cursor: pointer;
+
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    padding: 2.5%;
+  }
+
   .bubble {
     width: 12.6875rem;
     margin-left: 1rem;
@@ -38,9 +44,14 @@
       margin-right: 2.5%;
     }
   }
+
+  &_selected {
+    background: darken($light-yellow, 7%);
+    border-radius: 0.4rem;
+  }
 }
 
-.profile_type-1 {
+.profile_grey {
   .bubble {
     @include set-bubble-color($light-grey, left);
   }
@@ -60,7 +71,7 @@
   }
 }
 
-.profile_type-2 {
+.profile_green {
   color: $white;
   .bubble {
     @include set-bubble-color($light-green, left);

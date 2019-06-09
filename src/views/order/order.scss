@@ -1,7 +1,14 @@
 .order {
-  padding-top: 3%;
-  display: flex;
-  justify-content: space-evenly;
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 
   &__sauce {
     margin-bottom: 1rem;

@@ -1,4 +1,11 @@
 .ui {
+  text-align: center;
+
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
   &__row {
     width: 100%;
   }
@@ -12,6 +19,14 @@
   &__column {
     float: left;
     width: 50%;
+
+    &_align-left {
+      text-align: left;
+    }
+
+    &_align-right {
+      text-align: right;
+    }
   }
 
   &__standard-buttons .button {
