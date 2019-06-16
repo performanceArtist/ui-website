@@ -1,5 +1,6 @@
 .checkmark {
   position: relative;
+  display: inline-block;
   cursor: pointer;
   font-size: 0.875rem;
   padding-left: 2.1875rem;
@@ -7,7 +8,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: inline-block;
   line-height: 1.8rem;
 
   &__input {

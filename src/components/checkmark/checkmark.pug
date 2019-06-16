@@ -1,4 +1,4 @@
-mixin checkmark({name = 'checkmark', label = 'Checkmark', type = 'checkbox', value = 'value'} = {})
+mixin checkmark({name = 'checkmark', label = '', type = 'checkbox', value = 'value'} = {})
   label.checkmark
     | #{label}
     input.checkmark__input(type=type, name=name, value=value)

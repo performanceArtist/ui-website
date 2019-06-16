@@ -30,16 +30,25 @@
   }
 
   &__standard-buttons .button {
-    margin-left: 1.25rem;
+    margin-left: 2rem;
   }
 
   &__arrow-buttons .arrow-button {
-    margin-left: 1.25rem;
+    margin-left: 2rem;
   }
 
   &__percentages .pie,
   &__percentages .circle {
-    margin-left: 1.25rem;
+    margin-left: 2rem;
+  }
+
+  &__slider {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+
+  &__radiobutton {
+    display: inline-block;
   }
 
   &__search {

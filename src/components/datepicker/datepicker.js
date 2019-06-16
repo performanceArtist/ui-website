@@ -15,7 +15,7 @@ export default function addCalendar(selector) {
 
   calendar.prepend(customDate);
 
-  $(document).on('click', 'button.ui-datepicker-current', function() {
+  $(document).on('click', 'button.ui-datepicker-current', () => {
     calendar.datepicker('setDate', new Date());
     calendar.trigger('change');
   });

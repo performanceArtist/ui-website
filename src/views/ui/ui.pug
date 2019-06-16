@@ -24,9 +24,9 @@ block content
         .pie
     
       h2 SLIDERS
-      .ui__sliders
+      .ui__slider
         +slider({id:'slider'})
-        +steps-slider({id:"steps-slider"})
+      +steps-slider({id:"steps-slider"})
     
       h2 STAGES
       +stage
@@ -44,14 +44,11 @@ block content
           div
             +toggle({name:'test', value:'test'})
           h2 TICK BOXES
-          form
-            h3 Radio
-              .ui__radiobutton
-                +checkmark({name:'test', type:'radio', value:'ok', label:'ok'})
-              .ui__radiobutton
-                +checkmark({name:'test', type:'radio', value:'not ok', label:'not ok'})
-            h3 Checkbox
-            +checkmark({name:'meme', type:'checkbox', label:'test'})
+          h3 Radio
+          +checkmark({name:'test', type:'radio', value:'ok'})
+          +checkmark({name:'test', type:'radio', value:'not ok'})
+          h3 Checkbox
+          +checkmark({name:'meme', type:'checkbox', label:'test'})
             
           h2 PROFILES
           +profile({

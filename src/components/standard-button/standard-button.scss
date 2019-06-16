@@ -10,45 +10,48 @@
   border-left: solid 0.1875rem;
   text-transform: uppercase;
   margin-bottom: 0.3125rem;
+
+  &_big {
+    @include set-button-size(9.125rem, 2.5rem);
+    font-size: 0.9rem;
+  }
+
+  &_small {
+    @include set-button-size(6.0625rem, 1.6875rem);
+    font-size: 0.8rem;
+  }
+
+  &_orange {
+    @include set-button-color($light-orange, $white);
+  }
+
+  &_green {
+    @include set-button-color($light-green, $white);
+  }
+
+  &_ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__rippler {
+    transform: scale(0);
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.75;
+    background-color: #fff;
+    animation: ripple 1000ms;
+  }
+
+  &__ripple-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
-.button_big {
-  @include set-button-size(9.125rem, 2.5rem);
-  font-size: 0.9rem;
-}
-
-.button_small {
-  @include set-button-size(6.0625rem, 1.6875rem);
-  font-size: 0.8rem;
-}
-
-.button_orange {
-  @include set-button-color($light-orange, $white);
-}
-
-.button_green {
-  @include set-button-color($light-green, $white);
-}
-
-[ripple] {
-  position: relative;
-  overflow: hidden;
-}
-[ripple] .ripple--container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-[ripple] .ripple--container span {
-  transform: scale(0);
-  border-radius: 100%;
-  position: absolute;
-  opacity: 0.75;
-  background-color: #fff;
-  animation: ripple 1000ms;
-}
 @-moz-keyframes ripple {
   to {
     opacity: 0;

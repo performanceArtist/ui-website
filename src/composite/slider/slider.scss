@@ -2,8 +2,7 @@
 
 .slider {
   position: relative;
-  max-width: 25rem;
-  width: 100%;
+  width: 20rem;
   display: inline-block;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
@@ -56,13 +55,14 @@
   color: $medium-grey;
   background: $light-grey;
   height: 0.3125rem;
-  max-width: 25rem;
+  max-width: 20.3rem;
   width: 100%;
   display: inline-block;
   margin-top: 0.5rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.8rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  font-size: 0.8rem;
 
   .ui-widget-header {
     background: $light-green;
@@ -75,6 +75,12 @@
     border: none;
     background: $light-green;
     top: -0.45rem;
+  }
+
+  .ui-slider-handle {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: -0.6rem;
   }
 
   label {
