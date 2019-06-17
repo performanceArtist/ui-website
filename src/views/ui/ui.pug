@@ -65,8 +65,10 @@ block content
         .ui__column
           h2.ui__toggle-title TOGGLES
           .ui__toggle-content
-            +toggle({name:'test', value:'test'})
-            +toggle({name:'test', value:'test'})
+            .ui__toggle
+              +toggle({name:'test', value:'test'})
+            .ui__toggle
+              +toggle({name:'test', checked:true, value:'test'})
           h2 TICK BOXES
           .ui__checkmark-content
             .ui__checkmark

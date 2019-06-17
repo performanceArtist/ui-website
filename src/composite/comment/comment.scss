@@ -1,6 +1,8 @@
 @import '../../components/bubble/mixins';
 
 .comment {
+  display: inline-block;
+
   &__name {
     font-weight: bold;
     padding-right: 1rem;
@@ -32,11 +34,5 @@
     .comment__rating {
       color: $medium-green;
     }
-  }
-}
-
-@media screen and (max-width: 50rem) {
-  .comment {
-    font-size: 0.75rem;
   }
 }

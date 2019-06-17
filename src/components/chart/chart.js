@@ -51,15 +51,17 @@ function percent(selector, opt = {}) {
     startAngle: -Math.PI / 2,
     size: 120,
     thickness: 7,
-    fill: '#E75637'
+    fill: '#E75637',
+    emptyFill: '#f7ecdb'
   };
 
   $(selector)
-    .circleProgress(Object.assign(def, opt))
-    .on('circle-animation-progress', function(e, progress, stepValue) {
+    .circleProgress({ ...def, ...opt })
+    .on('circle-animation-progress', function update(e, progress, stepValue) {
+      const value = parseInt(stepValue.toFixed(2).slice(2), 10);
       $(this)
         .find('.chart__text')
-        .text(stepValue.toFixed(2).substr(2));
+        .text(value);
     });
 }
 
@@ -79,7 +81,7 @@ function pie(selector, opt = {}) {
     }
   };
 
-  $(selector).circleProgress(Object.assign(def, opt));
+  $(selector).circleProgress({ ...def, ...opt });
 }
 
 export { percent, pie };

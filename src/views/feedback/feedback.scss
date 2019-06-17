@@ -28,8 +28,12 @@
       flex-direction: column;
     }
 
-    &__comments {
+    &__comment-container {
       max-width: 100%;
+    }
+
+    &__comment {
+      font-size: 0.75rem;
       margin-top: 5%;
     }
   }

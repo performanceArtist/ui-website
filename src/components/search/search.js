@@ -1,18 +1,20 @@
 export default function updateSearch() {
-  const elements = document.querySelector('.search input');
+  const elements = document.querySelectorAll('.search input');
 
-  elements.addEventListener('input', function onSearchInput() {
+  function handleInput() {
     if (/^[a-zA-Z]*$/.test(this.value)) {
-      this.style.backgroundColor = '';
-      this.style.color = '';
+      this.classList.remove('search_invalid');
     } else {
-      this.style.backgroundColor = '#d28847';
-      this.style.color = 'white';
+      this.classList.add('search_invalid');
       this.value = 'Invalid';
     }
+  }
+
+  Array.prototype.forEach.call(elements, element => {
+    element.addEventListener('input', handleInput);
   });
 
-  Array.prototype.forEach.call(elements, element =>
-    element.dispatchEvent('input')
-  );
+  Array.prototype.forEach.call(elements, element => {
+    handleInput.call(element);
+  });
 }

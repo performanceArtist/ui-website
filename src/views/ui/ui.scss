@@ -20,7 +20,7 @@
 
   &__column {
     float: left;
-    width: 48%;
+    width: 49%;
 
     &_align-left {
       text-align: left;
@@ -101,24 +101,36 @@
   }
 
   &__toggle-content {
+    text-align: left;
     margin-top: 2.5rem;
     margin-bottom: 2.8rem;
+    margin-left: 7.2rem;
   }
 
-  &__checkmark {
+  &__toggle {
     display: inline-block;
+    margin-left: 0.6rem;
   }
 
   &__checkmark-content {
     margin-bottom: 8.8rem;
   }
 
+  &__checkmark {
+    display: inline-block;
+    margin-left: 0.8rem;
+  }
+
   &__search {
+    text-align: left;
     margin-bottom: 1.4rem;
+    margin-left: 4rem;
   }
 
   &__profile {
+    text-align: left;
     margin-bottom: 1.2rem;
+    margin-left: 2rem;
   }
 
   &__news-title {
@@ -149,7 +161,9 @@
   }
 
   &__chat {
+    text-align: left;
     margin-top: 2rem;
+    margin-left: 1.2rem;
   }
 
   &__video-title {

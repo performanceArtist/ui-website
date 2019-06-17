@@ -1,2 +1,2 @@
-mixin toggle({name = 'toggle', value = 'value'})
-  input(class='toggle-switch', type='checkbox', name=name, value=value)
+mixin toggle({name = 'toggle', id='', checked=false, value = 'value'} = {})
+  input(class='toggle-switch', checked=checked, id=id, type='checkbox', name=name, value=value)

@@ -11,21 +11,26 @@ block content
         +message-form
           +slider({id:'rating', name:'rating'})
       .rating__comment-container
-        +comment({username:'sadBoy', message:'I just want my tendies.', rating:0})
-        +comment({
-          username:'Ash Williams', 
-          message:'Good pizza and all, but your menu lacks variety. Hopefully it\'ll only get better with time.', 
-          rating:60})
-        +comment({
-          username:'TENDY DESTROYER',
-          message:'BRING BACK THE NUGGETS OR FACE THE CONSEQUENCES. I AM DEAD SERIOUS.',
-          rating:0})
-        +comment({
-          username:'yogaBro1989',
-          message:'Great pizza place and delivery is always just in time!',
-          rating:85})
-        +comment({
-          username:'crikey',
-          message:'I like your pizza, but that bear is just creepy. Do you really need it?',
-          rating:70})
+        .rating__comment
+          +comment({username:'sadBoy', message:'I just want my tendies.', rating:0})
+        .rating__comment
+          +comment({
+            username:'Ash Williams', 
+            message:'Good pizza and all, but your menu lacks variety. Hopefully it\'ll only get better with time.', 
+            rating:60})
+        .rating__comment
+          +comment({
+            username:'TENDY DESTROYER',
+            message:'BRING BACK THE NUGGETS OR FACE THE CONSEQUENCES. I AM DEAD SERIOUS.',
+            rating:0})
+        .rating__comment
+          +comment({
+            username:'yogaBro1989',
+            message:'Great pizza place and delivery is always just in time!',
+            rating:85})
+        .rating__comment
+          +comment({
+            username:'crikey',
+            message:'I like your pizza, but that bear is just creepy. Do you really need it?',
+            rating:70})
   

@@ -42,12 +42,11 @@
   }
 
   &__icon-container {
-    width: 20%;
-    display: table;
+    width: 15%;
+    display: flex;
   }
 
   &__icon {
-    display: table-cell;
     width: 2rem;
     height: 2rem;
     margin-right: 12.5%;
