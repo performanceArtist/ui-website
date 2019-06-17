@@ -1,5 +1,5 @@
-mixin search
+mixin search({value = '', placeholder = 'Search'} = {})
   fieldset.search
-    input.search__input(name='search', placeholder='Search')
+    input.search__input(name='search', value=value, placeholder=placeholder)
     button(type='submit').search__button
       i.search__icon(class='fa fa-search')

@@ -1,9 +1,11 @@
 .ui {
   text-align: center;
 
-  &__wrapper {
-    width: 80%;
+  &__content {
+    width: 54.8rem;
     margin: auto;
+    padding-top: 5rem;
+    border: 0.1rem #bbb solid;
   }
 
   &__row {
@@ -18,7 +20,7 @@
 
   &__column {
     float: left;
-    width: 50%;
+    width: 48%;
 
     &_align-left {
       text-align: left;
@@ -29,50 +31,133 @@
     }
   }
 
-  &__standard-buttons .button {
+  &__button-content {
+    margin-top: 5.5rem;
+    margin-bottom: 4rem;
+  }
+
+  &__button-row {
+    margin-bottom: 1.3rem;
+  }
+
+  &__button-row .button {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__arrow-button-content {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__arrow-button-content .arrow-button {
     margin-left: 2rem;
   }
 
-  &__arrow-buttons .arrow-button {
-    margin-left: 2rem;
+  &__percentage-content {
+    margin-top: 1.8rem;
+    margin-left: 1.7rem;
+    margin-bottom: 2.2rem;
+    text-align: left;
   }
 
-  &__percentages .pie,
-  &__percentages .circle {
-    margin-left: 2rem;
+  &__percentage-content > div {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  &__slider-title {
+    margin-bottom: 0;
+  }
+
+  &__slider-content {
+    margin-bottom: 1.4rem;
   }
 
   &__slider {
     display: inline-block;
     margin-right: 3rem;
+    margin-top: 0.6rem;
   }
 
-  &__radiobutton {
+  &__steps-slider {
+    display: inline-block;
+    margin-top: 3rem;
+  }
+
+  &__stage-content {
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__message-form {
+    margin-top: 2.4rem;
+    margin-left: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  &__toggle-title {
+    padding-top: 0.8rem;
+  }
+
+  &__toggle-content {
+    margin-top: 2.5rem;
+    margin-bottom: 2.8rem;
+  }
+
+  &__checkmark {
     display: inline-block;
   }
 
-  &__search {
-    margin-bottom: 2rem;
+  &__checkmark-content {
+    margin-bottom: 8.8rem;
   }
 
-  &__news-1,
-  &__news-2,
-  &__map,
-  &__chat,
-  &__message-form {
-    margin: auto;
+  &__search {
+    margin-bottom: 1.4rem;
+  }
+
+  &__profile {
+    margin-bottom: 1.2rem;
+  }
+
+  &__news-title {
+    margin-top: 6rem;
+  }
+
+  &__news-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__news-item {
+    margin: 0.9rem;
+  }
+
+  &__map-title {
+    margin-bottom: 2.2rem;
+  }
+
+  &__map-content {
+    margin-bottom: 2.4rem;
+  }
+
+  &__calendar {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+
+  &__chat {
+    margin-top: 2rem;
+  }
+
+  &__video-title {
+    margin-top: 3.5rem;
   }
 
   &__video {
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 60rem) {
-  .ui {
-    &__column {
-      float: none;
-      width: 100%;
-    }
+    margin-top: 1.8rem;
+    margin-bottom: 8.3rem;
   }
 }

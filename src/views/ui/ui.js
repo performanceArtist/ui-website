@@ -9,7 +9,10 @@ window.onload = function init() {
   scripts.ripple();
 
   // defaults
-  scripts.chart.percent('.chart');
+  scripts.chart.percent('#chart-1', { value: 0 });
+  scripts.chart.percent('#chart-2', { value: 0.38 });
+  scripts.chart.percent('#chart-3', { value: 0.62 });
+  scripts.chart.percent('#chart-4', { value: 0.89 });
   scripts.chart.pie('.pie');
 
   // override defaults
@@ -28,7 +31,7 @@ window.onload = function init() {
     */
 
   scripts.slider.standard('#slider');
-  scripts.slider.withSteps('#steps-slider');
+  scripts.slider.withSteps('#steps-slider', { value: 75 });
 
   $.switcher('.toggle-switch');
 

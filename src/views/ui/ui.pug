@@ -4,77 +4,103 @@ block head
   title UI
 
 block content
-  .ui
-    .ui__wrapper
+  article.ui
+    h1 UI-kit
+    .ui__content
       h2 STANDARD BUTTONS
-      .ui__standard-buttons
-        +standard-button({size:'small', color:'green', text:'button'}) 
-        +standard-button({size:'big', color:'green', text:'button'}) 
-        +standard-button({size:'big', color:'orange', text:'button'})
-        +standard-button({size:'small', color:'orange', text:'button'})
+      .ui__button-content
+        .ui__button-row
+          +standard-button({size:'small', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'orange', text:'button'})
+          +standard-button({size:'small', color:'orange', text:'button'})
+        .ui__button-row
+          +standard-button({size:'small', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'orange', text:'button'})
+          +standard-button({size:'small', color:'orange', text:'button'})
+        .ui__button-row
+          +standard-button({size:'small', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'green', text:'button'}) 
+          +standard-button({size:'big', color:'orange', text:'button'})
+          +standard-button({size:'small', color:'orange', text:'button'})
       
       h2 ARROW BUTTONS
-      .ui__arrow-buttons
+      .ui__arrow-button-content
         +arrow-button({direction:'left', disabled:true})
         +arrow-button({direction:'right'})
     
-      h2 PERCENTAGES/PIE CHART
-      .ui__percentages
-        +chart
+      h2 PERCENTAGES / PIE CHART
+      .ui__percentage-content
+        +chart({id:'chart-1'})
+        +chart({id:'chart-2'})
+        +chart({id:'chart-3'})
+        +chart({id:'chart-4'})
         .pie
     
-      h2 SLIDERS
-      .ui__slider
-        +slider({id:'slider'})
-      +steps-slider({id:"steps-slider"})
+      h2.ui__slider-title SLIDERS
+      .ui__slider-content
+        .ui__slider
+          +slider({id:'slider', value:40})
+        .ui__steps-slider  
+          +steps-slider({id:"steps-slider"})
     
       h2 STAGES
-      +stage
+      .ui__stage-content
+        +stage
     
       h2 FORM ELEMENTS
       .ui__row
         .ui__column
-          +message-form
-          h2 SEARCH/DROP DOWNS
-          .ui__search
-            +search
-            +dropdown
+          .ui__message-form
+            +message-form
+          h2 SEARCH / DROP DOWN
+          .ui__search-content
+            .ui__search
+              +search
+            .ui__search
+              +search({value:'!invalid!'})
+            .ui__search
+              +dropdown
         .ui__column
-          h2 TOGGLES
-          div
+          h2.ui__toggle-title TOGGLES
+          .ui__toggle-content
+            +toggle({name:'test', value:'test'})
             +toggle({name:'test', value:'test'})
           h2 TICK BOXES
-          h3 Radio
-          +checkmark({name:'test', type:'radio', value:'ok'})
-          +checkmark({name:'test', type:'radio', value:'not ok'})
-          h3 Checkbox
-          +checkmark({name:'meme', type:'checkbox', label:'test'})
+          .ui__checkmark-content
+            .ui__checkmark
+              +checkmark({name:'test', type:'radio', value:'ok', checked:true})
+            .ui__checkmark
+              +checkmark({name:'test', type:'radio', value:'not ok'})
             
-          h2 PROFILES
-          +profile({
-            type:'grey',
-            name:'Ricardo Milos', 
-            occupation:'FleXx CEO', 
-            src:'images/ricardo.jpg'
-          })
-          +profile({
-            type:'green',
-            name:'Orang', 
-            occupation:'Health Inspector', 
-            src:'images/orang.jpg'
-          })
+          h2 USER PROFILE
+          .ui__profile
+            +profile({
+              type:'grey',
+              name:'Ricardo Milos', 
+              occupation:'FleXx CEO', 
+              src:'images/ricardo.jpg'
+            })
+          .ui__profile
+            +profile({
+              type:'green',
+              name:'Orang', 
+              occupation:'Health Inspector', 
+              src:'images/orang.jpg'
+            })
     
-      h2 NEWS & EVENTS
-      .ui__row
-        .ui__column.ui__column_align-right
+      h2.ui__news-title NEWS & EVENTS
+      .ui__news-content
+        .ui__news-item
           +news({
             image:'images/animal.jpg', 
             title:'Beta Uprising', 
             date:'1 April 2019',
             text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
           })
-  
-        .ui__column.ui__column_align-left
+
+        .ui__news-item
           +event-news({
             image:'images/bear.jpg', 
             title:'Meme funeral', 
@@ -83,16 +109,19 @@ block content
             text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           })
     
-      h2 LOCATION
-      +map({id:'map', title:'Meet us!', street:'1259 California st', city:'san francisco, ca'})
+      h2.ui__map-title LOCATION
+      .ui__map-content
+        +map({id:'map', title:'Meet us!', street:'1259 California st', city:'san francisco, ca'})
       .ui__row
         .ui__column
           h2 CALENDAR
-          .calendar
+          .ui__calendar
+            .calendar
         .ui__column
           h2 MESSAGING
-          +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
-      h2 VIDEO
+          .ui__chat
+            +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
+      h2.ui__video-title VIDEO
       .ui__video
         +video({src:'videos/bunny.mp4'})
         
