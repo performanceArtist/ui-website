@@ -1,7 +1,7 @@
 .checkmark {
   position: relative;
+  height: 1.6875rem;
   display: inline-block;
-  cursor: pointer;
   font-size: 0.875rem;
   padding-left: 2.1875rem;
   -webkit-user-select: none;
@@ -33,6 +33,7 @@
 
   &__icon {
     position: absolute;
+    cursor: pointer;
     top: 0;
     left: 0;
     height: 1.6875rem;

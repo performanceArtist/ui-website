@@ -1,6 +1,8 @@
 .calendar {
   display: inline-block;
   font-size: 1.28rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
 
   .ui-widget.ui-widget-content {
     padding: 0;
@@ -11,16 +13,25 @@
     display: none;
   }
 
-  .ui-datepicker .ui-datepicker-header,
-  .ui-datepicker-calendar thead {
-    background-color: $light-orange;
+  .ui-datepicker .ui-datepicker-header {
     color: $white;
+    background: darken($light-orange, 10);
+    font-size: 1.5rem;
+    font-weight: normal;
+    border: none;
+    border-radius: 0;
   }
 
   .ui-datepicker-calendar thead {
+    color: $white;
+    background: $light-orange;
     font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
+  }
+
+  .ui-datepicker th {
+    padding: 1.05em 0.3em;
   }
 
   .ui-state-active,
@@ -39,16 +50,21 @@
     text-align: left;
     border: none;
     margin: 0;
-    padding: 5%;
+    padding: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     background: $medium-grey;
   }
 
-  .ui-datepicker .ui-datepicker-buttonpane {
+  .ui-datepicker-buttonpane {
     border: none;
     margin: 0;
+    padding: 0;
+  }
+
+  .ui-state-hover {
+    background: $light-grey;
   }
 
   .calendar .ui-state-active,
@@ -64,13 +80,14 @@
 
   table tbody tr td a {
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.65rem 0.5rem;
+    font-size: 1.4rem;
   }
 
   .datepicker-custom-date {
     text-align: center;
     background: $light-orange;
-    font-size: 5rem;
+    font-size: 7rem;
     padding: 0.1rem;
     padding-bottom: 0;
     color: $white;
@@ -110,7 +127,7 @@
   }
 
   .ui-datepicker-title {
-    line-height: 2rem;
+    line-height: 2.5rem;
   }
 }
 

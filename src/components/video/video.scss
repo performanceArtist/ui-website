@@ -43,7 +43,7 @@
     background-color: black;
     background-size: cover;
     background-image: url('images/play.png');
-    margin-right: 2%;
+    margin-right: 1%;
   }
 
   &__pause {
@@ -58,7 +58,7 @@
     background-color: $light-orange;
     background-size: cover;
     background-image: url('images/fullscreen.png');
-    margin-left: 2%;
+    margin-left: 1%;
   }
 }
 
