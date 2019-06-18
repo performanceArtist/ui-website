@@ -45,8 +45,10 @@
 
 @media screen and (max-width: 51.25rem) {
   .order {
-    margin-top: 2%;
-    display: block;
+    &__form {
+      margin-top: 2%;
+      display: block;
+    }
 
     .dropdown,
     &__options,
