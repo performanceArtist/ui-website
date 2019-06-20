@@ -4,7 +4,8 @@ import './components/toggle/jquery.switcher.min';
 import './components/progressbar/jquery.progressbar';
 
 import ripple from './components/standard-button/ripple';
-import * as chart from './components/chart/chart';
+import chart from './components/chart/chart';
+import pie from './components/pie/pie';
 import * as slider from './composite/slider/slider';
 import video from './components/video/video';
 import datepicker from './components/datepicker/datepicker';
@@ -14,4 +15,4 @@ import search from './components/search/search';
 
 search();
 
-export { ripple, chart, slider, video, messageForm, datepicker, myMap };
+export { ripple, chart, pie, slider, video, messageForm, datepicker, myMap };

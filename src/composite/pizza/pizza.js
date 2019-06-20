@@ -1,4 +1,4 @@
-import { chart } from '../../scripts';
+import { chart, pie } from '../../scripts';
 
 const Factory = (function Factory() {
   function Ingredient(name, color, value) {
@@ -77,12 +77,12 @@ const displayItem = (function displayItem() {
     document.querySelector('.pizza__li').innerHTML = '';
     document.querySelector('.pizza__li').appendChild(html);
 
-    chart.percent('.chart', {
+    chart('.chart', {
       value: item.rating,
       fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
     });
 
-    chart.pie('.pie', {
+    pie('.pie', {
       fill: {
         sectors: item.ing.map(el => [el.color, el.value])
       }

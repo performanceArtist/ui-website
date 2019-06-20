@@ -9,17 +9,17 @@ window.onload = function init() {
   scripts.ripple();
 
   // defaults
-  scripts.chart.percent('#chart-1', { value: 0 });
-  scripts.chart.percent('#chart-2', { value: 0.38 });
-  scripts.chart.percent('#chart-3', { value: 0.62 });
-  scripts.chart.percent('#chart-4', { value: 0.89 });
-  scripts.chart.pie('.pie');
+  scripts.chart('#chart-1', { value: 0 });
+  scripts.chart('#chart-2', { value: 0.38 });
+  scripts.chart('#chart-3', { value: 0.62 });
+  scripts.chart('#chart-4', { value: 0.89 });
+  scripts.pie('.pie');
 
   // override defaults
   // same principle applies to some other modules, such as 'slider'
   /*
-    chart.percent('.chart', {fill: 'red'});
-    chart.pie('.pie', {fill: {
+    scripts.percent('.chart', {fill: 'red'});
+    scripts.pie('.pie', {fill: {
         sectors: [
             ['red', 0.3],
             ['blue', 0.5],
