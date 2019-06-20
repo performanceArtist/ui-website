@@ -45,6 +45,15 @@
   &__video {
     margin: auto;
   }
+
+  &__link {
+    text-decoration: none;
+    color: #006000;
+  }
+
+  &__link:hover {
+    color: #008500;
+  }
 }
 
 @media screen and (max-width: 47.5rem) {

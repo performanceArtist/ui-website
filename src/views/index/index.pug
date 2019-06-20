@@ -5,7 +5,7 @@ block head
 
 block content
   .index
-    h2 Hottest news
+    h2.standard-heading Hottest news
     .index__news-container
       .index__news-item
         +news({
@@ -23,7 +23,7 @@ block content
           text:'Billy Bob will make his appearance on this very date! '
         })
   
-    h2 Plan your visit!
+    h2.standard-heading Plan your visit!
     .index__place-info
       .index__map
         +map({
@@ -40,9 +40,9 @@ block content
           .index__order-button
             a(href='order.html')
               +standard-button({size:'big', color:'orange', text:'order now!'})
-    h2  
+    h2.standard-heading  
       | Check out the 
-      a(href='https://www.youtube.com/watch?v=8RamCgvJKKE', target='_blank', rel='noopener noreferrer') review
+      a.index__link(href='https://www.youtube.com/watch?v=8RamCgvJKKE', target='_blank', rel='noopener noreferrer') review
       |  of our latest offer!
     .index__video
       +video({src:'videos/review.mp4'})

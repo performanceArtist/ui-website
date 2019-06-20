@@ -7,7 +7,7 @@ block content
   article.ui
     h1 UI-kit
     .ui__content
-      h2 STANDARD BUTTONS
+      h2.standard-heading STANDARD BUTTONS
       .ui__button-content
         .ui__button-row
           +standard-button({size:'small', color:'green', text:'button'}) 
@@ -25,12 +25,12 @@ block content
           +standard-button({size:'big', color:'orange', text:'button'})
           +standard-button({size:'small', color:'orange', text:'button'})
       
-      h2 ARROW BUTTONS
+      h2.standard-heading ARROW BUTTONS
       .ui__arrow-button-content
         +arrow-button({direction:'left', disabled:true})
         +arrow-button({direction:'right'})
     
-      h2 PERCENTAGES / PIE CHART
+      h2.standard-heading PERCENTAGES / PIE CHART
       .ui__percentage-content
         +chart({id:'chart-1'})
         +chart({id:'chart-2'})
@@ -38,23 +38,23 @@ block content
         +chart({id:'chart-4'})
         .pie
     
-      h2.ui__slider-title SLIDERS
+      h2.standard-heading.ui__slider-title SLIDERS
       .ui__slider-content
         .ui__slider
           +slider({id:'slider', value:40})
         .ui__steps-slider  
           +steps-slider({id:"steps-slider"})
     
-      h2 STAGES
+      h2.standard-heading STAGES
       .ui__stage-content
         +stage
     
-      h2 FORM ELEMENTS
+      h2.standard-heading FORM ELEMENTS
       .ui__row
         .ui__column
           .ui__message-form
             +message-form
-          h2 SEARCH / DROP DOWN
+          h2.standard-heading SEARCH / DROP DOWN
           .ui__search-content
             .ui__search
               +search
@@ -63,20 +63,20 @@ block content
             .ui__search
               +dropdown
         .ui__column
-          h2.ui__toggle-title TOGGLES
+          h2.standard-heading.ui__toggle-title TOGGLES
           .ui__toggle-content
             .ui__toggle
               +toggle({name:'test', value:'test'})
             .ui__toggle
               +toggle({name:'test', checked:true, value:'test'})
-          h2 TICK BOXES
+          h2.standard-heading TICK BOXES
           .ui__checkmark-content
             .ui__checkmark
               +checkmark({name:'test', type:'radio', value:'ok', checked:true})
             .ui__checkmark
               +checkmark({name:'test', type:'radio', value:'not ok'})
             
-          h2 USER PROFILE
+          h2.standard-heading USER PROFILE
           .ui__profile
             +profile({
               type:'grey',
@@ -92,7 +92,7 @@ block content
               src:'images/orang.jpg'
             })
     
-      h2.ui__news-title NEWS & EVENTS
+      h2.standard-heading.ui__news-title NEWS & EVENTS
       .ui__news-content
         .ui__news-item
           +news({
@@ -111,19 +111,19 @@ block content
             text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           })
     
-      h2.ui__map-title LOCATION
+      h2.standard-heading.ui__map-title LOCATION
       .ui__map-content
         +map({id:'map', title:'Meet us!', street:'1259 California st', city:'san francisco, ca'})
       .ui__row
         .ui__column
-          h2 CALENDAR
+          h2.standard-heading CALENDAR
           .ui__calendar
             .calendar
         .ui__column
-          h2 MESSAGING
+          h2.standard-heading MESSAGING
           .ui__chat
             +chat({name:'Ricardo Milos', image:'images/ricardo.jpg'})
-      h2.ui__video-title VIDEO
+      h2.standard-heading.ui__video-title VIDEO
       .ui__video
         +video({src:'videos/bunny.mp4'})
         
