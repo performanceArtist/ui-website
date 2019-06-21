@@ -1,7 +1,7 @@
 export default function addCalendar(selector) {
   const calendar = $(selector);
   const customDate = $('<div />', {
-    class: 'datepicker-custom-date'
+    class: 'calendar__custom-date'
   });
 
   calendar.datepicker({

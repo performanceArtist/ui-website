@@ -7,8 +7,14 @@
   }
 
   &__link {
+    text-decoration: none;
+    color: #006000;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  &__link:hover {
+    color: #008500;
   }
 }
 

@@ -4,6 +4,15 @@
   border-radius: 0.3rem;
   overflow: hidden;
 
+  &__custom-date {
+    text-align: center;
+    background: $light-orange;
+    font-size: 7rem;
+    padding: 0.1rem;
+    padding-bottom: 0;
+    color: $white;
+  }
+
   .ui-widget.ui-widget-content {
     padding: 0;
     border: none;
@@ -86,15 +95,6 @@
     text-align: center;
     padding: 0.65rem 0.5rem;
     font-size: 1.4rem;
-  }
-
-  .datepicker-custom-date {
-    text-align: center;
-    background: $light-orange;
-    font-size: 7rem;
-    padding: 0.1rem;
-    padding-bottom: 0;
-    color: $white;
   }
 
   .ui-datepicker-prev span,
