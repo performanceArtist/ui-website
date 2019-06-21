@@ -1,2 +1,5 @@
 mixin toggle({name = 'toggle', id='', checked=false, value = 'value'} = {})
-  input(class='toggle-switch', checked=checked, id=id, type='checkbox', name=name, value=value)
+  label.toggle
+    input.toggle__checkbox(type='checkbox', id=id, name=name, value=value checked=checked)
+    .toggle__switch
+    span.toggle__label

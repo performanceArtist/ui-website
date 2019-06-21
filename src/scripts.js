@@ -1,6 +1,5 @@
 // add JQuery dependencies
 import 'jquery-ui-dist/jquery-ui';
-import './components/toggle/jquery.switcher.min';
 import './components/progressbar/jquery.progressbar';
 
 import ripple from './components/standard-button/ripple';
