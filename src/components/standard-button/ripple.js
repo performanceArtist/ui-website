@@ -8,14 +8,14 @@ function debounce(func, delay) {
   };
 }
 
-function showRipple(e) {
-  const target = e.currentTarget;
+function showRipple(event) {
+  const target = event.currentTarget;
   const rippler = document.createElement('span');
   rippler.className = 'button__rippler';
   const size = target.offsetWidth;
   const pos = target.getBoundingClientRect();
-  const x = e.pageX - pos.left - size / 2;
-  const y = e.pageY - pos.top - size / 2 - window.scrollY;
+  const x = event.pageX - pos.left - size / 2;
+  const y = event.pageY - pos.top - size / 2 - window.scrollY;
   const style = `top: ${y}px; left: ${x}px; height: ${size}px; width: ${size}px;`;
   target.rippleContainer.appendChild(rippler);
   return rippler.setAttribute('style', style);

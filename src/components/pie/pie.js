@@ -45,8 +45,8 @@ require('jquery-circle-progress');
   };
 })();
 
-function pie(selector, opt = {}) {
-  const def = {
+function pie(selector, options = {}) {
+  const defaults = {
     value: 1,
     startAngle: -Math.PI / 2,
     size: 120,
@@ -61,7 +61,7 @@ function pie(selector, opt = {}) {
     }
   };
 
-  $(selector).circleProgress({ ...def, ...opt });
+  $(selector).circleProgress({ ...defaults, ...options });
 }
 
 export default pie;

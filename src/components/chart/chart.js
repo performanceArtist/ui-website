@@ -1,5 +1,5 @@
-function percent(selector, opt = {}) {
-  const def = {
+function percent(selector, options = {}) {
+  const defaults = {
     value: 0.89,
     startAngle: -Math.PI / 2,
     size: 120,
@@ -9,8 +9,12 @@ function percent(selector, opt = {}) {
   };
 
   $(selector)
-    .circleProgress({ ...def, ...opt })
-    .on('circle-animation-progress', function update(e, progress, stepValue) {
+    .circleProgress({ ...defaults, ...options })
+    .on('circle-animation-progress', function update(
+      event,
+      progress,
+      stepValue
+    ) {
       const value = parseInt(stepValue.toFixed(2).slice(2), 10);
       $(this)
         .find('.chart__text')

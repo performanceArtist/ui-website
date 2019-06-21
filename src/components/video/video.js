@@ -27,10 +27,9 @@ function fullscreen(video) {
 }
 
 function updateVideo() {
-  document.querySelectorAll('.video').forEach(cont => {
-    const jcont = $(cont);
-    const progress = jcont.find('.video__progress');
-    const video = cont.querySelector('video');
+  document.querySelectorAll('.video').forEach(container => {
+    const progress = $(container.querySelector('.video__progress'));
+    const video = container.querySelector('video');
     let moving = false;
 
     progress.slider({
@@ -55,18 +54,20 @@ function updateVideo() {
     });
 
     video.addEventListener('ended', () => {
-      const playButton = cont.querySelector('.video__pause');
+      const playButton = container.querySelector('.video__pause');
       if (playButton) {
         playButton.className = 'video__play';
       }
     });
 
-    cont.querySelector('.video__fullscreen').addEventListener('click', () => {
-      fullscreen(video);
-    });
+    container
+      .querySelector('.video__fullscreen')
+      .addEventListener('click', () => {
+        fullscreen(video);
+      });
 
-    cont.querySelector('.video__play').addEventListener('click', e => {
-      play(video, e.currentTarget);
+    container.querySelector('.video__play').addEventListener('click', event => {
+      play(video, event.currentTarget);
     });
   });
 }

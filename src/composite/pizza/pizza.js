@@ -8,7 +8,7 @@ const Factory = (function Factory() {
 
     const li = document.createElement('li');
     li.innerText = this.name;
-    this.el = li;
+    this.element = li;
   }
 
   return function choose(type, val) {
@@ -34,7 +34,7 @@ const items = [
     name: 'pepperoni',
     src: 'images/pepperoni.jpg',
     rating: 0.82,
-    ing: [
+    ingredients: [
       Factory('Tomatoes', 0.2),
       Factory('Mozarella', 0.5),
       Factory('Pepperoni', 0.8)
@@ -44,7 +44,7 @@ const items = [
     name: 'cheesy crust',
     src: 'images/cheesy_crust.jpg',
     rating: 0.95,
-    ing: [
+    ingredients: [
       Factory('Tomatoes', 0.1),
       Factory('Mozarella', 0.7),
       Factory('Pepperoni', 0.9)
@@ -54,7 +54,7 @@ const items = [
     name: 'vegetarian',
     src: 'images/vegetarian.jpg',
     rating: 0.37,
-    ing: [
+    ingredients: [
       Factory('Tomatoes', 0.2),
       Factory('Mozarella', 0.3),
       Factory('GreenStuff', 0.8),
@@ -70,8 +70,8 @@ const displayItem = (function displayItem() {
 
     const html = document.createElement('ul');
 
-    item.ing.forEach(el => {
-      html.appendChild(el.el);
+    item.ingredients.forEach(ingredient => {
+      html.appendChild(ingredient.element);
     });
 
     document.querySelector('.pizza__li').innerHTML = '';
@@ -84,7 +84,10 @@ const displayItem = (function displayItem() {
 
     pie('.pie', {
       fill: {
-        sectors: item.ing.map(el => [el.color, el.value])
+        sectors: item.ingredients.map(ingredient => [
+          ingredient.color,
+          ingredient.value
+        ])
       }
     });
   }

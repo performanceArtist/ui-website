@@ -11,15 +11,15 @@ window.onload = function init() {
   const chatImg = chat.querySelector('.avatar img');
 
   profiles.forEach(profile => {
-    profile.addEventListener('click', e => {
-      const target = e.currentTarget;
-      const img = target.querySelector('.avatar img');
+    profile.addEventListener('click', event => {
+      const target = event.currentTarget;
+      const image = target.querySelector('.avatar img');
       const name = target.querySelector('.profile__name');
 
       profiles.forEach(p => p.classList.remove('profile_selected'));
       target.classList.add('profile_selected');
       chatName.innerText = name.innerText;
-      chatImg.src = img.src;
+      chatImg.src = image.src;
     });
   });
 };

@@ -2,7 +2,7 @@ import ymaps from 'ymaps';
 
 export default function updateMap(
   id,
-  opt = { center: [55.751574, 37.573856], zoom: 9 }
+  options = { center: [55.751574, 37.573856], zoom: 9 }
 ) {
   ymaps
     .load(
@@ -12,8 +12,8 @@ export default function updateMap(
       const myMap = new maps.Map(
         id,
         {
-          center: opt.center,
-          zoom: opt.zoom,
+          center: options.center,
+          zoom: options.zoom,
           controls: []
         },
         {

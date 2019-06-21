@@ -29,12 +29,12 @@ window.onload = function init() {
     document.querySelector('.order__address').style.visibility = 'initial';
   });
 
-  const el = validator.extract(document.querySelector('.order__address'));
+  const element = validator.extract(document.querySelector('.order__address'));
 
-  el.input.addEventListener('input', () => {
-    validator.validate(el, validator.address);
+  element.input.addEventListener('input', () => {
+    validator.validate(element, validator.address);
 
-    if (validator.address(el.input)) {
+    if (validator.address(element.input)) {
       steps[2].setAttribute('class', 'done');
       steps[3].setAttribute('class', 'done');
       document.querySelector('.order__submit').style.visibility = 'initial';

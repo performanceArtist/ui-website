@@ -1,30 +1,30 @@
 const choose = regex => {
-  return function(input, cb) {
+  return function isValid(input, callback) {
     const valid = regex.test(input.value);
-    if (cb instanceof Function) {
-      cb(valid, input);
+    if (callback instanceof Function) {
+      callback(valid, input);
     } else {
       return valid;
     }
   };
 };
 
-function extract(cont) {
+function extract(container) {
   return {
-    bubble: cont.querySelector('.message-form__bubble'),
-    input: cont.querySelector('input')
+    bubble: container.querySelector('.message-form__bubble'),
+    input: container.querySelector('input')
   };
 }
 
-function validate(el, vald) {
-  el.input.addEventListener('input', () => {
-    const valid = vald(el.input);
+function validate(element, isValid) {
+  element.input.addEventListener('input', () => {
+    const valid = isValid(element.input);
     const newClass = valid ? 'bubble_okay' : 'bubble_error';
     const newText = valid ? 'thanks' : 'error';
 
-    el.bubble.innerHTML = newText;
-    el.bubble.style.visibility = 'initial';
-    el.bubble.className = `bubble bubble_left ${newClass}`;
+    element.bubble.innerHTML = newText;
+    element.bubble.style.visibility = 'initial';
+    element.bubble.className = `bubble bubble_left ${newClass}`;
   });
 }
 
