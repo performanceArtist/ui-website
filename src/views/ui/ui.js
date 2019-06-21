@@ -33,8 +33,6 @@ window.onload = function init() {
   scripts.slider.standard('#slider');
   scripts.slider.withSteps('#steps-slider', { value: 75 });
 
-  $.switcher('.toggle-switch');
-
   scripts.messageForm('.message-form');
 
   scripts.datepicker('.calendar');
