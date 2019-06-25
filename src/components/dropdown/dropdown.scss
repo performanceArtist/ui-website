@@ -34,6 +34,13 @@ $dropdown-width: 22.5rem;
     padding: 0.3125rem;
     width: $dropdown-width;
   }
+
+  &__option {
+    background: $light-grey;
+    &_disabled {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {

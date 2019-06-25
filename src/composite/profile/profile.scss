@@ -12,13 +12,13 @@
   }
 
   .bubble {
-    width: 12.6875rem;
+    width: 14rem;
     margin-left: 1rem;
   }
 
   &__name {
     font-size: 1.5rem;
-    margin-top: 5.5%;
+    margin-top: 0.7rem;
   }
 
   &__occupation {
@@ -28,20 +28,18 @@
   }
 
   &__icons {
-    margin-top: 6.5%;
+    display: inline-block;
     font-size: 2rem;
     text-align: center;
+    margin-top: 0.4rem;
+    margin-bottom: 0.6rem;
 
-    i {
-      margin-left: 9%;
+    i:first-child {
+      margin-right: 1.5rem;
     }
 
     i:last-child {
-      margin-right: 9%;
-    }
-
-    i:first-child {
-      margin-right: 2.5%;
+      margin-left: 1.5rem;
     }
   }
 

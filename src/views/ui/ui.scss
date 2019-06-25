@@ -102,7 +102,7 @@
 
   &__toggle-content {
     text-align: left;
-    margin-top: 2.5rem;
+    margin-top: 2.2rem;
     margin-bottom: 2.8rem;
     margin-left: 7.2rem;
   }
@@ -128,6 +128,10 @@
     margin-left: 4rem;
   }
 
+  &__profile-container {
+    margin-top: 1.7rem;
+  }
+
   &__profile {
     text-align: left;
     margin-bottom: 1.2rem;
@@ -135,7 +139,8 @@
   }
 
   &__news-title {
-    margin-top: 6rem;
+    margin-top: 5.5rem;
+    margin-bottom: 1.6rem;
   }
 
   &__news-content {
@@ -168,7 +173,7 @@
   }
 
   &__video-title {
-    margin-top: 3.5rem;
+    margin-top: 1rem;
   }
 
   &__video {

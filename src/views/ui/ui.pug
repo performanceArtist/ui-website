@@ -61,7 +61,7 @@ block content
             .ui__search
               +search({value:'!invalid!'})
             .ui__search
-              +dropdown
+              +dropdown({options:['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']})
         .ui__column
           h2.standard-heading.ui__toggle-title TOGGLES
           .ui__toggle-content
@@ -77,20 +77,21 @@ block content
               +checkmark({name:'test', type:'radio', value:'not ok'})
             
           h2.standard-heading USER PROFILE
-          .ui__profile
-            +profile({
-              type:'grey',
-              name:'Ricardo Milos', 
-              occupation:'FleXx CEO', 
-              src:'images/ricardo.jpg'
-            })
-          .ui__profile
-            +profile({
-              type:'green',
-              name:'Orang', 
-              occupation:'Health Inspector', 
-              src:'images/orang.jpg'
-            })
+          .ui__profile-container
+            .ui__profile
+              +profile({
+                type:'grey',
+                name:'Ricardo Milos', 
+                occupation:'FleXx CEO', 
+                src:'images/ricardo.jpg'
+              })
+            .ui__profile
+              +profile({
+                type:'green',
+                name:'Orang', 
+                occupation:'Health Inspector', 
+                src:'images/orang.jpg'
+              })
     
       h2.standard-heading.ui__news-title NEWS & EVENTS
       .ui__news-content
