@@ -1,0 +1,14 @@
+include ../profile/profile
+include ../chat/chat
+
+mixin contact({profiles = []} = {})
+  .contact
+    h2.standard-heading.contact__title Contacts:
+    .contact__content
+      .contact__profile-container
+        each profile in profiles
+          .contact__profile
+            +profile(profile)
+  
+      .contact__chat
+        +chat(profiles[0])

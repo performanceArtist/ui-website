@@ -1,48 +1,32 @@
 extends ../../layout
 
+include ../../composite/index/index
+
 block head
   title Homepage
 
 block content
-  .index
-    h2.standard-heading Hottest news
-    .index__news-container
-      .index__news-item
-        +news({
-            image:'images/animal.jpg', 
-            title:'Cheesy picket', 
-            date:'1 April 2019', 
-            text:'Angry mob demands Cheesy Nuggets to be back!'
-          })
-      .index__news-item
-        +event-news({
-          image:'images/bear.jpg', 
-          title:'Meet our mascot!', 
-          day:'22', 
-          month:'April',
-          text:'Billy Bob will make his appearance on this very date! '
-        })
-  
-    h2.standard-heading Plan your visit!
-    .index__place-info
-      .index__map
-        +map({
-          id:'location', 
-          title:'Meet us!', 
-          street:'1259 California st', 
-          town:'san francisco, ca'
-        })
-      .index__date
-        .index__calendar
-          .calendar
-        .index__date-description 
-          | The first step in any flexbox layout is to create a flex container. To do that, set the display property to flex. In Safari, you will still have to use the -webkit prefix. 
-          .index__order-button
-            a(href='order.html')
-              +standard-button({size:'big', color:'orange', text:'order now!'})
-    h2.standard-heading  
-      | Check out the 
-      a.index__link(href='https://www.youtube.com/watch?v=8RamCgvJKKE', target='_blank', rel='noopener noreferrer') review
-      |  of our latest offer!
-    .index__video
-      +video({src:'videos/review.mp4'})
+  +index({
+    news: {
+      image:'images/animal.jpg', 
+      title:'Cheesy picket', 
+      date:'1 April 2019', 
+      text:'Angry mob demands Cheesy Nuggets to be back!'
+    },
+    eventNews: {
+      image:'images/bear.jpg', 
+      title:'Meet our mascot!', 
+      day:'22', 
+      month:'April',
+      text:'Billy Bob will make his appearance on this very date! '
+    },
+    location: {
+      id:'location', 
+      title:'Meet us!', 
+      street:'1259 California st', 
+      town:'san francisco, ca'
+    },
+    video: {
+      src:'videos/review.mp4'
+    }
+  })

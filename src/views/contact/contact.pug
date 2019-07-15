@@ -1,28 +1,23 @@
 extends ../../layout
 
+include ../../composite/contact/contact
+
 block head
   title Contact
 
 block content
-  .contact
-    h2.standard-heading.contact__title Contacts:
-    .contact__content
-      .contact__profile-container
-        .contact__profile
-          +profile({
-            type:'grey',
-            selected: true,
-            name:'Billy Bob', 
-            occupation:'Official mascot', 
-            src:'images/billybob.jpg'
-          })
-        .contact__profile
-          +profile({
-            type:'green',
-            name:'Ricardo Milos', 
-            occupation:'Pizza boy', 
-            src:'images/ricardo.jpg'
-          })
-  
-      .contact__chat
-        +chat({name:'Billy Bob', image:'images/billybob.jpg'})
+  +contact({profiles: [
+            {
+              type:'grey',
+              selected: true,
+              name:'Billy Bob', 
+              occupation:'Official mascot', 
+              image:'images/billybob.jpg'
+            }, 
+            {
+              type:'green',
+              name:'Ricardo Milos', 
+              occupation:'Pizza boy', 
+              image:'images/ricardo.jpg'
+            }
+          ]})

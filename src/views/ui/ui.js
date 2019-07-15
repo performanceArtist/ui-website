@@ -1,7 +1,5 @@
 import '../../styles';
 
-import './ui.scss';
-
 import * as scripts from '../../scripts';
 
 window.onload = function init() {

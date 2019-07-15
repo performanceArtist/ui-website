@@ -1,7 +1,5 @@
 import '../../styles';
 
-import './order.scss';
-
 // progressbar JQuery dependency
 import {} from '../../scripts';
 import validator from '../../composite/message-form/validator';

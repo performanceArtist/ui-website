@@ -1,5 +1,3 @@
-import './index.scss';
-
 import { ripple, video, myMap, datepicker } from '../../scripts';
 
 window.onload = function init() {

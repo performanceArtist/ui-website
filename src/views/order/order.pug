@@ -1,28 +1,14 @@
 extends ../../layout
 
+include ../../composite/order/order
+
 block head
   title Order
 
 block content
-  .order
-    h2.standard-heading.order__title Order
-    +stage
-  
-    form.order__form
-      +dropdown({name:'pizza', options:['Pepperoni', 'Cheesy Crust', 'Vegetarian']})
-    
-      .order__options
-        .order__sauce
-          | Special sauce:
-          +toggle({name:'sauce', value:'yep'})
-  
-        .order__crust
-          +checkmark({name:'crust', type:'radio', value:'thin', label:'Thin'})
-          +checkmark({name:'crust', type:'radio', value:'standard', label:'Standard'})
-  
-      .order__address
-        input.order__input(name='address', placeholder='Address')
-        .status__bubble
-  
-      .order__submit
-        input(type='submit', value='SUBMIT', class='button button_small button_green')
+  +order({
+    menu: {name:'pizza', options:['Pepperoni', 'Cheesy Crust', 'Vegetarian']},
+    special: {name: 'Special sauce', toggle: {name:'sauce', value:'yep'}},
+    crustOptions: [{name:'crust', type:'radio', value:'thin', label:'Thin'}, {name:'crust', type:'radio', value:'standard', label:'Standard'}]
+  })
+

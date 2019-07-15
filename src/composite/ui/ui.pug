@@ -1,0 +1,123 @@
+include ../../components/bubble/bubble
+include ../../components/map/map
+include ../../components/video/video
+include ../../components/dropdown/dropdown
+include ../../components/standard-button/standard-button
+include ../../components/arrow-button/arrow-button
+include ../../components/checkmark/checkmark
+include ../../components/toggle/toggle
+include ../../components/chart/chart
+include ../../components/stage/stage
+include ../../components/search/search
+
+include ../profile/profile
+include ../message-form/message-form
+include ../news/news
+include ../chat/chat
+include ../slider/slider
+include ../comment/comment
+
+mixin ui(args = {})
+  - const {
+  -   buttons = [], 
+  -   arrowButtons = [], 
+  -   charts = [], 
+  -   slider = {}, 
+  -   stepsSlider = {}, 
+  -   dropdown = {}, 
+  -   toggles = [], 
+  -   checkmarks = [], 
+  -   profiles = [], 
+  -   news = {}, 
+  -   eventNews = {}, 
+  -   map = {}, 
+  -   chat={}, 
+  -   video={}
+  - } = args
+  article.ui
+    h1 UI-kit
+    .ui__content
+      h2.standard-heading STANDARD BUTTONS
+      .ui__button-content
+        each row in buttons
+          .ui__button-row
+            each button in row
+              +standard-button(button)
+      
+      h2.standard-heading ARROW BUTTONS
+      .ui__arrow-button-content
+        each arrowButton in arrowButtons
+          +arrow-button(arrowButton)
+    
+      h2.standard-heading PERCENTAGES / PIE CHART
+      .ui__percentage-content
+        each chart in charts
+          +chart(chart)
+        .pie
+    
+      h2.standard-heading.ui__slider-title SLIDERS
+      .ui__slider-content
+        .ui__slider
+          +slider(slider)
+        .ui__steps-slider  
+          +steps-slider(stepsSlider)
+    
+      h2.standard-heading STAGES
+      .ui__stage-content
+        +stage
+    
+      h2.standard-heading FORM ELEMENTS
+      .ui__row
+        .ui__column
+          .ui__message-form
+            +message-form
+          h2.standard-heading SEARCH / DROP DOWN
+          .ui__search-content
+            .ui__search
+              +search
+            .ui__search
+              +search({value:'!invalid!'})
+            .ui__search
+              +dropdown(dropdown)
+        .ui__column
+          h2.standard-heading.ui__toggle-title TOGGLES
+          .ui__toggle-content
+            each toggle in toggles
+              .ui__toggle
+                +toggle(toggle)
+          h2.standard-heading TICK BOXES
+          .ui__checkmark-content
+            each checkmark in checkmarks
+              .ui__checkmark
+                +checkmark(checkmark)
+            
+          h2.standard-heading USER PROFILE
+          .ui__profile-container
+            each profile in profiles
+              .ui__profile
+                +profile(profile)
+    
+      h2.standard-heading.ui__news-title NEWS & EVENTS
+      .ui__news-content
+        .ui__news-item
+          +news(news)
+
+        .ui__news-item
+          +event-news(eventNews)
+    
+      h2.standard-heading.ui__map-title LOCATION
+      .ui__map-content
+        +map(map)
+      .ui__row
+        .ui__column
+          h2.standard-heading CALENDAR
+          .ui__calendar
+            .calendar
+        .ui__column
+          h2.standard-heading MESSAGING
+          .ui__chat
+            +chat(chat)
+      h2.standard-heading.ui__video-title VIDEO
+      .ui__video
+        +video(video)
+        

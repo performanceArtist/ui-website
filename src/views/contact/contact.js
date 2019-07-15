@@ -1,5 +1,3 @@
-import './contact.scss';
-
 import { ripple } from '../../scripts';
 
 window.onload = function init() {

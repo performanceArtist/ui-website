@@ -1,10 +1,10 @@
 include ../../components/bubble/bubble
 include ../../components/avatar/avatar
 
-mixin profile({type='grey', selected=false, src='', name='name', occupation='occupation'} = {})
+mixin profile({type='grey', selected=false, image='', name='name', occupation='occupation'} = {})
   article(class=selected ? `profile profile_${type} profile_selected` : `profile profile_${type}`)
     .profile__wrapper
-      +avatar({src:src})
+      +avatar({src:image})
       +bubble({direction:'left'})
         .profile__name #{name}
         .profile__occupation #{occupation}

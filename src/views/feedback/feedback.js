@@ -1,5 +1,3 @@
-import './feedback.scss';
-
 import { messageForm, slider, ripple } from '../../scripts';
 
 window.onload = function init() {

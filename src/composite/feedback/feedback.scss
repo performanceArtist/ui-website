@@ -1,4 +1,4 @@
-.rating {
+.feedback {
   &__title {
     text-align: left;
   }
@@ -19,7 +19,7 @@
 }
 
 @media screen and (max-width: 50rem) {
-  .rating {
+  .feedback {
     &__title {
       text-align: center;
     }

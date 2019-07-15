@@ -1,0 +1,15 @@
+include ../message-form/message-form
+include ../slider/slider
+include ../comment/comment
+
+mixin feedback({comments = []} = {})
+  .feedback
+    h2.standard-heading.feedback__title Rate our service:
+    .feedback__content
+      .feedback__form
+        +message-form
+          +slider({id:'rating', name:'feedback'})
+      .feedback__comment-container
+        each comment in comments
+          .feedback__comment
+          +comment(comment)
