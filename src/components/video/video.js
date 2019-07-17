@@ -1,75 +1,86 @@
-function play(video, playButton) {
-  if (playButton.className === 'video__play') {
-    video.play();
-    playButton.className = 'video__pause';
-  } else if (playButton.className === 'video__pause') {
-    video.pause();
-    playButton.className = 'video__play';
-  }
-}
+class Video {
+  constructor(container) {
+    this.container = container;
+    this.video = container.querySelector('video');
+    this.$progress = $(container.querySelector('.video__progress'));
+    this.playButton = container.querySelector('.video__play-button');
+    this.fullscreenButton = container.querySelector('.video__fullscreen');
+    this.playing = false;
 
-function fullscreen(video) {
-  const state =
-    document.fullScreen ||
-    document.mozFullScreen ||
-    document.webkitIsFullScreen;
-  if (!state) {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.msRequestFullscreen) {
-      video.msRequestFullscreen();
-    } else if (video.mozRequestFullScreen) {
-      video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) {
-      video.webkitRequestFullscreen();
+    this.init = this.init.bind(this);
+    this.play = this.play.bind(this);
+    this.fullscreen = this.fullscreen.bind(this);
+
+    this.init();
+  }
+
+  play() {
+    if (this.playButton.classList.contains('video__play-button_play')) {
+      this.video.play();
+      this.playButton.classList.remove('video__play-button_play');
+      this.playButton.classList.add('video__play-button_pause');
+    } else {
+      this.video.pause();
+      this.playButton.classList.remove('video__play-button_pause');
+      this.playButton.classList.add('video__play-button_play');
     }
   }
-}
 
-function updateVideo() {
-  document.querySelectorAll('.video').forEach(container => {
-    const progress = $(container.querySelector('.video__progress'));
-    const video = container.querySelector('video');
-    let moving = false;
+  fullscreen() {
+    const state =
+      document.fullScreen ||
+      document.mozFullScreen ||
+      document.webkitIsFullScreen;
+    if (!state) {
+      if (this.video.requestFullscreen) {
+        this.video.requestFullscreen();
+      } else if (this.video.msRequestFullscreen) {
+        this.video.msRequestFullscreen();
+      } else if (this.video.mozRequestFullScreen) {
+        this.video.mozRequestFullScreen();
+      } else if (this.video.webkitRequestFullscreen) {
+        this.video.webkitRequestFullscreen();
+      }
+    }
+  }
 
-    progress.slider({
+  init() {
+    const that = this;
+
+    this.$progress.slider({
       value: 0,
-      max: video.duration,
+      max: that.video.duration,
       orientation: 'horizontal',
       range: 'min',
       animate: true,
       start() {
-        moving = true;
+        that.playing = true;
       },
       stop(event, ui) {
-        video.currentTime = ui.value;
-        moving = false;
+        that.video.currentTime = ui.value;
+        that.playing = false;
       }
     });
 
-    video.volume = 0.5;
+    this.video.volume = 0.5;
 
-    video.addEventListener('timeupdate', () => {
-      if (!moving) progress.slider('value', video.currentTime);
+    this.video.addEventListener('timeupdate', () => {
+      if (!this.playing) this.$progress.slider('value', this.video.currentTime);
     });
 
-    video.addEventListener('ended', () => {
-      const playButton = container.querySelector('.video__pause');
-      if (playButton) {
-        playButton.className = 'video__play';
-      }
+    this.video.addEventListener('ended', () => {
+      this.playButton.classList.remove('video__play-button_pause');
+      this.playButton.classList.add('video__play-button_play');
     });
 
-    container
-      .querySelector('.video__fullscreen')
-      .addEventListener('click', () => {
-        fullscreen(video);
-      });
-
-    container.querySelector('.video__play').addEventListener('click', event => {
-      play(video, event.currentTarget);
+    this.fullscreenButton.addEventListener('click', () => {
+      this.fullscreen();
     });
-  });
+
+    this.playButton.addEventListener('click', () => {
+      this.play();
+    });
+  }
 }
 
-export default updateVideo;
+document.querySelectorAll('.video').forEach(video => new Video(video));

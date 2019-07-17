@@ -1,5 +1,3 @@
-require('jquery-circle-progress');
-
 // multiple colors
 (function addColorFeature() {
   const _originalInitFill = $.circleProgress.defaults.initFill;
@@ -45,23 +43,8 @@ require('jquery-circle-progress');
   };
 })();
 
-function pie(selector, options = {}) {
-  const defaults = {
-    value: 1,
-    startAngle: -Math.PI / 2,
-    size: 120,
-    thickness: 22,
-    fill: {
-      sectors: [
-        ['#747474', 0.3],
-        ['#E75637', 0.5],
-        ['#4EB7A8', 0.8],
-        ['#E6E6E6', 1.0]
-      ]
-    }
-  };
-
-  $(selector).circleProgress({ ...defaults, ...options });
-}
-
-export default pie;
+document.querySelectorAll('.pie-chart').forEach(element => {
+  const $element = $(element);
+  const data = $element.data();
+  $element.circleProgress(data);
+});

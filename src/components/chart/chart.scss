@@ -14,17 +14,12 @@
   }
 }
 
-.pie {
-  display: inline-block;
-}
-
 @media screen and (max-width: 31.25rem) {
   .chart__text {
     font-size: 1.5rem;
   }
 
-  .chart,
-  .pie {
+  .chart {
     canvas {
       width: 3.75rem;
       height: 3.75rem;

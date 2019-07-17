@@ -1,4 +1,4 @@
-export default function addCalendar(selector) {
+(function addCalendar(selector) {
   const calendar = $(selector);
   const customDate = $('<div />', {
     class: 'calendar__custom-date'
@@ -28,4 +28,4 @@ export default function addCalendar(selector) {
   });
 
   calendar.trigger('change');
-}
+})('.calendar');

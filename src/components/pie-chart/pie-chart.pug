@@ -1,0 +1,9 @@
+mixin pie-chart(args = {})
+  - const {
+  -   value=1, 
+  -   startAngle=-Math.PI / 2, 
+  -   size=120, 
+  -   thickness=22, 
+  -   sectors=[['#747474', 0.3], ['#E75637', 0.5], ['#4EB7A8', 0.8],['#E6E6E6', 1.0]]
+  - } = args
+  .pie-chart(data-value=value, data-start-angle=startAngle, data-size=size, data-thickness=thickness, data-fill={sectors})

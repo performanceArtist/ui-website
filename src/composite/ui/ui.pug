@@ -7,6 +7,7 @@ include ../../components/arrow-button/arrow-button
 include ../../components/checkmark/checkmark
 include ../../components/toggle/toggle
 include ../../components/chart/chart
+include ../../components/pie-chart/pie-chart
 include ../../components/stage/stage
 include ../../components/search/search
 
@@ -22,6 +23,7 @@ mixin ui(args = {})
   -   buttons = [], 
   -   arrowButtons = [], 
   -   charts = [], 
+  -   pieChart = {},
   -   slider = {}, 
   -   stepsSlider = {}, 
   -   dropdown = {}, 
@@ -53,7 +55,7 @@ mixin ui(args = {})
       .ui__percentage-content
         each chart in charts
           +chart(chart)
-        .pie
+        +pie-chart(pieChart)
     
       h2.standard-heading.ui__slider-title SLIDERS
       .ui__slider-content

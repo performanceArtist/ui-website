@@ -31,9 +31,12 @@ block content
       {direction:'left', disabled:true},
       {direction: 'right'}
     ],
-    charts: [{id:'chart-1'}, {id:'chart-2'}, {id:'chart-3'}, {id:'chart-4'}],
+    charts: [{value: 0}, {value: 0.38}, {value: 0.62}, {value: 0.89}],
+    pieChart: {
+      sectors: [['#747474', 0.3], ['#E75637', 0.5], ['#4EB7A8', 0.8],['#E6E6E6', 1.0]]
+    },
     slider: {id:'slider', value:40},
-    stepsSlider: {id:"steps-slider"},
+    stepsSlider: {min: 0, max: 100, step: 25},
     dropdown: {options:['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']},
     toggles: [
       {name:'test', value:'test'},
@@ -70,7 +73,7 @@ block content
       month:'Feb',
       text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
-    map: {id:'map', title:'Meet us!', street:'1259 California st', city:'san francisco, ca'},
+    map: {title:'Meet us!', street:'1259 California st', city:'san francisco, ca'},
     chat: {name:'Ricardo Milos', image:'images/ricardo.jpg'},
     video: {src:'videos/bunny.mp4'}
   })

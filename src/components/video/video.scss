@@ -36,19 +36,22 @@
     }
   }
 
-  &__play {
+  &__play-button {
     width: 4rem;
     height: 3.5rem;
     cursor: pointer;
     background-color: black;
     background-size: cover;
-    background-image: url('images/play.png');
-    margin-right: 1%;
-  }
 
-  &__pause {
-    @extend .video__play;
-    background-image: url('images/pause.png');
+    margin-right: 1%;
+
+    &_play {
+      background-image: url('images/play.png');
+    }
+
+    &_pause {
+      background-image: url('images/pause.png');
+    }
   }
 
   &__fullscreen {

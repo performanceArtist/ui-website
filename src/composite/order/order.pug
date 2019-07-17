@@ -3,10 +3,10 @@ include ../../components/dropdown/dropdown
 include ../../components/checkmark/checkmark
 include ../../components/toggle/toggle
 
-mixin order({menu = {}, special = {name, toggle}, crustOptions = []} = {})
+mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, stage, crustOptions = []} = {})
   .order
     h2.standard-heading.order__title Order
-    +stage
+    +stage(stage)
   
     form.order__form
       +dropdown(menu)

@@ -1,5 +1,3 @@
-import { chart, pie } from '../../scripts';
-
 const Factory = (function Factory() {
   function Ingredient(name, color, value) {
     this.name = name;
@@ -77,6 +75,7 @@ const displayItem = (function displayItem() {
     document.querySelector('.pizza__li').innerHTML = '';
     document.querySelector('.pizza__li').appendChild(html);
 
+    /*
     chart('.chart', {
       value: item.rating,
       fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
@@ -89,7 +88,7 @@ const displayItem = (function displayItem() {
           ingredient.value
         ])
       }
-    });
+    });*/
   }
 
   let i = 0;
@@ -131,4 +130,17 @@ const displayItem = (function displayItem() {
   };
 })();
 
-export default displayItem;
+(function init() {
+  if (!document.querySelector('.pizza')) return;
+
+  displayItem.current();
+  document
+    .querySelector('.arrow-button_right')
+    .addEventListener('click', () => {
+      displayItem.next();
+    });
+
+  document.querySelector('.arrow-button_left').addEventListener('click', () => {
+    displayItem.previous();
+  });
+})();

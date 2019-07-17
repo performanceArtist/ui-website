@@ -1,4 +1,4 @@
-export default function updateSearch() {
+(function updateSearch() {
   const elements = document.querySelectorAll('.search input');
 
   function handleInput() {
@@ -17,4 +17,4 @@ export default function updateSearch() {
   Array.prototype.forEach.call(elements, element => {
     handleInput.call(element);
   });
-}
+})();

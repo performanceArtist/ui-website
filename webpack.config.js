@@ -16,18 +16,13 @@ const htmlFiles = [
     new HtmlWebpackPlugin({
       template: `./src/views/${name}/${name}.pug`,
       filename: `${name}.html`,
-      chunks: ['commons', name]
+      chunks: ['commons', 'main']
     })
 );
 
 const config = {
   entry: {
-    index: './src/views/index/index.js',
-    order: './src/views/order/order.js',
-    gallery: './src/views/gallery/gallery.js',
-    feedback: './src/views/feedback/feedback.js',
-    contact: './src/views/contact/contact.js',
-    ui: './src/views/ui/ui.js'
+    main: './src/main.js'
   },
   optimization: {
     splitChunks: {
@@ -136,7 +131,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      filename: 'css/main.css'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

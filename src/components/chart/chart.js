@@ -1,15 +1,8 @@
-function percent(selector, options = {}) {
-  const defaults = {
-    value: 0.89,
-    startAngle: -Math.PI / 2,
-    size: 120,
-    thickness: 7,
-    fill: '#E75637',
-    emptyFill: '#f7ecdb'
-  };
-
-  $(selector)
-    .circleProgress({ ...defaults, ...options })
+document.querySelectorAll('.chart').forEach(element => {
+  const $element = $(element);
+  const data = $element.data();
+  $element
+    .circleProgress(data)
     .on('circle-animation-progress', function update(
       event,
       progress,
@@ -20,6 +13,4 @@ function percent(selector, options = {}) {
         .find('.chart__text')
         .text(value);
     });
-}
-
-export default percent;
+});

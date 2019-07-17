@@ -1,2 +1,2 @@
-mixin stage()
-  .stage
+mixin stage({steps = ['Step 1', 'Step 2', '@Step 3 (Current)', 'Step 4', 'Step 5']} = {})
+  .stage(data-steps = steps)

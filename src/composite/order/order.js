@@ -1,19 +1,9 @@
-import '../../styles';
+import validator from '../message-form/validator';
 
-// progressbar JQuery dependency
-import {} from '../../scripts';
-import validator from '../../composite/message-form/validator';
+(function init() {
+  const steps = document.querySelectorAll('.stage ul li');
 
-window.onload = function init() {
-  const progressbar = $('.stage').progressbar({
-    steps: [
-      '@Choose a pizza',
-      'Select options',
-      'Enter your address',
-      'All done!'
-    ]
-  });
-  const steps = progressbar.find('ul li');
+  if (!steps || steps.length !== 4) return;
 
   document.querySelector('.dropdown select').addEventListener('change', () => {
     steps[0].setAttribute('class', 'done');
@@ -42,6 +32,4 @@ window.onload = function init() {
       document.querySelector('.order__submit').style.visibility = 'hidden';
     }
   });
-
-  $.switcher('.toggle-switch');
-};
+})();

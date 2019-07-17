@@ -27,15 +27,11 @@ function cleanUp() {
   }
 }
 
-export default function ripple() {
-  const ripples = document.querySelectorAll('.button_ripple');
-
-  ripples.forEach(element => {
-    const rippleContainer = document.createElement('div');
-    rippleContainer.className = 'button__ripple-container';
-    element.addEventListener('mousedown', showRipple);
-    element.addEventListener('mouseup', debounce(cleanUp, 2000));
-    element.rippleContainer = rippleContainer;
-    element.appendChild(rippleContainer);
-  });
-}
+document.querySelectorAll('.button_ripple').forEach(element => {
+  const rippleContainer = document.createElement('div');
+  rippleContainer.className = 'button__ripple-container';
+  element.addEventListener('mousedown', showRipple);
+  element.addEventListener('mouseup', debounce(cleanUp, 2000));
+  element.rippleContainer = rippleContainer;
+  element.appendChild(rippleContainer);
+});

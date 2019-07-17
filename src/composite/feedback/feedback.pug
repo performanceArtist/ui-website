@@ -8,7 +8,7 @@ mixin feedback({comments = []} = {})
     .feedback__content
       .feedback__form
         +message-form
-          +slider({id:'rating', name:'feedback'})
+          +slider({name:'feedback'})
       .feedback__comment-container
         each comment in comments
           .feedback__comment

@@ -1,4 +1,4 @@
-function standard(selector) {
+(function standard(selector) {
   const event = new Event('input', {
     bubbles: true,
     cancelable: true
@@ -20,33 +20,29 @@ function standard(selector) {
 
     input.dispatchEvent(event);
   });
+})('.slider');
+
+class WithSteps {
+  constructor($element) {
+    this.data = $element.data();
+    this.$element = $element.slider(this.data);
+    this.addSteps();
+  }
+
+  addSteps() {
+    const { max, min, step } = this.data;
+    const length = max - min;
+
+    for (let i = 0; i <= length; i += step) {
+      const label = $(`<label>${i + min}</label>`).css(
+        'left',
+        `${(i / length) * 100}%`
+      );
+      this.$element.append(label);
+    }
+  }
 }
 
-function withSteps(selector, options = {}) {
-  const defaults = {
-    value: 50,
-    min: 0,
-    max: 100,
-    step: 25,
-    orientation: 'horizontal',
-    range: 'min',
-    animate: true
-  };
-
-  $(selector)
-    .slider({ ...defaults, ...options })
-    .each(function addSteps() {
-      const { options } = $(this).data().uiSlider;
-      const values = options.max - options.min;
-
-      for (let i = 0; i <= values; i += options.step) {
-        const element = $(`<label>${i}</label>`).css(
-          'left',
-          `${(i / values) * 100}%`
-        );
-        $(selector).append(element);
-      }
-    });
-}
-
-export { standard, withSteps };
+document.querySelectorAll('.steps-slider').forEach(element => {
+  new WithSteps($(element));
+});

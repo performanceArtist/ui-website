@@ -1,5 +1,6 @@
 include ../../components/arrow-button/arrow-button
 include ../../components/chart/chart
+include ../../components/pie-chart/pie-chart
 
 mixin pizza
   article.pizza
@@ -14,6 +15,6 @@ mixin pizza
           +arrow-button({direction:'right'})
     section.pizza__ingredients
       .pizza__li
-      .pie
+      +pie-chart
 
 
