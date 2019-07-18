@@ -1,7 +1,5 @@
-import validator from '../message-form/validator';
-
 (function init() {
-  const steps = document.querySelectorAll('.stage ul li');
+  const steps = document.querySelectorAll('.order__stage .stage ul li');
 
   if (!steps || steps.length !== 4) return;
 
@@ -17,12 +15,12 @@ import validator from '../message-form/validator';
     document.querySelector('.order__address').style.visibility = 'initial';
   });
 
-  const element = validator.extract(document.querySelector('.order__address'));
+  const address = document.querySelector('.order__address input');
 
-  element.input.addEventListener('input', () => {
-    validator.validate(element, validator.address);
+  address.addEventListener('input', event => {
+    const isValid = /^[a-zA-Z0-9 ]{5,}$/.test(event.target.value);
 
-    if (validator.address(element.input)) {
+    if (isValid) {
       steps[2].setAttribute('class', 'done');
       steps[3].setAttribute('class', 'done');
       document.querySelector('.order__submit').style.visibility = 'initial';

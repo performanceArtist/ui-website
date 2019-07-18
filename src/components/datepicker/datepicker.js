@@ -1,10 +1,10 @@
-(function addCalendar(selector) {
-  const calendar = $(selector);
+export default function makeDatepicker(element) {
+  const datepicker = $(element);
   const customDate = $('<div />', {
-    class: 'calendar__custom-date'
+    class: 'datepicker__custom-date'
   });
 
-  calendar.datepicker({
+  datepicker.datepicker({
     showOtherMonths: true,
     selectOtherMonths: true,
     showButtonPanel: true,
@@ -13,19 +13,21 @@
     maxDate: null
   });
 
-  calendar.prepend(customDate);
+  datepicker.prepend(customDate);
 
   $(document).on('click', 'button.ui-datepicker-current', () => {
-    calendar.datepicker('setDate', new Date());
-    calendar.trigger('change');
+    datepicker.datepicker('setDate', new Date());
+    datepicker.trigger('change');
   });
 
-  calendar.on('change', function changeCustomDate() {
+  datepicker.on('change', function changeCustomDate() {
     const selected = $(this).val();
     const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
 
     customDate.text(text);
   });
 
-  calendar.trigger('change');
-})('.calendar');
+  datepicker.trigger('change');
+}
+
+document.querySelectorAll('.datepicker').forEach(makeDatepicker);

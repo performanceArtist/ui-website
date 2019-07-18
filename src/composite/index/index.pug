@@ -2,6 +2,7 @@ include ../news/news
 include ../../components/video/video
 include ../../components/map/map
 include ../../components/standard-button/standard-button
+include ../../components/datepicker/datepicker
 
 mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
   .index
@@ -17,7 +18,7 @@ mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
         +map(location)
       .index__date
         .index__calendar
-          .calendar
+          +datepicker
         .index__date-description
           | The first step in any flexbox layout is to create a flex container. To do that, set the display property to flex. In Safari, you will still have to use the -webkit prefix.
         .index__order-button

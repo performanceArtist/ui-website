@@ -2,8 +2,15 @@ include ../../components/arrow-button/arrow-button
 include ../../components/chart/chart
 include ../../components/pie-chart/pie-chart
 
-mixin pizza
-  article.pizza
+mixin pizza(items = [])
+  - const newItems = items.map(({
+  -   name = 'Pizza', 
+  -   image = 'images/pepperoni.jpg', 
+  -   rating = 0.95, 
+  -   ingredients = [['Tomatoes', 0.2], ['Mozarella', 0.5], ['Pepperoni', 0.8]]} = {}
+  - ) => ({name, image, rating, ingredients}))
+
+  article.pizza(data-items = newItems)
     header.pizza__name
     section.pizza__info
       img(alt='pizza').pizza__image
@@ -14,7 +21,7 @@ mixin pizza
           +arrow-button({direction:'left', disabled:true})
           +arrow-button({direction:'right'})
     section.pizza__ingredients
-      .pizza__li
+      .pizza__list 
       +pie-chart
 
 

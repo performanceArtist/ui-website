@@ -1,3 +1,6 @@
+import makeChart from '../../components/chart/chart';
+import makePieChart from '../../components/pie-chart/pie-chart';
+
 const Factory = (function Factory() {
   function Ingredient(name, color, value) {
     this.name = name;
@@ -27,120 +30,102 @@ const Factory = (function Factory() {
   };
 })();
 
-const items = [
-  {
-    name: 'pepperoni',
-    src: 'images/pepperoni.jpg',
-    rating: 0.82,
-    ingredients: [
-      Factory('Tomatoes', 0.2),
-      Factory('Mozarella', 0.5),
-      Factory('Pepperoni', 0.8)
-    ]
-  },
-  {
-    name: 'cheesy crust',
-    src: 'images/cheesy_crust.jpg',
-    rating: 0.95,
-    ingredients: [
-      Factory('Tomatoes', 0.1),
-      Factory('Mozarella', 0.7),
-      Factory('Pepperoni', 0.9)
-    ]
-  },
-  {
-    name: 'vegetarian',
-    src: 'images/vegetarian.jpg',
-    rating: 0.37,
-    ingredients: [
-      Factory('Tomatoes', 0.2),
-      Factory('Mozarella', 0.3),
-      Factory('GreenStuff', 0.8),
-      Factory('Onions', 0.9)
-    ]
+class Pizza {
+  constructor(element, items) {
+    this.items = items.map(item => {
+      const ingredients = item.ingredients.map(([ingredient, value]) =>
+        Factory(ingredient, value)
+      );
+      return {
+        ...item,
+        ingredients
+      };
+    });
+    this.element = element;
+    this.name = element.querySelector('.pizza__name');
+    this.image = element.querySelector('.pizza__image');
+    this.pieChart = element.querySelector('.pie-chart');
+    this.chart = element.querySelector('.chart');
+    this.leftArrow = element.querySelector('.arrow-button_left');
+    this.rightArrow = element.querySelector('.arrow-button_right');
+    this.list = element.querySelector('.pizza__list');
+    this.index = 0;
+
+    this.display = this.display.bind(this);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+
+    this.leftArrow.addEventListener('click', () => {
+      this.previous();
+    });
+
+    this.rightArrow.addEventListener('click', () => {
+      this.next();
+    });
+
+    this.display();
   }
-];
 
-const displayItem = (function displayItem() {
-  function display(item) {
-    document.querySelector('.pizza__name').innerHTML = item.name;
-    document.querySelector('.pizza__image').src = item.src;
+  display() {
+    const { name, image, rating, ingredients } = this.items[this.index];
 
-    const html = document.createElement('ul');
+    this.name.innerText = name;
+    this.image.src = image;
 
-    item.ingredients.forEach(ingredient => {
-      html.appendChild(ingredient.element);
+    const list = document.createElement('ul');
+
+    ingredients.forEach(ingredient => {
+      list.appendChild(ingredient.element);
     });
 
-    document.querySelector('.pizza__li').innerHTML = '';
-    document.querySelector('.pizza__li').appendChild(html);
+    this.list.innerHTML = '';
+    this.list.appendChild(list);
 
-    /*
-    chart('.chart', {
-      value: item.rating,
-      fill: item.rating > 0.6 ? '#68BB68' : '#D28847'
+    makeChart(this.chart, {
+      value: rating,
+      fill: rating > 0.6 ? '#68BB68' : '#D28847'
     });
 
-    pie('.pie', {
+    makePieChart(this.pieChart, {
       fill: {
-        sectors: item.ingredients.map(ingredient => [
+        sectors: ingredients.map(ingredient => [
           ingredient.color,
           ingredient.value
         ])
       }
-    });*/
+    });
   }
 
-  let i = 0;
+  next() {
+    if (this.index >= this.items.length - 1) return;
 
-  return {
-    current() {
-      display(items[i]);
-    },
-    next() {
-      if (i >= items.length - 1) return;
+    this.index = this.index + 1;
 
-      i += 1;
-      if (i === items.length - 1) {
-        document
-          .querySelector('.arrow-button_right')
-          .classList.add('arrow-button_disabled');
-      } else {
-        document
-          .querySelector('.arrow-button_left')
-          .classList.remove('arrow-button_disabled');
-      }
-      display(items[i]);
-    },
-    previous() {
-      if (i <= 0) return;
-
-      i -= 1;
-      if (i === 0) {
-        document
-          .querySelector('.arrow-button_left')
-          .classList.add('arrow-button_disabled');
-      } else {
-        document
-          .querySelector('.arrow-button_right')
-          .classList.remove('arrow-button_disabled');
-      }
-      display(items[i]);
+    if (this.index === this.items.length - 1) {
+      this.rightArrow.classList.add('arrow-button_disabled');
+    } else {
+      this.leftArrow.classList.remove('arrow-button_disabled');
     }
-  };
-})();
 
-(function init() {
-  if (!document.querySelector('.pizza')) return;
+    this.display();
+  }
 
-  displayItem.current();
-  document
-    .querySelector('.arrow-button_right')
-    .addEventListener('click', () => {
-      displayItem.next();
-    });
+  previous() {
+    if (this.index <= 0) return;
 
-  document.querySelector('.arrow-button_left').addEventListener('click', () => {
-    displayItem.previous();
-  });
-})();
+    this.index = this.index - 1;
+
+    if (this.index === 0) {
+      this.leftArrow.classList.add('arrow-button_disabled');
+    } else {
+      this.rightArrow.classList.remove('arrow-button_disabled');
+    }
+
+    this.display();
+  }
+}
+
+document.querySelectorAll('.pizza').forEach(element => {
+  const items = JSON.parse(element.dataset.items);
+  new Pizza(element, items);
+});

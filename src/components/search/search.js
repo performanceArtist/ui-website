@@ -1,20 +1,17 @@
-(function updateSearch() {
-  const elements = document.querySelectorAll('.search input');
+function makeSearch(element) {
+  const input = element.querySelector('input');
 
   function handleInput() {
-    if (/^[a-zA-Z]*$/.test(this.value)) {
-      this.classList.remove('search_invalid');
+    if (/^[a-zA-Z]*$/.test(input.value)) {
+      input.classList.remove('search_invalid');
     } else {
-      this.classList.add('search_invalid');
-      this.value = 'Invalid';
+      input.classList.add('search_invalid');
+      input.value = 'Invalid';
     }
   }
 
-  Array.prototype.forEach.call(elements, element => {
-    element.addEventListener('input', handleInput);
-  });
+  input.addEventListener('input', handleInput);
+  handleInput();
+}
 
-  Array.prototype.forEach.call(elements, element => {
-    handleInput.call(element);
-  });
-})();
+document.querySelectorAll('.search').forEach(makeSearch);

@@ -43,8 +43,10 @@
   };
 })();
 
-document.querySelectorAll('.pie-chart').forEach(element => {
+export default function makePieChart(element, options) {
   const $element = $(element);
   const data = $element.data();
-  $element.circleProgress(data);
-});
+  $element.circleProgress({ ...data, ...options });
+}
+
+document.querySelectorAll('.pie-chart').forEach(makePieChart);

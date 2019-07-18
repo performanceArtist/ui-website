@@ -1,26 +1,28 @@
-(function standard(selector) {
-  const event = new Event('input', {
-    bubbles: true,
-    cancelable: true
-  });
+class Slider {
+  constructor(element) {
+    this.element = element;
+    this.input = element.querySelector('input');
+    this.bubble = element.querySelector('.bubble');
+    this.width = element.offsetWidth;
+    this.offset = 0.25;
 
-  document.querySelectorAll(selector).forEach(slider => {
-    const bubble = slider.querySelector('.bubble');
-    const width = slider.offsetWidth;
-    const offset = 0.25;
-    const input = slider.querySelector('input');
+    this.handleInput = this.handleInput.bind(this);
+    this.input.addEventListener('input', this.handleInput);
+    this.input.dispatchEvent(new Event('input'));
+  }
 
-    input.addEventListener('input', function handleInput() {
-      const perc = (this.value - this.min) / (this.max - this.min);
-      const npos = width * perc - this.value * offset;
+  handleInput(event) {
+    const { target } = event;
 
-      bubble.innerHTML = this.value;
-      bubble.style.left = `${npos - 5}px`;
-    });
+    const perc = (target.value - target.min) / (target.max - target.min);
+    const newPosition = this.width * perc - target.value * this.offset;
 
-    input.dispatchEvent(event);
-  });
-})('.slider');
+    this.bubble.innerHTML = target.value;
+    this.bubble.style.left = `${newPosition - 5}px`;
+  }
+}
+
+document.querySelectorAll('.slider').forEach(element => new Slider(element));
 
 class WithSteps {
   constructor($element) {
@@ -43,6 +45,6 @@ class WithSteps {
   }
 }
 
-document.querySelectorAll('.steps-slider').forEach(element => {
-  new WithSteps($(element));
-});
+document
+  .querySelectorAll('.steps-slider')
+  .forEach(element => new WithSteps($(element)));

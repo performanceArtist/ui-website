@@ -10,6 +10,7 @@ include ../../components/chart/chart
 include ../../components/pie-chart/pie-chart
 include ../../components/stage/stage
 include ../../components/search/search
+include ../../components/datepicker/datepicker
 
 include ../profile/profile
 include ../message-form/message-form
@@ -114,7 +115,7 @@ mixin ui(args = {})
         .ui__column
           h2.standard-heading CALENDAR
           .ui__calendar
-            .calendar
+            +datepicker
         .ui__column
           h2.standard-heading MESSAGING
           .ui__chat
