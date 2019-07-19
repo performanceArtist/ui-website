@@ -2,10 +2,23 @@ class Video {
   constructor(container) {
     this.container = container;
     this.video = container.querySelector('video');
-    this.$progress = $(container.querySelector('.video__progress'));
+    const that = this;
+    this.$progress = $(container.querySelector('.video__progress')).slider({
+      value: 0,
+      max: this.video.duration,
+      orientation: 'horizontal',
+      range: 'min',
+      start() {
+        that.sliderActive = true;
+      },
+      stop(event, ui) {
+        that.video.currentTime = ui.value;
+        that.sliderActive = false;
+      }
+    });
     this.playButton = container.querySelector('.video__play-button');
     this.fullscreenButton = container.querySelector('.video__fullscreen');
-    this.playing = false;
+    this.sliderActive = false;
 
     this.init = this.init.bind(this);
     this.play = this.play.bind(this);
@@ -45,27 +58,12 @@ class Video {
   }
 
   init() {
-    const that = this;
-
-    this.$progress.slider({
-      value: 0,
-      max: that.video.duration,
-      orientation: 'horizontal',
-      range: 'min',
-      animate: true,
-      start() {
-        that.playing = true;
-      },
-      stop(event, ui) {
-        that.video.currentTime = ui.value;
-        that.playing = false;
-      }
-    });
-
     this.video.volume = 0.5;
 
     this.video.addEventListener('timeupdate', () => {
-      if (!this.playing) this.$progress.slider('value', this.video.currentTime);
+      if (!this.sliderActive) {
+        this.$progress.slider({ value: this.video.currentTime });
+      }
     });
 
     this.video.addEventListener('ended', () => {
@@ -83,4 +81,6 @@ class Video {
   }
 }
 
-document.querySelectorAll('.video').forEach(video => new Video(video));
+window.addEventListener('load', () => {
+  document.querySelectorAll('.video').forEach(video => new Video(video));
+});
