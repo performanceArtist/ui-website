@@ -1,33 +1,43 @@
-export default function makeDatepicker(element) {
-  const datepicker = $(element);
-  const customDate = $('<div />', {
-    class: 'datepicker__custom-date'
-  });
+class Datepicker {
+  constructor(root) {
+    this.$root = $(root);
+    this.$date = $('<div />', {
+      class: 'datepicker__custom-date'
+    });
 
-  datepicker.datepicker({
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    showButtonPanel: true,
-    dayNamesMin: ['sat', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-    minDate: null,
-    maxDate: null
-  });
+    this.init = this.init.bind(this);
 
-  datepicker.prepend(customDate);
+    this.init();
+  }
 
-  $(document).on('click', 'button.ui-datepicker-current', () => {
-    datepicker.datepicker('setDate', new Date());
-    datepicker.trigger('change');
-  });
+  init() {
+    this.$root.datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true,
+      showButtonPanel: true,
+      dayNamesMin: ['sat', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+      minDate: null,
+      maxDate: null
+    });
 
-  datepicker.on('change', function changeCustomDate() {
-    const selected = $(this).val();
-    const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
+    this.$root.prepend(this.$date);
 
-    customDate.text(text);
-  });
+    $(document).on('click', 'button.ui-datepicker-current', () => {
+      this.$root.datepicker('setDate', new Date());
+      this.$root.trigger('change');
+    });
 
-  datepicker.trigger('change');
+    this.$root.on('change', () => {
+      const selected = this.$root.val();
+      const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
+
+      this.$date.text(text);
+    });
+
+    this.$root.trigger('change');
+  }
 }
 
-document.querySelectorAll('.datepicker').forEach(makeDatepicker);
+document
+  .querySelectorAll('.datepicker')
+  .forEach(element => new Datepicker(element));

@@ -1,33 +1,41 @@
-(function init() {
-  const steps = document.querySelectorAll('.order__stage .stage ul li');
+class Order {
+  constructor(root) {
+    this.root = root;
 
-  if (!steps || steps.length !== 4) return;
+    this.init = this.init.bind(this);
 
-  document.querySelector('.dropdown select').addEventListener('change', () => {
-    steps[0].setAttribute('class', 'done');
-    steps[1].setAttribute('class', 'current');
-    document.querySelector('.order__options').style.visibility = 'initial';
-  });
+    this.init();
+  }
 
-  document.querySelector('.order__crust').addEventListener('change', () => {
-    steps[1].setAttribute('class', 'done');
-    steps[2].setAttribute('class', 'current');
-    document.querySelector('.order__address').style.visibility = 'initial';
-  });
+  init() {
+    this.steps = this.root.querySelectorAll('.stage ul li');
+    this.dropdown = this.root.querySelector('.dropdown select');
+    this.options = this.root.querySelector('.order__options');
+    this.address = this.root.querySelector('.order__address input');
+    this.submit = this.root.querySelector('.order__submit');
 
-  const address = document.querySelector('.order__address input');
+    this.dropdown.addEventListener('change', () => {
+      this.steps[0].setAttribute('class', 'done');
+      this.steps[1].setAttribute('class', 'current');
+      this.options.style.visibility = 'initial';
+    });
 
-  address.addEventListener('input', event => {
-    const isValid = /^[a-zA-Z0-9 ]{5,}$/.test(event.target.value);
+    this.options.addEventListener('change', () => {
+      this.steps[1].setAttribute('class', 'done');
+      this.steps[2].setAttribute('class', 'current');
+      this.address.style.visibility = 'initial';
+    });
 
-    if (isValid) {
-      steps[2].setAttribute('class', 'done');
-      steps[3].setAttribute('class', 'done');
-      document.querySelector('.order__submit').style.visibility = 'initial';
-    } else {
-      steps[2].setAttribute('class', 'current');
-      steps[3].setAttribute('class', '');
-      document.querySelector('.order__submit').style.visibility = 'hidden';
-    }
-  });
-})();
+    this.address.addEventListener('input', event => {
+      const isValid = /^[a-zA-Z0-9 ]{5,}$/.test(event.target.value);
+
+      if (isValid) {
+        this.steps[2].setAttribute('class', 'done');
+        this.steps[3].setAttribute('class', 'done');
+        this.submit.style.visibility = 'initial';
+      }
+    });
+  }
+}
+
+document.querySelectorAll('.order').forEach(element => new Order(element));

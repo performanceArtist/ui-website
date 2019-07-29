@@ -1,5 +1,5 @@
-import makeChart from '../../components/chart/chart';
-import makePieChart from '../../components/pie-chart/pie-chart';
+import Chart from '../../components/chart/chart';
+import PieChart from '../../components/pie-chart/pie-chart';
 
 const Factory = (function Factory() {
   function Ingredient(name, color, value) {
@@ -31,7 +31,8 @@ const Factory = (function Factory() {
 })();
 
 class Pizza {
-  constructor(element, items) {
+  constructor(root, items) {
+    this.root = root;
     this.items = items.map(item => {
       const ingredients = item.ingredients.map(([ingredient, value]) =>
         Factory(ingredient, value)
@@ -41,19 +42,25 @@ class Pizza {
         ingredients
       };
     });
-    this.element = element;
-    this.name = element.querySelector('.pizza__name');
-    this.image = element.querySelector('.pizza__image');
-    this.pieChart = element.querySelector('.pie-chart');
-    this.chart = element.querySelector('.chart');
-    this.leftArrow = element.querySelector('.arrow-button_left');
-    this.rightArrow = element.querySelector('.arrow-button_right');
-    this.list = element.querySelector('.pizza__list');
     this.index = 0;
 
+    this.init = this.init.bind(this);
     this.display = this.display.bind(this);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
+
+    this.init();
+    this.display();
+  }
+
+  init() {
+    this.name = this.root.querySelector('.pizza__name');
+    this.image = this.root.querySelector('.pizza__image');
+    this.pieChart = this.root.querySelector('.pie-chart');
+    this.chart = this.root.querySelector('.chart');
+    this.leftArrow = this.root.querySelector('.arrow-button_left');
+    this.rightArrow = this.root.querySelector('.arrow-button_right');
+    this.list = this.root.querySelector('.pizza__list');
 
     this.leftArrow.addEventListener('click', () => {
       this.previous();
@@ -62,8 +69,6 @@ class Pizza {
     this.rightArrow.addEventListener('click', () => {
       this.next();
     });
-
-    this.display();
   }
 
   display() {
@@ -81,12 +86,12 @@ class Pizza {
     this.list.innerHTML = '';
     this.list.appendChild(list);
 
-    makeChart(this.chart, {
+    new Chart(this.chart, {
       value: rating,
       fill: rating > 0.6 ? '#68BB68' : '#D28847'
     });
 
-    makePieChart(this.pieChart, {
+    new PieChart(this.pieChart, {
       fill: {
         sectors: ingredients.map(ingredient => [
           ingredient.color,

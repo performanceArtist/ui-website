@@ -1,12 +1,18 @@
 class Slider {
-  constructor(element) {
-    this.element = element;
-    this.input = element.querySelector('input');
-    this.bubble = element.querySelector('.bubble');
-    this.width = element.offsetWidth;
-    this.offset = 0.25;
+  constructor(root) {
+    this.root = root;
 
+    this.init = this.init.bind(this);
     this.handleInput = this.handleInput.bind(this);
+
+    this.init();
+  }
+
+  init() {
+    this.input = this.root.querySelector('input');
+    this.bubble = this.root.querySelector('.bubble');
+    this.width = this.root.offsetWidth;
+    this.offset = 0.25;
     this.input.addEventListener('input', this.handleInput);
     this.input.dispatchEvent(new Event('input'));
   }
@@ -25,9 +31,13 @@ class Slider {
 document.querySelectorAll('.slider').forEach(element => new Slider(element));
 
 class WithSteps {
-  constructor($element) {
-    this.data = $element.data();
-    this.$element = $element.slider(this.data);
+  constructor(root) {
+    this.$root = $(root);
+    this.data = this.$root.data();
+    this.$root.slider(this.data);
+
+    this.addSteps = this.addSteps.bind(this);
+
     this.addSteps();
   }
 
@@ -40,11 +50,11 @@ class WithSteps {
         'left',
         `${(i / length) * 100}%`
       );
-      this.$element.append(label);
+      this.$root.append(label);
     }
   }
 }
 
 document
   .querySelectorAll('.steps-slider')
-  .forEach(element => new WithSteps($(element)));
+  .forEach(element => new WithSteps(element));

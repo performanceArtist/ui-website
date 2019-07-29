@@ -34,8 +34,13 @@
   };
 })(jQuery);
 
-document.querySelectorAll('.stage').forEach(element => {
-  const $element = $(element);
-  const data = $element.data();
-  $element.progressbar(data);
-});
+class Stage {
+  constructor(root) {
+    this.$root = $(root);
+    this.data = this.$root.data();
+
+    this.$root.progressbar(this.data);
+  }
+}
+
+document.querySelectorAll('.stage').forEach(element => new Stage(element));

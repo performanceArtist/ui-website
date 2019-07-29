@@ -7,6 +7,8 @@
     },
     "rules": {
         "linebreak-style":"off",
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "class-methods-use-this": "off",
+        "no-new": "off"
     }
 }

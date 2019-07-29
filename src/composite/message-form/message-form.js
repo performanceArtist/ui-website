@@ -1,27 +1,34 @@
 class MessageForm {
-  constructor(element) {
-    this.element = element;
+  constructor(root) {
+    this.root = root;
 
+    this.init = this.init.bind(this);
+
+    this.init();
+  }
+
+  init() {
     this.name = {
       regex: /^[a-zA-Z0-9]+$/,
-      input: element.querySelector('.message-form__name input'),
-      bubble: element.querySelector('.message-form__name .message-form__bubble')
+      input: this.root.querySelector('.message-form__name input'),
+      bubble: this.root.querySelector(
+        '.message-form__name .message-form__bubble'
+      )
     };
-    this.name.input.addEventListener('input', () => this.validate(this.name));
 
     this.email = {
       regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      input: element.querySelector('.message-form__email input'),
-      bubble: element.querySelector(
+      input: this.root.querySelector('.message-form__email input'),
+      bubble: this.root.querySelector(
         '.message-form__email .message-form__bubble'
       )
     };
 
+    this.name.input.addEventListener('input', () => this.validate(this.name));
     this.email.input.addEventListener('input', () => this.validate(this.email));
   }
 
   validate(current) {
-    console.log(current);
     const valid = current.regex.test(current.input.value);
     const newClass = valid ? 'bubble_okay' : 'bubble_error';
     const newText = valid ? 'thanks' : 'error';
