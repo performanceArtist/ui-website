@@ -3,7 +3,6 @@
 $arrow-button-border: 0.1875rem;
 
 .arrow-button {
-  $root: &;
   @include set-arrow-size(3.75rem);
   @include set-arrow-color($white, $light-green);
   cursor: pointer;
@@ -13,23 +12,19 @@ $arrow-button-border: 0.1875rem;
     @include set-disabled-color(#f7f7f7, $light-grey);
   }
 
-  &_left {
-    #{$root} {
-      &__arrow {
-        margin-left: 14%;
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-      }
+  &_left & {
+    &__arrow {
+      margin-left: 14%;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
     }
   }
 
-  &_right {
-    #{$root} {
-      &__arrow {
-        margin-right: 12%;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-      }
+  &_right & {
+    &__arrow {
+      margin-right: 12%;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
     }
   }
 

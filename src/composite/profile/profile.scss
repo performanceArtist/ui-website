@@ -1,7 +1,6 @@
 @import '../../components/bubble/mixins';
 
 .profile {
-  $root: &;
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -10,19 +9,17 @@
     color: $white;
   }
 
-  &_grey {
-    #{$root} {
-      &__name {
-        color: $light-orange;
-      }
+  &_grey & {
+    &__name {
+      color: $light-orange;
+    }
 
-      &__icons i {
-        color: $dark-grey;
-      }
+    &__icons i {
+      color: $dark-grey;
+    }
 
-      &__icons .fa-twitter {
-        color: $light-orange;
-      }
+    &__icons .fa-twitter {
+      color: $light-orange;
     }
   }
 
