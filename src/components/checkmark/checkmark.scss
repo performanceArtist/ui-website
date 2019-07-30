@@ -2,7 +2,6 @@
   position: relative;
   display: inline-block;
   font-size: 0.875rem;
-  padding-left: 2.1875rem;
   height: 1.75rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -13,6 +12,10 @@
   &__input {
     display: none;
     cursor: pointer;
+  }
+
+  &__label-text {
+    padding-left: 2.1875rem;
   }
 
   &:hover &__input ~ &__icon {
