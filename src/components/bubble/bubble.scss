@@ -79,8 +79,7 @@ $bubble-color: $light-orange;
     @include set-bubble-color($light-green, left);
   }
 
-  &_label {
-    display: absolute;
+  &_with-label {
     @include set-bubble-color($light-orange, bottom);
     width: 2.25rem;
     height: 1.5rem;
@@ -101,31 +100,17 @@ $bubble-color: $light-orange;
     @include set-bubble-color($light-orange, right);
   }
 
-  %info-bubble {
-    display: inline-block;
-    visibility: hidden;
-    height: 2.1rem;
-    width: 8rem;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $white;
-    line-height: 2.1rem;
-    margin-left: 0.8rem;
-  }
-
-  &_error {
+  &_invalid {
     @extend %info-bubble;
     @include set-bubble-color($light-orange, left);
   }
 
-  &_okay {
+  &_valid {
     @extend %info-bubble;
     @include set-bubble-color($light-green, left);
   }
 
-  &_message {
+  &_with-message {
     @include set-bubble-color($white, top);
     padding: 1rem;
     text-align: left;

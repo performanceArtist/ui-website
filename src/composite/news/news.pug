@@ -12,7 +12,7 @@ mixin news({type = "default", image = '', title = 'Title', day = '1', month = 'A
           .news__event-title #{title}
           .news__text #{text}
           .news__button
-            +button({size:'auto', color:'green', text:'Add to calendar'}) 
+            +button({size:'responsive', color:'green', text:'Add to calendar'}) 
   else
     .news
       .news__image(style = 'background-image:url(' + image + ')')

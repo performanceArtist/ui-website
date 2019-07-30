@@ -31,35 +31,29 @@
     }
   }
 
-  &__title {
-    font-family: $font;
-    font-weight: bold;
-    word-spacing: 0.3125rem;
+  &__search-heading {
+    padding-left: 3.5rem;
+  }
 
-    &_search {
-      padding-left: 3.5rem;
-    }
+  &__toggle-heading {
+    padding-top: 0.8rem;
+  }
 
-    &_toggle {
-      padding-top: 0.8rem;
-    }
+  &__slider-heading {
+    margin-bottom: 0;
+  }
 
-    &_slider {
-      margin-bottom: 0;
-    }
+  &__news-heading {
+    margin-top: 5.5rem;
+    margin-bottom: 1.6rem;
+  }
 
-    &_news {
-      margin-top: 5.5rem;
-      margin-bottom: 1.6rem;
-    }
+  &__map-heading {
+    margin-bottom: 2.2rem;
+  }
 
-    &_map {
-      margin-bottom: 2.2rem;
-    }
-
-    &_video {
-      margin-top: 3.3rem;
-    }
+  &__video-heading {
+    margin-top: 3.3rem;
   }
 
   &__button-content {

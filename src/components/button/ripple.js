@@ -49,5 +49,5 @@ class Ripple {
 }
 
 document
-  .querySelectorAll('.button_ripple')
+  .querySelectorAll('.button_with-ripple')
   .forEach(element => new Ripple(element));

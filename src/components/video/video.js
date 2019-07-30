@@ -43,8 +43,8 @@ class Video {
     });
 
     this.video.addEventListener('ended', () => {
-      this.playButton.classList.remove('video__play-button_pause');
-      this.playButton.classList.add('video__play-button_play');
+      this.playButton.classList.remove('video__play-button_with-pause');
+      this.playButton.classList.add('video__play-button_with-play');
     });
 
     this.fullscreenButton.addEventListener('click', () => {
@@ -57,14 +57,14 @@ class Video {
   }
 
   play() {
-    if (this.playButton.classList.contains('video__play-button_play')) {
+    if (this.playButton.classList.contains('video__play-button_with-play')) {
       this.video.play();
-      this.playButton.classList.remove('video__play-button_play');
-      this.playButton.classList.add('video__play-button_pause');
+      this.playButton.classList.remove('video__play-button_with-play');
+      this.playButton.classList.add('video__play-button_with-pause');
     } else {
       this.video.pause();
-      this.playButton.classList.remove('video__play-button_pause');
-      this.playButton.classList.add('video__play-button_play');
+      this.playButton.classList.remove('video__play-button_with-pause');
+      this.playButton.classList.add('video__play-button_with-play');
     }
   }
 

@@ -14,7 +14,7 @@
     margin-bottom: 0.3125rem;
   }
 
-  &_auto {
+  &_responsive {
     @include set-button-size(100%, 1.5rem);
     height: 100%;
     font-size: 0.8rem;
@@ -38,7 +38,7 @@
     @include set-button-color($light-green, $white);
   }
 
-  &_ripple {
+  &_with-ripple {
     position: relative;
     overflow: hidden;
   }

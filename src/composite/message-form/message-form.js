@@ -30,7 +30,7 @@ class MessageForm {
 
   validate(current) {
     const valid = current.regex.test(current.input.value);
-    const newClass = valid ? 'bubble_okay' : 'bubble_error';
+    const newClass = valid ? 'bubble_valid' : 'bubble_invalid';
     const newText = valid ? 'thanks' : 'error';
 
     current.bubble.innerHTML = newText;

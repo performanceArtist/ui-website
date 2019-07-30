@@ -32,3 +32,17 @@
   display: inline-block;
   text-align: left;
 }
+
+%info-bubble {
+  display: inline-block;
+  visibility: hidden;
+  height: 2.1rem;
+  width: 8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $white;
+  line-height: 2.1rem;
+  margin-left: 0.8rem;
+}

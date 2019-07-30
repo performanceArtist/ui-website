@@ -12,8 +12,8 @@ mixin chat({name = 'John Doe', image = ''} = {})
       i(class = 'fa fa-comment')
       i(class = 'fa fa-camera')
     .chat__content
-      +bubble({direction:'top', modifier:'message'})
+      +bubble({direction:'top', modifier:'with-message'})
         | Hi there! I'm here to answer all your questions!
       textarea.chat__textarea(name = 'chat-reply', placeholder = 'What starts with a "W" and ends with a "T"?', rows = 3)
       .chat__button
-        +button({size:'auto', color:'green', text:'reply'})
+        +button({size:'responsive', color:'green', text:'reply'})

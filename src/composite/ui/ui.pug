@@ -11,6 +11,7 @@ include ../../components/pie-chart/pie-chart
 include ../../components/stage/stage
 include ../../components/search/search
 include ../../components/datepicker/datepicker
+include ../../components/standard-heading/standard-heading
 
 include ../profile/profile
 include ../message-form/message-form
@@ -41,7 +42,7 @@ mixin ui(args = {})
   article.ui
     .ui__wrapper
       .ui__content
-        h2.ui__title STANDARD BUTTONS
+        +standard-heading({text:'STANDARD BUTTONS'})
         .ui__button-content
           each row in buttons
             .ui__button-row
@@ -49,34 +50,36 @@ mixin ui(args = {})
                 .ui__button
                   +button(button)
         
-        h2.ui__title ARROW BUTTONS
+        +standard-heading({text:'ARROW BUTTONS'})
         .ui__arrow-button-content
           each arrowButton in arrowButtons
             +arrow-button(arrowButton)
       
-        h2.ui__title PERCENTAGES / PIE CHART
+        +standard-heading({text:'PERCENTAGES / PIE CHART'})
         .ui__percentage-content
           each chart in charts
             +chart(chart)
           +pie-chart(pieChart)
       
-        h2.ui__title.ui__title_slider SLIDERS
+        .ui__slider-heading 
+          +standard-heading({text:'SLIDERS'})
         .ui__slider-content
           .ui__slider
             +slider(slider)
           .ui__steps-slider  
             +steps-slider(stepsSlider)
       
-        h2.ui__title STAGES
+        +standard-heading({text:'STAGES'})
         .ui__stage-content
           +stage
       
-        h2.ui__title FORM ELEMENTS
+        +standard-heading({text:'FORM ELEMENTS'})
         .ui__row
           .ui__column
             .ui__message-form
               +message-form
-            h2.ui__title.ui__title_search SEARCH / DROP DOWN
+            .ui__search-heading 
+              +standard-heading({text:'SEARCH / DROP DOWN'})
             .ui__search-content
               .ui__search
                 +search
@@ -85,25 +88,27 @@ mixin ui(args = {})
               .ui__search
                 +dropdown(dropdown)
           .ui__column
-            h2.ui__title.ui__title_toggle TOGGLES
+            .ui__toggle-heading 
+              +standard-heading({text:'TOGGLES'})
             .ui__toggle-content
               each toggle in toggles
                 .ui__toggle
                   +toggle(toggle)
-            h2.ui__title TICK BOXES
+            +standard-heading({text:'TICK BOXES'})
             .ui__checkmark-content
               each checkmark in checkmarks
                 .ui__checkmark
                   +checkmark(checkmark)
               
-            h2.ui__title USER PROFILE
+            +standard-heading({text:'USER PROFILE'})
             .ui__profile-container
               each profile in profiles
                 .ui__profile
                   +profile(profile)
       
 
-        h2.ui__title.ui__title_news NEWS & EVENTS
+        .ui__news-heading 
+          +standard-heading({text:'NEWS & EVENTS'})
         .ui__news-content
           .ui__news-item
             +news(news)
@@ -111,19 +116,21 @@ mixin ui(args = {})
           .ui__news-item
             +news(eventNews)
       
-        h2.ui__title.ui__title_map LOCATION
+        .ui__map-heading 
+          +standard-heading({text:'LOCATION'})
         .ui__map-content
           +map(map)
         .ui__row
           .ui__column
-            h2.ui__title CALENDAR
+            +standard-heading({text:'CALENDAR'})
             .ui__calendar
               +datepicker
           .ui__column
-            h2.ui__title MESSAGING
+            +standard-heading({text:'MESSAGING'})
             .ui__chat
               +chat(chat)
-        h2.ui__title.ui__title_video VIDEO
+        .ui__video-heading 
+          +standard-heading({text:'VIDEO'})
         .ui__video
           +video(video)
           

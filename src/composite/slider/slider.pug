@@ -3,5 +3,6 @@ include ../../components/bubble/bubble
 mixin slider({name = 'slider', withSteps = false, value = 0, min = 0, max = 100} = {})
   .slider
     .slider__wrapper
-      +bubble({direction:'bottom', modifier:'label'})
+      .slider__bubble
+        +bubble({direction:'bottom', modifier:'with-label'})
       input.slider__input(name = name, type = "range", value = value, min = min, max = max)
