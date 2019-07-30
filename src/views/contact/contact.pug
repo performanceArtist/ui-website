@@ -6,18 +6,19 @@ block head
   title Contact
 
 block content
-  +contact({profiles: [
-            {
-              type:'grey',
-              selected: true,
-              name:'Billy Bob', 
-              occupation:'Official mascot', 
-              image:'images/billybob.jpg'
-            }, 
-            {
-              type:'green',
-              name:'Ricardo Milos', 
-              occupation:'Pizza boy', 
-              image:'images/ricardo.jpg'
-            }
-          ]})
+  main.content
+    +contact({profiles: [
+              {
+                type:'grey',
+                selected: true,
+                name:'Billy Bob', 
+                occupation:'Official mascot', 
+                image:'images/billybob.jpg'
+              }, 
+              {
+                type:'green',
+                name:'Ricardo Milos', 
+                occupation:'Pizza boy', 
+                image:'images/ricardo.jpg'
+              }
+            ]})

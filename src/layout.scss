@@ -19,7 +19,12 @@ html {
 }
 
 .content {
-  margin: auto;
   width: 95%;
+  margin: auto;
   max-width: 80rem;
+
+  &_center {
+    display: flex;
+    justify-content: center;
+  }
 }

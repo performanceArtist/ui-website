@@ -1,0 +1,6 @@
+include ../../composite/pizza/pizza
+
+mixin gallery({pizza = []} = {})
+  .gallery
+    .gallery__pizza
+      +pizza(pizza)

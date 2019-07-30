@@ -6,77 +6,78 @@ block head
   title UI
 
 block content
-  +ui({
-    buttons: [
-      [
-        {size:'small', color:'green', text:'button'}, 
-        {size:'big', color:'green', text:'button'}, 
-        {size:'big', color:'orange', text:'button'},
-        {size:'small', color:'orange', text:'button'}
+  main.content
+    +ui({
+      buttons: [
+        [
+          {size:'small', color:'green', text:'button'}, 
+          {size:'big', color:'green', text:'button'}, 
+          {size:'big', color:'orange', text:'button'},
+          {size:'small', color:'orange', text:'button'}
+        ],
+        [
+          {size:'small', color:'green', text:'button'},
+          {size:'big', color:'green', text:'button'},
+          {size:'big', color:'orange', text:'button'},
+          {size:'small', color:'orange', text:'button'}
+        ],
+        [
+          {size:'small', color:'green', text:'button'},
+          {size:'big', color:'green', text:'button'},
+          {size:'big', color:'orange', text:'button'},
+          {size:'small', color:'orange', text:'button'}
+        ]
       ],
-      [
-        {size:'small', color:'green', text:'button'},
-        {size:'big', color:'green', text:'button'},
-        {size:'big', color:'orange', text:'button'},
-        {size:'small', color:'orange', text:'button'}
+      arrowButtons: [
+        {direction:'left', disabled:true},
+        {direction: 'right'}
       ],
-      [
-        {size:'small', color:'green', text:'button'},
-        {size:'big', color:'green', text:'button'},
-        {size:'big', color:'orange', text:'button'},
-        {size:'small', color:'orange', text:'button'}
-      ]
-    ],
-    arrowButtons: [
-      {direction:'left', disabled:true},
-      {direction: 'right'}
-    ],
-    charts: [{value: 0}, {value: 0.38}, {value: 0.62}, {value: 0.89}],
-    pieChart: {
-      sectors: [['#747474', 0.3], ['#E75637', 0.5], ['#4EB7A8', 0.8],['#E6E6E6', 1.0]]
-    },
-    slider: {value: 40},
-    stepsSlider: {value: 75, min: 0, max: 100, step: 25},
-    dropdown: {options:['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']},
-    toggles: [
-      {name:'test', value:'test'},
-      {name:'test', checked:true, value:'test'}
-    ],
-    checkmarks: [
-      {name:'test', type:'radio', value:'ok', checked:true},
-      {name:'test', type:'radio', value:'not ok'}
-    ],
-    profiles: [
-      {
-        type:'grey',
-        name:'Ricardo Milos', 
-        occupation:'FleXx CEO', 
-        image:'images/ricardo.jpg'
+      charts: [{value: 0}, {value: 0.38}, {value: 0.62}, {value: 0.89}],
+      pieChart: {
+        sectors: [['#747474', 0.3], ['#E75637', 0.5], ['#4EB7A8', 0.8],['#E6E6E6', 1.0]]
       },
-      {
-        type:'green',
-        name:'Orang', 
-        occupation:'Health Inspector', 
-        image:'images/orang.jpg'
-      }
-    ],
-    news: {
-      image:'images/animal.jpg', 
-      title:'Beta Uprising', 
-      day:'1',
-      month: 'April',
-      year: '2019',
-      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
-    },
-    eventNews: {
-      type: 'event',
-      image:'images/bear.jpg', 
-      title:'Meme funeral', 
-      day:'24', 
-      month:'Feb',
-      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    },
-    map: {title:'Meet us!', street:'1259 California st', city:'san francisco, ca'},
-    chat: {name:'Ricardo Milos', image:'images/ricardo.jpg'},
-    video: {src:'videos/bunny.mp4'}
-  })
+      slider: {value: 40},
+      stepsSlider: {value: 75, min: 0, max: 100, step: 25},
+      dropdown: {options:['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']},
+      toggles: [
+        {name:'test', value:'test'},
+        {name:'test', checked:true, value:'test'}
+      ],
+      checkmarks: [
+        {name:'test', type:'radio', value:'ok', checked:true},
+        {name:'test', type:'radio', value:'not ok'}
+      ],
+      profiles: [
+        {
+          type:'grey',
+          name:'Ricardo Milos', 
+          occupation:'FleXx CEO', 
+          image:'images/ricardo.jpg'
+        },
+        {
+          type:'green',
+          name:'Orang', 
+          occupation:'Health Inspector', 
+          image:'images/orang.jpg'
+        }
+      ],
+      news: {
+        image:'images/animal.jpg', 
+        title:'Beta Uprising', 
+        day:'1',
+        month: 'April',
+        year: '2019',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+      },
+      eventNews: {
+        type: 'event',
+        image:'images/bear.jpg', 
+        title:'Meme funeral', 
+        day:'24', 
+        month:'Feb',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      },
+      map: {title:'Meet us!', street:'1259 California st', city:'san francisco, ca'},
+      chat: {name:'Ricardo Milos', image:'images/ricardo.jpg'},
+      video: {src:'videos/bunny.mp4'}
+    })

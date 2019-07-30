@@ -1,5 +1,4 @@
 .pizza {
-  margin: auto;
   max-width: 40.625rem;
   text-align: center;
 
@@ -28,6 +27,7 @@
   &__rating {
     padding: 1rem;
     padding-top: 0;
+    margin-left: 1rem;
     font-size: 1.5rem;
   }
 

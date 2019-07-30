@@ -9,7 +9,10 @@
   border: solid 0.125rem;
   border-left: solid 0.1875rem;
   text-transform: uppercase;
-  margin-bottom: 0.3125rem;
+
+  &__wrapper {
+    margin-bottom: 0.3125rem;
+  }
 
   &_auto {
     @include set-button-size(100%, 1.5rem);

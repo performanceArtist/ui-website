@@ -6,28 +6,30 @@ block head
   title Homepage
 
 block content
-  +index({
-    news: {
-      image:'images/animal.jpg', 
-      title:'Cheesy picket', 
-      date:'1 April 2019', 
-      text:'Angry mob demands Cheesy Nuggets to be back!'
-    },
-    eventNews: {
-      type: 'event',
-      image:'images/bear.jpg', 
-      title:'Meet our mascot!', 
-      day:'22', 
-      month:'April',
-      text:'Billy Bob will make his appearance on this very date! '
-    },
-    location: {
-      id:'location', 
-      title:'Meet us!', 
-      street:'1259 California st', 
-      town:'san francisco, ca'
-    },
-    video: {
-      src:'videos/review.mp4'
-    }
-  })
+  main.content.content_center
+    +index({
+      news: {
+        image:'images/animal.jpg', 
+        title:'Cheesy picket', 
+        date:'1 April 2019', 
+        text:'Angry mob demands Cheesy Nuggets to be back!'
+      },
+      eventNews: {
+        type: 'event',
+        image:'images/bear.jpg', 
+        title:'Meet our mascot!', 
+        day:'22', 
+        month:'April',
+        text:'Billy Bob will make his appearance on this very date! '
+      },
+      location: {
+        id:'location', 
+        title:'Meet us!', 
+        street:'1259 California st', 
+        town:'san francisco, ca'
+      },
+      video: {
+        src:'videos/review.mp4'
+      }
+    })
+  

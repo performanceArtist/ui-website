@@ -1,41 +1,42 @@
 extends ../../layout
 
-include ../../composite/pizza/pizza
+include ../../composite/gallery/gallery
 
 block head
   title Gallery
 
 block content
-  +pizza([
+  main.content.content_center
+    +gallery({pizza: [
+      {
+      name: 'pepperoni',
+      image: 'images/pepperoni.jpg',
+      rating: 0.82,
+      ingredients: [
+        ['Tomatoes', 0.2],
+        ['Mozarella', 0.5],
+        ['Pepperoni', 0.8]
+      ]
+    },
     {
-    name: 'pepperoni',
-    image: 'images/pepperoni.jpg',
-    rating: 0.82,
-    ingredients: [
-      ['Tomatoes', 0.2],
-      ['Mozarella', 0.5],
-      ['Pepperoni', 0.8]
-    ]
-  },
-  {
-    name: 'cheesy crust',
-    image: 'images/cheesy_crust.jpg',
-    rating: 0.95,
-    ingredients: [
-      ['Tomatoes', 0.1],
-      ['Mozarella', 0.7],
-      ['Pepperoni', 0.9]
-    ]
-  },
-  {
-    name: 'vegetarian',
-    image: 'images/vegetarian.jpg',
-    rating: 0.37,
-    ingredients: [
-      ['Tomatoes', 0.2],
-      ['Mozarella', 0.3],
-      ['GreenStuff', 0.8],
-      ['Onions', 0.9]
-    ]
-  }
-  ])
+      name: 'cheesy crust',
+      image: 'images/cheesy_crust.jpg',
+      rating: 0.95,
+      ingredients: [
+        ['Tomatoes', 0.1],
+        ['Mozarella', 0.7],
+        ['Pepperoni', 0.9]
+      ]
+    },
+    {
+      name: 'vegetarian',
+      image: 'images/vegetarian.jpg',
+      rating: 0.37,
+      ingredients: [
+        ['Tomatoes', 0.2],
+        ['Mozarella', 0.3],
+        ['GreenStuff', 0.8],
+        ['Onions', 0.9]
+      ]
+    }
+    ]})
