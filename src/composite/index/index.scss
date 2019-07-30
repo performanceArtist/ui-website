@@ -53,10 +53,8 @@
   &__link:hover {
     color: #008500;
   }
-}
 
-@media screen and (max-width: 47.5rem) {
-  .index {
+  @media screen and (max-width: 47.5rem) {
     width: 100%;
 
     &__news-container {

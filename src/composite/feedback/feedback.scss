@@ -16,10 +16,8 @@
     max-width: 40%;
     text-align: right;
   }
-}
 
-@media screen and (max-width: 50rem) {
-  .feedback {
+  @media screen and (max-width: 50rem) {
     &__title {
       text-align: center;
     }

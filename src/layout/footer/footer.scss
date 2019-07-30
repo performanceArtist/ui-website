@@ -16,10 +16,8 @@
   &__link:hover {
     color: #008500;
   }
-}
 
-@media screen and (max-width: 31.25rem) {
-  .footer {
+  @media screen and (max-width: 31.25rem) {
     font-size: 0.75rem;
   }
 }

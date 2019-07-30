@@ -50,10 +50,8 @@
     margin-right: 5%;
     text-align: left;
   }
-}
 
-@media screen and (max-width: 31.25rem) {
-  .pizza {
+  @media screen and (max-width: 31.25rem) {
     &__info {
       font-size: 1rem;
     }

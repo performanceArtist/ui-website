@@ -1,9 +1,7 @@
 .pie-chart {
   display: inline-block;
-}
 
-@media screen and (max-width: 31.25rem) {
-  .pie-chart {
+  @media screen and (max-width: 31.25rem) {
     canvas {
       width: 3.75rem;
       height: 3.75rem;

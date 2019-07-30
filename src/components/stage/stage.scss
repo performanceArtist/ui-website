@@ -55,10 +55,8 @@
       background-color: $light-green;
     }
   }
-}
 
-@media screen and (max-width: 51.25rem) {
-  .stage {
+  @media screen and (max-width: 51.25rem) {
     .progressbar {
       li {
         font-size: 0.75rem;

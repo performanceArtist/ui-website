@@ -14,10 +14,8 @@
   &__profile {
     margin: 0.5rem;
   }
-}
 
-@media screen and (max-width: 50rem) {
-  .contact {
+  @media screen and (max-width: 50rem) {
     &__content {
       flex-direction: column;
     }

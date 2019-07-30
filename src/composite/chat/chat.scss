@@ -73,10 +73,8 @@
   .fa-camera {
     float: right;
   }
-}
 
-@media screen and (max-width: 50rem) {
-  .chat {
+  @media screen and (max-width: 50rem) {
     &__textarea {
       font-size: 1rem;
     }

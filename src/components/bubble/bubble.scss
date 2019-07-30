@@ -13,129 +13,122 @@ $bubble-color: $light-orange;
     height: 0;
     border: $pointer-size solid transparent;
   }
-}
 
-.bubble_top {
-  margin-top: $pointer-size;
+  &_top {
+    margin-top: $pointer-size;
 
-  &:after {
-    top: 0;
-    left: 50%;
-    border-bottom-color: $bubble-color;
-    border-top: 0;
-    margin-left: -$pointer-size;
-    margin-top: -$pointer-size;
+    &:after {
+      top: 0;
+      left: 50%;
+      border-bottom-color: $bubble-color;
+      border-top: 0;
+      margin-left: -$pointer-size;
+      margin-top: -$pointer-size;
+    }
   }
-}
 
-.bubble_bottom {
-  margin-bottom: $pointer-size;
+  &_bottom {
+    margin-bottom: $pointer-size;
 
-  &:after {
-    bottom: 0;
-    left: 50%;
-    border-top-color: $bubble-color;
-    border-bottom: 0;
-    margin-left: -$pointer-size;
-    margin-bottom: -$pointer-size;
+    &:after {
+      bottom: 0;
+      left: 50%;
+      border-top-color: $bubble-color;
+      border-bottom: 0;
+      margin-left: -$pointer-size;
+      margin-bottom: -$pointer-size;
+    }
   }
-}
 
-.bubble_left {
-  margin-left: $pointer-size;
+  &_left {
+    margin-left: $pointer-size;
 
-  &:after {
-    left: 0;
-    top: 50%;
-    border-right-color: $bubble-color;
-    border-left: 0;
-    margin-top: -$pointer-size;
-    margin-left: -$pointer-size;
+    &:after {
+      left: 0;
+      top: 50%;
+      border-right-color: $bubble-color;
+      border-left: 0;
+      margin-top: -$pointer-size;
+      margin-left: -$pointer-size;
+    }
   }
-}
 
-.bubble_right {
-  margin-right: $pointer-size;
+  &_right {
+    margin-right: $pointer-size;
 
-  &:after {
-    right: 0;
-    top: 50%;
-    border-left-color: $bubble-color;
-    border-right: 0;
-    margin-top: -$pointer-size;
-    margin-right: -$pointer-size;
+    &:after {
+      right: 0;
+      top: 50%;
+      border-left-color: $bubble-color;
+      border-right: 0;
+      margin-top: -$pointer-size;
+      margin-right: -$pointer-size;
+    }
   }
-}
 
-.bubble_default {
-  background: $bubble-color;
-  width: 100%;
-}
+  &_default {
+    background: $bubble-color;
+    width: 100%;
+  }
 
-.bubble_grey {
-  @include set-bubble-color($light-grey, left);
-}
+  &_grey {
+    @include set-bubble-color($light-grey, left);
+  }
 
-.bubble_green {
-  @include set-bubble-color($light-green, left);
-}
+  &_green {
+    @include set-bubble-color($light-green, left);
+  }
 
-.bubble_label {
-  display: absolute;
-  @include set-bubble-color($light-orange, bottom);
-  width: 2.25rem;
-  height: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  padding: 0.12rem;
-  color: $white;
-  font-weight: bold;
-}
+  &_label {
+    display: absolute;
+    @include set-bubble-color($light-orange, bottom);
+    width: 2.25rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    padding: 0.12rem;
+    color: $white;
+    font-weight: bold;
+  }
 
-%comment-bubble {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  text-align: left;
-}
+  &_positive-comment {
+    @extend %comment-bubble;
+    @include set-bubble-color($light-green, right);
+  }
 
-.bubble_positive-comment {
-  @extend %comment-bubble;
-  @include set-bubble-color($light-green, right);
-}
+  &_negative-comment {
+    @extend %comment-bubble;
+    @include set-bubble-color($light-orange, right);
+  }
 
-.bubble_negative-comment {
-  @extend %comment-bubble;
-  @include set-bubble-color($light-orange, right);
-}
+  %info-bubble {
+    display: inline-block;
+    visibility: hidden;
+    height: 2.1rem;
+    width: 8rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 2.1rem;
+    margin-left: 0.8rem;
+  }
 
-%info-bubble {
-  display: inline-block;
-  visibility: hidden;
-  height: 2.1rem;
-  width: 8rem;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $white;
-  line-height: 2.1rem;
-  margin-left: 0.8rem;
-}
+  &_error {
+    @extend %info-bubble;
+    @include set-bubble-color($light-orange, left);
+  }
 
-.bubble_error {
-  @extend %info-bubble;
-  @include set-bubble-color($light-orange, left);
-}
+  &_okay {
+    @extend %info-bubble;
+    @include set-bubble-color($light-green, left);
+  }
 
-.bubble_okay {
-  @extend %info-bubble;
-  @include set-bubble-color($light-green, left);
-}
-
-.bubble_message {
-  @include set-bubble-color($white, top);
-  padding: 1rem;
-  text-align: left;
-  margin-bottom: 9%;
+  &_message {
+    @include set-bubble-color($white, top);
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 9%;
+  }
 }

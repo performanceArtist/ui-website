@@ -63,10 +63,8 @@
     background-image: url('images/fullscreen.png');
     margin-left: 1%;
   }
-}
 
-@media screen and (max-width: 46.875rem) {
-  .video {
+  @media screen and (max-width: 46.875rem) {
     &__play,
     &__pause,
     &__fullscreen {

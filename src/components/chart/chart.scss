@@ -12,17 +12,15 @@
     width: 100%;
     margin: 0;
   }
-}
 
-@media screen and (max-width: 31.25rem) {
-  .chart__text {
-    font-size: 1.5rem;
-  }
-
-  .chart {
+  @media screen and (max-width: 31.25rem) {
     canvas {
       width: 3.75rem;
       height: 3.75rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
     }
   }
 }

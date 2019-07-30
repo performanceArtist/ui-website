@@ -41,10 +41,8 @@ $dropdown-width: 22.5rem;
       display: none;
     }
   }
-}
 
-@media screen and (max-width: 850px) {
-  .dropdown {
+  @media screen and (max-width: 850px) {
     width: 12rem;
     &__select {
       width: 12rem;

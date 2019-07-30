@@ -1,9 +1,30 @@
 @import '../../components/bubble/mixins';
 
 .profile {
+  $root: &;
   display: inline-block;
   text-align: center;
   cursor: pointer;
+
+  &_green {
+    color: $white;
+  }
+
+  &_grey {
+    #{$root} {
+      &__name {
+        color: $light-orange;
+      }
+
+      &__icons i {
+        color: $dark-grey;
+      }
+
+      &__icons .fa-twitter {
+        color: $light-orange;
+      }
+    }
+  }
 
   &__wrapper {
     display: inline-flex;
@@ -47,30 +68,8 @@
     background: darken($light-yellow, 7%);
     border-radius: 0.4rem;
   }
-}
 
-.profile_grey {
-  .profile {
-    &__name {
-      color: $light-orange;
-    }
-
-    &__icons i {
-      color: $dark-grey;
-    }
-
-    &__icons .fa-twitter {
-      color: $light-orange;
-    }
-  }
-}
-
-.profile_green {
-  color: $white;
-}
-
-@media screen and (max-width: 25rem) {
-  .profile {
+  @media screen and (max-width: 25rem) {
     &__name {
       font-size: 1rem;
     }

@@ -133,10 +133,8 @@
   .ui-datepicker-title {
     line-height: 2.5rem;
   }
-}
 
-@media screen and (max-width: 42.5rem) {
-  .datepicker {
+  @media screen and (max-width: 42.5rem) {
     font-size: 1rem;
   }
 }
