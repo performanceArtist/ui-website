@@ -9,29 +9,15 @@
   }
 
   &__rating {
-    color: #800000;
     margin-top: 1rem;
     text-align: right;
     font-weight: bold;
-  }
 
-  %comment-bubble {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    text-align: left;
-  }
+    &_low {
+      color: #800000;
+    }
 
-  .bubble_comment-orange {
-    @extend %comment-bubble;
-    @include set-bubble-color($light-orange, right);
-  }
-
-  .bubble_comment-green {
-    @extend %comment-bubble;
-    @include set-bubble-color($light-green, right);
-
-    .comment__rating {
+    &_high {
       color: $medium-green;
     }
   }

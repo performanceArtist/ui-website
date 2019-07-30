@@ -7,19 +7,21 @@ mixin pizza(items = [])
   -   name = 'Pizza', 
   -   image = 'images/pepperoni.jpg', 
   -   rating = 0.95, 
-  -   ingredients = [['Tomatoes', 0.2], ['Mozarella', 0.5], ['Pepperoni', 0.8]]} = {}
-  - ) => ({name, image, rating, ingredients}))
+  -   ingredients = [['Tomatoes', 0.2], ['Mozarella', 0.5], ['Pepperoni', 0.8]]
+  - } = {}) => ({name, image, rating, ingredients}))
 
   article.pizza(data-items = newItems)
     header.pizza__name
     section.pizza__info
-      img(alt='pizza').pizza__image
+      img(alt = 'pizza').pizza__image
       .pizza__rating Rating
         .pizza__circle
           +chart
         .pizza__arrows
-          +arrow-button({direction:'left', disabled:true})
-          +arrow-button({direction:'right'})
+          .pizza__arrow
+            +arrow-button({direction:'left', disabled:true})
+          .pizza__arrow
+            +arrow-button({direction:'right'})
     section.pizza__ingredients
       .pizza__list 
       +pie-chart

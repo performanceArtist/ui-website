@@ -11,14 +11,14 @@
     padding: 2.5%;
   }
 
-  .bubble {
+  &__bubble {
     width: 14rem;
     margin-left: 1rem;
   }
 
   &__name {
     font-size: 1.5rem;
-    margin-top: 0.7rem;
+    padding-top: 0.7rem;
   }
 
   &__occupation {
@@ -50,10 +50,6 @@
 }
 
 .profile_grey {
-  .bubble {
-    @include set-bubble-color($light-grey, left);
-  }
-
   .profile {
     &__name {
       color: $light-orange;
@@ -71,9 +67,6 @@
 
 .profile_green {
   color: $white;
-  .bubble {
-    @include set-bubble-color($light-green, left);
-  }
 }
 
 @media screen and (max-width: 25rem) {
@@ -90,7 +83,7 @@
       font-size: 1.4rem;
     }
 
-    .bubble {
+    &__bubble {
       width: 10rem;
     }
   }

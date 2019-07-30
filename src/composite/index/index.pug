@@ -1,7 +1,7 @@
 include ../news/news
 include ../../components/video/video
 include ../../components/map/map
-include ../../components/standard-button/standard-button
+include ../../components/button/button
 include ../../components/datepicker/datepicker
 
 mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
@@ -22,11 +22,11 @@ mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
         .index__date-description
           | The first step in any flexbox layout is to create a flex container. To do that, set the display property to flex. In Safari, you will still have to use the -webkit prefix.
         .index__order-button
-          a(href='order.html')
-            +standard-button({size:'big', color:'orange', text:'order now!'})
+          a(href = 'order.html')
+            +button({size:'big', color:'orange', text:'order now!'})
     h2.standard-heading  
       | Check out the 
-      a.index__link(href='https://www.youtube.com/watch?v=8RamCgvJKKE', target='_blank', rel='noopener noreferrer') review
+      a.index__link(href = 'https://www.youtube.com/watch?v = 8RamCgvJKKE', target = '_blank', rel = 'noopener noreferrer') review
       |  of our latest offer!
     .index__video
       +video(video)

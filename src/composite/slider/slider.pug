@@ -1,9 +1,6 @@
 include ../../components/bubble/bubble
  
-mixin slider({name='slider', value=0, min=0, max=100} = {})
+mixin slider({name = 'slider', withSteps = false, value = 0, min = 0, max = 100} = {})
   .slider
-    +bubble({direction:'bottom', modifier:'slider'})
-    input.slider__input(name=name, type="range", value=value, min=min, max=max)
-  
-mixin steps-slider({value=0, min=50, max=200, step=25, orientation='horizontal', range='min', animate=true} = {})
-  .steps-slider(data-value=value, data-min=min, data-max=max, data-step=step, data-orientation=orientation, data-range=range, data-animate=animate)
+    +bubble({direction:'bottom', modifier:'label'})
+    input.slider__input(name = name, type = "range", value = value, min = min, max = max)

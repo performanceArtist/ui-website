@@ -11,6 +11,12 @@
   text-transform: uppercase;
   margin-bottom: 0.3125rem;
 
+  &_auto {
+    @include set-button-size(100%, 1.5rem);
+    height: 100%;
+    font-size: 0.9rem;
+  }
+
   &_big {
     @include set-button-size(9.125rem, 2.5rem);
     font-size: 0.9rem;

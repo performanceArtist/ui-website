@@ -2,6 +2,7 @@ include ../../components/stage/stage
 include ../../components/dropdown/dropdown
 include ../../components/checkmark/checkmark
 include ../../components/toggle/toggle
+include ../../components/button/button
 
 mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, stage, crustOptions = []} = {})
   .order
@@ -10,7 +11,8 @@ mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, sta
       +stage(stage)
   
     form.order__form
-      +dropdown(menu)
+      .order__dropdown
+        +dropdown(menu)
     
       .order__options
         .order__sauce #{name}
@@ -21,8 +23,8 @@ mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, sta
             +checkmark(option)
   
       .order__address
-        input.order__input(name='address', placeholder='Address')
+        input.order__input(name = 'address', placeholder = 'Address')
         .status__bubble
   
       .order__submit
-        input(type='submit', value='SUBMIT', class='button button_small button_green')
+        +button({type: 'submit', text: 'SUBMIT', size: "small", color: "green"})

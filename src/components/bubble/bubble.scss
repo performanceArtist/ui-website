@@ -69,6 +69,44 @@ $bubble-color: $light-orange;
 
 .bubble_default {
   background: $bubble-color;
+  width: 100%;
+}
+
+.bubble_grey {
+  @include set-bubble-color($light-grey, left);
+}
+
+.bubble_green {
+  @include set-bubble-color($light-green, left);
+}
+
+.bubble_label {
+  display: absolute;
+  @include set-bubble-color($light-orange, bottom);
+  width: 2.25rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0.12rem;
+  color: $white;
+  font-weight: bold;
+}
+
+%comment-bubble {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.bubble_positive-comment {
+  @extend %comment-bubble;
+  @include set-bubble-color($light-green, right);
+}
+
+.bubble_negative-comment {
+  @extend %comment-bubble;
+  @include set-bubble-color($light-orange, right);
 }
 
 %info-bubble {

@@ -1,8 +1,8 @@
-include ../../components/standard-button/standard-button
+include ../../components/button/button
 
 mixin news({image, title = 'Title', date = '1 April', text = 'Text here'} = {})
   .news
-    .news__image(style='background-image:url(' + image + ')')
+    .news__image(style = 'background-image:url(' + image + ')')
     .news__content
       .news__content-wrapper
         .news__title #{title}
@@ -11,7 +11,7 @@ mixin news({image, title = 'Title', date = '1 April', text = 'Text here'} = {})
 
 mixin event-news({image, title = 'Title', day = '1', month = 'April', text = 'Text here'} = {})
   .event-news
-    .news__image(style='background-image:url(' + image + ')')
+    .news__image(style = 'background-image:url(' + image + ')')
     .news__content
       .news__content-wrapper
         .news__date 
@@ -20,4 +20,4 @@ mixin event-news({image, title = 'Title', day = '1', month = 'April', text = 'Te
         .news__title #{title}
         .news__text #{text}
         .news__button
-          +standard-button({size:'big', color:'green', text:'Add to calendar'}) 
+          +button({size:'big', color:'green', text:'Add to calendar'}) 

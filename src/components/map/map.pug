@@ -1,5 +1,5 @@
-mixin map({title = 'Meet us!', street = '1259 California st', city = 'san francisco, ca', center=[55.751574, 37.573856]} = {})
-  .map(data-center=center)
+mixin map({title = 'Meet us!', street = '1259 California st', city = 'san francisco, ca', center = [55.751574, 37.573856]} = {})
+  .map(data-center = center)
     .map__info     
       .map__info-text
         .map__title #{title}
@@ -8,6 +8,6 @@ mixin map({title = 'Meet us!', street = '1259 California st', city = 'san franci
           br
           | #{city}
       .map__icon-container
-        img.map__icon(src='images/crosshair.png')
-        img.map__icon(src='images/location.png')
+        img.map__icon(src = 'images/crosshair.png')
+        img.map__icon(src = 'images/location.png')
 

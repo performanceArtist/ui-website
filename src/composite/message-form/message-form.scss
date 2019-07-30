@@ -33,14 +33,10 @@
     resize: none;
   }
 
-  input[type='submit'] {
+  &__submit {
     display: block;
     margin-left: auto;
     margin-right: 0;
-  }
-
-  input[type='text'] {
-    width: 66%;
   }
 
   &__name,

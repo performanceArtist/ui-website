@@ -11,29 +11,27 @@
   }
 
   &__sauce {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1rem;
+    width: 11.5rem;
   }
 
-  .toggle {
-    margin-left: 1rem;
-  }
-
-  .checkmark {
-    margin-right: 1rem;
-  }
-
-  &__address {
-    input {
-      max-width: 11.25rem;
-    }
+  &__crust {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11.5rem;
   }
 
   &__input {
-    background-color: #d2d2d2;
+    font-size: 0.9rem;
     border: none;
     padding: 0.4375rem;
     padding-left: 0.9375rem;
-    font-size: 0.9rem;
+    background-color: #d2d2d2;
+    max-width: 11.25rem;
   }
 
   &__options,
@@ -43,14 +41,16 @@
   }
 }
 
-@media screen and (max-width: 51.25rem) {
+@media screen and (max-width: 55rem) {
   .order {
     &__form {
       margin-top: 2%;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .dropdown,
+    &__dropdown,
     &__options,
     &__address,
     &__submit {

@@ -2,7 +2,7 @@ include ../../components/bubble/bubble
 include ../../components/map/map
 include ../../components/video/video
 include ../../components/dropdown/dropdown
-include ../../components/standard-button/standard-button
+include ../../components/button/button
 include ../../components/arrow-button/arrow-button
 include ../../components/checkmark/checkmark
 include ../../components/toggle/toggle
@@ -17,6 +17,7 @@ include ../message-form/message-form
 include ../news/news
 include ../chat/chat
 include ../slider/slider
+include ../steps-slider/steps-slider
 include ../comment/comment
 
 mixin ui(args = {})
@@ -34,47 +35,48 @@ mixin ui(args = {})
   -   news = {}, 
   -   eventNews = {}, 
   -   map = {}, 
-  -   chat={}, 
-  -   video={}
+  -   chat = {}, 
+  -   video = {}
   - } = args
   article.ui
     .ui__wrapper
       .ui__content
-        h2.standard-heading STANDARD BUTTONS
+        h2.ui__title STANDARD BUTTONS
         .ui__button-content
           each row in buttons
             .ui__button-row
               each button in row
-                +standard-button(button)
+                .ui__button
+                  +button(button)
         
-        h2.standard-heading ARROW BUTTONS
+        h2.ui__title ARROW BUTTONS
         .ui__arrow-button-content
           each arrowButton in arrowButtons
             +arrow-button(arrowButton)
       
-        h2.standard-heading PERCENTAGES / PIE CHART
+        h2.ui__title PERCENTAGES / PIE CHART
         .ui__percentage-content
           each chart in charts
             +chart(chart)
           +pie-chart(pieChart)
       
-        h2.standard-heading.ui__slider-title SLIDERS
+        h2.ui__title.ui__title_slider SLIDERS
         .ui__slider-content
           .ui__slider
             +slider(slider)
           .ui__steps-slider  
             +steps-slider(stepsSlider)
       
-        h2.standard-heading STAGES
+        h2.ui__title STAGES
         .ui__stage-content
           +stage
       
-        h2.standard-heading FORM ELEMENTS
+        h2.ui__title FORM ELEMENTS
         .ui__row
           .ui__column
             .ui__message-form
               +message-form
-            h2.standard-heading.ui__search-title SEARCH / DROP DOWN
+            h2.ui__title.ui__title_search SEARCH / DROP DOWN
             .ui__search-content
               .ui__search
                 +search
@@ -83,24 +85,25 @@ mixin ui(args = {})
               .ui__search
                 +dropdown(dropdown)
           .ui__column
-            h2.standard-heading.ui__toggle-title TOGGLES
+            h2.ui__title.ui__title_toggle TOGGLES
             .ui__toggle-content
               each toggle in toggles
                 .ui__toggle
                   +toggle(toggle)
-            h2.standard-heading TICK BOXES
+            h2.ui__title TICK BOXES
             .ui__checkmark-content
               each checkmark in checkmarks
                 .ui__checkmark
                   +checkmark(checkmark)
               
-            h2.standard-heading USER PROFILE
+            h2.ui__title USER PROFILE
             .ui__profile-container
               each profile in profiles
                 .ui__profile
                   +profile(profile)
       
-        h2.standard-heading.ui__news-title NEWS & EVENTS
+
+        h2.ui__title.ui__title_news NEWS & EVENTS
         .ui__news-content
           .ui__news-item
             +news(news)
@@ -108,19 +111,19 @@ mixin ui(args = {})
           .ui__news-item
             +event-news(eventNews)
       
-        h2.standard-heading.ui__map-title LOCATION
+        h2.ui__title.ui__title_map LOCATION
         .ui__map-content
           +map(map)
         .ui__row
           .ui__column
-            h2.standard-heading CALENDAR
+            h2.ui__title CALENDAR
             .ui__calendar
               +datepicker
           .ui__column
-            h2.standard-heading MESSAGING
+            h2.ui__title MESSAGING
             .ui__chat
               +chat(chat)
-        h2.standard-heading.ui__video-title VIDEO
+        h2.ui__title.ui__title_video VIDEO
         .ui__video
           +video(video)
           

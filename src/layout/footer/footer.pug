@@ -3,6 +3,6 @@ mixin footer(links = [])
     .footer__wrapper
       each link, index in links
         - let {text = 'Link', href = 'blank.html'} = link
-        a.footer__link(href=href) #{text}
+        a.footer__link(href = href) #{text}
         if index !== links.length - 1
           | |

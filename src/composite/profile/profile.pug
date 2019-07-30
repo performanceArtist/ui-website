@@ -1,16 +1,17 @@
 include ../../components/bubble/bubble
 include ../../components/avatar/avatar
 
-mixin profile({type='grey', selected=false, image='', name='name', occupation='occupation'} = {})
-  article(class=selected ? `profile profile_${type} profile_selected` : `profile profile_${type}`)
+mixin profile({type = 'grey', selected = false, image = '', name = 'name', occupation = 'occupation'} = {})
+  article(class = selected ? `profile profile_${type} profile_selected` : `profile profile_${type}`)
     .profile__wrapper
       +avatar({src:image})
-      +bubble({direction:'left'})
-        .profile__name #{name}
-        .profile__occupation #{occupation}
-        .profile__icons
-          i(class='fa fa-facebook-f')
-          i(class='fa fa-twitter')
-          i(class='fa fa-dribbble')
+      .profile__bubble
+        +bubble({direction:'left', modifier: type})
+          .profile__name #{name}
+          .profile__occupation #{occupation}
+          .profile__icons
+            i(class = 'fa fa-facebook-f')
+            i(class = 'fa fa-twitter')
+            i(class = 'fa fa-dribbble')
 
     

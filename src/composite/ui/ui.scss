@@ -1,9 +1,6 @@
 .ui {
   text-align: center;
 
-  &__wrapper {
-  }
-
   &__content {
     width: 54.8rem;
     margin: auto;
@@ -34,6 +31,37 @@
     }
   }
 
+  &__title {
+    font-family: $font;
+    font-weight: bold;
+    word-spacing: 0.3125rem;
+
+    &_search {
+      padding-left: 3.5rem;
+    }
+
+    &_toggle {
+      padding-top: 0.8rem;
+    }
+
+    &_slider {
+      margin-bottom: 0;
+    }
+
+    &_news {
+      margin-top: 5.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &_map {
+      margin-bottom: 2.2rem;
+    }
+
+    &_video {
+      margin-top: 3.3rem;
+    }
+  }
+
   &__button-content {
     margin-top: 5.5rem;
     margin-bottom: 4rem;
@@ -43,7 +71,8 @@
     margin-bottom: 1.3rem;
   }
 
-  &__button-row .button {
+  &__button {
+    display: inline-block;
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -67,10 +96,6 @@
   &__percentage-content > div {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
-  }
-
-  &__slider-title {
-    margin-bottom: 0;
   }
 
   &__slider-content {
@@ -97,14 +122,6 @@
     margin-top: 2.4rem;
     margin-left: 4rem;
     margin-bottom: 5rem;
-  }
-
-  &__search-title {
-    padding-left: 3.5rem;
-  }
-
-  &__toggle-title {
-    padding-top: 0.8rem;
   }
 
   &__toggle-content {
@@ -145,11 +162,6 @@
     margin-left: 2rem;
   }
 
-  &__news-title {
-    margin-top: 5.5rem;
-    margin-bottom: 1.6rem;
-  }
-
   &__news-content {
     display: flex;
     justify-content: center;
@@ -158,10 +170,6 @@
 
   &__news-item {
     margin: 0.9rem;
-  }
-
-  &__map-title {
-    margin-bottom: 2.2rem;
   }
 
   &__map-content {
@@ -177,10 +185,6 @@
     text-align: left;
     margin-top: 2rem;
     margin-left: 1.2rem;
-  }
-
-  &__video-title {
-    margin-top: 3.3rem;
   }
 
   &__video {
