@@ -26,7 +26,6 @@ mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, sta
   
       .order__address
         input.order__input(name = 'address', placeholder = 'Address')
-        .status__bubble
   
       .order__submit
         +button({type: 'submit', text: 'SUBMIT', size: "small", color: "green"})
