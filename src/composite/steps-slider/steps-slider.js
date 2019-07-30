@@ -24,5 +24,5 @@ class StepsSlider {
 }
 
 document
-  .querySelectorAll('.steps-slider')
+  .querySelectorAll('.steps-slider__slider')
   .forEach(element => new StepsSlider(element));
