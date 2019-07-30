@@ -3,16 +3,17 @@ include ../../components/video/video
 include ../../components/map/map
 include ../../components/button/button
 include ../../components/datepicker/datepicker
+include ../../components/standard-heading/standard-heading
 
 mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
   .index
-    h2.standard-heading Hottest news
+    +standard-heading({text: 'Hottest news'})
     .index__news-container
       .index__news-item
         +news(news)
       .index__news-item
         +news(eventNews)
-    h2.standard-heading Plan your visit!
+    +standard-heading({text: 'Plan your visit!'})
     .index__place-info
       .index__map
         +map(location)
@@ -24,9 +25,6 @@ mixin index({news = {}, eventNews = {}, location = {}, video = {}} = {})
         .index__order-button
           a(href = 'order.html')
             +button({size:'big', color:'orange', text:'order now!'})
-    h2.standard-heading  
-      | Check out the 
-      a.index__link(href = 'https://www.youtube.com/watch?v = 8RamCgvJKKE', target = '_blank', rel = 'noopener noreferrer') review
-      |  of our latest offer!
+    +standard-heading({text: 'Check out the review of our latest offer!'})
     .index__video
       +video(video)

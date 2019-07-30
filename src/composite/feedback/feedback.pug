@@ -1,10 +1,11 @@
 include ../message-form/message-form
 include ../slider/slider
 include ../comment/comment
+include ../../components/standard-heading/standard-heading
 
 mixin feedback({comments = []} = {})
   .feedback
-    h2.standard-heading.feedback__title Rate our service:
+    +standard-heading({text: 'Rate our service:'})
     .feedback__content
       .feedback__form
         +message-form

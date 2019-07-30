@@ -3,10 +3,12 @@ include ../../components/dropdown/dropdown
 include ../../components/checkmark/checkmark
 include ../../components/toggle/toggle
 include ../../components/button/button
+include ../../components/standard-heading/standard-heading
 
 mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, stage, crustOptions = []} = {})
   .order
-    h2.standard-heading.order__title Order
+    .order__title
+      +standard-heading({text: 'Order'})
     .order__stage
       +stage(stage)
   

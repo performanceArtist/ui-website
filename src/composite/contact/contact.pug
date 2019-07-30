@@ -1,9 +1,10 @@
 include ../profile/profile
 include ../chat/chat
+include ../../components/standard-heading/standard-heading
 
 mixin contact({profiles = []} = {})
   .contact
-    h2.standard-heading.contact__title Contacts:
+    +standard-heading({text: 'Contacts:'})
     .contact__content
       .contact__profile-container
         each profile in profiles
