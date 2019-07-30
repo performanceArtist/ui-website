@@ -1,23 +1,23 @@
 include ../../components/button/button
 
-mixin news({image, title = 'Title', date = '1 April', text = 'Text here'} = {})
-  .news
-    .news__image(style = 'background-image:url(' + image + ')')
-    .news__content
-      .news__content-wrapper
-        .news__title #{title}
-        .news__date #{date}
-        .news__text #{text}
-
-mixin event-news({image, title = 'Title', day = '1', month = 'April', text = 'Text here'} = {})
-  .event-news
-    .news__image(style = 'background-image:url(' + image + ')')
-    .news__content
-      .news__content-wrapper
-        .news__date 
-          span.news__day #{day}
-          span.news__month #{month}
-        .news__title #{title}
-        .news__text #{text}
-        .news__button
-          +button({size:'big', color:'green', text:'Add to calendar'}) 
+mixin news({type = "default", image = '', title = 'Title', day = '1', month = 'April', year = '2019', text = 'Text here'} = {})
+  if type === 'event'
+    .news.news_event
+      .news__image(style = 'background-image:url(' + image + ')')
+      .news__content
+        .news__content-wrapper
+          .news__event-date 
+            span.news__day #{day}
+            span.news__month #{month}
+          .news__event-title #{title}
+          .news__text #{text}
+          .news__button
+            +button({size:'auto', color:'green', text:'Add to calendar'}) 
+  else
+    .news
+      .news__image(style = 'background-image:url(' + image + ')')
+      .news__content
+        .news__content-wrapper
+          .news__title #{title}
+          .news__date #{`${day} ${month} ${year}`}
+          .news__text #{text}    

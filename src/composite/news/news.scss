@@ -1,5 +1,4 @@
-.news,
-.event-news {
+.news {
   display: inline-block;
   color: $white;
   width: 22.5rem;
@@ -7,44 +6,40 @@
   text-align: center;
   border-radius: 0.4rem;
   overflow: hidden;
-}
-
-.news::after,
-.event-news::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-.news__image {
-  float: left;
-  width: 33%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-}
-
-.news__text {
-  text-align: left;
-  font-size: 0.8rem;
-}
-
-.news__content-wrapper {
-  padding: 10%;
-  padding-bottom: 0;
-}
-
-.news__content {
-  float: left;
-  width: 65%;
-  height: 100%;
-}
-
-.news {
   background-color: $light-orange;
 
-  .news__title {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  &__image {
+    float: left;
+    width: 33%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  &__content-wrapper {
+    padding: 10%;
+    padding-bottom: 0;
+  }
+
+  &__content {
+    float: left;
+    width: 65%;
+    height: 100%;
+  }
+
+  &__title {
     font-size: 2.2rem;
     line-height: 1.95rem;
     margin-bottom: 8%;
@@ -52,52 +47,52 @@
     margin-top: 2%;
   }
 
-  .news__date {
+  &__date {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.9rem;
     text-align: left;
     margin-bottom: 9.5%;
   }
-}
 
-.event-news {
-  background-color: $light-green;
+  &_event {
+    background-color: $light-green;
 
-  .news__content-wrapper {
-    padding-top: 0;
-  }
+    .news {
+      &__content-wrapper {
+        padding: 0 10%;
+      }
 
-  .news__date {
-    margin-bottom: 4%;
-  }
+      &__event-date {
+        margin-bottom: 4%;
+      }
 
-  .news__day {
-    font-size: 6rem;
-    margin-right: 4%;
-  }
+      &__day {
+        font-size: 6rem;
+        margin-right: 4%;
+      }
 
-  .news__month {
-    font-size: 2rem;
-  }
+      &__month {
+        font-size: 2rem;
+      }
 
-  .news__title {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 5%;
-    text-align: left;
-  }
+      &__event-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5%;
+        text-align: left;
+      }
 
-  .news__text {
-    margin-bottom: 10%;
-  }
+      &__text {
+        margin-bottom: 10%;
+      }
 
-  .news__button {
-    .button {
-      font-size: 0.8rem;
-      width: 90%;
-      height: 2rem;
-      margin-bottom: 19%;
+      &__button {
+        width: 90%;
+        height: 2.5rem;
+        margin: auto;
+        margin-bottom: 19%;
+      }
     }
   }
 }
