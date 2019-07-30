@@ -1,8 +1,12 @@
 include ../../components/bubble/bubble
 include ../../components/avatar/avatar
-
+ 
 mixin profile({type = 'grey', selected = false, image = '', name = 'name', occupation = 'occupation'} = {})
-  article(class = selected ? `profile profile_${type} profile_selected` : `profile profile_${type}`)
+  - const base = 'profile'
+  - const types = ['grey', 'green']
+  - const modifierClass = types.includes(type) ? `${base}_${type}` : ''
+  - const selectedClass = selected ? `${base}_selected` : ''
+  article(class = `${base} ${modifierClass} ${selectedClass}`)
     .profile__wrapper
       +avatar({src:image})
       .profile__bubble

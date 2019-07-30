@@ -1,3 +1,7 @@
 mixin arrow-button({direction = 'left', disabled = false} = {})
-  div(class = disabled ? `arrow-button arrow-button_${direction} arrow-button_disabled` : `arrow-button arrow-button_${direction}`)
+  - const directions  = ['left', 'right', 'top', 'bottom']
+  - const base = 'arrow-button'
+  - const directionClass = directions.includes(direction) ? `${base}_${direction}` : `${base}_left`
+  - const disabledClass = disabled ? `${base}_disabled` : ''
+  div(class = `${base} ${directionClass} ${disabledClass}`)
     i.arrow-button__arrow
