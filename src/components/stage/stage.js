@@ -1,7 +1,6 @@
 class Stage {
   constructor(root) {
     this.root = root;
-    this.steps = $(root).data().steps;
 
     this.init = this.init.bind(this);
     this.addStep = this.addStep.bind(this);
@@ -10,6 +9,7 @@ class Stage {
   }
 
   init() {
+    this.steps = $(this.root).data().steps;
     if (!(this.steps instanceof Array)) return;
 
     this.ul = document.createElement('ul');

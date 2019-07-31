@@ -6,6 +6,20 @@ import makeIngredient from './ingredients';
 class Pizza {
   constructor(root, items) {
     this.root = root;
+    this.index = 0;
+
+    this.init = this.init.bind(this);
+    this.createItems = this.createItems.bind(this);
+    this.display = this.display.bind(this);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+
+    this.init();
+    this.createItems(items);
+    this.display();
+  }
+
+  createItems(items) {
     this.items = items.map(item => {
       const ingredients = item.ingredients.map(([ingredient, value]) =>
         makeIngredient(ingredient, value)
@@ -15,15 +29,6 @@ class Pizza {
         ingredients
       };
     });
-    this.index = 0;
-
-    this.init = this.init.bind(this);
-    this.display = this.display.bind(this);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-
-    this.init();
-    this.display();
   }
 
   init() {

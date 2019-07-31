@@ -1,12 +1,17 @@
 class StepsSlider {
   constructor(root) {
     this.$root = $(root);
-    this.data = this.$root.data();
-    this.$root.slider(this.data);
 
+    this.init = this.init.bind(this);
     this.addSteps = this.addSteps.bind(this);
 
+    this.init();
     this.addSteps();
+  }
+
+  init() {
+    this.data = this.$root.data();
+    this.$root.slider(this.data);
   }
 
   addSteps() {

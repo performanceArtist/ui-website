@@ -4,7 +4,6 @@ class MyMap {
   constructor(root, url, options = { zoom: 9 }) {
     this.root = root;
     this.url = url;
-    this.data = $(root).data();
     this.options = options;
 
     this.init = this.init.bind(this);
@@ -15,6 +14,8 @@ class MyMap {
   }
 
   init() {
+    this.data = $(this.root).data();
+
     ymaps
       .load(this.url)
       .then(maps => {

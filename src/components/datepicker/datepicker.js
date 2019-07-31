@@ -1,9 +1,6 @@
 class Datepicker {
   constructor(root) {
     this.$root = $(root);
-    this.$date = $('<div />', {
-      class: 'datepicker__custom-date'
-    });
 
     this.init = this.init.bind(this);
 
@@ -20,7 +17,11 @@ class Datepicker {
       maxDate: null
     });
 
-    this.$root.prepend(this.$date);
+    const $date = $('<div />', {
+      class: 'datepicker__custom-date'
+    });
+
+    this.$root.prepend($date);
 
     $(document).on('click', 'button.ui-datepicker-current', () => {
       this.$root.datepicker('setDate', new Date());
@@ -31,7 +32,7 @@ class Datepicker {
       const selected = this.$root.val();
       const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
 
-      this.$date.text(text);
+      $date.text(text);
     });
 
     this.$root.trigger('change');

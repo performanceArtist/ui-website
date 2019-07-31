@@ -1,7 +1,6 @@
 class Chart {
   constructor(root, options = {}) {
     this.$root = $(root);
-    this.data = this.$root.data();
     this.options = options;
 
     this.init = this.init.bind(this);
@@ -10,6 +9,7 @@ class Chart {
   }
 
   init() {
+    this.data = this.$root.data();
     this.$value = this.$root.find('.chart__text');
     this.$root
       .circleProgress({ ...this.data, ...this.options })
