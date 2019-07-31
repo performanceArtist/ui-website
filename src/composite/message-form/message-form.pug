@@ -1,4 +1,5 @@
 include ../../components/bubble/bubble
+include ../../components/button/button
 
 mixin message-form({ action = '' } = {})
   form.message-form(action = action)
@@ -11,4 +12,5 @@ mixin message-form({ action = '' } = {})
       input.message-form__input(name = 'email', placeholder = 'Your email')
       .message-form__bubble
     textarea.message-form__textarea(name = 'message', placeholder = 'Your message', cols = 50, rows = 4)
-    input.message-form__submit(type = 'submit', value = 'SUBMIT', class = 'button button_big button_green') 
+    .message-form__submit
+      +button({type:"submit", text:"submit", size:"big", color: 'green'})
