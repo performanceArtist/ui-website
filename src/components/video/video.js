@@ -4,6 +4,8 @@ class Video {
 
     this.init = this.init.bind(this);
     this.initVideoControls = this.initVideoControls.bind(this);
+    this.handleEnd = this.handleEnd.bind(this);
+    this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
     this.play = this.play.bind(this);
     this.fullscreen = this.fullscreen.bind(this);
 
@@ -36,24 +38,21 @@ class Video {
   initVideoControls() {
     this.video.volume = 0.5;
 
-    this.video.addEventListener('timeupdate', () => {
-      if (!this.sliderActive) {
-        this.$progress.slider({ value: this.video.currentTime });
-      }
-    });
+    this.video.addEventListener('timeupdate', this.handleTimeUpdate);
+    this.video.addEventListener('ended', this.handleEnd);
+    this.fullscreenButton.addEventListener('click', this.fullscreen);
+    this.playButton.addEventListener('click', this.play);
+  }
 
-    this.video.addEventListener('ended', () => {
-      this.playButton.classList.remove('video__play-button_with-pause');
-      this.playButton.classList.add('video__play-button_with-play');
-    });
+  handleTimeUpdate() {
+    if (!this.sliderActive) {
+      this.$progress.slider({ value: this.video.currentTime });
+    }
+  }
 
-    this.fullscreenButton.addEventListener('click', () => {
-      this.fullscreen();
-    });
-
-    this.playButton.addEventListener('click', () => {
-      this.play();
-    });
+  handleEnd() {
+    this.playButton.classList.remove('video__play-button_with-pause');
+    this.playButton.classList.add('video__play-button_with-play');
   }
 
   play() {

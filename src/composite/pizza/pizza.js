@@ -40,13 +40,8 @@ class Pizza {
     this.rightArrow = this.root.querySelector('.arrow-button_right');
     this.list = this.root.querySelector('.pizza__list');
 
-    this.leftArrow.addEventListener('click', () => {
-      this.previous();
-    });
-
-    this.rightArrow.addEventListener('click', () => {
-      this.next();
-    });
+    this.leftArrow.addEventListener('click', this.previous);
+    this.rightArrow.addEventListener('click', this.next);
   }
 
   display() {

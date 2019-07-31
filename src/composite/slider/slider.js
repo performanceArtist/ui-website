@@ -20,8 +20,9 @@ class Slider {
   handleInput(event) {
     const { target } = event;
 
-    const perc = (target.value - target.min) / (target.max - target.min);
-    const newPosition = this.width * perc - target.value * this.offset;
+    const relativeValue =
+      (target.value - target.min) / (target.max - target.min);
+    const newPosition = this.width * relativeValue - target.value * this.offset;
 
     this.bubble.innerHTML = target.value;
     this.bubble.style.left = `${newPosition - 5}px`;
