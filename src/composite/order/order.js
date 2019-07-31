@@ -3,38 +3,49 @@ class Order {
     this.root = root;
 
     this.init = this.init.bind(this);
+    this.takeStep = this.takeStep.bind(this);
 
     this.init();
   }
 
   init() {
-    this.steps = this.root.querySelectorAll('.stage ul li');
-    this.dropdown = this.root.querySelector('.dropdown select');
-    this.options = this.root.querySelector('.order__options');
-    this.address = this.root.querySelector('.order__address input');
-    this.submit = this.root.querySelector('.order__submit');
+    const selectors = [
+      '.dropdown select',
+      '.order__options',
+      '.order__address input',
+      '.order__submit'
+    ];
+    const steps = this.root.querySelectorAll('.stage ul li');
 
-    this.dropdown.addEventListener('change', () => {
-      this.steps[0].setAttribute('class', 'done');
-      this.steps[1].setAttribute('class', 'current');
-      this.options.style.visibility = 'initial';
-    });
+    this.steps = selectors.map((selector, index) => ({
+      element: this.root.querySelector(selector),
+      step: steps[index]
+    }));
+    this.steps.forEach(({ element }) =>
+      element.addEventListener('change', this.takeStep)
+    );
+    this.currentStepIndex = 0;
+  }
 
-    this.options.addEventListener('change', () => {
-      this.steps[1].setAttribute('class', 'done');
-      this.steps[2].setAttribute('class', 'current');
-      this.address.style.visibility = 'initial';
-    });
+  takeStep() {
+    const current = this.steps[this.currentStepIndex];
+    const next = this.steps[this.currentStepIndex + 1];
 
-    this.address.addEventListener('input', event => {
-      const isValid = /^[a-zA-Z0-9 ]{5,}$/.test(event.target.value);
+    if (!current) return;
 
-      if (isValid) {
-        this.steps[2].setAttribute('class', 'done');
-        this.steps[3].setAttribute('class', 'done');
-        this.submit.style.visibility = 'initial';
+    current.step.setAttribute('class', 'done');
+    current.element.removeEventListener('change', this.takeStep);
+
+    if (next) {
+      if (this.currentStepIndex + 2 === this.steps.length) {
+        next.step.setAttribute('class', 'done');
+      } else {
+        next.step.setAttribute('class', 'current');
       }
-    });
+      next.element.style.visibility = 'initial';
+    }
+
+    this.currentStepIndex += 1;
   }
 }
 
