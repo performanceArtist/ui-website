@@ -3,8 +3,22 @@ class Datepicker {
     this.$root = $(root);
 
     this.init = this.init.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleTodayClick = this.handleTodayClick.bind(this);
 
     this.init();
+  }
+
+  handleChange() {
+    const selected = this.$root.val();
+    const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
+
+    this.$date.text(text);
+  }
+
+  handleTodayClick() {
+    this.$root.datepicker('setDate', new Date());
+    this.$root.trigger('change');
   }
 
   init() {
@@ -17,23 +31,18 @@ class Datepicker {
       maxDate: null
     });
 
-    const $date = $('<div />', {
+    this.$date = $('<div />', {
       class: 'datepicker__custom-date'
     });
 
-    this.$root.prepend($date);
+    this.$root.prepend(this.$date);
 
-    $(document).on('click', 'button.ui-datepicker-current', () => {
-      this.$root.datepicker('setDate', new Date());
-      this.$root.trigger('change');
-    });
-
-    this.$root.on('change', () => {
-      const selected = this.$root.val();
-      const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
-
-      $date.text(text);
-    });
+    $(document).on(
+      'click',
+      'button.ui-datepicker-current',
+      this.handleTodayClick
+    );
+    this.$root.on('change', this.handleChange);
 
     this.$root.trigger('change');
   }
