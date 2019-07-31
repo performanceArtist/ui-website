@@ -1,45 +1,43 @@
-(function($) {
-  $.fn.progressbar = function(options) {
-    const opts = $.extend({}, options);
-
-    return this.each(function() {
-      const $this = $(this);
-
-      const $ul = $('<ul>').attr('class', 'progressbar');
-
-      let currentIdx = -1;
-
-      $.each(opts.steps, (index, value) => {
-        const $li = $('<li>').text(value.replace('@', '').replace('~', ''));
-        $li.css('width', `${100 / opts.steps.length}%`);
-
-        if (value.indexOf('@') > -1) {
-          $li.addClass('current');
-          currentIdx = index;
-        }
-
-        if (value.indexOf('~') > -1) {
-          $li.addClass('fail');
-        }
-
-        $ul.append($li);
-      });
-
-      for (let i = 0; i < currentIdx; i++) {
-        $($ul.find('li')[i]).addClass('done');
-      }
-
-      $this.append($ul);
-    });
-  };
-})(jQuery);
-
 class Stage {
   constructor(root) {
-    this.$root = $(root);
-    this.data = this.$root.data();
+    this.root = root;
+    this.steps = $(root).data().steps;
 
-    this.$root.progressbar(this.data);
+    this.init = this.init.bind(this);
+    this.addStep = this.addStep.bind(this);
+
+    this.init();
+  }
+
+  init() {
+    if (!(this.steps instanceof Array)) return;
+
+    this.ul = document.createElement('ul');
+    this.ul.setAttribute('class', 'stage__progressbar');
+    this.root.appendChild(this.ul);
+
+    this.steps.forEach(this.addStep);
+  }
+
+  addStep(value) {
+    const li = document.createElement('li');
+    li.setAttribute('class', 'stage__li');
+
+    li.style.width = `${100 / this.steps.length}%`;
+    li.innerText = value.replace('@', '').replace('~', '');
+
+    if (value[0] === '@') {
+      li.classList.add('stage__li_current');
+      this.ul.childNodes.forEach(element =>
+        element.classList.add('class', 'stage__li_done')
+      );
+    }
+
+    if (value[0] === '~') {
+      li.classList.add('stage__li_failed');
+    }
+
+    this.ul.appendChild(li);
   }
 }
 

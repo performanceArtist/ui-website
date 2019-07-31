@@ -33,14 +33,15 @@ class Order {
 
     if (!current) return;
 
-    current.step.setAttribute('class', 'done');
+    current.step.classList.remove('stage__li_current');
+    current.step.classList.add('stage__li_done');
     current.element.removeEventListener('change', this.takeStep);
 
     if (next) {
       if (this.currentStepIndex + 2 === this.steps.length) {
-        next.step.setAttribute('class', 'done');
+        next.step.classList.add('stage__li_done');
       } else {
-        next.step.setAttribute('class', 'current');
+        next.step.classList.add('stage__li_current');
       }
       next.element.style.visibility = 'initial';
     }

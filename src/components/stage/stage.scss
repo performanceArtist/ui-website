@@ -1,76 +1,89 @@
 .stage {
-  .progressbar {
-    li {
-      color: #303030;
-      font-size: 1rem;
-      z-index: 0;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+  &__progressbar {
+    height: 4.6875rem;
+    padding: 0;
+    counter-reset: step;
+  }
 
-    .current {
+  &__li {
+    color: #303030;
+    list-style-type: none;
+    font-size: 1rem;
+    z-index: 0;
+    float: left;
+    position: relative;
+    text-align: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:before {
+      content: counter(step);
+      counter-increment: step;
+      color: #333;
       font-weight: bold;
-    }
-
-    .current:before {
-      background-color: $light-orange;
-    }
-
-    .done::before,
-    .current::before,
-    li::before {
       width: 2.25rem;
       height: 2.25rem;
       line-height: 2.2rem;
-      font-weight: bold;
-    }
-
-    li::after {
-      height: 0.6rem;
-    }
-
-    .done::before {
-      background-color: $light-green;
-    }
-
-    .done:after {
-      background-color: #68bb68;
+      border-radius: 50%;
+      display: block;
+      text-align: center;
+      margin: 0 auto 0.625rem auto;
+      background: rgb(216, 216, 216);
     }
 
     &:after {
-      height: 0.4375rem;
-      top: 1.125rem;
+      content: '';
+      background: #ddd;
+      position: absolute;
+      width: 100%;
+      height: 0.6rem;
+      top: 0.875rem;
+      right: -50%;
+      z-index: -1;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+
+    &_done:before,
+    &_done:after {
+      background: $light-green;
+      color: #fff;
+    }
+
+    &_current {
+      font-weight: bold;
+    }
+
+    &_current:before {
       background-color: $light-orange;
+      color: #fff;
     }
 
-    .done:before {
-      background-color: $light-green;
-    }
-
-    .done:after {
-      background-color: $light-green;
+    &_failed:before {
+      background: rgb(229, 48, 40);
     }
   }
 
   @media screen and (max-width: 51.25rem) {
-    .progressbar {
-      li {
-        font-size: 0.75rem;
-      }
+    &__li {
+      font-size: 0.75rem;
 
-      .done::before,
-      .current::before,
-      li::before {
+      &_done::before,
+      &_current::before,
+      &::before {
         width: 1.5rem;
         height: 1.5rem;
         line-height: 1.9;
       }
 
-      li::after {
+      &::after {
         top: 0.5rem;
       }
     }
