@@ -112,8 +112,8 @@ $bubble-color: $light-orange;
 
   &_with-message {
     @include set-bubble-color($white, top);
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: left;
-    margin-bottom: 9%;
+    margin-bottom: 1.4rem;
   }
 }

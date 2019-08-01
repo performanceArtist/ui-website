@@ -43,7 +43,7 @@ mixin ui(args = {})
     .ui__wrapper
       .ui__content
         +standard-heading({text:'STANDARD BUTTONS'})
-        .ui__button-content
+        .ui__buttons
           each row in buttons
             .ui__button-row
               each button in row
@@ -51,26 +51,33 @@ mixin ui(args = {})
                   +button(button)
         
         +standard-heading({text:'ARROW BUTTONS'})
-        .ui__arrow-button-content
-          each arrowButton in arrowButtons
-            +arrow-button(arrowButton)
+        .ui__arrow-buttons
+          - for (let i = 0; i < arrowButtons.length; i+=2) {
+              .ui__arrow-button-group
+                .ui__arrow-button
+                  +arrow-button(arrowButtons[i])
+                .ui__arrow-button
+                  +arrow-button(arrowButtons[i + 1])
+          - }
       
         +standard-heading({text:'PERCENTAGES / PIE CHART'})
-        .ui__percentage-content
+        .ui__percentages
           each chart in charts
-            +chart(chart)
-          +pie-chart(pieChart)
+            .ui__percentage
+              +chart(chart)
+          .ui__percentage
+            +pie-chart(pieChart)
       
         .ui__slider-heading 
-          +standard-heading({text:'SLIDERS'})
-        .ui__slider-content
+          +standard-heading({text:'SLIDERS', stripped: true})
+        .ui__sliders
           .ui__slider
             +slider(slider)
           .ui__steps-slider  
             +steps-slider(stepsSlider)
       
         +standard-heading({text:'STAGES'})
-        .ui__stage-content
+        .ui__stage
           +stage
       
         +standard-heading({text:'FORM ELEMENTS'})
@@ -80,7 +87,7 @@ mixin ui(args = {})
               +message-form
             .ui__search-heading 
               +standard-heading({text:'SEARCH / DROP DOWN'})
-            .ui__search-content
+            .ui__searches
               .ui__search
                 +search
               .ui__search
@@ -90,18 +97,18 @@ mixin ui(args = {})
           .ui__column
             .ui__toggle-heading 
               +standard-heading({text:'TOGGLES'})
-            .ui__toggle-content
+            .ui__toggles
               each toggle in toggles
                 .ui__toggle
                   +toggle(toggle)
             +standard-heading({text:'TICK BOXES'})
-            .ui__checkmark-content
+            .ui__checkmarks
               each checkmark in checkmarks
                 .ui__checkmark
                   +checkmark(checkmark)
               
             +standard-heading({text:'USER PROFILE'})
-            .ui__profile-container
+            .ui__profiles
               each profile in profiles
                 .ui__profile
                   +profile(profile)
@@ -118,7 +125,7 @@ mixin ui(args = {})
       
         .ui__map-heading 
           +standard-heading({text:'LOCATION'})
-        .ui__map-content
+        .ui__map
           +map(map)
         .ui__row
           .ui__column

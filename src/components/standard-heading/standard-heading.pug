@@ -1,2 +1,2 @@
-mixin standard-heading({text = 'Title'})
-  h2.standard-heading #{text}
+mixin standard-heading({text = 'Title', stripped = false})
+  h2(class = stripped ? 'standard-heading standard-heading_stripped' : 'standard-heading') #{text}

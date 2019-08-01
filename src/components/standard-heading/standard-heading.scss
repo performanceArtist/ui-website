@@ -3,6 +3,11 @@
   font-weight: bold;
   word-spacing: 0.3125rem;
 
+  &_stripped {
+    padding: 0;
+    margin: 0;
+  }
+
   @media screen and (max-width: 31.25rem) {
     font-size: 1.2rem;
   }
