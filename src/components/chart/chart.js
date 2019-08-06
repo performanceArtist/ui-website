@@ -4,6 +4,7 @@ class Chart {
     this.options = options;
 
     this.init = this.init.bind(this);
+    this.handleAnimationProgress = this.handleAnimationProgress.bind(this);
 
     this.init();
   }
@@ -13,10 +14,12 @@ class Chart {
     this.$value = this.$root.find('.chart__text');
     this.$root
       .circleProgress({ ...this.data, ...this.options })
-      .on('circle-animation-progress', (event, progress, stepValue) => {
-        const value = parseInt(stepValue.toFixed(2).slice(2), 10);
-        this.$value.text(value);
-      });
+      .on('circle-animation-progress', this.handleAnimationProgress);
+  }
+
+  handleAnimationProgress(event, progress, stepValue) {
+    const value = parseInt(stepValue.toFixed(2).slice(2), 10);
+    this.$value.text(value);
   }
 }
 
