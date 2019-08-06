@@ -103,7 +103,4 @@ class Pizza {
   }
 }
 
-document.querySelectorAll('.pizza').forEach(element => {
-  const items = JSON.parse(element.dataset.items);
-  new Pizza(element, items);
-});
+export default Pizza;

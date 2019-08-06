@@ -41,4 +41,4 @@ class Stage {
   }
 }
 
-document.querySelectorAll('.stage').forEach(element => new Stage(element));
+export default Stage;

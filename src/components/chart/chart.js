@@ -23,6 +23,4 @@ class Chart {
   }
 }
 
-document.querySelectorAll('.chart').forEach(element => new Chart(element));
-
 export default Chart;

@@ -29,4 +29,4 @@ class Slider {
   }
 }
 
-document.querySelectorAll('.slider').forEach(element => new Slider(element));
+export default Slider;

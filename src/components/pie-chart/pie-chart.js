@@ -16,8 +16,4 @@ class PieChart {
   }
 }
 
-document
-  .querySelectorAll('.pie-chart')
-  .forEach(element => new PieChart(element));
-
 export default PieChart;

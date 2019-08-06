@@ -48,6 +48,4 @@ class Datepicker {
   }
 }
 
-document
-  .querySelectorAll('.datepicker')
-  .forEach(element => new Datepicker(element));
+export default Datepicker;

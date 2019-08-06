@@ -50,4 +50,4 @@ class Order {
   }
 }
 
-document.querySelectorAll('.order').forEach(element => new Order(element));
+export default Order;

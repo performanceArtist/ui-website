@@ -39,6 +39,4 @@ class MessageForm {
   }
 }
 
-document
-  .querySelectorAll('.message-form')
-  .forEach(element => new MessageForm(element));
+export default MessageForm;

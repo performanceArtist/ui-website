@@ -28,6 +28,4 @@ class StepsSlider {
   }
 }
 
-document
-  .querySelectorAll('.steps-slider__slider')
-  .forEach(element => new StepsSlider(element));
+export default StepsSlider;

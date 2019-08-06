@@ -48,6 +48,4 @@ class Button {
   }
 }
 
-document
-  .querySelectorAll('.button_with-ripple')
-  .forEach(element => new Button(element));
+export default Button;

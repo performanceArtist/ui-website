@@ -86,6 +86,4 @@ class Video {
   }
 }
 
-window.addEventListener('load', () => {
-  document.querySelectorAll('.video').forEach(video => new Video(video));
-});
+export default Video;

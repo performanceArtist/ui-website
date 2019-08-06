@@ -24,4 +24,4 @@ class Search {
   }
 }
 
-document.querySelectorAll('.search').forEach(element => new Search(element));
+export default Search;
