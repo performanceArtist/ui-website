@@ -1,14 +1,4 @@
-function debounce(func, delay) {
-  let inDebounce;
-  return function newDebounce(...args) {
-    const context = this;
-    clearTimeout(inDebounce);
-    inDebounce = setTimeout(() => func.apply(context, args), delay);
-    return inDebounce;
-  };
-}
-
-class Ripple {
+class Button {
   constructor(root) {
     this.root = root;
 
@@ -19,11 +9,21 @@ class Ripple {
     this.init();
   }
 
+  static debounce(func, delay) {
+    let inDebounce;
+    return function newDebounce(...args) {
+      const context = this;
+      clearTimeout(inDebounce);
+      inDebounce = setTimeout(() => func.apply(context, args), delay);
+      return inDebounce;
+    };
+  }
+
   init() {
     this.rippleContainer = document.createElement('div');
     this.rippleContainer.className = 'button__ripple-container';
     this.root.addEventListener('mousedown', this.showRipple);
-    this.root.addEventListener('mouseup', debounce(this.cleanUp, 2000));
+    this.root.addEventListener('mouseup', Button.debounce(this.cleanUp, 2000));
     this.root.rippleContainer = this.rippleContainer;
     this.root.appendChild(this.rippleContainer);
   }
@@ -50,4 +50,4 @@ class Ripple {
 
 document
   .querySelectorAll('.button_with-ripple')
-  .forEach(element => new Ripple(element));
+  .forEach(element => new Button(element));

@@ -10,8 +10,8 @@ class Datepicker {
   }
 
   handleChange() {
-    const selected = this.$root.val();
-    const text = /^[0-9]{2}\/([0-9]{2})/.exec(selected)[1];
+    const date = this.$root.val();
+    const text = /^[0-9]{2}\/([0-9]{2})/.exec(date)[1];
 
     this.$date.text(text);
   }

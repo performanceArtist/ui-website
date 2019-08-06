@@ -28,22 +28,22 @@ class Order {
   }
 
   takeStep() {
-    const current = this.steps[this.currentStepIndex];
-    const next = this.steps[this.currentStepIndex + 1];
+    const currentStep = this.steps[this.currentStepIndex];
+    const nextStep = this.steps[this.currentStepIndex + 1];
 
-    if (!current) return;
+    if (!currentStep) return;
 
-    current.step.classList.remove('stage__li_current');
-    current.step.classList.add('stage__li_done');
-    current.element.removeEventListener('change', this.takeStep);
+    currentStep.step.classList.remove('stage__li_current');
+    currentStep.step.classList.add('stage__li_done');
+    currentStep.element.removeEventListener('change', this.takeStep);
 
-    if (next) {
+    if (nextStep) {
       if (this.currentStepIndex + 2 === this.steps.length) {
-        next.step.classList.add('stage__li_done');
+        nextStep.step.classList.add('stage__li_done');
       } else {
-        next.step.classList.add('stage__li_current');
+        nextStep.step.classList.add('stage__li_current');
       }
-      next.element.style.visibility = 'initial';
+      nextStep.element.style.visibility = 'initial';
     }
 
     this.currentStepIndex += 1;

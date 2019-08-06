@@ -28,14 +28,14 @@ class MessageForm {
     this.email.input.addEventListener('input', () => this.validate(this.email));
   }
 
-  validate(current) {
-    const valid = current.regex.test(current.input.value);
+  validate(field) {
+    const valid = field.regex.test(current.input.value);
     const newClass = valid ? 'bubble_valid' : 'bubble_invalid';
     const newText = valid ? 'thanks' : 'error';
 
-    current.bubble.innerHTML = newText;
-    current.bubble.style.visibility = 'initial';
-    current.bubble.className = `bubble bubble_left ${newClass}`;
+    field.bubble.innerHTML = newText;
+    field.bubble.style.visibility = 'initial';
+    field.bubble.className = `bubble bubble_left ${newClass}`;
   }
 }
 
