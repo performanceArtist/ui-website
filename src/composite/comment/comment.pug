@@ -4,7 +4,7 @@ mixin comment({username = 'Anonymous', message = 'Text', rating = 100} = {})
   - const ratingNumber = Number.isNaN(parseInt(rating, 10)) ? 100 : rating
   - const validRating = ratingNumber >= 0 && ratingNumber <= 100 ? ratingNumber : 100
   article.comment
-    +bubble({direction: 'right', modifier: validRating < 60 ? 'negative-comment' : 'positive-comment'})
+    +bubble({direction: 'right', modifier: validRating < 60 ? 'with-negative-comment' : 'with-positive-comment'})
       | #{message}
       div(class = validRating < 60 ? 'comment__rating comment__rating_low' : 'comment__rating comment__rating_high') Rated #{validRating}
       .comment__name #{username}

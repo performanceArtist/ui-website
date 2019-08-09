@@ -1,6 +1,6 @@
 mixin bubble({direction = 'left', modifier = ''} = {})
   - const directions = ['left', 'right', 'top', 'bottom']
-  - const modifiers = ['grey', 'green', 'with-label', 'positive-comment', 'negative-comment', 'valid', 'invalid', 'with-message']
+  - const modifiers = ['grey', 'green', 'with-label', 'with-positive-comment', 'with-negative-comment', 'valid', 'invalid', 'with-message']
   - const base = 'bubble'
   - const directionClass = directions.includes(direction) ? `${base}_${direction}` : `${base}_left`
   - const modifierClass = modifiers.includes(modifier) ? `${base}_${modifier}` : `${base}_default`

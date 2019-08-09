@@ -90,12 +90,12 @@ $bubble-color: $light-orange;
     font-weight: bold;
   }
 
-  &_positive-comment {
+  &_with-positive-comment {
     @extend %comment-bubble;
     @include set-bubble-color($light-green, right);
   }
 
-  &_negative-comment {
+  &_with-negative-comment {
     @extend %comment-bubble;
     @include set-bubble-color($light-orange, right);
   }
