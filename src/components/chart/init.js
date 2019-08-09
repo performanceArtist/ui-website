@@ -1,3 +1,3 @@
 import Chart from './chart';
 
-document.querySelectorAll('.chart').forEach(element => new Chart(element));
+document.querySelectorAll('.js-chart').forEach(element => new Chart(element));

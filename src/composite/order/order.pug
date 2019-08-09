@@ -6,17 +6,17 @@ include ../../components/button/button
 include ../../components/standard-heading/standard-heading
 
 mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, stage, crustOptions = []} = {})
-  .order
+  .order.js-order
     .order__title
       +standard-heading({text: 'Order'})
     .order__stage
       +stage(stage)
   
     form.order__form
-      .order__dropdown
+      .order__dropdown.js-order__dropdown
         +dropdown(menu)
     
-      .order__options
+      .order__options.js-order__options
         .order__sauce #{name}
           +toggle(toggle)
   
@@ -24,8 +24,8 @@ mixin order({menu = {}, special:{name = "Special sauce:", toggle = {}} = {}, sta
           each option in crustOptions
             +checkmark(option)
   
-      .order__address
+      .order__address.js-order__address
         input.order__input(name = 'address', placeholder = 'Address')
   
-      .order__submit
+      .order__submit.js-order__submit
         +button({type: 'submit', text: 'SUBMIT', size: "small", color: "green"})

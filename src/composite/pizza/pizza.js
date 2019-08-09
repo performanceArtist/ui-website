@@ -32,13 +32,13 @@ class Pizza {
   }
 
   init() {
-    this.name = this.root.querySelector('.pizza__name');
-    this.image = this.root.querySelector('.pizza__image');
-    this.pieChart = this.root.querySelector('.pie-chart');
-    this.chart = this.root.querySelector('.chart');
+    this.name = this.root.querySelector('.js-pizza__name');
+    this.image = this.root.querySelector('.js-pizza__image');
+    this.pieChart = this.root.querySelector('.js-pie-chart');
+    this.chart = this.root.querySelector('.js-chart');
     this.leftArrow = this.root.querySelector('.arrow-button_left');
     this.rightArrow = this.root.querySelector('.arrow-button_right');
-    this.list = this.root.querySelector('.pizza__list');
+    this.list = this.root.querySelector('.js-pizza__list');
 
     this.leftArrow.addEventListener('click', this.previous);
     this.rightArrow.addEventListener('click', this.next);

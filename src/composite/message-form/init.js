@@ -1,5 +1,5 @@
 import MessageForm from './message-form';
 
 document
-  .querySelectorAll('.message-form')
+  .querySelectorAll('.js-message-form')
   .forEach(element => new MessageForm(element));

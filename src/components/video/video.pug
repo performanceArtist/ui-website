@@ -1,8 +1,8 @@
 mixin video({src = '', type = 'video/mp4'} = {})
-  .video
-    video
+  .video.js-video
+    video.video__video.js-video__video
       source(src = src, type = type)
     .video__controls
-      .video__play-button.video__play-button_with-play
-      .video__progress
-      .video__fullscreen
+      .video__play-button.js-video__play-button.video__play-button_with-play
+      .video__progress.js-video__progress
+      .video__fullscreen.js-video__fullscreen

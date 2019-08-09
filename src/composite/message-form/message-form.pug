@@ -2,15 +2,15 @@ include ../../components/bubble/bubble
 include ../../components/button/button
 
 mixin message-form({ action = '' } = {})
-  form.message-form(action = action)
+  form.message-form.js-message-form(action = action)
     .message-form__extra-inputs
       block
-    .message-form__name
+    .message-form__name.js-message-form__name
       input.message-form__input(name = 'name', placeholder = 'Your name')
-      .message-form__bubble
-    .message-form__email
+      .message-form__bubble.js-message-form__bubble
+    .message-form__email.js-message-form__email
       input.message-form__input(name = 'email', placeholder = 'Your email')
-      .message-form__bubble
+      .message-form__bubble.js-message-form__bubble
     textarea.message-form__textarea(name = 'message', placeholder = 'Your message', cols = 50, rows = 4)
     .message-form__submit
       +button({type:"submit", text:"submit", size:"big", color: 'green'})

@@ -1,5 +1,5 @@
 import Datepicker from './datepicker';
 
 document
-  .querySelectorAll('.datepicker')
+  .querySelectorAll('.js-datepicker')
   .forEach(element => new Datepicker(element));

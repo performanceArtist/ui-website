@@ -9,8 +9,8 @@ class Slider {
   }
 
   init() {
-    this.input = this.root.querySelector('input');
-    this.bubble = this.root.querySelector('.bubble');
+    this.input = this.root.querySelector('.js-slider__input');
+    this.bubble = this.root.querySelector('.js-slider__bubble .bubble');
     this.width = this.root.offsetWidth;
     this.offset = 0.25;
     this.input.addEventListener('input', this.handleInput);

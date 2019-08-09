@@ -1,6 +1,6 @@
 import Pizza from './pizza';
 
-document.querySelectorAll('.pizza').forEach(element => {
+document.querySelectorAll('.js-pizza').forEach(element => {
   const items = JSON.parse(element.dataset.items);
   new Pizza(element, items);
 });

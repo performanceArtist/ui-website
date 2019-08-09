@@ -1,7 +1,7 @@
 class Search {
   constructor(root) {
     this.root = root;
-    this.input = root.querySelector('input');
+    this.input = this.root.querySelector('.js-search__input');
 
     this.init = this.init.bind(this);
     this.handleInput = this.handleInput.bind(this);

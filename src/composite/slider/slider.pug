@@ -1,8 +1,8 @@
 include ../../components/bubble/bubble
  
 mixin slider({name = 'slider', value = 0, min = 0, max = 100} = {})
-  .slider
+  .slider.js-slider
     .slider__wrapper
-      .slider__bubble
+      .slider__bubble.js-slider__bubble
         +bubble({direction:'bottom', modifier:'with-label'})
-      input.slider__input(name = name, type = "range", value = value, min = min, max = max)
+      input.slider__input.js-slider__input(name = name, type = "range", value = value, min = min, max = max)

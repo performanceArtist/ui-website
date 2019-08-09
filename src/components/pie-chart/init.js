@@ -1,5 +1,5 @@
-import PieChart from './/pie-chart';
+import PieChart from './pie-chart';
 
 document
-  .querySelectorAll('.pie-chart')
+  .querySelectorAll('.js-pie-chart')
   .forEach(element => new PieChart(element));

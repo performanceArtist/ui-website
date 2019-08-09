@@ -10,10 +10,10 @@ mixin pizza(items = [])
   -   ingredients = [['Tomatoes', 0.2], ['Mozarella', 0.5], ['Pepperoni', 0.8]]
   - } = {}) => ({name, image, rating, ingredients}))
 
-  article.pizza(data-items = newItems)
-    header.pizza__name
+  article.pizza.js-pizza(data-items = newItems)
+    header.pizza__name.js-pizza__name
     section.pizza__info
-      img(alt = 'pizza').pizza__image
+      img(alt = 'pizza').pizza__image.js-pizza__image
       .pizza__rating Rating
         .pizza__circle
           +chart
@@ -23,7 +23,7 @@ mixin pizza(items = [])
           .pizza__arrow
             +arrow-button({direction:'right'})
     section.pizza__ingredients
-      .pizza__list 
+      .pizza__list.js-pizza__list 
       +pie-chart
 
 

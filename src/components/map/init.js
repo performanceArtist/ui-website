@@ -1,7 +1,7 @@
 import MyMap from './map';
 
 document
-  .querySelectorAll('.map')
+  .querySelectorAll('.js-map')
   .forEach(
     element =>
       new MyMap(

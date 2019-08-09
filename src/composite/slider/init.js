@@ -1,3 +1,3 @@
 import Slider from './slider';
 
-document.querySelectorAll('.slider').forEach(element => new Slider(element));
+document.querySelectorAll('.js-slider').forEach(element => new Slider(element));

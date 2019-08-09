@@ -5,4 +5,4 @@ mixin button({type = 'button', size = 'big', color = 'green', ripple = true, tex
   - const sizeClass = sizes.includes(size) ? `${base}_${size}` : `${base}_big`
   - const colorClass = colors.includes(color) ? `${base}_${color}` : `${base}_green`
   - const rippleClass = ripple ? `${base}_with-ripple` : ''
-  button(type = type, class = `${base} ${sizeClass} ${colorClass} ${rippleClass}`) #{text}
+  button(type = type, class = `${base} ${sizeClass} ${colorClass} js-${rippleClass} ${rippleClass}`) #{text}

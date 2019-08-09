@@ -10,10 +10,10 @@ class Order {
 
   init() {
     const selectors = [
-      '.dropdown select',
-      '.order__options',
-      '.order__address input',
-      '.order__submit'
+      '.js-order__dropdown select',
+      '.js-order__options',
+      '.js-order__address input',
+      '.js-order__submit'
     ];
     const steps = this.root.querySelectorAll('.stage ul li');
 

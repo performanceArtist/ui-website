@@ -1,3 +1,3 @@
 import Search from './search';
 
-document.querySelectorAll('.search').forEach(element => new Search(element));
+document.querySelectorAll('.js-search').forEach(element => new Search(element));

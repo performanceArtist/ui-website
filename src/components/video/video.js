@@ -14,13 +14,13 @@ class Video {
   }
 
   init() {
-    this.video = this.root.querySelector('video');
+    this.video = this.root.querySelector('.js-video__video');
 
-    this.playButton = this.root.querySelector('.video__play-button');
-    this.fullscreenButton = this.root.querySelector('.video__fullscreen');
+    this.playButton = this.root.querySelector('.js-video__play-button');
+    this.fullscreenButton = this.root.querySelector('.js-video__fullscreen');
     this.sliderActive = false;
     const that = this;
-    this.$progress = $(this.root.querySelector('.video__progress')).slider({
+    this.$progress = $(this.root.querySelector('.js-video__progress')).slider({
       value: 0,
       max: this.video.duration,
       orientation: 'horizontal',

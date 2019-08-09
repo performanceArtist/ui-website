@@ -1,3 +1,3 @@
 import Order from './order';
 
-document.querySelectorAll('.order').forEach(element => new Order(element));
+document.querySelectorAll('.js-order').forEach(element => new Order(element));
