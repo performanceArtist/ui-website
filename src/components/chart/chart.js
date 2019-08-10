@@ -11,7 +11,7 @@ class Chart {
 
   init() {
     this.data = this.$root.data();
-    this.$value = this.$root.find('.chart__text');
+    this.$value = this.$root.find('.js-chart__text');
     this.$root
       .circleProgress({ ...this.data, ...this.options })
       .on('circle-animation-progress', this.handleAnimationProgress);
