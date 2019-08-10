@@ -6,10 +6,10 @@ mixin message-form({ action = '' } = {})
     .message-form__extra-inputs
       block
     .message-form__name.js-message-form__name
-      input.message-form__input(name = 'name', placeholder = 'Your name')
+      input.message-form__input(name = 'name', type="text", placeholder = 'Your name')
       .message-form__bubble.js-message-form__bubble
     .message-form__email.js-message-form__email
-      input.message-form__input(name = 'email', placeholder = 'Your email')
+      input.message-form__input(name = 'email', type="email", placeholder = 'Your email')
       .message-form__bubble.js-message-form__bubble
     textarea.message-form__textarea(name = 'message', placeholder = 'Your message', cols = 50, rows = 4)
     .message-form__submit
