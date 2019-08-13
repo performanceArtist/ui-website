@@ -1,5 +1,6 @@
 import Chart from '../../components/chart/chart';
 import PieChart from '../../components/pie-chart/pie-chart';
+import ArrowButton from '../../components/arrow-button/arrow-button';
 
 import makeIngredient from './ingredients';
 
@@ -36,12 +37,16 @@ class Pizza {
     this.image = this.root.querySelector('.js-pizza__image');
     this.pieChart = this.root.querySelector('.js-pie-chart');
     this.chart = this.root.querySelector('.js-chart');
-    this.leftArrow = this.root.querySelector('.arrow-button_left');
-    this.rightArrow = this.root.querySelector('.arrow-button_right');
+    this.leftArrow = new ArrowButton(
+      this.root.querySelector('.arrow-button_left')
+    );
+    this.rightArrow = new ArrowButton(
+      this.root.querySelector('.arrow-button_right')
+    );
     this.list = this.root.querySelector('.js-pizza__list');
 
-    this.leftArrow.addEventListener('click', this.previous);
-    this.rightArrow.addEventListener('click', this.next);
+    this.leftArrow.onClick(this.previous);
+    this.rightArrow.onClick(this.next);
   }
 
   display() {
@@ -80,9 +85,9 @@ class Pizza {
     this.index = this.index + 1;
 
     if (this.index === this.items.length - 1) {
-      this.rightArrow.classList.add('arrow-button_disabled');
+      this.rightArrow.disable();
     } else {
-      this.leftArrow.classList.remove('arrow-button_disabled');
+      this.leftArrow.activate();
     }
 
     this.display();
@@ -94,9 +99,9 @@ class Pizza {
     this.index = this.index - 1;
 
     if (this.index === 0) {
-      this.leftArrow.classList.add('arrow-button_disabled');
+      this.leftArrow.disable();
     } else {
-      this.rightArrow.classList.remove('arrow-button_disabled');
+      this.rightArrow.activate();
     }
 
     this.display();
