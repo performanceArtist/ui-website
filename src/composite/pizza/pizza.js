@@ -3,7 +3,7 @@ import PieChart from '../../components/pie-chart/pie-chart';
 import ArrowButton from '../../components/arrow-button/arrow-button';
 
 import makeIngredient from './ingredients';
-
+ 
 class Pizza {
   constructor(root, items) {
     this.root = root;

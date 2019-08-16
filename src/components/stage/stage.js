@@ -1,6 +1,7 @@
 class Stage {
   constructor(root) {
     this.root = root;
+    this.stepElements = [];
 
     this.init = this.init.bind(this);
     this.addStep = this.addStep.bind(this);
@@ -14,6 +15,8 @@ class Stage {
 
     this.ul = document.createElement('ul');
     this.ul.setAttribute('class', 'stage__progressbar');
+
+    this.root.innerHTML = '';
     this.root.appendChild(this.ul);
 
     this.steps.forEach(this.addStep);
@@ -37,7 +40,26 @@ class Stage {
       li.classList.add('stage__li_failed');
     }
 
+    this.stepElements.push(li);
     this.ul.appendChild(li);
+  }
+
+  takeStep(index) {
+    const currentStep = this.stepElements[index];
+    const nextStep = this.stepElements[index + 1];
+
+    if (currentStep) {
+      currentStep.classList.remove('stage__li_current');
+      currentStep.classList.add('stage__li_done');
+    }
+
+    if (nextStep) {
+      if (index + 2 === this.stepElements.length) {
+        nextStep.classList.add('stage__li_done');
+      } else {
+        nextStep.classList.add('stage__li_current');
+      }
+    }
   }
 }
 

@@ -1,3 +1,5 @@
+import Stage from '../../components/stage/stage';
+
 class Order {
   constructor(root) {
     this.root = root;
@@ -15,37 +17,22 @@ class Order {
       '.js-order__address input',
       '.js-order__submit'
     ];
-    const steps = this.root.querySelectorAll('.stage ul li');
 
-    this.steps = selectors.map((selector, index) => ({
-      element: this.root.querySelector(selector),
-      step: steps[index]
-    }));
-    this.steps.forEach(({ element }) =>
+    this.stage = new Stage(this.root.querySelector('.stage'));
+    this.elements = selectors.map(selector => document.querySelector(selector));
+    this.elements.forEach(element =>
       element.addEventListener('change', this.takeStep)
     );
     this.currentStepIndex = 0;
   }
 
   takeStep() {
-    const currentStep = this.steps[this.currentStepIndex];
-    const nextStep = this.steps[this.currentStepIndex + 1];
+    if (this.elements.length <= this.currentStepIndex) return;
 
-    if (!currentStep) return;
+    const nextElement = this.elements[this.currentStepIndex + 1];
+    if (nextElement) nextElement.style.visibility = 'initial';
 
-    currentStep.step.classList.remove('stage__li_current');
-    currentStep.step.classList.add('stage__li_done');
-    currentStep.element.removeEventListener('change', this.takeStep);
-
-    if (nextStep) {
-      if (this.currentStepIndex + 2 === this.steps.length) {
-        nextStep.step.classList.add('stage__li_done');
-      } else {
-        nextStep.step.classList.add('stage__li_current');
-      }
-      nextStep.element.style.visibility = 'initial';
-    }
-
+    this.stage.takeStep(this.currentStepIndex);
     this.currentStepIndex += 1;
   }
 }
